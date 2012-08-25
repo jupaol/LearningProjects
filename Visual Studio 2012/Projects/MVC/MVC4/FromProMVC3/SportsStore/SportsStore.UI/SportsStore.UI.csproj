@@ -41,8 +41,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.2.1.267\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Bootstrapper">
       <HintPath>..\packages\Bootstrapper.2.0.3.2\lib\Bootstrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Bootstrapper.AutoMapper">
+      <HintPath>..\packages\Bootstrapper.AutoMapper.2.0.3.0\lib\Bootstrapper.AutoMapper.dll</HintPath>
     </Reference>
     <Reference Include="Bootstrapper.Ninject">
       <HintPath>..\packages\Bootstrapper.Ninject.2.0.3.0\lib\Bootstrapper.Ninject.dll</HintPath>
@@ -156,6 +162,12 @@
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="BootstrapInitialization\CustomMaps\CustomMaps.cs" />
+    <Compile Include="BootstrapInitialization\CustomStartupTasks\RunMeFirst.cs" />
+    <Compile Include="BootstrapInitialization\ForTesting.cs" />
+    <Compile Include="BootstrapInitialization\IForTesting.cs" />
+    <Compile Include="BootstrapInitialization\NinjectInitialization.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -249,14 +261,20 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SportsStore.Domain\SportsStore.Domain.csproj">
+      <Project>{c2fc6c61-747c-430d-8197-f413a9dfab5f}</Project>
+      <Name>SportsStore.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

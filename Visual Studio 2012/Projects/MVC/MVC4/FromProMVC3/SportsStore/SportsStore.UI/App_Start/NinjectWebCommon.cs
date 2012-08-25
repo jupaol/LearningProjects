@@ -3,13 +3,14 @@
 
 namespace SportsStore.UI.App_Start
 {
-    using System;
-    using System.Web;
-
+    using Bootstrap.Extensions.StartupTasks;
+    using Bootstrap.Locator;
+    using Bootstrap.Ninject;
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
-
     using Ninject;
     using Ninject.Web.Common;
+    using System;
+    using System.Web;
 
     public static class NinjectWebCommon 
     {
@@ -18,8 +19,22 @@ namespace SportsStore.UI.App_Start
         /// <summary>
         /// Starts the application
         /// </summary>
-        public static void Start() 
+        public static void Start()
         {
+            Bootstrap.Bootstrapper
+                .Including
+                    //.AssemblyRange(BuildManager.GetReferencedAssemblies().OfType<Assembly>().Where(x => x.FullName.StartsWith("SportsStore")))
+                    .Assembly(typeof(NinjectWebCommon).Assembly)
+                .With
+                    .Ninject()
+                .And
+                    .ServiceLocator()
+                //.And
+                //    .AutoMapper()
+                .And
+                    .StartupTasks()
+                .Start();
+
             DynamicModuleUtility.RegisterModule(typeof(OnePerRequestHttpModule));
             DynamicModuleUtility.RegisterModule(typeof(NinjectHttpModule));
             bootstrapper.Initialize(CreateKernel);
@@ -39,7 +54,9 @@ namespace SportsStore.UI.App_Start
         /// <returns>The created kernel.</returns>
         private static IKernel CreateKernel()
         {
-            var kernel = new StandardKernel();
+            //var kernel = new StandardKernel();
+            var kernel = Bootstrap.Bootstrapper.Container as IKernel;
+
             kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
             kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
             

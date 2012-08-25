@@ -1,0 +1,16 @@
+﻿@model Mvc4FirstBasicApplication.Models.RegisterModel
+
+@{
+    ViewBag.Title = "Thanks";
+}
+
+<h2>Thanks @Model.FirstName</h2>
+
+@if (this.Model.WillAttend == true)
+{
+    @:Nice that you will be to come. We will be wating for you =)
+}
+else
+{
+    @: Sorry to hear you cannot come, but thank you so much for letting us know you are wonderful
+}

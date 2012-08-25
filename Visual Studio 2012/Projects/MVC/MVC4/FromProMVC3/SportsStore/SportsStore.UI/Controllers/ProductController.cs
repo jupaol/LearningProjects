@@ -29,7 +29,8 @@ namespace SportsStore.UI.Controllers
                 .Skip((page -1) * pageSize)
                 .Take(pageSize);
 
-            return View(Mapper.Map<IEnumerable<ProductModel>>(products));
+            //return View(Mapper.Map<IEnumerable<ProductModel>>(products));
+            return View(products);
         }
     }
 }

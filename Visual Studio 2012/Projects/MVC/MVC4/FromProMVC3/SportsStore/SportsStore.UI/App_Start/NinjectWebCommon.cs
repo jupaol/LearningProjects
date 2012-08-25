@@ -1,5 +1,5 @@
-[assembly: WebActivator.PreApplicationStartMethod(typeof(SportsStore.UI.App_Start.NinjectWebCommon), "Start")]
-[assembly: WebActivator.ApplicationShutdownMethodAttribute(typeof(SportsStore.UI.App_Start.NinjectWebCommon), "Stop")]
+//[assembly: WebActivator.PreApplicationStartMethod(typeof(SportsStore.UI.App_Start.NinjectWebCommon), "Start")]
+//[assembly: WebActivator.ApplicationShutdownMethodAttribute(typeof(SportsStore.UI.App_Start.NinjectWebCommon), "Stop")]
 
 namespace SportsStore.UI.App_Start
 {

@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace SportsStore.UI.Controllers
 {
-    public class HomeController : Controller
+    public partial class HomeController : Controller
     {
         private IForTesting forTesting;
 
@@ -16,7 +16,7 @@ namespace SportsStore.UI.Controllers
             this.forTesting = forTesting;
         }
 
-        public ActionResult Index()
+        public virtual ActionResult Index()
         {
             this.ViewBag.Message = this.forTesting.GetMessage();
 

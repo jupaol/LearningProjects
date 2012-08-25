@@ -3,12 +3,14 @@
 
 namespace SportsStore.UI.App_Start
 {
+    using Bootstrap.AutoMapper;
     using Bootstrap.Extensions.StartupTasks;
     using Bootstrap.Locator;
     using Bootstrap.Ninject;
     using Microsoft.Web.Infrastructure.DynamicModuleHelper;
     using Ninject;
     using Ninject.Web.Common;
+    using SportsStore.Domain.Entities;
     using System;
     using System.Web;
 
@@ -24,13 +26,13 @@ namespace SportsStore.UI.App_Start
             Bootstrap.Bootstrapper
                 .Including
                     //.AssemblyRange(BuildManager.GetReferencedAssemblies().OfType<Assembly>().Where(x => x.FullName.StartsWith("SportsStore")))
-                    .Assembly(typeof(NinjectWebCommon).Assembly)
+                    .AssemblyRange(new[] { typeof(NinjectWebCommon).Assembly, typeof(Product).Assembly })
                 .With
                     .Ninject()
                 .And
                     .ServiceLocator()
-                //.And
-                //    .AutoMapper()
+                .And
+                    .AutoMapper()
                 .And
                     .StartupTasks()
                 .Start();
@@ -59,17 +61,8 @@ namespace SportsStore.UI.App_Start
 
             kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
             kernel.Bind<IHttpModule>().To<HttpApplicationInitializationHttpModule>();
-            
-            RegisterServices(kernel);
+
             return kernel;
         }
-
-        /// <summary>
-        /// Load your modules or register your services here!
-        /// </summary>
-        /// <param name="kernel">The kernel.</param>
-        private static void RegisterServices(IKernel kernel)
-        {
-        }        
     }
 }

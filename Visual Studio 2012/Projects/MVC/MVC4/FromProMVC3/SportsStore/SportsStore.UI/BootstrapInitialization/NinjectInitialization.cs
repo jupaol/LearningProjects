@@ -1,6 +1,7 @@
 ﻿using Bootstrap.Ninject;
 using Ninject;
 using Ninject.Modules;
+using SportsStore.Domain.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace SportsStore.UI.BootstrapInitialization
         public override void Load()
         {
             this.Kernel.Bind<IForTesting>().To<ForTesting>();
+            this.Kernel.Bind<IProductRepository>().To<ProductRepository>();
         }
     }
 }

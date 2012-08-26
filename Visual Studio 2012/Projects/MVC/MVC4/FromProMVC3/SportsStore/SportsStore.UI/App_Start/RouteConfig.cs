@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SportsStore.UI.RouteConstraints;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,11 @@ namespace SportsStore.UI
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            routes.MapRoute(
+                null,
+                "Page{page}",
+                new { controller = "Product", action = "List", page = 1 });
 
             routes.MapRoute(
                 name: "Default",

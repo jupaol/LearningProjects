@@ -25,17 +25,35 @@ namespace SportsStore.UnitTests.MVC.Controllers
         [TestClass]
         public class TheListMethod
         {
-            [TestMethod]
-            public void CanPaginate()
+            private ProductController SUT;
+
+            [TestInitialize]
+            public void Initialize()
             {
                 var repo = new Mock<IProductRepository>();
                 var products = Builder<Product>.CreateListOfSize(9).Build().AsQueryable();
-                var sut = new ProductController(repo.Object);
 
                 repo.Setup(x => x.GetProducts()).Returns(() => products).Verifiable();
 
-                var res = (sut.List() as ViewResult).Model as IEnumerable<Product>;
-                res.Should().HaveCount(4);
+                this.SUT = new ProductController(repo.Object);
+            }
+
+            [TestMethod]
+            public void can_paginate()
+            {
+                var res = (this.SUT.List() as ViewResult).Model as ProductsListViewModel;
+                res.Products.Should().HaveCount(4);
+            }
+
+            [TestMethod]
+            public void can_send_the_correct_PagingInfo()
+            {
+                var res = (this.SUT.List(2) as ViewResult).Model as ProductsListViewModel;
+
+                res.PagingInfo.CurrentPage.Should().Be(2);
+                res.PagingInfo.ItemsPerPage.Should().Be(4);
+                res.PagingInfo.TotalItems.Should().Be(9);
+                res.PagingInfo.TotalPages.Should().Be(3);
             }
         }
     }

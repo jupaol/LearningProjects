@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SportsStore.UI.Models.ProductModel>
+﻿@model SportsStore.UI.Models.ProductsListViewModel
 
 @{
     ViewBag.Title = "List";
@@ -6,12 +6,10 @@
 
 <h2>Products</h2>
 
-@foreach (var item in this.Model)
+@foreach (var product in this.Model.Products)
 {
-    <div class="item">
-        <h3>@item.Name</h3>
-        @item.Description
-        <h4>@item.Price.ToString("c")</h4>
-        <hr />
-    </div>
+    Html.RenderPartial(MVC.Shared.Views.ProductSummary, product);
 }
+<div class="Pager">
+    @Html.PageLinks(this.Model.PagingInfo, x => Url.Action(MVC.Product.List(x)))
+</div>

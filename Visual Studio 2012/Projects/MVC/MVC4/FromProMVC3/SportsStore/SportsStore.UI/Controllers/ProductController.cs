@@ -24,13 +24,21 @@ namespace SportsStore.UI.Controllers
         {
             var products = this.productRepository.GetProducts();
 
-            products = products
+            var q = products
                 .OrderBy(x => x.ProductID)
                 .Skip((page -1) * pageSize)
                 .Take(pageSize);
 
-            //return View(Mapper.Map<IEnumerable<ProductModel>>(products));
-            return View(products);
+            return View(new ProductsListViewModel
+            {
+                Products = q, 
+                PagingInfo = new PagingInfo
+                {
+                    CurrentPage = page, 
+                    ItemsPerPage = this.pageSize, 
+                    TotalItems = products.Count() 
+                } 
+            });
         }
     }
 }

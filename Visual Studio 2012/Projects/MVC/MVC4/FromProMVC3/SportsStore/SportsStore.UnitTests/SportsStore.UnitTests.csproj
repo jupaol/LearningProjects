@@ -127,6 +127,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MVC\Controllers\ProductControllerTests.cs" />
+    <Compile Include="MVC\HtmlHelpers\PagingHelpersTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -21,6 +21,12 @@ namespace SportsStore.UI
 
             routes.MapRoute(
                 null,
+                "Cart/Add/{productID}",
+                new { controller = "Cart", action = "AddToCart" }
+                );
+
+            routes.MapRoute(
+                null,
                 "Page{page}",
                 new { controller = "Product", action = "List", category = (string)null },
                 new { page = @"\d+" });

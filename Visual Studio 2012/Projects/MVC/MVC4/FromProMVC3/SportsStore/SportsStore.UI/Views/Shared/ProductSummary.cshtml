@@ -3,6 +3,12 @@
 <div class="item">
     <h3>@this.Model.Name</h3>
     @this.Model.Description
+
+    @using (@Html.BeginForm(MVC.Cart.AddToCart(this.Model.ProductID, this.Request.Url.PathAndQuery)))
+    {
+        <input type="submit" id="addToCart" name="addToCart" value="addToCart" />
+    }
+
     <h4>@this.Model.Price.ToString("c")</h4>
     <hr />
 </div>

@@ -126,6 +126,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\CartTests.cs" />
+    <Compile Include="MVC\Controllers\CartControllerTests.cs" />
     <Compile Include="MVC\Controllers\ProductControllerTests.cs" />
     <Compile Include="MVC\HtmlHelpers\PagingHelpersTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,0 +1,14 @@
+﻿@model IEnumerable<string>
+
+@{
+    this.Layout = null;
+}
+
+@Html.ActionLink("Home", MVC.Product.List())
+
+@foreach (var category in this.Model)
+{
+    <div>
+        @Html.ActionLink(category, MVC.Product.List(category, 1), new { @class = category.ToLower() == this.ViewBag.CurrentCategory.ToLower() ? "selected" : "" })
+    </div>
+}

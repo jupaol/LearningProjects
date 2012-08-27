@@ -13,18 +13,24 @@ namespace SportsStore.UI.Controllers
     public partial class ProductController : Controller
     {
         private IProductRepository productRepository;
-        private int pageSize = 4;
+        private int pageSize = 2;
 
         public ProductController(IProductRepository productRepository)
         {
             this.productRepository = productRepository;
         }
 
-        public virtual ActionResult List(int page = 1)
+        public virtual ActionResult List(string category = null, int page = 1)
         {
             var products = this.productRepository.GetProducts();
+            var filtered = products;
 
-            var q = products
+            if (!string.IsNullOrWhiteSpace(category))
+            {
+                filtered = filtered.Where(x => x.Category == string.Empty || x.Category == null || x.Category.ToLower() == category.ToLower());
+            }
+
+            var q = filtered
                 .OrderBy(x => x.ProductID)
                 .Skip((page -1) * pageSize)
                 .Take(pageSize);
@@ -36,8 +42,9 @@ namespace SportsStore.UI.Controllers
                 {
                     CurrentPage = page, 
                     ItemsPerPage = this.pageSize, 
-                    TotalItems = products.Count() 
-                } 
+                    TotalItems = filtered.Count() 
+                },
+                CurrentCategory = category
             });
         }
     }

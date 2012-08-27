@@ -31,7 +31,16 @@ namespace SportsStore.UnitTests.MVC.Controllers
             public void Initialize()
             {
                 var repo = new Mock<IProductRepository>();
-                var products = Builder<Product>.CreateListOfSize(9).Build().AsQueryable();
+                var products = Builder<Product>.CreateListOfSize(9)
+                    .TheFirst(3)
+                        .With(x => x.Category, "Cat1")
+                    .TheNext(3)
+                        .With(x => x.Category, "Cat2")
+                    .TheNext(2)
+                        .With(x => x.Category, "Cat3")
+                    .TheNext(1)
+                        .With(x => x.Category, null)
+                    .Build().AsQueryable();
 
                 repo.Setup(x => x.GetProducts()).Returns(() => products).Verifiable();
 
@@ -48,12 +57,20 @@ namespace SportsStore.UnitTests.MVC.Controllers
             [TestMethod]
             public void can_send_the_correct_PagingInfo()
             {
-                var res = (this.SUT.List(2) as ViewResult).Model as ProductsListViewModel;
+                var res = (this.SUT.List(string.Empty, 2) as ViewResult).Model as ProductsListViewModel;
 
                 res.PagingInfo.CurrentPage.Should().Be(2);
                 res.PagingInfo.ItemsPerPage.Should().Be(4);
                 res.PagingInfo.TotalItems.Should().Be(9);
                 res.PagingInfo.TotalPages.Should().Be(3);
+            }
+
+            [TestMethod]
+            public void can_filter_using_the_current_category()
+            {
+                var res = (this.SUT.List("Cat2") as ViewResult).Model as ProductsListViewModel;
+
+                res.Products.Should().HaveCount(4);
             }
         }
     }

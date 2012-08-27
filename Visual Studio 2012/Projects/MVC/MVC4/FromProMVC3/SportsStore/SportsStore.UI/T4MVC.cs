@@ -24,6 +24,7 @@ using T4MVC;
 [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
 public static class MVC {
     public static SportsStore.UI.Controllers.HomeController Home = new SportsStore.UI.Controllers.T4MVC_HomeController();
+    public static SportsStore.UI.Controllers.NavController Nav = new SportsStore.UI.Controllers.T4MVC_NavController();
     public static SportsStore.UI.Controllers.ProductController Product = new SportsStore.UI.Controllers.T4MVC_ProductController();
     public static T4MVC.SharedController Shared = new T4MVC.SharedController();
 }

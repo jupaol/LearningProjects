@@ -21,9 +21,9 @@ using System.Web.Mvc.Html;
 using System.Web.Routing;
 using T4MVC;
 namespace SportsStore.UI.Controllers {
-    public partial class ProductController {
+    public partial class NavController {
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        protected ProductController(Dummy d) { }
+        protected NavController(Dummy d) { }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         protected RedirectToRouteResult RedirectToAction(ActionResult result) {
@@ -39,53 +39,51 @@ namespace SportsStore.UI.Controllers {
 
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public ProductController Actions { get { return MVC.Product; } }
+        public NavController Actions { get { return MVC.Nav; } }
         [GeneratedCode("T4MVC", "2.0")]
         public readonly string Area = "";
         [GeneratedCode("T4MVC", "2.0")]
-        public readonly string Name = "Product";
+        public readonly string Name = "Nav";
         [GeneratedCode("T4MVC", "2.0")]
-        public const string NameConst = "Product";
+        public const string NameConst = "Nav";
 
         static readonly ActionNamesClass s_actions = new ActionNamesClass();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public ActionNamesClass ActionNames { get { return s_actions; } }
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNamesClass {
-            public readonly string List = "List";
+            public readonly string Menu = "Menu";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants {
-            public const string List = "List";
+            public const string Menu = "Menu";
         }
 
 
-        static readonly ActionParamsClass_List s_params_List = new ActionParamsClass_List();
+        static readonly ActionParamsClass_Menu s_params_Menu = new ActionParamsClass_Menu();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public ActionParamsClass_List ListParams { get { return s_params_List; } }
+        public ActionParamsClass_Menu MenuParams { get { return s_params_Menu; } }
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public class ActionParamsClass_List {
+        public class ActionParamsClass_Menu {
             public readonly string category = "category";
-            public readonly string page = "page";
         }
         static readonly ViewNames s_views = new ViewNames();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public ViewNames Views { get { return s_views; } }
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ViewNames {
-            public readonly string List = "~/Views/Product/List.cshtml";
+            public readonly string Menu = "~/Views/Nav/Menu.cshtml";
         }
     }
 
     [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-    public class T4MVC_ProductController: SportsStore.UI.Controllers.ProductController {
-        public T4MVC_ProductController() : base(Dummy.Instance) { }
+    public class T4MVC_NavController: SportsStore.UI.Controllers.NavController {
+        public T4MVC_NavController() : base(Dummy.Instance) { }
 
-        public override System.Web.Mvc.ActionResult List(string category, int page) {
-            var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.List);
+        public override System.Web.Mvc.ActionResult Menu(string category) {
+            var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.Menu);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "category", category);
-            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "page", page);
             return callInfo;
         }
 

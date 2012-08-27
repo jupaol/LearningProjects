@@ -10,6 +10,6 @@
 {
     Html.RenderPartial(MVC.Shared.Views.ProductSummary, product);
 }
-<div class="Pager">
-    @Html.PageLinks(this.Model.PagingInfo, x => Url.Action(MVC.Product.List(x)))
+<div class="pager">
+    @Html.PageLinks(this.Model.PagingInfo, x => Url.Action(MVC.Product.List(this.Model.CurrentCategory, x)))
 </div>

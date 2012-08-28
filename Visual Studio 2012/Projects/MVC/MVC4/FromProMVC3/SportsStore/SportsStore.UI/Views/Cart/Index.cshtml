@@ -13,6 +13,7 @@
             <th align="left">Item</th>
             <th align="right">Price</th>
             <th align="right">Subtotal</th>
+            <th align="right"></th>
         </tr>
     </thead>
     <tbody>
@@ -31,6 +32,12 @@
                 <td align="right">
                     @this.Model.Cart.ComputeSubTotal(item.Product.ProductID).ToString("c")
                 </td>
+                <td>
+                    @using (Html.BeginForm(MVC.Cart.RemoveFromCart(null, item.Product.ProductID, this.Model.ReturnUrl)))
+                    {
+                        <input type="submit" name="removeFromCart" id="removeFromCart" value="Remove" class="actionButtons"  />
+                    }
+                </td>
             </tr>
         }
     </tbody>
@@ -47,6 +54,13 @@
 </table>
 
 <br />
-<div class="actionButtons">
+<div class="actionButtons" align="center">
     <a href="@this.Model.ReturnUrl">Continue shopping</a>
+
+    @{
+        if(this.Model.Cart.Lines.Count() > 0)
+        {
+            @Html.ActionLink("Checkout", MVC.Cart.Checkout(this.Model.ReturnUrl, null))
+        }
+    }
 </div>

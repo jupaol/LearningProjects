@@ -286,6 +286,28 @@ public interface IT4MVCActionResult {
   
 
 [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+public class T4MVC_RedirectToRouteResult : System.Web.Mvc.RedirectToRouteResult, IT4MVCActionResult {
+    public T4MVC_RedirectToRouteResult(string area, string controller, string action, string protocol = null): base(" ", default(System.Web.Routing.RouteValueDictionary), default(bool))  {
+        this.InitMVCT4Result(area, controller, action, protocol);
+    }
+    
+    public string Controller { get; set; }
+    public string Action { get; set; }
+    public string Protocol { get; set; }
+    public RouteValueDictionary RouteValueDictionary { get; set; }
+}
+[GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+public class T4MVC_ViewResult : System.Web.Mvc.ViewResult, IT4MVCActionResult {
+    public T4MVC_ViewResult(string area, string controller, string action, string protocol = null): base()  {
+        this.InitMVCT4Result(area, controller, action, protocol);
+    }
+    
+    public string Controller { get; set; }
+    public string Action { get; set; }
+    public string Protocol { get; set; }
+    public RouteValueDictionary RouteValueDictionary { get; set; }
+}
+[GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
 public class T4MVC_ActionResult : System.Web.Mvc.ActionResult, IT4MVCActionResult {
     public T4MVC_ActionResult(string area, string controller, string action, string protocol = null): base()  {
         this.InitMVCT4Result(area, controller, action, protocol);

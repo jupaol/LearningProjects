@@ -9,6 +9,15 @@
 </head>
 <body>
     <div id="header">
+        @{
+            var controller = this.ViewContext.RouteData.Values["controller"].ToString();
+            var action = this.ViewContext.RouteData.Values["action"].ToString();
+            
+            if(string.Compare(controller, MVC.Cart.Name, true) != 0)
+            {
+                @Html.Action(MVC.Cart.Summary(null))
+            }
+        }
         <div class="title">
             Sports Store
         </div>

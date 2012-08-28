@@ -4,7 +4,8 @@
     <h3>@this.Model.Name</h3>
     @this.Model.Description
 
-    @using (@Html.BeginForm(MVC.Cart.AddToCart(this.Model.ProductID, this.Request.Url.PathAndQuery)))
+    @*@using (@Html.BeginForm("AddToCart", "Cart", new { productID = this.Model.ProductID, returnUrl = this.Request.Url.PathAndQuery }))*@
+    @using (@Html.BeginForm(MVC.Cart.AddToCart(null, this.Model.ProductID, this.Request.Url.PathAndQuery)))
     {
         <input type="submit" id="addToCart" name="addToCart" value="addToCart" />
     }

@@ -1,0 +1,16 @@
+﻿@model SportsStore.Domain.Entities.Cart
+
+@{
+    this.Layout = null;
+}
+
+<div id="cart">
+    <span class="caption">
+        <b>Your cart</b>
+        (@this.Model.Lines.Sum(x => x.Quantity)) items,
+        @this.Model.ComputeTotalCost().ToString("c")
+
+        @*@Html.ActionLink("Checkout", MVC.Cart.Index(null, this.Request.Url.PathAndQuery), null)*@
+        @Html.ActionLink("View Cart", "Index", "Cart", new { returnUrl = this.Request.Url.PathAndQuery }, null)
+    </span>
+</div>

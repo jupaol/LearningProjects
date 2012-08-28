@@ -39,18 +39,28 @@ namespace SportsStore.UI.Controllers {
 
         [NonAction]
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public System.Web.Mvc.ActionResult AddToCart() {
-            return new T4MVC_ActionResult(Area, Name, ActionNames.AddToCart);
+        public System.Web.Mvc.RedirectToRouteResult AddToCart() {
+            return new T4MVC_RedirectToRouteResult(Area, Name, ActionNames.AddToCart);
         }
         [NonAction]
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public System.Web.Mvc.ActionResult RemoveFromCart() {
-            return new T4MVC_ActionResult(Area, Name, ActionNames.RemoveFromCart);
+        public System.Web.Mvc.RedirectToRouteResult RemoveFromCart() {
+            return new T4MVC_RedirectToRouteResult(Area, Name, ActionNames.RemoveFromCart);
         }
         [NonAction]
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public System.Web.Mvc.ActionResult Index() {
-            return new T4MVC_ActionResult(Area, Name, ActionNames.Index);
+        public System.Web.Mvc.ViewResult Index() {
+            return new T4MVC_ViewResult(Area, Name, ActionNames.Index);
+        }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public System.Web.Mvc.ViewResult Summary() {
+            return new T4MVC_ViewResult(Area, Name, ActionNames.Summary);
+        }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public System.Web.Mvc.ViewResult Checkout() {
+            return new T4MVC_ViewResult(Area, Name, ActionNames.Checkout);
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -70,6 +80,8 @@ namespace SportsStore.UI.Controllers {
             public readonly string AddToCart = "AddToCart";
             public readonly string RemoveFromCart = "RemoveFromCart";
             public readonly string Index = "Index";
+            public readonly string Summary = "Summary";
+            public readonly string Checkout = "Checkout";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -77,6 +89,8 @@ namespace SportsStore.UI.Controllers {
             public const string AddToCart = "AddToCart";
             public const string RemoveFromCart = "RemoveFromCart";
             public const string Index = "Index";
+            public const string Summary = "Summary";
+            public const string Checkout = "Checkout";
         }
 
 
@@ -85,6 +99,7 @@ namespace SportsStore.UI.Controllers {
         public ActionParamsClass_AddToCart AddToCartParams { get { return s_params_AddToCart; } }
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionParamsClass_AddToCart {
+            public readonly string cart = "cart";
             public readonly string productID = "productID";
             public readonly string returnUrl = "returnUrl";
         }
@@ -93,6 +108,7 @@ namespace SportsStore.UI.Controllers {
         public ActionParamsClass_RemoveFromCart RemoveFromCartParams { get { return s_params_RemoveFromCart; } }
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionParamsClass_RemoveFromCart {
+            public readonly string cart = "cart";
             public readonly string productID = "productID";
             public readonly string returnUrl = "returnUrl";
         }
@@ -101,14 +117,33 @@ namespace SportsStore.UI.Controllers {
         public ActionParamsClass_Index IndexParams { get { return s_params_Index; } }
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionParamsClass_Index {
+            public readonly string cart = "cart";
             public readonly string returnUrl = "returnUrl";
+        }
+        static readonly ActionParamsClass_Summary s_params_Summary = new ActionParamsClass_Summary();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_Summary SummaryParams { get { return s_params_Summary; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_Summary {
+            public readonly string cart = "cart";
+        }
+        static readonly ActionParamsClass_Checkout s_params_Checkout = new ActionParamsClass_Checkout();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_Checkout CheckoutParams { get { return s_params_Checkout; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_Checkout {
+            public readonly string returnUrl = "returnUrl";
+            public readonly string cart = "cart";
         }
         static readonly ViewNames s_views = new ViewNames();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public ViewNames Views { get { return s_views; } }
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ViewNames {
+            public readonly string Checkout = "~/Views/Cart/Checkout.cshtml";
             public readonly string Index = "~/Views/Cart/Index.cshtml";
+            public readonly string OrderCompleted = "~/Views/Cart/OrderCompleted.cshtml";
+            public readonly string Summary = "~/Views/Cart/Summary.cshtml";
         }
     }
 
@@ -116,23 +151,47 @@ namespace SportsStore.UI.Controllers {
     public class T4MVC_CartController: SportsStore.UI.Controllers.CartController {
         public T4MVC_CartController() : base(Dummy.Instance) { }
 
-        public override System.Web.Mvc.ActionResult AddToCart(int productID, string returnUrl) {
-            var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.AddToCart);
+        public override System.Web.Mvc.RedirectToRouteResult AddToCart(SportsStore.Domain.Entities.Cart cart, int productID, string returnUrl) {
+            var callInfo = new T4MVC_RedirectToRouteResult(Area, Name, ActionNames.AddToCart);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "cart", cart);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "productID", productID);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "returnUrl", returnUrl);
             return callInfo;
         }
 
-        public override System.Web.Mvc.ActionResult RemoveFromCart(int productID, string returnUrl) {
-            var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.RemoveFromCart);
+        public override System.Web.Mvc.RedirectToRouteResult RemoveFromCart(SportsStore.Domain.Entities.Cart cart, int productID, string returnUrl) {
+            var callInfo = new T4MVC_RedirectToRouteResult(Area, Name, ActionNames.RemoveFromCart);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "cart", cart);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "productID", productID);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "returnUrl", returnUrl);
             return callInfo;
         }
 
-        public override System.Web.Mvc.ActionResult Index(string returnUrl) {
-            var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.Index);
+        public override System.Web.Mvc.ViewResult Index(SportsStore.Domain.Entities.Cart cart, string returnUrl) {
+            var callInfo = new T4MVC_ViewResult(Area, Name, ActionNames.Index);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "cart", cart);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "returnUrl", returnUrl);
+            return callInfo;
+        }
+
+        public override System.Web.Mvc.ViewResult Summary(SportsStore.Domain.Entities.Cart cart) {
+            var callInfo = new T4MVC_ViewResult(Area, Name, ActionNames.Summary);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "cart", cart);
+            return callInfo;
+        }
+
+        public override System.Web.Mvc.ViewResult Checkout(string returnUrl, SportsStore.Domain.Entities.Cart cart) {
+            var callInfo = new T4MVC_ViewResult(Area, Name, ActionNames.Checkout);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "returnUrl", returnUrl);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "cart", cart);
+            return callInfo;
+        }
+
+        public override System.Web.Mvc.ActionResult Checkout(string returnUrl, SportsStore.Domain.Entities.Cart cart, SportsStore.Domain.Entities.ShippingDetails shippingDetails) {
+            var callInfo = new T4MVC_ActionResult(Area, Name, ActionNames.Checkout);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "returnUrl", returnUrl);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "cart", cart);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "shippingDetails", shippingDetails);
             return callInfo;
         }
 

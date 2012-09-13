@@ -1,0 +1,59 @@
+﻿@model SportsStore.UI.Areas.Administration.Models.AdminProductModel
+
+@{
+    ViewBag.Title = "Admin all products";
+}
+
+<h2>Admin all products</h2>
+
+<p>
+    @Html.ActionLink("Create New Product", "Create")
+</p>
+<table class="Grid">
+    <tr>
+        <th>Actions</th>
+        <th>
+            Product name
+        </th>
+        <th class="NumericCol">
+            Price
+        </th>
+        <th>
+            Category
+        </th>
+    </tr>
+
+@foreach (var item in Model.Products) {
+    <tr>
+        <td>
+            @Html.ActionLink("Delete", MVC.Administration.Admin.Delete(item.ProductID), new { @class = "deleteButton" })
+        </td>
+        <td>
+            @Html.ActionLink(item.Name, MVC.Administration.Admin.Details(item.ProductID))
+        </td>
+        <td class="NumericCol">
+            @item.Price.ToString("c")
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+    </tr>
+}
+
+</table>
+
+<div class="pager">
+    @Html.PageLinks(this.Model.PagingInfo, x => Url.Action(MVC.Administration.Admin.List(x)))
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jquery")
+
+    <script type="text/javascript">
+        $(function () {
+            $(".deleteButton").click(function () {
+                return confirm("Are you sure you want to delete the product");
+            });
+        });
+    </script>
+}

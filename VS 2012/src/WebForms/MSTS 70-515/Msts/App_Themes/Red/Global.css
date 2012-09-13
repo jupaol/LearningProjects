@@ -1,0 +1,42 @@
+﻿body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.master-header, .master-header-actions, master-nested-classic-menu, master-nested-modern-menu {
+    padding: 15px;
+    background-color: #FF0000;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFF00;
+    font-weight: bold;
+}
+.master-header-actions {
+    text-align:right;
+}
+.master-nested-classic-menu, master-nested-modern-menu {
+    width:150px;
+}
+.master-nested-classic-content {
+    width:auto;
+}
+.master-nested-modern-slogan {
+    font-family: Georgia, 'Times New Roman' , Times, serif;
+    font-size: xx-large;
+    font-weight: bold;
+    color: #FF0000;
+}
+.master-nested-classic-slogan {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    font-size: large;
+    font-weight: bold;
+}
+
+.master-content {
+    background-color: #C0C0C0;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:8px;
+}
+.master-global-table {
+    width: 100%;
+    border-spacing: 0px;
+}

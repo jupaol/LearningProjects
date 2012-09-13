@@ -1,0 +1,44 @@
+﻿<%@ Master EnableViewState="false" Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Msts.Site" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="~/Content/Site.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div class="top-header">
+            <div class="title">
+                <asp:Literal runat="server" ID="title" Text="Header test"></asp:Literal>
+            </div>
+            <div class="actions">
+                <asp:Label runat="server" Text="Choose master page" AssociatedControlID="ddl"></asp:Label>
+                <asp:DropDownList runat="server" ID="ddl">
+                    <asp:ListItem Text="Site.master" Selected="True" />
+                    <asp:ListItem Text="AlternateSite.master" />
+                </asp:DropDownList>
+                <asp:Button runat="server" ID="changeMaster" Text="Change MasterPage" OnClick="changeMaster_Click" />
+            </div>
+        </div>
+        <div class="left-menu">
+        </div>
+        <div class="main-content">
+            <p>
+                EnableViewState is: <%: this.EnableViewState %>
+            </p>
+            <p>
+                IsViewStateEnabled is: <%: this.IsViewStateEnabled %>
+            </p>
+            <hr />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

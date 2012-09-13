@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>@ViewBag.Title</title>
+        <link href="@Url.Content("~/Content/Admin.css")" rel="stylesheet" type="text/css" />
+        @Scripts.Render("~/bundles/modernizr")
+    </head>
+    <body>
+        @{
+            if(this.PageContext.Page.User.Identity.IsAuthenticated)
+            {
+                @Html.Action(MVC.Account.CurrentUser())
+            }
+        }
+        <div>
+            @{
+                if (this.TempData["message"] != null)
+                {
+                    <div class="Message">@this.TempData["message"]</div>
+                }
+            }
+            @RenderBody()
+        </div>
+        <div>
+            @Html.ActionLink("Back to store", MVC.Product.List())
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

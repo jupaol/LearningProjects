@@ -1,0 +1,67 @@
+﻿@model SportsStore.UI.Models.CartModel
+
+@{
+    ViewBag.Title = "Cart Content";
+}
+
+<h2>Cart content</h2>
+
+<table align="center" width="90%">
+    <thead>
+        <tr>
+            <th align="center">Quantity</th>
+            <th align="left">Item</th>
+            <th align="right">Price</th>
+            <th align="right">Subtotal</th>
+            <th align="right"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in this.Model.Cart.Lines)
+        {
+            <tr>
+                <td align="center">
+                    @item.Quantity.ToString()
+                </td>
+                <td align="left">
+                    @item.Product.Name
+                </td>
+                <td align="right">
+                    @item.Product.Price.ToString("c")
+                </td>
+                <td align="right">
+                    @this.Model.Cart.ComputeSubTotal(item.Product.ProductID).ToString("c")
+                </td>
+                <td>
+                    @using (Html.BeginForm(MVC.Cart.RemoveFromCart(null, item.Product.ProductID, this.Model.ReturnUrl)))
+                    {
+                        <input type="submit" name="removeFromCart" id="removeFromCart" value="Remove" class="actionButtons"  />
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" align="right">
+                Total:
+            </td>
+            <td align="right">
+                @this.Model.Cart.ComputeTotalCost().ToString("c")
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+    </tfoot>
+</table>
+
+<br />
+<div class="actionButtons" align="center">
+    <a href="@this.Model.ReturnUrl">Continue shopping</a>
+
+    @{
+        if(this.Model.Cart.Lines.Count() > 0)
+        {
+            @Html.ActionLink("Checkout", MVC.Cart.Checkout(this.Model.ReturnUrl, null))
+        }
+    }
+</div>

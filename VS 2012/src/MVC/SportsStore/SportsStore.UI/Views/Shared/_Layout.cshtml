@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div id="header">
+        @{
+            var controller = this.ViewContext.RouteData.Values["controller"].ToString();
+            var action = this.ViewContext.RouteData.Values["action"].ToString();
+            
+            if(string.Compare(controller, MVC.Cart.Name, true) != 0)
+            {
+                @Html.Action(MVC.Cart.Summary(null))
+            }
+        }
+        <div class="title">
+            Sports Store
+        </div>
+    </div>
+    <div id="categories">
+        @Html.ActionLink("Admin", MVC.Administration.Admin.List())
+        <hr />
+
+        @Html.Action("Menu", "Nav")
+    </div>
+    <div id="content">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,6 @@
+﻿@model SportsStore.UI.Models.LoggedUserModel
+
+<div class="loggedUser">
+    Hello @this.Model.Username
+    @Html.ActionLink("Log out", MVC.Account.Logout())
+</div>

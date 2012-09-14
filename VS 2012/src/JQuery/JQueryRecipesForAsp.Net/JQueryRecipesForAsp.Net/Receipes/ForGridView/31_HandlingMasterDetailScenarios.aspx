@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="31_HandlingMasterDetailScenarios.aspx.cs" Inherits="JQueryRecipesForAsp.Net.Receipes.ForGridView._31_HandlingMasterDetailScenarios" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
+    <script type="text/javascript" src="../../Scripts/jtemplates-min.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
 </asp:Content>
@@ -48,15 +49,23 @@
             function showDetails(msg) {
                 $data.text("");
 
-                $data
-                    .append("ID: ")
-                    .append(msg.EmployeeID)
-                    .append("<br />")
-                    .append("First Name: ")
-                    .append(msg.FirstName)
-                    .append("<br />")
-                    .append("Last Name: ")
-                    .append(msg.LastName);
+                if (!msg) {
+                    $data.text("No details found");
+                }
+                else {
+                    //$("#data").setTemplateURL("detailsTemplate.html", null, { filter_data: false });
+                    //$data.processTemplate(msg);
+
+                    $data
+                        .append("ID: ")
+                        .append(msg.EmployeeID)
+                        .append("<br />")
+                        .append("First Name: ")
+                        .append(msg.FirstName)
+                        .append("<br />")
+                        .append("Last Name: ")
+                        .append(msg.LastName);
+                }
 
                 $dialog.dialog({ "width": 450, "modal": true});
                 $dialog.dialog("open");

@@ -10,6 +10,9 @@
     </asp:PlaceHolder>  
     <webopt:BundleReference runat="server" Path="~/Content/css" /> 
     <webopt:BundleReference runat="server" Path="~/Content/themes/base/jquery.ui.all.css" /> 
+    <webopt:BundleReference runat="server" Path="~/Content/themes/ui-darkness/jquery-ui-1.8.23.custom.css" /> 
+    <webopt:BundleReference runat="server" Path="~/Content/themes/swanky-purse/jquery-ui-1.8.23.custom.css" /> 
+    <webopt:BundleReference runat="server" Path="~/Content/themes/le-frog/jquery-ui-1.8.23.custom.css" /> 
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width" />
     <asp:ContentPlaceHolder runat="server" ID="HeadContent" />

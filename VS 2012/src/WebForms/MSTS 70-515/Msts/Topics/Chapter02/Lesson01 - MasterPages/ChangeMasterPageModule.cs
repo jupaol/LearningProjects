@@ -31,7 +31,8 @@ namespace Msts.Topics.Chapter02.Lesson01___MasterPages
 
                     if (page != null)
                     {
-                        if (!ctx.Request.AppRelativeCurrentExecutionFilePath.ToLowerInvariant().Contains("SettingMasterPageDynamically.aspx".ToLowerInvariant()))
+                        if (!ctx.Request.AppRelativeCurrentExecutionFilePath.ToLowerInvariant().Contains("SettingMasterPageDynamically.aspx".ToLowerInvariant())
+                            && !ctx.Request.AppRelativeCurrentExecutionFilePath.ToLowerInvariant().Contains("OutputCacheDependingOnMasterPageControls.aspx".ToLowerInvariant()))
                         {
                             page.PreInit += page_PreInit;
                         }

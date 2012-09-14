@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CachedMaster.master.cs" Inherits="Msts.Topics.Chapter02.Lesson03.CachedMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table class="master-global-table">
+            <tr>
+                <th class="master-header">
+                    Header from global
+                </th>
+            </tr>
+            <tr>
+                <th class="master-header-actions">
+                    <div>
+                        <asp:Label ID="Label1" runat="server" Text="Select your custom layout" AssociatedControlID="ddlLayouts"></asp:Label>
+                        <asp:DropDownList runat="server" ID="ddlLayouts" AutoPostBack="true" CausesValidation="true">
+                            <asp:ListItem Text="Global - Classic" Value="~/Topics/Chapter02/Lesson01 - MasterPages/ClassicMaster.Master" Selected="True" />
+                            <asp:ListItem Text="Local - Modern" Value="~/Topics/Chapter02/Lesson01 - MasterPages/ModernMaster.Master" />
+                        </asp:DropDownList>
+                    </div>
+                    <div>
+                        <asp:Label ID="Label2" runat="server" Text="Select your preferred theme" AssociatedControlID="ddlThemes"></asp:Label>
+                        <asp:DropDownList runat="server" ID="ddlThemes" AutoPostBack="true" CausesValidation="true">
+                            <asp:ListItem Text="Blue" Selected="True" />
+                            <asp:ListItem Text="Red" />
+                            <asp:ListItem Text="Yellow" />
+                        </asp:DropDownList>
+                    </div>
+                </th>
+            </tr>
+            <tr>
+                <td class="master-content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

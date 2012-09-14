@@ -1,0 +1,33 @@
+﻿<table>
+    <thead>
+        <tr>
+            <th>
+                Employee ID
+            </th>
+            <th>
+                First Name
+            </th>
+            <th>
+                Last Name
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        {#foreach $T as data}
+        <tr>
+            <td>
+                {$T.data.EmployeeID}
+            </td>
+            <td>
+                {$T.data.FirstName}
+            </td>
+            <td>
+                {$T.data.LastName}
+            </td>
+        </tr>
+        {#/for}
+    </tbody>
+    <tfoot>
+
+    </tfoot>
+</table>

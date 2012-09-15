@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Web
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Msts", "Msts\Msts.csproj", "{D673901C-5A51-47D6-A1B8-CFFD0900C478}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Msts.Mvc", "Msts.Mvc\Msts.Mvc.csproj", "{FD475563-750C-49CD-BCA1-A9C6C9C17D98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{D673901C-5A51-47D6-A1B8-CFFD0900C478}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D673901C-5A51-47D6-A1B8-CFFD0900C478}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D673901C-5A51-47D6-A1B8-CFFD0900C478}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD475563-750C-49CD-BCA1-A9C6C9C17D98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD475563-750C-49CD-BCA1-A9C6C9C17D98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD475563-750C-49CD-BCA1-A9C6C9C17D98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD475563-750C-49CD-BCA1-A9C6C9C17D98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -312,6 +312,7 @@
     <Compile Include="Topics\Chapter03\Lesson02 - ClientSideState\ViewStateSecurity.aspx.designer.cs">
       <DependentUpon>ViewStateSecurity.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Topics\Chapter03\Lesson03 - ServerSideState\SessionObject.cs" />
     <Compile Include="Topics\Chapter03\Lesson03 - ServerSideState\UsingSessionState_StateServer.aspx.cs">
       <DependentUpon>UsingSessionState_StateServer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -354,6 +355,9 @@
     <Folder Include="Topics\Chapter04\Lesson01\" />
     <Folder Include="Topics\Chapter04\Lesson02\" />
     <Folder Include="Topics\Chapter04\Lesson03\" />
+    <Folder Include="Topics\Chapter05\Lesson01\" />
+    <Folder Include="Topics\Chapter05\Lesson02\" />
+    <Folder Include="Topics\Chapter05\Lesson03\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

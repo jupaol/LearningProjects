@@ -12,11 +12,21 @@ namespace Msts.Topics.Chapter03.Lesson03___ServerSideState
         protected void Page_PreRender(object sender, EventArgs e)
         {
             this.msg.Text = this.Session["cs"] != null ? this.Session["cs"].ToString() : string.Empty;
+
+            var sessionObject = this.Session["cso"] as SessionObject;
+
+            if (sessionObject != null)
+            {
+                var lastLogin = sessionObject.LastLogin.HasValue ? sessionObject.LastLogin.Value.ToString() : string.Empty;
+
+                this.msg.Text += "<br />" + lastLogin + "<br />" + sessionObject.User;
+            }
         }
 
         protected void updateSessionState_Click(object sender, EventArgs e)
         {
             this.Session["cs"] = DateTime.Now;
+            this.Session["cso"] = new SessionObject { LastLogin = DateTime.Now, User = this.User.Identity.Name };
         }
     }
 }

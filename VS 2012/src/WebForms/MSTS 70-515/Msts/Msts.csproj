@@ -98,6 +98,7 @@
     <Content Include="Topics\Chapter03\Lesson01 - ASP.Net LifeCycle\PageLifeCycle.aspx" />
     <Content Include="Topics\Chapter03\Lesson02 - ClientSideState\AddingPersistentCookies.aspx" />
     <Content Include="Topics\Chapter03\Lesson02 - ClientSideState\ViewStateSecurity.aspx" />
+    <Content Include="Topics\Chapter03\Lesson03 - ServerSideState\UsingSessionState_StateServer.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -311,6 +312,13 @@
     <Compile Include="Topics\Chapter03\Lesson02 - ClientSideState\ViewStateSecurity.aspx.designer.cs">
       <DependentUpon>ViewStateSecurity.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Topics\Chapter03\Lesson03 - ServerSideState\UsingSessionState_StateServer.aspx.cs">
+      <DependentUpon>UsingSessionState_StateServer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter03\Lesson03 - ServerSideState\UsingSessionState_StateServer.aspx.designer.cs">
+      <DependentUpon>UsingSessionState_StateServer.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
@@ -343,7 +351,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Scripts\" />
-    <Folder Include="Topics\Chapter03\Lesson03 - ServerSideState\" />
     <Folder Include="Topics\Chapter04\Lesson01\" />
     <Folder Include="Topics\Chapter04\Lesson02\" />
     <Folder Include="Topics\Chapter04\Lesson03\" />

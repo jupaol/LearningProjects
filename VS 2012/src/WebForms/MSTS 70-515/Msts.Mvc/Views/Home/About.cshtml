@@ -32,3 +32,25 @@
         <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
     </ul>
 </aside>
+
+<div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken();
+        <fieldset>
+            <legend>
+                Something to post
+            </legend>
+            <div>
+                <label for="username">Username:</label>
+            </div>
+            <div>
+                @Html.TextBox("username")
+                @*<input type="text" name="username" id="username" />*@
+            </div>
+            <div>
+                <input type="submit" name="send" value="Send data" />
+            </div>
+        </fieldset>
+    }
+</div>

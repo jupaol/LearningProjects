@@ -38,6 +38,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AntiXssLibrary">
+      <HintPath>..\packages\AntiXSS.4.2.1\lib\net40\AntiXssLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlSanitizationLibrary">
+      <HintPath>..\packages\AntiXSS.4.2.1\lib\net40\HtmlSanitizationLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Idunno.AntiCSRF">
+      <HintPath>..\..\..\..\..\..\..\AntiCSRF\Idunno.AntiCSRF.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.DynamicData" />
@@ -68,26 +77,30 @@
     <Content Include="App_Themes\Yellow\Images\logo.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
-    <Content Include="Topics\Chapter02\Lesson02\OverridingDefaultThemeWithDynamicMasterPages.aspx" />
+    <Content Include="Topics\Chapter02\Lesson02 - Themes\OverridingDefaultThemeWithDynamicMasterPages.aspx" />
     <Content Include="Topics\Chapter02\Lesson01 - MasterPages\SettingMasterPageDynamically.aspx" />
     <Content Include="Topics\Chapter02\Lesson01 - MasterPages\SettingMasterPageDynamically2.aspx" />
-    <Content Include="Topics\Chapter02\Lesson03\CachingFileContent.aspx" />
-    <Content Include="Topics\Chapter02\Lesson03\CachingSqlQueries.aspx" />
-    <Content Include="Topics\Chapter02\Lesson03\DetermineIfTheCachedPageIsValid.aspx" />
-    <Content Include="Topics\Chapter02\Lesson03\Licence.txt" />
-    <Content Include="Topics\Chapter02\Lesson03\OutputCacheDependingOnMasterPageControls.aspx" />
-    <Content Include="Topics\Chapter02\Lesson03\OutputCacheUsingVaryByCustom.aspx" />
-    <Content Include="Topics\Chapter02\Lesson03\OutputCacheWithCacheItemDependency.aspx" />
-    <Content Include="Topics\Chapter02\Lesson03\OutputCacheWithFileDependencies.aspx" />
-    <Content Include="Topics\Chapter02\Lesson03\OutputCacheWithSqlPollingDeclaratively.aspx" />
-    <Content Include="Topics\Chapter02\Lesson03\OutputCacheWithSqlPollingDependency.aspx" />
-    <Content Include="Topics\Chapter02\Lesson03\OutputCachingByParam.aspx" />
-    <Content Include="Topics\Chapter02\Lesson03\PartialCachedControl.ascx" />
-    <Content Include="Topics\Chapter02\Lesson03\PartialOutputCaching.aspx" />
-    <Content Include="Topics\Chapter02\Lesson03\SettingOutputCacheViaCode.aspx" />
-    <Content Include="Topics\Chapter03\Lesson01\InitCompleteEventAndViewState.aspx" />
-    <Content Include="Topics\Chapter03\Lesson01\PageLifeCycle.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Topics\Chapter02\Lesson03 - Caching\CachingFileContent.aspx" />
+    <Content Include="Topics\Chapter02\Lesson03 - Caching\CachingSqlQueries.aspx" />
+    <Content Include="Topics\Chapter02\Lesson03 - Caching\DetermineIfTheCachedPageIsValid.aspx" />
+    <Content Include="Topics\Chapter02\Lesson03 - Caching\Licence.txt" />
+    <Content Include="Topics\Chapter02\Lesson03 - Caching\OutputCacheDependingOnMasterPageControls.aspx" />
+    <Content Include="Topics\Chapter02\Lesson03 - Caching\OutputCacheUsingVaryByCustom.aspx" />
+    <Content Include="Topics\Chapter02\Lesson03 - Caching\OutputCacheWithCacheItemDependency.aspx" />
+    <Content Include="Topics\Chapter02\Lesson03 - Caching\OutputCacheWithFileDependencies.aspx" />
+    <Content Include="Topics\Chapter02\Lesson03 - Caching\OutputCacheWithSqlPollingDeclaratively.aspx" />
+    <Content Include="Topics\Chapter02\Lesson03 - Caching\OutputCacheWithSqlPollingDependency.aspx" />
+    <Content Include="Topics\Chapter02\Lesson03 - Caching\OutputCachingByParam.aspx" />
+    <Content Include="Topics\Chapter02\Lesson03 - Caching\PartialCachedControl.ascx" />
+    <Content Include="Topics\Chapter02\Lesson03 - Caching\PartialOutputCaching.aspx" />
+    <Content Include="Topics\Chapter02\Lesson03 - Caching\SettingOutputCacheViaCode.aspx" />
+    <Content Include="Topics\Chapter03\Lesson01 - ASP.Net LifeCycle\InitCompleteEventAndViewState.aspx" />
+    <Content Include="Topics\Chapter03\Lesson01 - ASP.Net LifeCycle\PageLifeCycle.aspx" />
+    <Content Include="Topics\Chapter03\Lesson02 - ClientSideState\AddingPersistentCookies.aspx" />
+    <Content Include="Topics\Chapter03\Lesson02 - ClientSideState\ViewStateSecurity.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlternateSite.Master.cs">
@@ -106,6 +119,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="ObjectExtenssions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -149,11 +163,11 @@
     <Compile Include="Topics\Chapter02\Lesson01 - MasterPages\ModernMaster.Master.designer.cs">
       <DependentUpon>ModernMaster.Master</DependentUpon>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson02\OverridingDefaultThemeWithDynamicMasterPages.aspx.cs">
+    <Compile Include="Topics\Chapter02\Lesson02 - Themes\OverridingDefaultThemeWithDynamicMasterPages.aspx.cs">
       <DependentUpon>OverridingDefaultThemeWithDynamicMasterPages.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson02\OverridingDefaultThemeWithDynamicMasterPages.aspx.designer.cs">
+    <Compile Include="Topics\Chapter02\Lesson02 - Themes\OverridingDefaultThemeWithDynamicMasterPages.aspx.designer.cs">
       <DependentUpon>OverridingDefaultThemeWithDynamicMasterPages.aspx</DependentUpon>
     </Compile>
     <Compile Include="Topics\Chapter02\Lesson01 - MasterPages\SettingMasterPageDynamically.aspx.cs">
@@ -170,119 +184,133 @@
     <Compile Include="Topics\Chapter02\Lesson01 - MasterPages\SettingMasterPageDynamically2.aspx.designer.cs">
       <DependentUpon>SettingMasterPageDynamically2.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\CachedMaster.Master.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\CachedMaster.Master.cs">
       <DependentUpon>CachedMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\CachedMaster.Master.designer.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\CachedMaster.Master.designer.cs">
       <DependentUpon>CachedMaster.Master</DependentUpon>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\CachingFileContent.aspx.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\CachingFileContent.aspx.cs">
       <DependentUpon>CachingFileContent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\CachingFileContent.aspx.designer.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\CachingFileContent.aspx.designer.cs">
       <DependentUpon>CachingFileContent.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\CachingSqlQueries.aspx.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\CachingSqlQueries.aspx.cs">
       <DependentUpon>CachingSqlQueries.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\CachingSqlQueries.aspx.designer.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\CachingSqlQueries.aspx.designer.cs">
       <DependentUpon>CachingSqlQueries.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\DetermineIfTheCachedPageIsValid.aspx.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\DetermineIfTheCachedPageIsValid.aspx.cs">
       <DependentUpon>DetermineIfTheCachedPageIsValid.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\DetermineIfTheCachedPageIsValid.aspx.designer.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\DetermineIfTheCachedPageIsValid.aspx.designer.cs">
       <DependentUpon>DetermineIfTheCachedPageIsValid.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\OutputCacheDependingOnMasterPageControls.aspx.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\OutputCacheDependingOnMasterPageControls.aspx.cs">
       <DependentUpon>OutputCacheDependingOnMasterPageControls.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\OutputCacheDependingOnMasterPageControls.aspx.designer.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\OutputCacheDependingOnMasterPageControls.aspx.designer.cs">
       <DependentUpon>OutputCacheDependingOnMasterPageControls.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\OutputCacheUsingVaryByCustom.aspx.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\OutputCacheUsingVaryByCustom.aspx.cs">
       <DependentUpon>OutputCacheUsingVaryByCustom.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\OutputCacheUsingVaryByCustom.aspx.designer.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\OutputCacheUsingVaryByCustom.aspx.designer.cs">
       <DependentUpon>OutputCacheUsingVaryByCustom.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\OutputCacheWithCacheItemDependency.aspx.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\OutputCacheWithCacheItemDependency.aspx.cs">
       <DependentUpon>OutputCacheWithCacheItemDependency.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\OutputCacheWithCacheItemDependency.aspx.designer.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\OutputCacheWithCacheItemDependency.aspx.designer.cs">
       <DependentUpon>OutputCacheWithCacheItemDependency.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\OutputCacheWithFileDependencies.aspx.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\OutputCacheWithFileDependencies.aspx.cs">
       <DependentUpon>OutputCacheWithFileDependencies.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\OutputCacheWithFileDependencies.aspx.designer.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\OutputCacheWithFileDependencies.aspx.designer.cs">
       <DependentUpon>OutputCacheWithFileDependencies.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\OutputCacheWithSqlPollingDeclaratively.aspx.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\OutputCacheWithSqlPollingDeclaratively.aspx.cs">
       <DependentUpon>OutputCacheWithSqlPollingDeclaratively.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\OutputCacheWithSqlPollingDeclaratively.aspx.designer.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\OutputCacheWithSqlPollingDeclaratively.aspx.designer.cs">
       <DependentUpon>OutputCacheWithSqlPollingDeclaratively.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\OutputCacheWithSqlPollingDependency.aspx.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\OutputCacheWithSqlPollingDependency.aspx.cs">
       <DependentUpon>OutputCacheWithSqlPollingDependency.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\OutputCacheWithSqlPollingDependency.aspx.designer.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\OutputCacheWithSqlPollingDependency.aspx.designer.cs">
       <DependentUpon>OutputCacheWithSqlPollingDependency.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\OutputCachingByParam.aspx.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\OutputCachingByParam.aspx.cs">
       <DependentUpon>OutputCachingByParam.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\OutputCachingByParam.aspx.designer.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\OutputCachingByParam.aspx.designer.cs">
       <DependentUpon>OutputCachingByParam.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\PartialCachedControl.ascx.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\PartialCachedControl.ascx.cs">
       <DependentUpon>PartialCachedControl.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\PartialCachedControl.ascx.designer.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\PartialCachedControl.ascx.designer.cs">
       <DependentUpon>PartialCachedControl.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\PartialOutputCaching.aspx.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\PartialOutputCaching.aspx.cs">
       <DependentUpon>PartialOutputCaching.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\PartialOutputCaching.aspx.designer.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\PartialOutputCaching.aspx.designer.cs">
       <DependentUpon>PartialOutputCaching.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\SettingOutputCacheViaCode.aspx.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\SettingOutputCacheViaCode.aspx.cs">
       <DependentUpon>SettingOutputCacheViaCode.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Topics\Chapter02\Lesson03\SettingOutputCacheViaCode.aspx.designer.cs">
+    <Compile Include="Topics\Chapter02\Lesson03 - Caching\SettingOutputCacheViaCode.aspx.designer.cs">
       <DependentUpon>SettingOutputCacheViaCode.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Topics\Chapter03\Lesson01\InitCompleteEventAndViewState.aspx.cs">
+    <Compile Include="Topics\Chapter03\Lesson01 - ASP.Net LifeCycle\InitCompleteEventAndViewState.aspx.cs">
       <DependentUpon>InitCompleteEventAndViewState.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Topics\Chapter03\Lesson01\InitCompleteEventAndViewState.aspx.designer.cs">
+    <Compile Include="Topics\Chapter03\Lesson01 - ASP.Net LifeCycle\InitCompleteEventAndViewState.aspx.designer.cs">
       <DependentUpon>InitCompleteEventAndViewState.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Topics\Chapter03\Lesson01\PageLifeCycle.aspx.cs">
+    <Compile Include="Topics\Chapter03\Lesson01 - ASP.Net LifeCycle\PageLifeCycle.aspx.cs">
       <DependentUpon>PageLifeCycle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Topics\Chapter03\Lesson01\PageLifeCycle.aspx.designer.cs">
+    <Compile Include="Topics\Chapter03\Lesson01 - ASP.Net LifeCycle\PageLifeCycle.aspx.designer.cs">
       <DependentUpon>PageLifeCycle.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Topics\Chapter03\Lesson01\RequestLifeCycle.cs" />
+    <Compile Include="Topics\Chapter03\Lesson01 - ASP.Net LifeCycle\RequestLifeCycle.cs" />
+    <Compile Include="Topics\Chapter03\Lesson02 - ClientSideState\AddingPersistentCookies.aspx.cs">
+      <DependentUpon>AddingPersistentCookies.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter03\Lesson02 - ClientSideState\AddingPersistentCookies.aspx.designer.cs">
+      <DependentUpon>AddingPersistentCookies.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter03\Lesson02 - ClientSideState\ViewStateSecurity.aspx.cs">
+      <DependentUpon>ViewStateSecurity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter03\Lesson02 - ClientSideState\ViewStateSecurity.aspx.designer.cs">
+      <DependentUpon>ViewStateSecurity.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
@@ -303,7 +331,8 @@
     <None Include="DataAccess\Pubs.dbml.layout">
       <DependentUpon>Pubs.dbml</DependentUpon>
     </None>
-    <Content Include="Topics\Chapter02\Lesson03\CachedMaster.Master" />
+    <Content Include="Topics\Chapter02\Lesson03 - Caching\CachedMaster.Master" />
+    <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -314,8 +343,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Scripts\" />
-    <Folder Include="Topics\Chapter03\Lesson02\" />
-    <Folder Include="Topics\Chapter03\Lesson03\" />
+    <Folder Include="Topics\Chapter03\Lesson03 - ServerSideState\" />
     <Folder Include="Topics\Chapter04\Lesson01\" />
     <Folder Include="Topics\Chapter04\Lesson02\" />
     <Folder Include="Topics\Chapter04\Lesson03\" />

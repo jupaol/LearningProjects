@@ -15,11 +15,19 @@ namespace Msts.Mvc.Controllers
             return View();
         }
 
+        [HttpGet]
         public ActionResult About()
         {
             ViewBag.Message = "Your app description page.";
 
             return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult About(string username)
+        {
+            return View((object)username);
         }
 
         public ActionResult Contact()

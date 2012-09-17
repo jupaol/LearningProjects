@@ -11,6 +11,13 @@
 <body>
     <form id="form1" runat="server">
     <div>
+        <asp:ScriptManager runat="server" ID="scriptManager" EnableCdn="false">
+            <Scripts>
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" />
+            </Scripts>
+        </asp:ScriptManager>
         <table class="master-global-table">
             <tr>
                 <th class="master-header">

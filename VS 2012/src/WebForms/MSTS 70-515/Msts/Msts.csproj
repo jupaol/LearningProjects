@@ -41,13 +41,23 @@
     <Reference Include="AntiXssLibrary">
       <HintPath>..\packages\AntiXSS.4.2.1\lib\net40\AntiXssLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="HtmlSanitizationLibrary">
       <HintPath>..\packages\AntiXSS.4.2.1\lib\net40\HtmlSanitizationLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Idunno.AntiCSRF">
       <HintPath>..\..\..\..\..\..\..\AntiCSRF\Idunno.AntiCSRF.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.0.0\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -58,6 +68,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -65,6 +78,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease">
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\Blue\Global.css" />
@@ -77,6 +93,14 @@
     <Content Include="App_Themes\Yellow\Images\logo.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
+    <None Include="Scripts\jquery-1.8.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.1.js" />
+    <Content Include="Scripts\jquery-1.8.1.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Topics\Chapter02\Lesson02 - Themes\OverridingDefaultThemeWithDynamicMasterPages.aspx" />
     <Content Include="Topics\Chapter02\Lesson01 - MasterPages\SettingMasterPageDynamically.aspx" />
     <Content Include="Topics\Chapter02\Lesson01 - MasterPages\SettingMasterPageDynamically2.aspx" />
@@ -99,6 +123,10 @@
     <Content Include="Topics\Chapter03\Lesson02 - ClientSideState\AddingPersistentCookies.aspx" />
     <Content Include="Topics\Chapter03\Lesson02 - ClientSideState\ViewStateSecurity.aspx" />
     <Content Include="Topics\Chapter03\Lesson03 - ServerSideState\UsingSessionState_StateServer.aspx" />
+    <Content Include="Topics\Chapter04\Lesson01 - Server Controls\SimpleASP_NetControls.aspx" />
+    <Content Include="Topics\Chapter04\Lesson01 - Server Controls\SpecializedServerControls.aspx" />
+    <Content Include="Topics\Chapter04\Lesson01 - Server Controls\TestingTheClientIdMode.aspx" />
+    <Content Include="Topics\Chapter06\Lesson01 - Input Validation\SimpleValidation.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -320,6 +348,34 @@
     <Compile Include="Topics\Chapter03\Lesson03 - ServerSideState\UsingSessionState_StateServer.aspx.designer.cs">
       <DependentUpon>UsingSessionState_StateServer.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Topics\Chapter04\Lesson01 - Server Controls\SimpleASP_NetControls.aspx.cs">
+      <DependentUpon>SimpleASP_NetControls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter04\Lesson01 - Server Controls\SimpleASP_NetControls.aspx.designer.cs">
+      <DependentUpon>SimpleASP_NetControls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter04\Lesson01 - Server Controls\SpecializedServerControls.aspx.cs">
+      <DependentUpon>SpecializedServerControls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter04\Lesson01 - Server Controls\SpecializedServerControls.aspx.designer.cs">
+      <DependentUpon>SpecializedServerControls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter04\Lesson01 - Server Controls\TestingTheClientIdMode.aspx.cs">
+      <DependentUpon>TestingTheClientIdMode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter04\Lesson01 - Server Controls\TestingTheClientIdMode.aspx.designer.cs">
+      <DependentUpon>TestingTheClientIdMode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter06\Lesson01 - Input Validation\SimpleValidation.aspx.cs">
+      <DependentUpon>SimpleValidation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter06\Lesson01 - Input Validation\SimpleValidation.aspx.designer.cs">
+      <DependentUpon>SimpleValidation.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
@@ -351,13 +407,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Scripts\" />
-    <Folder Include="Topics\Chapter04\Lesson01\" />
+    <Folder Include="Files\" />
     <Folder Include="Topics\Chapter04\Lesson02\" />
     <Folder Include="Topics\Chapter04\Lesson03\" />
     <Folder Include="Topics\Chapter05\Lesson01\" />
     <Folder Include="Topics\Chapter05\Lesson02\" />
     <Folder Include="Topics\Chapter05\Lesson03\" />
+    <Folder Include="Topics\Chapter06\Lesson02\" />
+    <Folder Include="Topics\Chapter06\Lesson03\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

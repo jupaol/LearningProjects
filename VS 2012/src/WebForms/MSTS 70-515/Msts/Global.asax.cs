@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using System.Web.Optimization;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.UI;
@@ -14,11 +13,11 @@ namespace Msts
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            ScriptManager.ScriptResourceMapping.AddDefinition("jquery",null, new ScriptResourceDefinition
-                {
-                    DebugPath = "~/Scripts/jquery-1.8.1.js",
-                    Path = "~/Scripts/jquery-1.8.1.min.js"
-                });
+            //ScriptManager.ScriptResourceMapping.AddDefinition("jquery",null, new ScriptResourceDefinition
+            //    {
+            //        DebugPath = "~/Scripts/jquery-1.8.1.js",
+            //        Path = "~/Scripts/jquery-1.8.1.min.js"
+            //    });
 
             //var bt = BundleTable.Bundles;
 

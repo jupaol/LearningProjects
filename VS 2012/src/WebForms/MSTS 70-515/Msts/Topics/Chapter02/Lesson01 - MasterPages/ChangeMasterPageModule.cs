@@ -34,10 +34,7 @@ namespace Msts.Topics.Chapter02.Lesson01___MasterPages
                         if (!ctx.Request.AppRelativeCurrentExecutionFilePath.ToLowerInvariant().Contains("SettingMasterPageDynamically.aspx".ToLowerInvariant())
                             && !ctx.Request.AppRelativeCurrentExecutionFilePath.ToLowerInvariant().Contains("OutputCacheDependingOnMasterPageControls.aspx".ToLowerInvariant()))
                         {
-                            if (page.Master != null)
-                            {
-                                page.PreInit += page_PreInit;
-                            }
+                            page.PreInit += page_PreInit;
                         }
                     }
                 }
@@ -53,9 +50,12 @@ namespace Msts.Topics.Chapter02.Lesson01___MasterPages
             {
                 if (profile != null)
                 {
-                    if (!string.IsNullOrWhiteSpace(profile.MasterPage))
+                    if (!string.IsNullOrWhiteSpace(page.MasterPageFile))
                     {
-                        page.MasterPageFile = profile.MasterPage;
+                        if (!string.IsNullOrWhiteSpace(profile.MasterPage))
+                        {
+                            page.MasterPageFile = profile.MasterPage;
+                        }
                     }
 
                     if (!string.IsNullOrWhiteSpace(profile.Theme))

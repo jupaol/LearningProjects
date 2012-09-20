@@ -204,9 +204,14 @@
     <Content Include="Topics\Chapter04\Lesson01 - Server Controls\TestingTheClientIdMode.aspx" />
     <Content Include="Topics\Chapter05\Lesson01 - Input Validation\SimpleValidation.aspx" />
     <Content Include="Topics\Chapter05\Lesson01 - Input Validation\TestingValidation.aspx" />
+    <Content Include="Topics\Chapter05\Lesson02\CrossPagePostTest.aspx" />
+    <Content Include="Topics\Chapter05\Lesson02\ProcessingPage.aspx" />
+    <Content Include="Topics\Chapter05\Lesson02\ServerExecuteTest.aspx" />
+    <Content Include="Topics\Chapter05\Lesson02\ServerTransferTest.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlternateSite.Master.cs">
@@ -460,6 +465,37 @@
     <Compile Include="Topics\Chapter05\Lesson01 - Input Validation\TestingValidation.aspx.designer.cs">
       <DependentUpon>TestingValidation.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Topics\Chapter05\Lesson02\BasePreviousPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter05\Lesson02\CrossPagePostTest.aspx.cs">
+      <DependentUpon>CrossPagePostTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter05\Lesson02\CrossPagePostTest.aspx.designer.cs">
+      <DependentUpon>CrossPagePostTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter05\Lesson02\ProcessingPage.aspx.cs">
+      <DependentUpon>ProcessingPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter05\Lesson02\ProcessingPage.aspx.designer.cs">
+      <DependentUpon>ProcessingPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter05\Lesson02\ServerExecuteTest.aspx.cs">
+      <DependentUpon>ServerExecuteTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter05\Lesson02\ServerExecuteTest.aspx.designer.cs">
+      <DependentUpon>ServerExecuteTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter05\Lesson02\ServerTransferTest.aspx.cs">
+      <DependentUpon>ServerTransferTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter05\Lesson02\ServerTransferTest.aspx.designer.cs">
+      <DependentUpon>ServerTransferTest.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
@@ -492,7 +528,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Files\" />
-    <Folder Include="Topics\Chapter05\Lesson02\" />
     <Folder Include="Topics\Chapter05\Lesson03\" />
     <Folder Include="Topics\Chapter06\Lesson01\" />
     <Folder Include="Topics\Chapter06\Lesson02\" />

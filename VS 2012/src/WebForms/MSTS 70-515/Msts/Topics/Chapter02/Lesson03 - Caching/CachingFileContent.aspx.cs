@@ -11,7 +11,7 @@ namespace Msts.Topics.Chapter02.Lesson03
 {
     public partial class CachingFileContent : System.Web.UI.Page
     {
-        private const string FileName = "~/Topics/Chapter02/Lesson03/Licence.txt";
+        private const string FileName = "~/Topics/Chapter02/Lesson03 - Caching/Licence.txt";
 
         protected void Page_Load(object sender, EventArgs e)
         {

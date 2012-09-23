@@ -32,5 +32,13 @@ namespace Msts.Topics.Chapter02.Lesson01___MasterPages
                 return "Local master page";
             }
         }
+
+        protected override DropDownList AvailableLanguages
+        {
+            get
+            {
+                return this.ddlCultures;
+            }
+        }
     }
 }

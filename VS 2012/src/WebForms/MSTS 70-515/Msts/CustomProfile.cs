@@ -46,6 +46,19 @@ namespace Msts
             }
         }
 
+        [SettingsAllowAnonymous(allow: true)]
+        public string Language
+        {
+            get
+            {
+                return this["Language"] as string;
+            }
+            set
+            {
+                this["Language"] = value;
+            }
+        }
+
         public DateTime? LastLogin
         {
             get

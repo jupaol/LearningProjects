@@ -8,6 +8,6 @@
     <asp:Button 
         Text="Send info to be processed on another page" 
         runat="server" 
-        PostBackUrl="~/Topics/Chapter05/Lesson02/ProcessingPage.aspx"
+        PostBackUrl="~/Topics/Chapter05/Lesson02 - Site Navigation/ProcessingPage.aspx"
         OnClick="Unnamed_Click" />
 </asp:Content>

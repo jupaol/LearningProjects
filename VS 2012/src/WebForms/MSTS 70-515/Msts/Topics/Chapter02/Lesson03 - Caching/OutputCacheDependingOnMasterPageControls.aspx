@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Topics/Chapter02/Lesson03/CachedMaster.Master" AutoEventWireup="true" CodeBehind="OutputCacheDependingOnMasterPageControls.aspx.cs" Inherits="Msts.Topics.Chapter02.Lesson03.OutputCacheDependingOnMasterPageControls" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Topics/Chapter02/Lesson03 - Caching/CachedMaster.Master" AutoEventWireup="true" CodeBehind="OutputCacheDependingOnMasterPageControls.aspx.cs" Inherits="Msts.Topics.Chapter02.Lesson03.OutputCacheDependingOnMasterPageControls" %>
 <%@ OutputCache CacheProfile="shortTime" VaryByParam="none" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

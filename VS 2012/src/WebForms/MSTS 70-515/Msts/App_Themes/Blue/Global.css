@@ -40,3 +40,10 @@
     width: 100%;
     border-spacing: 0px;
 }
+.master-breadcrumb {
+    background-color:lightblue;
+}
+.master-user-info {
+    text-align:right;
+    background-color:goldenrod;
+}

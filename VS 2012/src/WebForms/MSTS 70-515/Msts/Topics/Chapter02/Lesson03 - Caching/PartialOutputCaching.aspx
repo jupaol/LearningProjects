@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Topics/Chapter02/Lesson01 - MasterPages/ClassicMaster.Master" AutoEventWireup="true" CodeBehind="PartialOutputCaching.aspx.cs" Inherits="Msts.Topics.Chapter02.Lesson03.PartialOutputCaching" %>
 <%@ OutputCache Duration="30" VaryByParam="*" %>
-<%@ Register Src="~/Topics/Chapter02/Lesson03/PartialCachedControl.ascx" TagPrefix="uc1" TagName="PartialCachedControl" %>
+<%@ Register Src="~/Topics/Chapter02/Lesson03 - Caching/PartialCachedControl.ascx" TagPrefix="uc1" TagName="PartialCachedControl" %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

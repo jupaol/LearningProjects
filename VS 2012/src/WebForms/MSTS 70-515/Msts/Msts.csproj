@@ -93,6 +93,7 @@
     <Content Include="App_Themes\Blue\Images\logo.jpg" />
     <Content Include="App_Themes\Yellow\Global.css" />
     <Content Include="App_Themes\Yellow\Images\logo.jpg" />
+    <Content Include="ChangePassword.aspx" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -148,8 +149,12 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="CreateAccount.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="ForgotPassword.aspx" />
     <Content Include="Global.asax" />
     <None Include="Scripts\jquery-1.8.1.intellisense.js" />
+    <Content Include="Login.aspx" />
     <Content Include="Scripts\jquery-1.8.1.js" />
     <Content Include="Scripts\jquery-1.8.1.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.23.js" />
@@ -204,10 +209,16 @@
     <Content Include="Topics\Chapter04\Lesson01 - Server Controls\TestingTheClientIdMode.aspx" />
     <Content Include="Topics\Chapter05\Lesson01 - Input Validation\SimpleValidation.aspx" />
     <Content Include="Topics\Chapter05\Lesson01 - Input Validation\TestingValidation.aspx" />
-    <Content Include="Topics\Chapter05\Lesson02\CrossPagePostTest.aspx" />
-    <Content Include="Topics\Chapter05\Lesson02\ProcessingPage.aspx" />
-    <Content Include="Topics\Chapter05\Lesson02\ServerExecuteTest.aspx" />
-    <Content Include="Topics\Chapter05\Lesson02\ServerTransferTest.aspx" />
+    <Content Include="Topics\Chapter05\Lesson02 - Site Navigation\CrossPagePostTest.aspx" />
+    <Content Include="Topics\Chapter05\Lesson02 - Site Navigation\ProcessingPage.aspx" />
+    <Content Include="Topics\Chapter05\Lesson02 - Site Navigation\ServerExecuteTest.aspx" />
+    <Content Include="Topics\Chapter05\Lesson02 - Site Navigation\ServerTransferTest.aspx" />
+    <Content Include="Topics\Chapter05\Lesson02 - Site Navigation\SitemapTest.aspx" />
+    <Content Include="Topics\Chapter05\Lesson03 - WebParts\SimpleWebPart.aspx" />
+    <Content Include="Topics\Chapter05\Lesson03 - WebParts\UserControl1.ascx" />
+    <Content Include="Topics\Chapter05\Lesson03 - WebParts\UserControl2.ascx" />
+    <Content Include="Topics\Chapter05\Lesson03 - WebParts\UserControl3.ascx" />
+    <Content Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Globalization and Localization\LocalResourcesTest.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -221,14 +232,57 @@
     <Compile Include="AlternateSite.Master.designer.cs">
       <DependentUpon>AlternateSite.Master</DependentUpon>
     </Compile>
+    <Compile Include="App_GlobalResources\MyResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyResources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateAccount.aspx.cs">
+      <DependentUpon>CreateAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateAccount.aspx.designer.cs">
+      <DependentUpon>CreateAccount.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CustomProfile.cs" />
     <Compile Include="DataAccess\Pubs.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Pubs.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MctsBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ObjectExtenssions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -465,36 +519,80 @@
     <Compile Include="Topics\Chapter05\Lesson01 - Input Validation\TestingValidation.aspx.designer.cs">
       <DependentUpon>TestingValidation.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Topics\Chapter05\Lesson02\BasePreviousPage.cs">
+    <Compile Include="Topics\Chapter05\Lesson02 - Site Navigation\BasePreviousPage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Topics\Chapter05\Lesson02\CrossPagePostTest.aspx.cs">
+    <Compile Include="Topics\Chapter05\Lesson02 - Site Navigation\CrossPagePostTest.aspx.cs">
       <DependentUpon>CrossPagePostTest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Topics\Chapter05\Lesson02\CrossPagePostTest.aspx.designer.cs">
+    <Compile Include="Topics\Chapter05\Lesson02 - Site Navigation\CrossPagePostTest.aspx.designer.cs">
       <DependentUpon>CrossPagePostTest.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Topics\Chapter05\Lesson02\ProcessingPage.aspx.cs">
+    <Compile Include="Topics\Chapter05\Lesson02 - Site Navigation\ProcessingPage.aspx.cs">
       <DependentUpon>ProcessingPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Topics\Chapter05\Lesson02\ProcessingPage.aspx.designer.cs">
+    <Compile Include="Topics\Chapter05\Lesson02 - Site Navigation\ProcessingPage.aspx.designer.cs">
       <DependentUpon>ProcessingPage.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Topics\Chapter05\Lesson02\ServerExecuteTest.aspx.cs">
+    <Compile Include="Topics\Chapter05\Lesson02 - Site Navigation\ServerExecuteTest.aspx.cs">
       <DependentUpon>ServerExecuteTest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Topics\Chapter05\Lesson02\ServerExecuteTest.aspx.designer.cs">
+    <Compile Include="Topics\Chapter05\Lesson02 - Site Navigation\ServerExecuteTest.aspx.designer.cs">
       <DependentUpon>ServerExecuteTest.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Topics\Chapter05\Lesson02\ServerTransferTest.aspx.cs">
+    <Compile Include="Topics\Chapter05\Lesson02 - Site Navigation\ServerTransferTest.aspx.cs">
       <DependentUpon>ServerTransferTest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Topics\Chapter05\Lesson02\ServerTransferTest.aspx.designer.cs">
+    <Compile Include="Topics\Chapter05\Lesson02 - Site Navigation\ServerTransferTest.aspx.designer.cs">
       <DependentUpon>ServerTransferTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter05\Lesson02 - Site Navigation\CustomSiteMapProvider.cs" />
+    <Compile Include="Topics\Chapter05\Lesson02 - Site Navigation\SitemapTest.aspx.cs">
+      <DependentUpon>SitemapTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter05\Lesson02 - Site Navigation\SitemapTest.aspx.designer.cs">
+      <DependentUpon>SitemapTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter05\Lesson03 - WebParts\SimpleWebPart.aspx.cs">
+      <DependentUpon>SimpleWebPart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter05\Lesson03 - WebParts\SimpleWebPart.aspx.designer.cs">
+      <DependentUpon>SimpleWebPart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter05\Lesson03 - WebParts\UserControl1.ascx.cs">
+      <DependentUpon>UserControl1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter05\Lesson03 - WebParts\UserControl1.ascx.designer.cs">
+      <DependentUpon>UserControl1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter05\Lesson03 - WebParts\UserControl2.ascx.cs">
+      <DependentUpon>UserControl2.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter05\Lesson03 - WebParts\UserControl2.ascx.designer.cs">
+      <DependentUpon>UserControl2.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter05\Lesson03 - WebParts\UserControl3.ascx.cs">
+      <DependentUpon>UserControl3.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter05\Lesson03 - WebParts\UserControl3.ascx.designer.cs">
+      <DependentUpon>UserControl3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Globalization and Localization\LocalizationModule.cs" />
+    <Compile Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Globalization and Localization\LocalResourcesTest.aspx.cs">
+      <DependentUpon>LocalResourcesTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Globalization and Localization\LocalResourcesTest.aspx.designer.cs">
+      <DependentUpon>LocalResourcesTest.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -527,14 +625,29 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="App_LocalResources\" />
     <Folder Include="Files\" />
-    <Folder Include="Topics\Chapter05\Lesson03\" />
-    <Folder Include="Topics\Chapter06\Lesson01\" />
-    <Folder Include="Topics\Chapter06\Lesson02\" />
-    <Folder Include="Topics\Chapter06\Lesson03\" />
+    <Folder Include="Topics\Chapter06 - Globalization and Accessibility\Lesson02\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Globalization and Localization\App_LocalResources\LocalResourcesTest.aspx.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Globalization and Localization\App_LocalResources\LocalResourcesTest.aspx.es.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\MyResources.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>MyResources.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\MyResources.es.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+    </Content>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

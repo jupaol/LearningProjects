@@ -52,7 +52,7 @@ namespace Msts.Topics.Chapter03.Lesson01
 
         void context_RequestCompleted(object sender, EventArgs e)
         {
-            HttpContext.Current.Trace.Warn("Request", MethodInfo.GetCurrentMethod().Name);
+            //HttpContext.Current.Trace.Warn("Request", MethodInfo.GetCurrentMethod().Name);
         }
 
         void context_ReleaseRequestState(object sender, EventArgs e)

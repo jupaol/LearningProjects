@@ -12,7 +12,7 @@ namespace Msts.Topics.Chapter02.Lesson03
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            var filePath = Server.MapPath("~/Topics/Chapter02/Lesson03/Licence.txt");
+            var filePath = Server.MapPath("~/Topics/Chapter02/Lesson03 - Caching/Licence.txt");
 
             this.fileContent.Text = File.ReadAllText(filePath);
             this.msg.Text = DateTime.Now.ToString();

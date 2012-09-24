@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Global.master.cs" Inherits="BrandableApplication.Global" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="~/Content/Styles/plainoffice/default.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="logo">
+            <h1>
+                Brandable site
+            </h1>
+            <p>
+                Global master
+            </p>
+        </div>
+        <div id="menu">
+            <ul>
+                <li>
+                    <asp:Label runat="server" ID="layoutsMsg" AssociatedControlID="layouts" meta:resourcekey="layoutsMsg" />
+                    <asp:DropDownList runat="server" ID="layouts" AutoPostBack="true" CausesValidation="false" OnSelectedIndexChanged="layouts_SelectedIndexChanged">
+                        <asp:ListItem Text="<%$ Resources:Global, ClassicLayout_Message %>" Value="Classic" Selected="True" />
+                        <asp:ListItem Text="<%$ Resources:Global, ModernLayout_Message %>" Value="Modern" />
+                    </asp:DropDownList>
+                </li>
+                <li>
+                    <asp:Label runat="server" ID="colorsMsg" AssociatedControlID="colors" meta:resourcekey="colorsMsg" />
+                    <asp:DropDownList runat="server" ID="colors" CausesValidation="false" AutoPostBack="true" OnSelectedIndexChanged="colors_SelectedIndexChanged">
+                        <asp:ListItem Text="<%$ Resources:Global, Blue_Message %>" Value="Blue" Selected="True" />
+                        <asp:ListItem Text="<%$ Resources:Global, Red_Message %>" Value="Red" />
+                    </asp:DropDownList>
+                </li>
+                <li>
+                    <asp:Label runat="server" ID="Label1" AssociatedControlID="languages" meta:resourcekey="languagesMsg" />
+                    <asp:DropDownList runat="server" ID="languages" CausesValidation="false" AutoPostBack="true" OnSelectedIndexChanged="languages_SelectedIndexChanged">
+                        <asp:ListItem Text="<%$ Resources:Global, English_Message %>" Value="en" Selected="True" />
+                        <asp:ListItem Text="<%$ Resources:Global, Spanish_Message %>" Value="es" />
+                    </asp:DropDownList>
+                </li>
+            </ul>
+        </div>
+        <div id="page">
+            <div id="page-bg">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+                <div style="clear: both;">&nbsp;</div>
+            </div>
+        </div>
+        <div id="footer">
+            <p>
+                Footer of the Global master
+            </p>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,20 @@
+﻿<%@ Master MasterPageFile="~/Global.Master" Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="BrandableApplication.Site1" %>
+
+<asp:Content runat="server" ID="headerContent" ContentPlaceHolderID="head">
+    <asp:ContentPlaceHolder runat="server" ID="header">
+
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content runat="server" ID="placeContent" ContentPlaceHolderID="ContentPlaceHolder1">
+    <div id="content">
+        <asp:ContentPlaceHolder runat="server" ID="mainContent">
+
+        </asp:ContentPlaceHolder>
+    </div>
+    <div id="sidebar">
+        <asp:ContentPlaceHolder runat="server" ID="sidebarContent">
+
+        </asp:ContentPlaceHolder>
+    </div>
+</asp:Content>

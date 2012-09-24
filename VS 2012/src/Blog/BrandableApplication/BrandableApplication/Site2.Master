@@ -1,0 +1,13 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="BrandableApplication.Site2" %>
+
+<asp:Content runat="server" ID="headerContent" ContentPlaceHolderID="head">
+    <asp:ContentPlaceHolder runat="server" ID="header">
+
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content runat="server" ID="content" ContentPlaceHolderID="ContentPlaceHolder1">
+    <asp:ContentPlaceHolder runat="server" ID="ContentPlaceHolder1">
+
+    </asp:ContentPlaceHolder>
+</asp:Content>

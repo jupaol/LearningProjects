@@ -18,4 +18,13 @@
     <div>
         <asp:Label Text="text" runat="server" ID="lbl" meta:resourcekey="lbl" />
     </div>
+    <div>
+        Resource from satellite assembly
+    </div>
+    <div>
+        <asp:Literal ID="satelliteAssemblyMessage" runat="server" />
+    </div>
+    <div>
+        <asp:Literal ID="satelliteAssemblyResourceManagerMessage" runat="server" />
+    </div>
 </asp:Content>

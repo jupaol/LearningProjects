@@ -649,6 +649,12 @@
       <Generator>GlobalResourceProxyGenerator</Generator>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Msts.Domain\Msts.Domain.csproj">
+      <Project>{90ae8187-a59c-4466-9455-a254361638ae}</Project>
+      <Name>Msts.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

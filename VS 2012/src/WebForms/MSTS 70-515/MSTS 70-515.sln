@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Msts", "Msts\Msts.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Msts.Mvc", "Msts.Mvc\Msts.Mvc.csproj", "{FD475563-750C-49CD-BCA1-A9C6C9C17D98}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Msts.Domain", "Msts.Domain\Msts.Domain.csproj", "{90AE8187-A59C-4466-9455-A254361638AE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{FD475563-750C-49CD-BCA1-A9C6C9C17D98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD475563-750C-49CD-BCA1-A9C6C9C17D98}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD475563-750C-49CD-BCA1-A9C6C9C17D98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90AE8187-A59C-4466-9455-A254361638AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90AE8187-A59C-4466-9455-A254361638AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90AE8187-A59C-4466-9455-A254361638AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90AE8187-A59C-4466-9455-A254361638AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

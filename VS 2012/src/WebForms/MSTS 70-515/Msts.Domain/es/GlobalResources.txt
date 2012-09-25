@@ -1,0 +1,2 @@
+﻿Welcome_Message=Bienvenido!
+GoodBye_Message=Adios!

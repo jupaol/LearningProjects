@@ -7,36 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Msts.Topics.Chapter06___Globalization_and_Accessibility.Lesson01___Globalization_and_Localization {
+namespace WebApplication1 {
     
     
-    public partial class LocalResourcesTest {
+    public partial class Default {
         
         /// <summary>
-        /// lbl control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// satelliteAssemblyMessage control.
+        /// msg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal satelliteAssemblyMessage;
-        
-        /// <summary>
-        /// satelliteAssemblyResourceManagerMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal satelliteAssemblyResourceManagerMessage;
+        protected global::System.Web.UI.WebControls.Literal msg;
     }
 }

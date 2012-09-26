@@ -67,6 +67,7 @@
       <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.4.5.6\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -219,6 +220,11 @@
     <Content Include="Topics\Chapter05\Lesson03 - WebParts\UserControl2.ascx" />
     <Content Include="Topics\Chapter05\Lesson03 - WebParts\UserControl3.ascx" />
     <Content Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Globalization and Localization\LocalResourcesTest.aspx" />
+    <Content Include="Topics\Chapter06 - Globalization and Accessibility\Lesson02 - Accessibility\GeneralAccessibilityRules.aspx" />
+    <Content Include="Topics\Chapter06 - Globalization and Accessibility\Lesson02 - Accessibility\TestingTheSkipTextProperty.aspx" />
+    <Content Include="Topics\Chapter07 - Server Controls\Lesson01 - User Controls\TemplatedAddress.ascx" />
+    <Content Include="Topics\Chapter07 - Server Controls\Lesson01 - User Controls\TemplatedAddress.aspx" />
+    <Content Include="Topics\Chapter07 - Server Controls\Lesson02 - Server Controls\TemplatedServerAddress.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -594,6 +600,46 @@
     <Compile Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Globalization and Localization\LocalResourcesTest.aspx.designer.cs">
       <DependentUpon>LocalResourcesTest.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Topics\Chapter06 - Globalization and Accessibility\Lesson02 - Accessibility\GeneralAccessibilityRules.aspx.cs">
+      <DependentUpon>GeneralAccessibilityRules.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter06 - Globalization and Accessibility\Lesson02 - Accessibility\GeneralAccessibilityRules.aspx.designer.cs">
+      <DependentUpon>GeneralAccessibilityRules.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter06 - Globalization and Accessibility\Lesson02 - Accessibility\TestingTheSkipTextProperty.aspx.cs">
+      <DependentUpon>TestingTheSkipTextProperty.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter06 - Globalization and Accessibility\Lesson02 - Accessibility\TestingTheSkipTextProperty.aspx.designer.cs">
+      <DependentUpon>TestingTheSkipTextProperty.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter07 - Server Controls\Lesson01 - User Controls\TemplatedAddress.ascx.cs">
+      <DependentUpon>TemplatedAddress.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter07 - Server Controls\Lesson01 - User Controls\TemplatedAddress.ascx.designer.cs">
+      <DependentUpon>TemplatedAddress.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter07 - Server Controls\Lesson01 - User Controls\TemplatedAddress.aspx.cs">
+      <DependentUpon>TemplatedAddress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter07 - Server Controls\Lesson01 - User Controls\TemplatedAddress.aspx.designer.cs">
+      <DependentUpon>TemplatedAddress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter07 - Server Controls\Lesson01 - User Controls\TemplatedAddressContainer.cs" />
+    <Compile Include="Topics\Chapter07 - Server Controls\Lesson01 - User Controls\TemplatedAddressDesigner.cs" />
+    <Compile Include="Topics\Chapter07 - Server Controls\Lesson02 - Server Controls\TemplatedServerAddress.aspx.cs">
+      <DependentUpon>TemplatedServerAddress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter07 - Server Controls\Lesson02 - Server Controls\TemplatedServerAddress.aspx.designer.cs">
+      <DependentUpon>TemplatedServerAddress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter07 - Server Controls\Lesson02 - Server Controls\TemplatedServerAddressContainer.cs" />
+    <Compile Include="Topics\Chapter07 - Server Controls\Lesson02 - Server Controls\TemplatedServerAddressControl.cs" />
+    <Compile Include="Topics\Chapter07 - Server Controls\Lesson02 - Server Controls\TemplatedServerAddressDesigner.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
@@ -627,7 +673,6 @@
     <Folder Include="App_Data\" />
     <Folder Include="App_LocalResources\" />
     <Folder Include="Files\" />
-    <Folder Include="Topics\Chapter06 - Globalization and Accessibility\Lesson02\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

@@ -170,6 +170,7 @@
     <Content Include="Default.aspx" />
     <Content Include="ForgotPassword.aspx" />
     <Content Include="Global.asax" />
+    <None Include="Properties\PublishProfiles\local test.pubxml" />
     <None Include="Scripts\jquery-1.8.1.intellisense.js" />
     <Content Include="Login.aspx" />
     <Content Include="Scripts\jquery-1.8.1.js" />
@@ -235,7 +236,7 @@
     <Content Include="Topics\Chapter05\Lesson03 - WebParts\UserControl1.ascx" />
     <Content Include="Topics\Chapter05\Lesson03 - WebParts\UserControl2.ascx" />
     <Content Include="Topics\Chapter05\Lesson03 - WebParts\UserControl3.ascx" />
-    <Content Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Globalization and Localization\LocalResourcesTest.aspx" />
+    <Content Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Resources\LocalResourcesTest.aspx" />
     <Content Include="Topics\Chapter06 - Globalization and Accessibility\Lesson02 - Accessibility\GeneralAccessibilityRules.aspx" />
     <Content Include="Topics\Chapter06 - Globalization and Accessibility\Lesson02 - Accessibility\TestingTheSkipTextProperty.aspx" />
     <Content Include="Topics\Chapter07 - Server Controls\Lesson01 - User Controls\DataBoundTemplatedAddressesControl.ascx" />
@@ -250,10 +251,16 @@
     <Content Include="Topics\Chapter08 - Debugging and Deploying\Lesson02 - Troubleshooting\HealthMonitoringTest.aspx" />
     <Content Include="Topics\Chapter08 - Debugging and Deploying\Lesson02 - Troubleshooting\ShowingTraceInfo.aspx" />
     <Content Include="Topics\Chapter08 - Debugging and Deploying\Lesson02 - Troubleshooting\TracingAjax.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson01 - MS AJAX\CancelingAsyncPost.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson01 - MS AJAX\HandlingPartialPostsExceptions.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson01 - MS AJAX\MsAjaxControls.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Web.sitemap" />
+    <None Include="Web.Test.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlternateSite.Master.cs">
@@ -618,12 +625,12 @@
     <Compile Include="Topics\Chapter05\Lesson03 - WebParts\UserControl3.ascx.designer.cs">
       <DependentUpon>UserControl3.ascx</DependentUpon>
     </Compile>
-    <Compile Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Globalization and Localization\LocalizationModule.cs" />
-    <Compile Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Globalization and Localization\LocalResourcesTest.aspx.cs">
+    <Compile Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Resources\LocalizationModule.cs" />
+    <Compile Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Resources\LocalResourcesTest.aspx.cs">
       <DependentUpon>LocalResourcesTest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Globalization and Localization\LocalResourcesTest.aspx.designer.cs">
+    <Compile Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Resources\LocalResourcesTest.aspx.designer.cs">
       <DependentUpon>LocalResourcesTest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Topics\Chapter06 - Globalization and Accessibility\Lesson02 - Accessibility\GeneralAccessibilityRules.aspx.cs">
@@ -731,6 +738,27 @@
     <Compile Include="Topics\Chapter08 - Debugging and Deploying\Lesson02 - Troubleshooting\TracingAjax.aspx.designer.cs">
       <DependentUpon>TracingAjax.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson01 - MS AJAX\CancelingAsyncPost.aspx.cs">
+      <DependentUpon>CancelingAsyncPost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson01 - MS AJAX\CancelingAsyncPost.aspx.designer.cs">
+      <DependentUpon>CancelingAsyncPost.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson01 - MS AJAX\HandlingPartialPostsExceptions.aspx.cs">
+      <DependentUpon>HandlingPartialPostsExceptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson01 - MS AJAX\HandlingPartialPostsExceptions.aspx.designer.cs">
+      <DependentUpon>HandlingPartialPostsExceptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson01 - MS AJAX\MsAjaxControls.aspx.cs">
+      <DependentUpon>MsAjaxControls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson01 - MS AJAX\MsAjaxControls.aspx.designer.cs">
+      <DependentUpon>MsAjaxControls.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
@@ -770,10 +798,10 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Globalization and Localization\App_LocalResources\LocalResourcesTest.aspx.resx" />
+    <Content Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Resources\App_LocalResources\LocalResourcesTest.aspx.resx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Globalization and Localization\App_LocalResources\LocalResourcesTest.aspx.es.resx" />
+    <Content Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Resources\App_LocalResources\LocalResourcesTest.aspx.es.resx" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\MyResources.resx">
@@ -795,6 +823,9 @@
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Test|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />

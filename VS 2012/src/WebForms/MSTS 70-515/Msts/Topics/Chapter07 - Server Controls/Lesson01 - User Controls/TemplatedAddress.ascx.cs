@@ -11,7 +11,7 @@ namespace Msts.Topics.Chapter07___Server_Controls.Lesson01___User_Controls
     [DefaultProperty("Address")]
     [ToolboxData("<{0}:TemplatedAddress runat=server ></{0}:TemplatedAddress>")]
     [Designer(typeof(TemplatedAddressDesigner))]
-    public partial class TemplatedAddress : System.Web.UI.UserControl
+    public partial class TemplatedAddress : UserControl
     {
         private ITemplate addressTemplate;
         private TemplatedAddressContainer templatedAddressContainer;
@@ -50,6 +50,7 @@ namespace Msts.Topics.Chapter07___Server_Controls.Lesson01___User_Controls
         [DefaultValue(null)]
         [Description("My custom template")]
         [TemplateContainer(typeof(TemplatedAddressContainer))]
+        [TemplateInstance(TemplateInstance.Multiple)]
         [PersistenceMode(PersistenceMode.InnerProperty)]
         public ITemplate AddressTemplate
         {
@@ -84,6 +85,9 @@ namespace Msts.Topics.Chapter07___Server_Controls.Lesson01___User_Controls
         protected override void CreateChildControls()
         {
             this.Controls.Clear();
+
+            this.ClearChildViewState();
+            this.TrackViewState();
 
             if (this.AddressTemplate != null)
             {

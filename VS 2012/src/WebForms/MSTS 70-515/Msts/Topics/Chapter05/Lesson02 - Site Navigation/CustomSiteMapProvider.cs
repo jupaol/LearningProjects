@@ -31,6 +31,10 @@ namespace Msts.Topics.Chapter05.Lesson02
                 this.rootNode = root;
                 this.AddNode(root);
 
+                var tracing = new SiteMapNode(this, "tracinKey", "/trace.axd", "Tracing page");
+
+                this.AddNode(tracing, root);
+
                 foreach (var filePath in files)
                 {
                     var fileName = Path.GetFileName(filePath);

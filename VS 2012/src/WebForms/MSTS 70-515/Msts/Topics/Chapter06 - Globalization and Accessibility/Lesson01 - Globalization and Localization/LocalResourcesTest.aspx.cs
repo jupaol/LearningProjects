@@ -17,6 +17,8 @@ namespace Msts.Topics.Chapter06___Globalization_and_Accessibility.Lesson01___Glo
 
             this.satelliteAssemblyMessage.Text = GlobalResources.Welcome_Message + " " + GlobalResources.GoodBye_Message;
             //this.satelliteAssemblyResourceManagerMessage.Text = rm.GetString("Welcome_Message");
+
+            this.DataBind();
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -12,6 +13,9 @@ namespace Msts.Topics.Chapter07___Server_Controls.Lesson02___Server_Controls
     [ToolboxItem(true)]
     [ToolboxData("<{0}:TemplatedServerAddressControl runate=server></{0}:TemplatedServerAddressControl>")]
     [Designer(typeof(TemplatedServerAddressDesigner))]
+    //[ToolboxBitmap(typeof(TemplatedServerAddressControl), "")]
+    [Description("My templated server control")]
+    [ParseChildren(true)]
     public class TemplatedServerAddressControl : WebControl
     {
         private TemplatedServerAddressContainer addressContainer;
@@ -39,6 +43,7 @@ namespace Msts.Topics.Chapter07___Server_Controls.Lesson02___Server_Controls
         [Description("Address template")]
         [PersistenceMode(PersistenceMode.InnerProperty)]
         [TemplateContainer(typeof(TemplatedServerAddressContainer))]
+        [TemplateInstance(TemplateInstance.Multiple)]
         public ITemplate AddressTemplate { get; set; }
 
         [Browsable(false)]

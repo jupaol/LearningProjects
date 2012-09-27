@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Msts.App_Start;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Optimization;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.UI;
@@ -24,6 +26,8 @@ namespace Msts
             //bt.Add(new ScriptBundle("~/bundles/jquery").Include(
             //    "~/Scripts/jquery/jquery-{version}.js"
             //    ));
+
+            BundleConfiguration.RegisterBundles(BundleTable.Bundles);
         }
 
         protected void Session_Start(object sender, EventArgs e)

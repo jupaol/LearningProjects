@@ -27,4 +27,10 @@
     <div>
         <asp:Literal ID="satelliteAssemblyResourceManagerMessage" runat="server" />
     </div>
+    <div>
+        Resource from satellite assembly declaratively
+    </div>
+    <div>
+        <asp:Literal Text="<%# Msts.Domain.GlobalResources.GoodBye_Message %>" runat="server" />
+    </div>
 </asp:Content>

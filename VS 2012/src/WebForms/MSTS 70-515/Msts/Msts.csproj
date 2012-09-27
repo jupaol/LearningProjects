@@ -41,6 +41,9 @@
     <Reference Include="AntiXssLibrary">
       <HintPath>..\packages\AntiXSS.4.2.1\lib\net40\AntiXssLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="AspNet.ScriptManager.jQuery">
       <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.8.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
     </Reference>
@@ -51,7 +54,10 @@
       <HintPath>..\packages\AntiXSS.4.2.1\lib\net40\HtmlSanitizationLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Idunno.AntiCSRF">
-      <HintPath>..\..\..\..\..\..\..\AntiCSRF\Idunno.AntiCSRF.dll</HintPath>
+      <HintPath>..\..\..\..\lib\AntiCSRF\Idunno.AntiCSRF.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.0.0\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.ScriptManager.jQuery">
@@ -66,6 +72,10 @@
     <Reference Include="Microsoft.ScriptManager.WebForms">
       <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.4.5.6\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Design" />
     <Reference Include="System.Web.DynamicData" />
@@ -77,6 +87,9 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -84,6 +97,9 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease">
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Themes\Blue\Global.css" />
@@ -222,9 +238,18 @@
     <Content Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Globalization and Localization\LocalResourcesTest.aspx" />
     <Content Include="Topics\Chapter06 - Globalization and Accessibility\Lesson02 - Accessibility\GeneralAccessibilityRules.aspx" />
     <Content Include="Topics\Chapter06 - Globalization and Accessibility\Lesson02 - Accessibility\TestingTheSkipTextProperty.aspx" />
+    <Content Include="Topics\Chapter07 - Server Controls\Lesson01 - User Controls\DataBoundTemplatedAddressesControl.ascx" />
     <Content Include="Topics\Chapter07 - Server Controls\Lesson01 - User Controls\TemplatedAddress.ascx" />
     <Content Include="Topics\Chapter07 - Server Controls\Lesson01 - User Controls\TemplatedAddress.aspx" />
+    <Content Include="Topics\Chapter07 - Server Controls\Lesson02 - Server Controls\CompositeControlsTest.aspx" />
     <Content Include="Topics\Chapter07 - Server Controls\Lesson02 - Server Controls\TemplatedServerAddress.aspx" />
+    <Content Include="DefaultErrorPage.aspx" />
+    <Content Include="Topics\Chapter08 - Debugging and Deploying\Lesson01 - Debugging\DebugJavaScript.aspx" />
+    <Content Include="Topics\Chapter08 - Debugging and Deploying\Lesson01 - Debugging\EditAndContinueTest.aspx" />
+    <Content Include="Topics\Chapter08 - Debugging and Deploying\Lesson01 - Debugging\ThrowExceptionPage.aspx" />
+    <Content Include="Topics\Chapter08 - Debugging and Deploying\Lesson02 - Troubleshooting\HealthMonitoringTest.aspx" />
+    <Content Include="Topics\Chapter08 - Debugging and Deploying\Lesson02 - Troubleshooting\ShowingTraceInfo.aspx" />
+    <Content Include="Topics\Chapter08 - Debugging and Deploying\Lesson02 - Troubleshooting\TracingAjax.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -243,6 +268,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MyResources.resx</DependentUpon>
     </Compile>
+    <Compile Include="App_Start\BundleConfiguration.cs" />
     <Compile Include="ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -614,6 +640,13 @@
     <Compile Include="Topics\Chapter06 - Globalization and Accessibility\Lesson02 - Accessibility\TestingTheSkipTextProperty.aspx.designer.cs">
       <DependentUpon>TestingTheSkipTextProperty.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Topics\Chapter07 - Server Controls\Lesson01 - User Controls\DataBoundTemplatedAddressesControl.ascx.cs">
+      <DependentUpon>DataBoundTemplatedAddressesControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter07 - Server Controls\Lesson01 - User Controls\DataBoundTemplatedAddressesControl.ascx.designer.cs">
+      <DependentUpon>DataBoundTemplatedAddressesControl.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Topics\Chapter07 - Server Controls\Lesson01 - User Controls\TemplatedAddress.ascx.cs">
       <DependentUpon>TemplatedAddress.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -630,6 +663,14 @@
     </Compile>
     <Compile Include="Topics\Chapter07 - Server Controls\Lesson01 - User Controls\TemplatedAddressContainer.cs" />
     <Compile Include="Topics\Chapter07 - Server Controls\Lesson01 - User Controls\TemplatedAddressDesigner.cs" />
+    <Compile Include="Topics\Chapter07 - Server Controls\Lesson02 - Server Controls\AssemblyProperties.cs" />
+    <Compile Include="Topics\Chapter07 - Server Controls\Lesson02 - Server Controls\CompositeControlsTest.aspx.cs">
+      <DependentUpon>CompositeControlsTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter07 - Server Controls\Lesson02 - Server Controls\CompositeControlsTest.aspx.designer.cs">
+      <DependentUpon>CompositeControlsTest.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Topics\Chapter07 - Server Controls\Lesson02 - Server Controls\TemplatedServerAddress.aspx.cs">
       <DependentUpon>TemplatedServerAddress.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -640,6 +681,56 @@
     <Compile Include="Topics\Chapter07 - Server Controls\Lesson02 - Server Controls\TemplatedServerAddressContainer.cs" />
     <Compile Include="Topics\Chapter07 - Server Controls\Lesson02 - Server Controls\TemplatedServerAddressControl.cs" />
     <Compile Include="Topics\Chapter07 - Server Controls\Lesson02 - Server Controls\TemplatedServerAddressDesigner.cs" />
+    <Compile Include="Topics\Chapter07 - Server Controls\Lesson02 - Server Controls\UserPassword.cs" />
+    <Compile Include="DefaultErrorPage.aspx.cs">
+      <DependentUpon>DefaultErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DefaultErrorPage.aspx.designer.cs">
+      <DependentUpon>DefaultErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter08 - Debugging and Deploying\Lesson01 - Debugging\DebugJavaScript.aspx.cs">
+      <DependentUpon>DebugJavaScript.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter08 - Debugging and Deploying\Lesson01 - Debugging\DebugJavaScript.aspx.designer.cs">
+      <DependentUpon>DebugJavaScript.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter08 - Debugging and Deploying\Lesson01 - Debugging\EditAndContinueTest.aspx.cs">
+      <DependentUpon>EditAndContinueTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter08 - Debugging and Deploying\Lesson01 - Debugging\EditAndContinueTest.aspx.designer.cs">
+      <DependentUpon>EditAndContinueTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter08 - Debugging and Deploying\Lesson01 - Debugging\ThrowExceptionPage.aspx.cs">
+      <DependentUpon>ThrowExceptionPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter08 - Debugging and Deploying\Lesson01 - Debugging\ThrowExceptionPage.aspx.designer.cs">
+      <DependentUpon>ThrowExceptionPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter08 - Debugging and Deploying\Lesson02 - Troubleshooting\HealthMonitoringTest.aspx.cs">
+      <DependentUpon>HealthMonitoringTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter08 - Debugging and Deploying\Lesson02 - Troubleshooting\HealthMonitoringTest.aspx.designer.cs">
+      <DependentUpon>HealthMonitoringTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter08 - Debugging and Deploying\Lesson02 - Troubleshooting\ShowingTraceInfo.aspx.cs">
+      <DependentUpon>ShowingTraceInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter08 - Debugging and Deploying\Lesson02 - Troubleshooting\ShowingTraceInfo.aspx.designer.cs">
+      <DependentUpon>ShowingTraceInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter08 - Debugging and Deploying\Lesson02 - Troubleshooting\TracingAjax.aspx.cs">
+      <DependentUpon>TracingAjax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter08 - Debugging and Deploying\Lesson02 - Troubleshooting\TracingAjax.aspx.designer.cs">
+      <DependentUpon>TracingAjax.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
@@ -673,6 +764,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="App_LocalResources\" />
     <Folder Include="Files\" />
+    <Folder Include="Topics\Chapter08 - Debugging and Deploying\Lesson03 - Deploying\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
@@ -713,7 +805,7 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>63944</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:49354/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

@@ -254,6 +254,7 @@
     <Content Include="Topics\Chapter09 - Scripts\Lesson01 - MS AJAX\CancelingAsyncPost.aspx" />
     <Content Include="Topics\Chapter09 - Scripts\Lesson01 - MS AJAX\HandlingPartialPostsExceptions.aspx" />
     <Content Include="Topics\Chapter09 - Scripts\Lesson01 - MS AJAX\MsAjaxControls.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\LoadingScriptFilesInParallel.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -758,6 +759,13 @@
     </Compile>
     <Compile Include="Topics\Chapter09 - Scripts\Lesson01 - MS AJAX\MsAjaxControls.aspx.designer.cs">
       <DependentUpon>MsAjaxControls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\LoadingScriptFilesInParallel.aspx.cs">
+      <DependentUpon>LoadingScriptFilesInParallel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\LoadingScriptFilesInParallel.aspx.designer.cs">
+      <DependentUpon>LoadingScriptFilesInParallel.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

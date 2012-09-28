@@ -254,7 +254,12 @@
     <Content Include="Topics\Chapter09 - Scripts\Lesson01 - MS AJAX\CancelingAsyncPost.aspx" />
     <Content Include="Topics\Chapter09 - Scripts\Lesson01 - MS AJAX\HandlingPartialPostsExceptions.aspx" />
     <Content Include="Topics\Chapter09 - Scripts\Lesson01 - MS AJAX\MsAjaxControls.aspx" />
-    <Content Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\LoadingScriptFilesInParallel.aspx" />
+    <Content Include="Scripts\Chapter09\JavaScript1Include.js" />
+    <EmbeddedResource Include="Scripts\Chapter09\JavaScriptEmbedded.js" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\CustomCallbackEvent.aspx" />
+    <Content Include="Scripts\Chapter09\SimpleValidator.js" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\CustomSimpleScriptObject.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\RegisteringClientScripts.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -760,12 +765,26 @@
     <Compile Include="Topics\Chapter09 - Scripts\Lesson01 - MS AJAX\MsAjaxControls.aspx.designer.cs">
       <DependentUpon>MsAjaxControls.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\LoadingScriptFilesInParallel.aspx.cs">
-      <DependentUpon>LoadingScriptFilesInParallel.aspx</DependentUpon>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\CustomCallbackEvent.aspx.cs">
+      <DependentUpon>CustomCallbackEvent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\LoadingScriptFilesInParallel.aspx.designer.cs">
-      <DependentUpon>LoadingScriptFilesInParallel.aspx</DependentUpon>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\CustomCallbackEvent.aspx.designer.cs">
+      <DependentUpon>CustomCallbackEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\CustomSimpleScriptObject.aspx.cs">
+      <DependentUpon>CustomSimpleScriptObject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\CustomSimpleScriptObject.aspx.designer.cs">
+      <DependentUpon>CustomSimpleScriptObject.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\RegisteringClientScripts.aspx.cs">
+      <DependentUpon>RegisteringClientScripts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\RegisteringClientScripts.aspx.designer.cs">
+      <DependentUpon>RegisteringClientScripts.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

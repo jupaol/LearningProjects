@@ -11,7 +11,7 @@ namespace Msts.Topics.Chapter09___Scripts.Lesson02___Client_MS_AJAX
 {
 
 
-    public partial class LoadingScriptFilesInParallel
+    public partial class CustomCallbackEvent
     {
     }
 }

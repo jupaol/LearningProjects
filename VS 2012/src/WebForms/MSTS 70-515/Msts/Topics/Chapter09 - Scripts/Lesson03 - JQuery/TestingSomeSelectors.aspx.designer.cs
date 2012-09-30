@@ -7,36 +7,36 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Msts.Topics.Chapter09___Scripts.Lesson02___Client_MS_AJAX {
+namespace Msts.Topics.Chapter09___Scripts.Lesson03___JQuery {
     
     
-    public partial class CustomSimpleScriptObject {
+    public partial class TestingSomeSelectors {
         
         /// <summary>
-        /// smp control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManagerProxy smp;
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// username control.
+        /// Button2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox username;
+        protected global::System.Web.UI.WebControls.Button Button2;
         
         /// <summary>
-        /// registerUser control.
+        /// Button3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button registerUser;
+        protected global::System.Web.UI.WebControls.Button Button3;
     }
 }

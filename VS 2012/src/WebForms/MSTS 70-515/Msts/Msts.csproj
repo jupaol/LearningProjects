@@ -111,6 +111,7 @@
     <Content Include="App_Themes\Yellow\Global.css" />
     <Content Include="App_Themes\Yellow\Images\logo.jpg" />
     <Content Include="ChangePassword.aspx" />
+    <EmbeddedResource Include="Content\Chapter09\PasswordStrength.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -173,6 +174,10 @@
     <None Include="Properties\PublishProfiles\local test.pubxml" />
     <None Include="Scripts\jquery-1.8.1.intellisense.js" />
     <Content Include="Login.aspx" />
+    <EmbeddedResource Include="Scripts\Chapter09\PasswordLengthBehavior.js" />
+    <Content Include="Scripts\Chapter09\GlobalFunctions.js" />
+    <EmbeddedResource Include="Scripts\Chapter09\PasswordLengthControl.js" />
+    <EmbeddedResource Include="Scripts\Chapter09\PasswordLengthValidator.js" />
     <Content Include="Scripts\jquery-1.8.1.js" />
     <Content Include="Scripts\jquery-1.8.1.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.23.js" />
@@ -256,10 +261,23 @@
     <Content Include="Topics\Chapter09 - Scripts\Lesson01 - MS AJAX\MsAjaxControls.aspx" />
     <Content Include="Scripts\Chapter09\JavaScript1Include.js" />
     <EmbeddedResource Include="Scripts\Chapter09\JavaScriptEmbedded.js" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\AjaxClientControl.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\AjaxEncapsulatedAjaxBehavior.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\AjaxEncapsulatedClientControl.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\AjaxLifeCycle.aspx" />
     <Content Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\CustomCallbackEvent.aspx" />
     <Content Include="Scripts\Chapter09\SimpleValidator.js" />
     <Content Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\CustomSimpleScriptObject.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\PasswordStrengthValidatorFromJavaScriptObject.aspx" />
     <Content Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\RegisteringClientScripts.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\AjaxCallToPageMethod.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\CloningDomWithJQuery.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\CustomXmlService.asmx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\JQueryCustomEvents.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\ManipulatingXmlWithJQuery.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\MyXmlFile.xml" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\SimpleAnimatedMenu.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\TestingSomeSelectors.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -765,6 +783,34 @@
     <Compile Include="Topics\Chapter09 - Scripts\Lesson01 - MS AJAX\MsAjaxControls.aspx.designer.cs">
       <DependentUpon>MsAjaxControls.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\AjaxClientControl.aspx.cs">
+      <DependentUpon>AjaxClientControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\AjaxClientControl.aspx.designer.cs">
+      <DependentUpon>AjaxClientControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\AjaxEncapsulatedAjaxBehavior.aspx.cs">
+      <DependentUpon>AjaxEncapsulatedAjaxBehavior.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\AjaxEncapsulatedAjaxBehavior.aspx.designer.cs">
+      <DependentUpon>AjaxEncapsulatedAjaxBehavior.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\AjaxEncapsulatedClientControl.aspx.cs">
+      <DependentUpon>AjaxEncapsulatedClientControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\AjaxEncapsulatedClientControl.aspx.designer.cs">
+      <DependentUpon>AjaxEncapsulatedClientControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\AjaxLifeCycle.aspx.cs">
+      <DependentUpon>AjaxLifeCycle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\AjaxLifeCycle.aspx.designer.cs">
+      <DependentUpon>AjaxLifeCycle.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\CustomCallbackEvent.aspx.cs">
       <DependentUpon>CustomCallbackEvent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -779,12 +825,68 @@
     <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\CustomSimpleScriptObject.aspx.designer.cs">
       <DependentUpon>CustomSimpleScriptObject.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\PasswordLengthBehavior.cs" />
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\PasswordLengthControl.cs" />
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\PasswordStrengthValidatorFromJavaScriptObject.aspx.cs">
+      <DependentUpon>PasswordStrengthValidatorFromJavaScriptObject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\PasswordStrengthValidatorFromJavaScriptObject.aspx.designer.cs">
+      <DependentUpon>PasswordStrengthValidatorFromJavaScriptObject.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\RegisteringClientScripts.aspx.cs">
       <DependentUpon>RegisteringClientScripts.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\RegisteringClientScripts.aspx.designer.cs">
       <DependentUpon>RegisteringClientScripts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\AjaxCallToPageMethod.aspx.cs">
+      <DependentUpon>AjaxCallToPageMethod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\AjaxCallToPageMethod.aspx.designer.cs">
+      <DependentUpon>AjaxCallToPageMethod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\CloningDomWithJQuery.aspx.cs">
+      <DependentUpon>CloningDomWithJQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\CloningDomWithJQuery.aspx.designer.cs">
+      <DependentUpon>CloningDomWithJQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\CustomXmlService.asmx.cs">
+      <DependentUpon>CustomXmlService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\JQueryCustomEvents.aspx.cs">
+      <DependentUpon>JQueryCustomEvents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\JQueryCustomEvents.aspx.designer.cs">
+      <DependentUpon>JQueryCustomEvents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\ManipulatingXmlWithJQuery.aspx.cs">
+      <DependentUpon>ManipulatingXmlWithJQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\ManipulatingXmlWithJQuery.aspx.designer.cs">
+      <DependentUpon>ManipulatingXmlWithJQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\MyDomainObject.cs" />
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\SimpleAnimatedMenu.aspx.cs">
+      <DependentUpon>SimpleAnimatedMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\SimpleAnimatedMenu.aspx.designer.cs">
+      <DependentUpon>SimpleAnimatedMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\TestingSomeSelectors.aspx.cs">
+      <DependentUpon>TestingSomeSelectors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\TestingSomeSelectors.aspx.designer.cs">
+      <DependentUpon>TestingSomeSelectors.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

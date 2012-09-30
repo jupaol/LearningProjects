@@ -10,7 +10,7 @@
 namespace Msts.Topics.Chapter09___Scripts.Lesson02___Client_MS_AJAX {
     
     
-    public partial class CustomSimpleScriptObject {
+    public partial class AjaxClientControl {
         
         /// <summary>
         /// smp control.
@@ -22,21 +22,21 @@ namespace Msts.Topics.Chapter09___Scripts.Lesson02___Client_MS_AJAX {
         protected global::System.Web.UI.ScriptManagerProxy smp;
         
         /// <summary>
-        /// username control.
+        /// passwordMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox username;
+        protected global::System.Web.UI.WebControls.Label passwordMessage;
         
         /// <summary>
-        /// registerUser control.
+        /// password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button registerUser;
+        protected global::System.Web.UI.WebControls.TextBox password;
     }
 }

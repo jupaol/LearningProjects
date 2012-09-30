@@ -13,8 +13,6 @@
         $(function () {
             var $register = $("input:submit[id$=registerUser]");
             var $user = $("input:text[id$=username]");
-            var $pass = $("input:password[id$=password]");
-            var $confirmPass = $("input:password[id$=confirmPassword]");
 
             $register.click(function (e) {
                 e.preventDefault();
@@ -33,18 +31,6 @@
     </div>
     <div>
         <asp:TextBox runat="server" ID="username" />
-    </div>
-    <div>
-        Password:
-    </div>
-    <div>
-        <asp:TextBox runat="server" ID="password" TextMode="Password" />
-    </div>
-    <div>
-        Confirm password:
-    </div>
-    <div>
-        <asp:TextBox runat="server" ID="confirmPassword" TextMode="Password" />
     </div>
     <div>
         <asp:Button Text="Register user" runat="server" ID="registerUser" OnClick="registerUser_Click" />

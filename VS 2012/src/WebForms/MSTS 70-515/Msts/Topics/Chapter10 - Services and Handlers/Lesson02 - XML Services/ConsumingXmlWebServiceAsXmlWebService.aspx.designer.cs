@@ -7,63 +7,45 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Msts.Topics.Chapter08___Debugging_and_Deploying.Lesson01___Debugging {
+namespace Msts.Topics.Chapter10___Services_and_Handlers.Lesson02___XML_Services {
     
     
-    public partial class DefaultErrorPage {
+    public partial class ConsumingXmlWebServiceAsXmlWebService {
         
         /// <summary>
-        /// Head1 control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlHead Head1;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// BundleReference1 control.
+        /// name control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Microsoft.AspNet.Web.Optimization.WebForms.BundleReference BundleReference1;
+        protected global::System.Web.UI.WebControls.TextBox name;
         
         /// <summary>
-        /// form1 control.
+        /// Button1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Button Button1;
         
         /// <summary>
-        /// errorPanel control.
+        /// msg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel errorPanel;
-        
-        /// <summary>
-        /// errorMessage control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal errorMessage;
-        
-        /// <summary>
-        /// errorTrace control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal errorTrace;
+        protected global::System.Web.UI.WebControls.Label msg;
     }
 }

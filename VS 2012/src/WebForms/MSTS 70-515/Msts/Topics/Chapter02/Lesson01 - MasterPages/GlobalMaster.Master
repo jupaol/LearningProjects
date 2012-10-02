@@ -13,7 +13,7 @@
         <asp:WebPartManager runat="server" ID="wpm" Personalization-Enabled="true">
             
         </asp:WebPartManager>
-        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true">
             <Scripts>
                 <%--Framework Scripts--%>
                 <asp:ScriptReference Name="MsAjaxBundle" />

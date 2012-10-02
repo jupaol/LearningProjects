@@ -90,6 +90,8 @@
     <Reference Include="System.Reactive.PlatformServices">
       <HintPath>..\packages\Rx-PlatformServices.2.0.20823\lib\Net45\System.Reactive.PlatformServices.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -182,9 +184,14 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="CreateAccount.aspx" />
     <Content Include="Default.aspx" />
+    <Content Include="DefaultErrorPage.html" />
     <Content Include="ForgotPassword.aspx" />
     <Content Include="Global.asax" />
     <None Include="Properties\PublishProfiles\local test.pubxml" />
+    <Content Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-1.8.1.intellisense.js" />
     <Content Include="Login.aspx" />
     <EmbeddedResource Include="Scripts\Chapter09\PasswordLengthBehavior.js" />
@@ -218,6 +225,13 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Service References\HelloWorldWvfService\HelloWorldService.disco" />
+    <Content Include="Service References\HelloWorldWvfService\configuration91.svcinfo" />
+    <Content Include="Service References\HelloWorldWvfService\configuration.svcinfo" />
+    <Content Include="Service References\HelloWorldWvfService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
     <Content Include="Topics\Chapter02\Lesson02 - Themes\OverridingDefaultThemeWithDynamicMasterPages.aspx" />
     <Content Include="Topics\Chapter02\Lesson01 - MasterPages\SettingMasterPageDynamically.aspx" />
     <Content Include="Topics\Chapter02\Lesson01 - MasterPages\SettingMasterPageDynamically2.aspx" />
@@ -293,6 +307,16 @@
     <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\TestingSomeSelectors.aspx" />
     <Content Include="Topics\Chapter10 - Services and Handlers\Lesson01 - Handlers\AsyncPage.aspx" />
     <Content Include="Topics\Chapter10 - Services and Handlers\Lesson01 - Handlers\ImageRetrieverHandlerPage.aspx" />
+    <Content Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\AccessingProtectedService.aspx" />
+    <Content Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingPageMethodsUsingScriptManager.aspx" />
+    <Content Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingXmlWebServiceAsXmlWebService.aspx" />
+    <Content Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingXmlWebServiceReferencedAsWcfService.aspx" />
+    <Content Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingXmlWebServicesViaScriptManager.aspx" />
+    <Content Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingXmlWebServiceUsingAjax.aspx" />
+    <Content Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\HelloWorldService.asmx" />
+    <Content Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ProtectedWebService.asmx" />
+    <Content Include="Web References\HelloWorldXmlService\HelloWorldService.disco" />
+    <Content Include="Web References\ProtectedXmlWebService\ProtectedWebService.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -300,6 +324,17 @@
     <Content Include="Topics\Chapter10 - Services and Handlers\Lesson01 - Handlers\ImageRetrieverHandler.ashx" />
     <Content Include="Topics\Chapter10 - Services and Handlers\Lesson01 - Handlers\TestingMyAsyncHandler.myhandler" />
     <Content Include="Topics\Chapter10 - Services and Handlers\Lesson01 - Handlers\AsyncHandlerCallingSyncMethodsAsynchronously.ashx" />
+    <Content Include="Service References\HelloWorldWvfService\HelloWorldService.wsdl" />
+    <Content Include="Web References\HelloWorldXmlService\HelloWorldService.wsdl" />
+    <Content Include="Web References\HelloWorldXmlService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Web References\ProtectedXmlWebService\ProtectedWebService.wsdl" />
+    <Content Include="Web References\ProtectedXmlWebService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
     <None Include="Web.Test.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -367,6 +402,16 @@
     </Compile>
     <Compile Include="ObjectExtenssions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HelloWorldWvfService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -928,6 +973,66 @@
     </Compile>
     <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson01 - Handlers\ProcessResult.cs" />
     <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson01 - Handlers\RetrievingImageAsyncHandler.cs" />
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\AccessingProtectedService.aspx.cs">
+      <DependentUpon>AccessingProtectedService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\AccessingProtectedService.aspx.designer.cs">
+      <DependentUpon>AccessingProtectedService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingPageMethodsUsingScriptManager.aspx.cs">
+      <DependentUpon>ConsumingPageMethodsUsingScriptManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingPageMethodsUsingScriptManager.aspx.designer.cs">
+      <DependentUpon>ConsumingPageMethodsUsingScriptManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingXmlWebServiceAsXmlWebService.aspx.cs">
+      <DependentUpon>ConsumingXmlWebServiceAsXmlWebService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingXmlWebServiceAsXmlWebService.aspx.designer.cs">
+      <DependentUpon>ConsumingXmlWebServiceAsXmlWebService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingXmlWebServiceReferencedAsWcfService.aspx.cs">
+      <DependentUpon>ConsumingXmlWebServiceReferencedAsWcfService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingXmlWebServiceReferencedAsWcfService.aspx.designer.cs">
+      <DependentUpon>ConsumingXmlWebServiceReferencedAsWcfService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingXmlWebServicesViaScriptManager.aspx.cs">
+      <DependentUpon>ConsumingXmlWebServicesViaScriptManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingXmlWebServicesViaScriptManager.aspx.designer.cs">
+      <DependentUpon>ConsumingXmlWebServicesViaScriptManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingXmlWebServiceUsingAjax.aspx.cs">
+      <DependentUpon>ConsumingXmlWebServiceUsingAjax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingXmlWebServiceUsingAjax.aspx.designer.cs">
+      <DependentUpon>ConsumingXmlWebServiceUsingAjax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\HelloWorldService.asmx.cs">
+      <DependentUpon>HelloWorldService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ProtectedWebService.asmx.cs">
+      <DependentUpon>ProtectedWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Web References\HelloWorldXmlService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ProtectedXmlWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Site.Master" />
@@ -962,7 +1067,6 @@
     <Folder Include="App_LocalResources\" />
     <Folder Include="Files\" />
     <Folder Include="Topics\Chapter08 - Debugging and Deploying\Lesson03 - Deploying\" />
-    <Folder Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\" />
     <Folder Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\" />
   </ItemGroup>
   <ItemGroup>
@@ -990,6 +1094,39 @@
       <Project>{90ae8187-a59c-4466-9455-a254361638ae}</Project>
       <Name>Msts.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\HelloWorldWvfService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://localhost:49354/Topics/Chapter10%2520-%2520Services%2520and%2520Handlers/Lesson02%2520-%2520XML%2520Services/HelloWorldService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\HelloWorldXmlService\</RelPath>
+      <UpdateFromURL>http://localhost:49354/Topics/Chapter10%2520-%2520Services%2520and%2520Handlers/Lesson02%2520-%2520XML%2520Services/HelloWorldService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Msts_HelloWorldXmlService_HelloWorldService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://localhost:49354/Topics/Chapter10%2520-%2520Services%2520and%2520Handlers/Lesson02%2520-%2520XML%2520Services/ProtectedWebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ProtectedXmlWebService\</RelPath>
+      <UpdateFromURL>http://localhost:49354/Topics/Chapter10%2520-%2520Services%2520and%2520Handlers/Lesson02%2520-%2520XML%2520Services/ProtectedWebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Msts_ProtectedXmlWebService_ProtectedWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

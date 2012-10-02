@@ -64,7 +64,11 @@ namespace Msts.Topics.Chapter05.Lesson02
                         this.AddNode(currentNode, previousNode);
                     }
 
-                    var fileNode = new SiteMapNode(this, filePath, string.Format("~/Topics/{0}/{1}/{2}", previousDirectoryName, currentDirectoryName, fileName), Path.GetFileNameWithoutExtension(fileName));
+                    var fileNode = new SiteMapNode(
+                        this, 
+                        filePath, 
+                        string.Format("~/Topics/{0}/{1}/{2}", previousDirectoryName, currentDirectoryName, fileName), 
+                        (Path.GetExtension(fileName).Equals(".aspx", StringComparison.InvariantCultureIgnoreCase)) ? Path.GetFileNameWithoutExtension(fileName) : fileName);
 
                     this.AddNode(fileNode, currentNode);
                 }
@@ -106,6 +110,8 @@ namespace Msts.Topics.Chapter05.Lesson02
                         x.FullName.EndsWith(".aspx", StringComparison.InvariantCultureIgnoreCase)
                         || x.Extension.Equals(".myhandler", StringComparison.InvariantCultureIgnoreCase)
                         || x.Extension.Equals(".ashx", StringComparison.InvariantCultureIgnoreCase)
+                        || x.Extension.Equals(".asmx", StringComparison.InvariantCultureIgnoreCase)
+                        || x.Extension.Equals(".svc", StringComparison.InvariantCultureIgnoreCase)
                         ))
             {
                 files.Add(file.FullName);

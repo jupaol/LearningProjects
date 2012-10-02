@@ -10,6 +10,9 @@
             <u>
                 <asp:Literal Text="<%# Container.Address %>" runat="server" />
             </u>
+            <asp:Button Text="text" runat="server" OnClick="Unnamed_Click" ID="myButton" />
+            <br />
+            <asp:Button Text="Command bubbled" runat="server" CommandName="DoSomething" OnClick="Unnamed2_Click1" />
         </AddressTemplate>
     </address:TemplatedServerAddressControl>
 </asp:Content>

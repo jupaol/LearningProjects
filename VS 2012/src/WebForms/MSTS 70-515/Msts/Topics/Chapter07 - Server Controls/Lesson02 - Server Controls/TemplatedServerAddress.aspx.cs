@@ -14,5 +14,15 @@ namespace Msts.Topics.Chapter07___Server_Controls.Lesson02___Server_Controls
             this.addressControl1.Address = "Super Toronot";
             this.DataBind();
         }
+
+        protected void Unnamed_Click(object sender, EventArgs e)
+        {
+            this.Response.Write(DateTime.Now.ToString());
+        }
+
+        protected void Unnamed2_Click1(object sender, EventArgs e)
+        {
+            this.Response.Write("From command button " + DateTime.Now.ToString());
+        }
     }
 }

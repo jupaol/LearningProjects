@@ -92,5 +92,23 @@ namespace Msts.Topics.Chapter07___Server_Controls.Lesson02___Server_Controls
                 this.Controls.Add(this.addressContainer);
             }
         }
+
+        protected override bool OnBubbleEvent(object source, EventArgs args)
+        {
+            if (args is CommandEventArgs)
+            {
+                var commandArgs = args as CommandEventArgs;
+
+                switch (commandArgs.CommandName)
+                {
+                    case "DoSomething":
+                        // place here your custom logic
+                        this.Page.Response.Write("Command bubbled");
+                        return true;
+                }
+            }
+
+            return base.OnBubbleEvent(source, args);
+        }
     }
 }

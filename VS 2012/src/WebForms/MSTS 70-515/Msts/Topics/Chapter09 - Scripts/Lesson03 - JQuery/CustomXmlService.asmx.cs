@@ -31,5 +31,12 @@ namespace Msts.Topics.Chapter09___Scripts.Lesson03___JQuery
 
             return s;
         }
+
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public string Hello()
+        {
+            return "Hello World";
+        }
     }
 }

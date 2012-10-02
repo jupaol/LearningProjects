@@ -83,7 +83,7 @@
             <tr class="master-breadcrumb">
                 <td>
                     <asp:SiteMapDataSource runat="server" ID="smds" ShowStartingNode="false" />
-                    <asp:SiteMapPath runat="server" ID="sm" Font-Names="Verdana" Font-Size="0.8em" PathSeparator=" : ">
+                    <asp:SiteMapPath runat="server" ID="sm" Font-Names="Verdana" Font-Size="0.8em" PathSeparator=" : " RenderCurrentNodeAsLink="True">
                         <CurrentNodeStyle ForeColor="#333333"></CurrentNodeStyle>
 
                         <NodeStyle Font-Bold="True" ForeColor="#990000"></NodeStyle>

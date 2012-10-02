@@ -100,7 +100,13 @@ namespace Msts.Topics.Chapter05.Lesson02
             //    this.AddNode(newNode, parentNode);
             //}
 
-            foreach (var file in d.GetFiles("*.aspx"))
+            foreach (var file in d.GetFiles(
+                "*.*")
+                    .Where(x => 
+                        x.FullName.EndsWith(".aspx", StringComparison.InvariantCultureIgnoreCase)
+                        || x.Extension.Equals(".myhandler", StringComparison.InvariantCultureIgnoreCase)
+                        || x.Extension.Equals(".ashx", StringComparison.InvariantCultureIgnoreCase)
+                        ))
             {
                 files.Add(file.FullName);
             }

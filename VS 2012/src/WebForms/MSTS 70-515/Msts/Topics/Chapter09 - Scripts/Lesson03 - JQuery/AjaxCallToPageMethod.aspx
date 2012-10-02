@@ -68,6 +68,19 @@
                         else {
                             $res.append("The range of numbers is empty");
                         }
+
+                        // from here calling simple method in an xml service .asmx
+
+                        $.ajax({
+                            url: "<%: this.ResolveClientUrl("~/Topics/Chapter09%20-%20Scripts/Lesson03%20-%20JQuery/CustomXmlService.asmx/Hello") %>",
+                            type: "POST",
+                            data: "{}",
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            success: function (m) {
+                                $res.append("<hr /><br/>").append("Message: " + m.d);
+                            }
+                        });
                     },
                     complete: function (jqXHR, textStatus) {
                         $dialog.dialog("close");

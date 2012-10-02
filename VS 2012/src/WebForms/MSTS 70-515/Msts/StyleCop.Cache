@@ -15035,9 +15035,6 @@
       </violation>
     </violations>
   </sourcecode>
-  <project key="-1249611613">
-    <configuration>DEBUG;TRACE</configuration>
-  </project>
   <sourcecode name="TemplatedServerAddress.aspx.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2012/10/01 23:21:15.176</styleCop>
@@ -15117,11 +15114,14 @@
       </violation>
     </violations>
   </sourcecode>
+  <project key="-1249611613">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
   <sourcecode name="Reference.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2012/10/01 23:21:15.176</styleCop>
       <settingsFile>2012/10/01 23:21:14.907</settingsFile>
-      <sourceFile>2012/10/02 04:44:21.333</sourceFile>
+      <sourceFile>2012/10/02 01:05:23.271</sourceFile>
       <parser>2012/10/01 23:21:15.176</parser>
       <StyleCop.CSharp.DocumentationRules>2012/10/01 23:21:15.176</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>780160645</StyleCop.CSharp.DocumentationRules.FilesHashCode>

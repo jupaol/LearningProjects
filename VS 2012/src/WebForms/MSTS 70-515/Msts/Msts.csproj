@@ -307,14 +307,12 @@
     <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\TestingSomeSelectors.aspx" />
     <Content Include="Topics\Chapter10 - Services and Handlers\Lesson01 - Handlers\AsyncPage.aspx" />
     <Content Include="Topics\Chapter10 - Services and Handlers\Lesson01 - Handlers\ImageRetrieverHandlerPage.aspx" />
-    <Content Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\AccessingProtectedService.aspx" />
     <Content Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingPageMethodsUsingScriptManager.aspx" />
     <Content Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingXmlWebServiceAsXmlWebService.aspx" />
     <Content Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingXmlWebServiceReferencedAsWcfService.aspx" />
     <Content Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingXmlWebServicesViaScriptManager.aspx" />
     <Content Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingXmlWebServiceUsingAjax.aspx" />
     <Content Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\HelloWorldService.asmx" />
-    <Content Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ProtectedWebService.asmx" />
     <Content Include="Web References\HelloWorldXmlService\HelloWorldService.disco" />
     <Content Include="Web References\ProtectedXmlWebService\ProtectedWebService.disco" />
     <Content Include="Web.config">
@@ -973,13 +971,6 @@
     </Compile>
     <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson01 - Handlers\ProcessResult.cs" />
     <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson01 - Handlers\RetrievingImageAsyncHandler.cs" />
-    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\AccessingProtectedService.aspx.cs">
-      <DependentUpon>AccessingProtectedService.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\AccessingProtectedService.aspx.designer.cs">
-      <DependentUpon>AccessingProtectedService.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingPageMethodsUsingScriptManager.aspx.cs">
       <DependentUpon>ConsumingPageMethodsUsingScriptManager.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1017,10 +1008,6 @@
     </Compile>
     <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\HelloWorldService.asmx.cs">
       <DependentUpon>HelloWorldService.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ProtectedWebService.asmx.cs">
-      <DependentUpon>ProtectedWebService.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Web References\HelloWorldXmlService\Reference.cs">

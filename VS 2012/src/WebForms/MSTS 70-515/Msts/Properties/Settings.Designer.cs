@@ -33,16 +33,5 @@ namespace Msts.Properties {
                 return ((string)(this["Msts_HelloWorldXmlService_HelloWorldService"]));
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:49354/Topics/Chapter10%20-%20Services%20and%20Handlers/Lesson02%" +
-            "20-%20XML%20Services/ProtectedWebService.asmx")]
-        public string Msts_ProtectedXmlWebService_ProtectedWebService {
-            get {
-                return ((string)(this["Msts_ProtectedXmlWebService_ProtectedWebService"]));
-            }
-        }
     }
 }

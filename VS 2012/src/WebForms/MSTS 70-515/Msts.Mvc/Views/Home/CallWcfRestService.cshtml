@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "CallWcfRestService";
+}
+
+<h2>CallWcfRestService</h2>
+
+<script>
+    $(function () {
+        var $call = $("#call");
+        var $res = $("#res");
+
+        $call.click(function (e) {
+            e.preventDefault();
+
+            $.ajax({
+                url: "@Url.Content("~/wcf/hello")",
+                type: "GET",
+                dataType: "json",
+                data: "{}",
+                async: true,
+                cache: false,
+                success: function (msg) {
+                    $res.text(msg.Message);
+                },
+                error: function (xhr, message, code) {
+                    alert(message);
+                }
+            });
+        });
+    });
+</script>
+
+<input type="button" value="Call WCF REST service" id="call" />
+<div id="res">
+
+</div>

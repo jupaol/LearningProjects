@@ -36,5 +36,15 @@ namespace Msts.Mvc.Controllers
 
             return View();
         }
+
+        public ActionResult CallWcfRestService()
+        {
+            return View();
+        }
+
+        public ActionResult CallWcfRestCrossDomainService()
+        {
+            return this.View();
+        }
     }
 }

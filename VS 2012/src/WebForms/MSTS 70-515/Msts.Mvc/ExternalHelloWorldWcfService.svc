@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Msts.Mvc.ExternalHelloWorldWcfService" CodeBehind="ExternalHelloWorldWcfService.svc.cs" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory"  %>

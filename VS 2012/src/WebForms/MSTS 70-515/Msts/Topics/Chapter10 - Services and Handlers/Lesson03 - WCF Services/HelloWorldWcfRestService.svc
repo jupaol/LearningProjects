@@ -1,0 +1,2 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Msts.Topics.Chapter10___Services_and_Handlers.Lesson03___WCF_Services.HelloWorldWcfRestService" CodeBehind="HelloWorldWcfRestService.svc.cs"
+    Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>

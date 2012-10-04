@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "CallWcfRestCrossDomainService";
+}
+
+<h2>CallWcfRestCrossDomainService</h2>
+
+<script>
+    $(function () {
+        var $dialog = $("#dialog");
+        var $res = $("#res");
+        var $call = $("#call");
+
+        $dialog.dialog({
+            autoOpen: false,
+            modal: true,
+            closeOnEscape: false,
+            height: 140,
+            open: function (e, ui) {
+                $(this).closest(".ui-dialog").find(".ui-dialog-titlebar-close").hide();
+            }
+        });
+
+        $.ajaxSetup({
+            type: "POST",
+            contentType: "application/json; charset=utf-8;",
+            dataType: "json",
+            async: true,
+            cache: false,
+            beforeSend: function () {
+                $dialog.dialog("open");
+            },
+            complete: function () {
+                $dialog.dialog("close");
+            },
+            error: function (err) {
+                $dialog.dialog("close");
+                console.log("AJAX Error: %o", err);
+            }
+        });
+
+        $call.click(function (e) {
+            e.preventDefault();
+
+            try {
+                $.ajax({
+                    url: "http://localhost:49354/Topics/Chapter10%20-%20Services%20and%20Handlers/Lesson03%20-%20WCF%20Services/HelloWorldWcfRestService.svc/HelloWorldRequestWrapped",
+                    type: "GET",
+                    dataType: "jsonp",
+                    data: "{}",
+                    success: function (msg) {
+                        $res.text(msg.Message);
+                    }
+                });
+            } catch (exc) {
+                $dialog.dialog("close");
+                console.log("Calling Error: %o", exc);
+            }
+        });
+    });
+</script>
+
+<input type="button" id="call" value="Call service..." />
+<div id="res">
+
+</div>
+<div id="dialog" style="display:none;">
+    <div>
+        Processing...
+    </div>
+</div>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/jqueryui")
+    @Styles.Render("~/Content/themes/base/css")
+}

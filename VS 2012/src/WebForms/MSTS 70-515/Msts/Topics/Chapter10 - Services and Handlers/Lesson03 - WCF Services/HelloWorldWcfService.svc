@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Msts.Topics.Chapter10___Services_and_Handlers.Lesson03___WCF_Services.HelloWorldWcfService" CodeBehind="HelloWorldWcfService.svc.cs" %>

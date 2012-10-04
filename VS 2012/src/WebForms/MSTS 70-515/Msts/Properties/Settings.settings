@@ -5,8 +5,5 @@
     <Setting Name="Msts_HelloWorldXmlService_HelloWorldService" Type="(Web Service URL)" Scope="Application">
       <Value Profile="(Default)">http://localhost:49354/Topics/Chapter10%20-%20Services%20and%20Handlers/Lesson02%20-%20XML%20Services/HelloWorldService.asmx</Value>
     </Setting>
-    <Setting Name="Msts_ProtectedXmlWebService_ProtectedWebService" Type="(Web Service URL)" Scope="Application">
-      <Value Profile="(Default)">http://localhost:49354/Topics/Chapter10%20-%20Services%20and%20Handlers/Lesson02%20-%20XML%20Services/ProtectedWebService.asmx</Value>
-    </Setting>
   </Settings>
 </SettingsFile>

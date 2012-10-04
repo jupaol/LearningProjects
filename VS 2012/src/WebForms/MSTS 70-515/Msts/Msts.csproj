@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
     <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -92,6 +93,7 @@
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -225,6 +227,13 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Service References\HelloWorldWcfServiceReference\HelloWorldWcfService.disco" />
+    <Content Include="Service References\HelloWorldWcfServiceReference\configuration91.svcinfo" />
+    <Content Include="Service References\HelloWorldWcfServiceReference\configuration.svcinfo" />
+    <Content Include="Service References\HelloWorldWcfServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
     <Content Include="Service References\HelloWorldWvfService\HelloWorldService.disco" />
     <Content Include="Service References\HelloWorldWvfService\configuration91.svcinfo" />
     <Content Include="Service References\HelloWorldWvfService\configuration.svcinfo" />
@@ -313,8 +322,12 @@
     <Content Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingXmlWebServicesViaScriptManager.aspx" />
     <Content Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingXmlWebServiceUsingAjax.aspx" />
     <Content Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\HelloWorldService.asmx" />
+    <Content Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\ConsumeCrossDomainWcfRestService.aspx" />
+    <Content Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\ConsumingWcfRestService.aspx" />
+    <Content Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\ConsumingWcfService.aspx" />
+    <Content Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\HelloWorldWcfRestService.svc" />
+    <Content Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\HelloWorldWcfService.svc" />
     <Content Include="Web References\HelloWorldXmlService\HelloWorldService.disco" />
-    <Content Include="Web References\ProtectedXmlWebService\ProtectedWebService.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -328,11 +341,9 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
-    <Content Include="Web References\ProtectedXmlWebService\ProtectedWebService.wsdl" />
-    <Content Include="Web References\ProtectedXmlWebService\Reference.map">
-      <Generator>MSDiscoCodeGenerator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </Content>
+    <Content Include="Service References\HelloWorldWcfServiceReference\HelloWorldWcfService.wsdl" />
+    <None Include="Service References\HelloWorldWcfServiceReference\HelloWorldWcfService.xsd" />
+    <None Include="Service References\HelloWorldWcfServiceReference\HelloWorldWcfService1.xsd" />
     <None Include="Web.Test.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -404,6 +415,11 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\HelloWorldWcfServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Service References\HelloWorldWvfService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -1010,12 +1026,37 @@
       <DependentUpon>HelloWorldService.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Web References\HelloWorldXmlService\Reference.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Reference.map</DependentUpon>
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\ConsumeCrossDomainWcfRestService.aspx.cs">
+      <DependentUpon>ConsumeCrossDomainWcfRestService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Web References\ProtectedXmlWebService\Reference.cs">
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\ConsumeCrossDomainWcfRestService.aspx.designer.cs">
+      <DependentUpon>ConsumeCrossDomainWcfRestService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\ConsumingWcfRestService.aspx.cs">
+      <DependentUpon>ConsumingWcfRestService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\ConsumingWcfRestService.aspx.designer.cs">
+      <DependentUpon>ConsumingWcfRestService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\ConsumingWcfService.aspx.cs">
+      <DependentUpon>ConsumingWcfService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\ConsumingWcfService.aspx.designer.cs">
+      <DependentUpon>ConsumingWcfService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\HelloWorldDto.cs" />
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\HelloWorldWcfRestService.svc.cs">
+      <DependentUpon>HelloWorldWcfRestService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\HelloWorldWcfService.svc.cs">
+      <DependentUpon>HelloWorldWcfService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\IHelloWorldWcfRestService.cs" />
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\IHelloWorldWcfService.cs" />
+    <Compile Include="Web References\HelloWorldXmlService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.map</DependentUpon>
@@ -1054,7 +1095,6 @@
     <Folder Include="App_LocalResources\" />
     <Folder Include="Files\" />
     <Folder Include="Topics\Chapter08 - Debugging and Deploying\Lesson03 - Deploying\" />
-    <Folder Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
@@ -1089,6 +1129,7 @@
     <WebReferences Include="Web References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\HelloWorldWcfServiceReference\" />
     <WCFMetadataStorage Include="Service References\HelloWorldWvfService\" />
   </ItemGroup>
   <ItemGroup>
@@ -1102,17 +1143,6 @@
       </CachedDynamicPropName>
       <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
       <CachedSettingsPropName>Msts_HelloWorldXmlService_HelloWorldService</CachedSettingsPropName>
-    </WebReferenceUrl>
-    <WebReferenceUrl Include="http://localhost:49354/Topics/Chapter10%2520-%2520Services%2520and%2520Handlers/Lesson02%2520-%2520XML%2520Services/ProtectedWebService.asmx">
-      <UrlBehavior>Dynamic</UrlBehavior>
-      <RelPath>Web References\ProtectedXmlWebService\</RelPath>
-      <UpdateFromURL>http://localhost:49354/Topics/Chapter10%2520-%2520Services%2520and%2520Handlers/Lesson02%2520-%2520XML%2520Services/ProtectedWebService.asmx</UpdateFromURL>
-      <ServiceLocationURL>
-      </ServiceLocationURL>
-      <CachedDynamicPropName>
-      </CachedDynamicPropName>
-      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
-      <CachedSettingsPropName>Msts_ProtectedXmlWebService_ProtectedWebService</CachedSettingsPropName>
     </WebReferenceUrl>
   </ItemGroup>
   <PropertyGroup>

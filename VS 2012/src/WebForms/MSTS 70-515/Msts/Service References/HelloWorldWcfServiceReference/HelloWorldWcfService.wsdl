@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="HelloWorldWcfService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:49354/Topics/Chapter10 - Services and Handlers/Lesson03 - WCF Services/HelloWorldWcfService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49354/Topics/Chapter10 - Services and Handlers/Lesson03 - WCF Services/HelloWorldWcfService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IHelloWorldWcfService_HelloWorldBare_InputMessage">
+    <wsdl:part name="parameters" element="tns:HelloWorldBare" />
+  </wsdl:message>
+  <wsdl:message name="IHelloWorldWcfService_HelloWorldBare_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HelloWorldBareResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHelloWorldWcfService_HelloWorldWr_InputMessage">
+    <wsdl:part name="parameters" element="tns:HelloWorldWr" />
+  </wsdl:message>
+  <wsdl:message name="IHelloWorldWcfService_HelloWorldWr_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HelloWorldWrResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHelloWorldWcfService_HelloWorldRequestWrapped_InputMessage">
+    <wsdl:part name="parameters" element="tns:HelloWorldRequestWrapped" />
+  </wsdl:message>
+  <wsdl:message name="IHelloWorldWcfService_HelloWorldRequestWrapped_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HelloWorldRequestWrappedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IHelloWorldWcfService_HelloWorldResponseWrapped_InputMessage">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponseWrapped" />
+  </wsdl:message>
+  <wsdl:message name="IHelloWorldWcfService_HelloWorldResponseWrapped_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponseWrappedResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IHelloWorldWcfService">
+    <wsdl:operation name="HelloWorldBare">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHelloWorldWcfService/HelloWorldBare" message="tns:IHelloWorldWcfService_HelloWorldBare_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHelloWorldWcfService/HelloWorldBareResponse" message="tns:IHelloWorldWcfService_HelloWorldBare_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorldWr">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHelloWorldWcfService/HelloWorldWr" message="tns:IHelloWorldWcfService_HelloWorldWr_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHelloWorldWcfService/HelloWorldWrResponse" message="tns:IHelloWorldWcfService_HelloWorldWr_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorldRequestWrapped">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHelloWorldWcfService/HelloWorldRequestWrapped" message="tns:IHelloWorldWcfService_HelloWorldRequestWrapped_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHelloWorldWcfService/HelloWorldRequestWrappedResponse" message="tns:IHelloWorldWcfService_HelloWorldRequestWrapped_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorldResponseWrapped">
+      <wsdl:input wsaw:Action="http://tempuri.org/IHelloWorldWcfService/HelloWorldResponseWrapped" message="tns:IHelloWorldWcfService_HelloWorldResponseWrapped_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IHelloWorldWcfService/HelloWorldResponseWrappedResponse" message="tns:IHelloWorldWcfService_HelloWorldResponseWrapped_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IHelloWorldWcfService" type="tns:IHelloWorldWcfService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorldBare">
+      <soap:operation soapAction="http://tempuri.org/IHelloWorldWcfService/HelloWorldBare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorldWr">
+      <soap:operation soapAction="http://tempuri.org/IHelloWorldWcfService/HelloWorldWr" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorldRequestWrapped">
+      <soap:operation soapAction="http://tempuri.org/IHelloWorldWcfService/HelloWorldRequestWrapped" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorldResponseWrapped">
+      <soap:operation soapAction="http://tempuri.org/IHelloWorldWcfService/HelloWorldResponseWrapped" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HelloWorldWcfService">
+    <wsdl:port name="BasicHttpBinding_IHelloWorldWcfService" binding="tns:BasicHttpBinding_IHelloWorldWcfService">
+      <soap:address location="http://localhost:49354/Topics/Chapter10%20-%20Services%20and%20Handlers/Lesson03%20-%20WCF%20Services/HelloWorldWcfService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

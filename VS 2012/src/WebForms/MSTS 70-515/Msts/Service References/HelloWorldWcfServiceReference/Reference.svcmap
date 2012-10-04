@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f6bf1eb8-6119-45ed-9cab-ebe724f4405d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49354/Topics/Chapter10 - Services and Handlers/Lesson03 - WCF Services/HelloWorldWcfService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="HelloWorldWcfService.wsdl" MetadataType="Wsdl" ID="c3f01aad-6ac4-456e-92ef-11c493382333" SourceId="1" SourceUrl="http://localhost:49354/Topics/Chapter10 - Services and Handlers/Lesson03 - WCF Services/HelloWorldWcfService.svc?wsdl" />
+    <MetadataFile FileName="HelloWorldWcfService.xsd" MetadataType="Schema" ID="9cb800e3-aa9e-470d-be15-6cb78293f132" SourceId="1" SourceUrl="http://localhost:49354/Topics/Chapter10 - Services and Handlers/Lesson03 - WCF Services/HelloWorldWcfService.svc?xsd=xsd0" />
+    <MetadataFile FileName="HelloWorldWcfService.disco" MetadataType="Disco" ID="09aaa9a8-a713-4b50-bd86-19d4d2f67776" SourceId="1" SourceUrl="http://localhost:49354/Topics/Chapter10 - Services and Handlers/Lesson03 - WCF Services/HelloWorldWcfService.svc?disco" />
+    <MetadataFile FileName="HelloWorldWcfService1.xsd" MetadataType="Schema" ID="6e2faf75-6fcf-4ba3-b8b3-10b50557685f" SourceId="1" SourceUrl="http://localhost:49354/Topics/Chapter10 - Services and Handlers/Lesson03 - WCF Services/HelloWorldWcfService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

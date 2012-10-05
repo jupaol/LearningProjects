@@ -46,5 +46,10 @@ namespace Msts.Mvc.Controllers
         {
             return this.View();
         }
+
+        public ActionResult CallWcfRestDataService()
+        {
+            return this.View();
+        }
     }
 }

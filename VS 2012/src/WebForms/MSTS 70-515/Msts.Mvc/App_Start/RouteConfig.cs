@@ -30,6 +30,7 @@ namespace Msts.Mvc
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+            routes.IgnoreRoute("{resource}.svc/{*pathInfo}");
 
             routes.RouteExistingFiles = false;
 
@@ -37,7 +38,8 @@ namespace Msts.Mvc
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
-                constraints: new { controller = new MyWcfRestRouteConstrain() }
+                //constraints: new { controller = new MyWcfRestRouteConstrain() }
+                constraints: new { controller = "^(?!wcf).+" }
             );
 
             routes.Add(new ServiceRoute(

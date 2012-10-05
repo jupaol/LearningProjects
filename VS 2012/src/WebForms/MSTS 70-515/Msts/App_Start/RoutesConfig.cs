@@ -13,11 +13,6 @@ namespace Msts.App_Start
         public static void ConfigureRoutes(RouteCollection routes)
         {
             routes.Ignore("{resource}.axd/{*pathInfo}");
-
-            routes.Add(new ServiceRoute(
-                "wcf",
-                new ServiceHostFactory(),
-                typeof(HelloWorldWcfDataService)));
         }
     }
 }

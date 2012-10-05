@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Optimization;
+using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.UI;
@@ -28,6 +29,7 @@ namespace Msts
             //    ));
 
             BundleConfiguration.RegisterBundles(BundleTable.Bundles);
+            RoutesConfig.ConfigureRoutes(RouteTable.Routes);
         }
 
         protected void Session_Start(object sender, EventArgs e)

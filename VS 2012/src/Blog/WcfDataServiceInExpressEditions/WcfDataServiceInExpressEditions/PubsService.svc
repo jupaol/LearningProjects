@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="WcfDataServiceInExpressEditions.PubsService" CodeBehind="PubsService.svc.cs" Factory="System.Data.Services.DataServiceHostFactory, Microsoft.Data.Services" %>

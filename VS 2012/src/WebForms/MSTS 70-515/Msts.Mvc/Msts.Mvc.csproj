@@ -226,6 +226,7 @@
     </Compile>
     <Compile Include="HelloWorldDto.cs" />
     <Compile Include="IExternalHelloWorldWcfService.cs" />
+    <Compile Include="JSONPSupportInspector.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Topics\RequestLifeCycle\RequestLifeCycle.cs" />

@@ -1,4 +1,5 @@
-﻿using Msts.Mvc.DataAccess.EFData;
+﻿using DataServicesJSONP;
+using Msts.Mvc.DataAccess.EFData;
 using System;
 using System.Collections.Generic;
 using System.Data.Services;
@@ -9,6 +10,7 @@ using System.Text;
 
 namespace Msts.Mvc
 {
+    [JSONPSupportBehavior]
     public class ExternalHelloWorldWcfRestDataService : DataService<pubsEntities>
     {
         public static void InitializeService(DataServiceConfiguration config)

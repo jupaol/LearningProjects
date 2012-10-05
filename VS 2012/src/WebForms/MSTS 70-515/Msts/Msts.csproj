@@ -242,6 +242,12 @@
     <Content Include="Scripts\jquery-1.8.1.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.23.js" />
     <Content Include="Scripts\jquery-ui-1.8.23.min.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\knockout.mapping-latest.debug.js" />
+    <Content Include="Scripts\knockout.mapping-latest.js" />
+    <Content Include="Scripts\knockout.validation.debug.js" />
+    <Content Include="Scripts\knockout.validation.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
@@ -360,6 +366,7 @@
     <Content Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingXmlWebServicesViaScriptManager.aspx" />
     <Content Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\ConsumingXmlWebServiceUsingAjax.aspx" />
     <Content Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\HelloWorldService.asmx" />
+    <Content Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\ConsumeCrossDomainWcfRestDataService.aspx" />
     <Content Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\ConsumeCrossDomainWcfRestService.aspx" />
     <Content Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\ConsumeWcfRestDataService.aspx" />
     <Content Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\ConsumingWcfRestService.aspx" />
@@ -1087,6 +1094,13 @@
     <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson02 - XML Services\HelloWorldService.asmx.cs">
       <DependentUpon>HelloWorldService.asmx</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\ConsumeCrossDomainWcfRestDataService.aspx.cs">
+      <DependentUpon>ConsumeCrossDomainWcfRestDataService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\ConsumeCrossDomainWcfRestDataService.aspx.designer.cs">
+      <DependentUpon>ConsumeCrossDomainWcfRestDataService.aspx</DependentUpon>
     </Compile>
     <Compile Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\ConsumeCrossDomainWcfRestService.aspx.cs">
       <DependentUpon>ConsumeCrossDomainWcfRestService.aspx</DependentUpon>

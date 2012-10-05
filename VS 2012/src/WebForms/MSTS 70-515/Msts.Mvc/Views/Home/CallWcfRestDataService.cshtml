@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "CallWcfRestDataService";
+}
+
+<h2>CallWcfRestDataService</h2>
+
+<script>
+    $(function () {
+        var $res = $("#res");
+        var $call = $("#call");
+        var jobs = [];
+        var viewModel = {
+            job: ko.observableArray(jobs),
+            date: ko.observable(new Date())
+        };
+
+        ko.applyBindings(viewModel);
+
+        $call.click(function (e) {
+            e.preventDefault();
+
+            $.getJSON("@Url.Content("~/ExternalHelloWorldWcfRestDataService.svc/jobs")", "", function (msg) {
+                viewModel.job([]);
+                viewModel.job(msg.d);
+                viewModel.date(new Date());
+            });
+        });
+    });
+</script>
+
+<input type="button" id="call" value="Call WCF REST Data Service" />
+
+Render at:
+<span data-bind="text: date"></span>
+
+<ul data-bind="foreach: job">
+    <li data-bind="text: job_desc"></li>
+</ul>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/knockout")
+}

@@ -13,7 +13,7 @@ using DataServicesJSONP;
 
 namespace Msts.Topics.Chapter10___Services_and_Handlers.Lesson03___WCF_Services
 {
-    //[JSONPSupportBehavior]
+    [JSONPSupportBehavior]
     public class HelloWorldWcfDataService : DataService<PubsEntities>
     {
         public static void InitializeService(DataServiceConfiguration config)

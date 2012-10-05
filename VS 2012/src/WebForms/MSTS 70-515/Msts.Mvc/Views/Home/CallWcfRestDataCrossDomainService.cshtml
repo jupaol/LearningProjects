@@ -1,0 +1,50 @@
+﻿@{
+    ViewBag.Title = "CallWcfRestDataCrossDomainService";
+}
+
+<script>
+    $(function () {
+        var $call = $("#call");
+        var viewModel = {
+            employees: ko.observableArray()
+        };
+
+        $call.click(function () {
+            $.ajax({
+                url: "http://localhost:49354/Topics/Chapter10%20-%20Services%20and%20Handlers/Lesson03%20-%20WCF%20Services/HelloWorldWcfDataService.svc/employees?$format=json&$callback=myCallback",
+                type: "GET",
+                contentType: "application/json;odata=verbose;charset=utf-8;",
+                dataType: "jsonp",
+                jsonpCallback: "myCallback",
+                async: true,
+                cache: false,
+                data: "",
+                success: function (msg) {
+                    viewModel.employees(msg.d);
+                }
+            });
+        });
+
+        ko.applyBindings(viewModel);
+    });
+</script>
+
+<h2>CallWcfRestDataCrossDomainService</h2>
+
+<input type="button" id="call" value="Call xDomain service" />
+
+<h3>
+    Employees:
+</h3>
+
+<div>
+    Elemnts found: <span data-bind="text: employees().length"></span>
+</div>
+
+<ul data-bind="foreach: employees">
+    <li data-bind="text: fname"></li>
+</ul>
+
+@section Scripts{
+    @Scripts.Render("~/bundles/knockout")
+}

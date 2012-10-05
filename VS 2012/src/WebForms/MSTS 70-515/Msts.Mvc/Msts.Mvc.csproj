@@ -374,6 +374,7 @@
     <Content Include="Views\Home\CallWcfRestService.cshtml" />
     <Content Include="Views\Home\CallWcfRestCrossDomainService.cshtml" />
     <Content Include="Views\Home\CallWcfRestDataService.cshtml" />
+    <Content Include="Views\Home\CallWcfRestDataCrossDomainService.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

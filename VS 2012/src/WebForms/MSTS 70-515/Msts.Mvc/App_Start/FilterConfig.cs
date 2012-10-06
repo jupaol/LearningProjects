@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using Elmah.Contrib.Mvc;
+using System.Web;
 using System.Web.Mvc;
 
 namespace Msts.Mvc
@@ -7,7 +8,7 @@ namespace Msts.Mvc
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+            filters.Add(new ElmahHandleErrorAttribute());
         }
     }
 }

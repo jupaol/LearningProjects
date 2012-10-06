@@ -56,5 +56,15 @@ namespace Msts.Mvc.Controllers
         {
             return View();
         }
+
+        public ActionResult RaiseException()
+        {
+            throw new NotImplementedException();
+        }
+
+        public ActionResult HandledException()
+        {
+            throw new InvalidOperationException();
+        }
     }
 }

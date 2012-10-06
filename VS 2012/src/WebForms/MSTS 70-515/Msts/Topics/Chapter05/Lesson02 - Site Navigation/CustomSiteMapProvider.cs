@@ -32,8 +32,10 @@ namespace Msts.Topics.Chapter05.Lesson02
                 this.AddNode(root);
 
                 var tracing = new SiteMapNode(this, "tracinKey", "/trace.axd", "Tracing page");
+                var elmah = new SiteMapNode(this, "elmahKey", "/elmah.axd", "Elmah errors handler");
 
                 this.AddNode(tracing, root);
+                this.AddNode(elmah, root);
 
                 foreach (var filePath in files)
                 {

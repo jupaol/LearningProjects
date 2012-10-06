@@ -5,6 +5,7 @@ using System.Threading;
 using System.Web;
 using System.Web.Script.Services;
 using System.Web.Services;
+using System.Xml;
 using System.Xml.Linq;
 
 namespace Msts.Topics.Chapter09___Scripts.Lesson03___JQuery
@@ -22,14 +23,18 @@ namespace Msts.Topics.Chapter09___Scripts.Lesson03___JQuery
 
         [WebMethod]
         [ScriptMethod(ResponseFormat = ResponseFormat.Xml, UseHttpGet = true)]
-        public string GetCustomXml()
+        public XmlDocument GetCustomXml()
         {
             var doc = XDocument.Load(Server.MapPath("~/Topics/Chapter09 - Scripts/Lesson03 - JQuery/MyXmlFile.xml"));
             var s = doc.ToString();
 
             Thread.Sleep(2000);
 
-            return s;
+            var d = new XmlDocument();
+
+            d.Load(Server.MapPath("~/Topics/Chapter09 - Scripts/Lesson03 - JQuery/MyXmlFile.xml"));
+
+            return d;
         }
 
         [WebMethod]

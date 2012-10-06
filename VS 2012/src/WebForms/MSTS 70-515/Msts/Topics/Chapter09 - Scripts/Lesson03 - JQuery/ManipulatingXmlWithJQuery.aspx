@@ -51,7 +51,12 @@
                         //return;
                         //***************
 
-                        var $elements = $($(msg).text()).find("DomainUser");
+                        console.log("doc %o", msg);
+                        console.log("doc jquery %o", $(msg));
+
+                        //var $elements = $($(msg).text()).find("DomainUser");
+
+                        var $elements = $(msg).find("DomainUser");
 
                         $res.text("");
 

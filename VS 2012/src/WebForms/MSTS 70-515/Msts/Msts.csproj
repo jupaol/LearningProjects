@@ -399,6 +399,9 @@
     <Content Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\HelloWorldWcfRestService.svc" />
     <Content Include="Topics\Chapter10 - Services and Handlers\Lesson03 - WCF Services\HelloWorldWcfService.svc" />
     <Content Include="Topics\Chapter11 - LINQ\Lesson01 - LINQ to Objects\ParsingGeoLocationUsingLinqToXml.aspx" />
+    <Content Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\CreatingDataSets.aspx" />
+    <Content Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\FillingADataSetUsingSqlAdapter.aspx" />
+    <Content Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\FillStrongTypedDataSet.aspx" />
     <Content Include="Web References\HelloWorldXmlService\HelloWorldService.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -416,6 +419,17 @@
     <Content Include="Service References\HelloWorldWcfServiceReference\HelloWorldWcfService.wsdl" />
     <None Include="Service References\HelloWorldWcfServiceReference\HelloWorldWcfService.xsd" />
     <None Include="Service References\HelloWorldWcfServiceReference\HelloWorldWcfService1.xsd" />
+    <Content Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\JobsDataSet.xsc">
+      <DependentUpon>JobsDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\JobsDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>JobsDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\JobsDataSet.xss">
+      <DependentUpon>JobsDataSet.xsd</DependentUpon>
+    </Content>
     <None Include="Web.Test.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1175,6 +1189,32 @@
     <Compile Include="Topics\Chapter11 - LINQ\Lesson01 - LINQ to Objects\ParsingGeoLocationUsingLinqToXml.aspx.designer.cs">
       <DependentUpon>ParsingGeoLocationUsingLinqToXml.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\CreatingDataSets.aspx.cs">
+      <DependentUpon>CreatingDataSets.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\CreatingDataSets.aspx.designer.cs">
+      <DependentUpon>CreatingDataSets.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\FillingADataSetUsingSqlAdapter.aspx.cs">
+      <DependentUpon>FillingADataSetUsingSqlAdapter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\FillingADataSetUsingSqlAdapter.aspx.designer.cs">
+      <DependentUpon>FillingADataSetUsingSqlAdapter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\FillStrongTypedDataSet.aspx.cs">
+      <DependentUpon>FillStrongTypedDataSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\FillStrongTypedDataSet.aspx.designer.cs">
+      <DependentUpon>FillStrongTypedDataSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\JobsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JobsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Web References\HelloWorldXmlService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1214,7 +1254,6 @@
     <Folder Include="App_LocalResources\" />
     <Folder Include="Files\" />
     <Folder Include="Topics\Chapter08 - Debugging and Deploying\Lesson03 - Deploying\" />
-    <Folder Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

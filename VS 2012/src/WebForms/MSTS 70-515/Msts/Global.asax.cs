@@ -1,4 +1,5 @@
 ﻿using Msts.App_Start;
+using Msts.Topics.Chapter12___Data_binding.Lesson01___DataSource;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,19 @@ namespace Msts
 {
     public class Global : System.Web.HttpApplication
     {
+        Msts.DataAccess.EFData.PubsEntities PubsEFContext;
+
+        public Global()
+        {
+            this.PostRequestHandlerExecute += Global_PostRequestHandlerExecute;
+        }
+
+        private void Global_PostRequestHandlerExecute(object sender, EventArgs e)
+        {
+            var wrapper = new ContextWrapper(new HttpContextWrapper(this.Context));
+
+            wrapper.ReleaseEFContext();            
+        }
 
         protected void Application_Start(object sender, EventArgs e)
         {
@@ -30,6 +44,8 @@ namespace Msts
 
             BundleConfiguration.RegisterBundles(BundleTable.Bundles);
             RoutesConfig.ConfigureRoutes(RouteTable.Routes);
+
+            new JobMapper();
         }
 
         protected void Session_Start(object sender, EventArgs e)

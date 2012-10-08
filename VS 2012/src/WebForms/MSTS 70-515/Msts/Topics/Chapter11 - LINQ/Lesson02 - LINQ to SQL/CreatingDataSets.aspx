@@ -5,9 +5,7 @@
         Creating a dataset manually
     </h1>
     <ajaxToolkit:Accordion runat="server" ID="accordion" SelectedIndex="0"
-        HeaderCssClass="accordionHeader"
-    HeaderSelectedCssClass="accordionHeaderSelected"
-    ContentCssClass="accordionContent"
+        ContentCssClass="accordionContent" HeaderCssClass="accordionHeader" HeaderSelectedCssClass="accordionHeaderSelected"
     AutoSize="None"
     FadeTransitions="true"
     TransitionDuration="250"
@@ -21,10 +19,7 @@
             Woops
         </HeaderTemplate>
         <Panes>
-            <ajaxToolkit:AccordionPane runat="server" ID="pane1"
-                HeaderCssClass="accordionHeader"
-            HeaderSelectedCssClass="accordionHeaderSelected"
-            ContentCssClass="accordionContent">
+            <ajaxToolkit:AccordionPane runat="server" ID="pane1">
                 <Header>
                     Header 1
                 </Header>

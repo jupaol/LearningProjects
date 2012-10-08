@@ -18,12 +18,15 @@
     <h3>
         Creating a dataset using <code>SqlAdapter</code> and <code>SqlCommandBuilder</code>
     </h3>
-    <asp:GridView runat="server" ID="gvpicker">
+    <asp:GridView runat="server" ID="gvpicker" AutoGenerateEditButton="true" OnRowEditing="gvpicker_RowEditing">
         <Columns>
             <asp:TemplateField>
                 <ItemTemplate>
-                    <asp:TextBox runat="server" ID="myDatePicker" CssClass="myDatePickerClass" />
+                    <asp:Label Text='<%# Eval("job_desc") %>' runat="server" ID="jobDescriptionLabel" />
                 </ItemTemplate>
+                <EditItemTemplate>
+                    <asp:TextBox runat="server" Text='<%# Bind("job_desc") %>' ID="myDatePicker" CssClass="myDatePickerClass" />
+                </EditItemTemplate>
             </asp:TemplateField>
         </Columns>
     </asp:GridView>

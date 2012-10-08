@@ -40,7 +40,8 @@ namespace Msts.Topics.Chapter11___LINQ.Lesson01___LINQ_to_Objects
                 var elements = xml.Root.Elements();
                 var currentCountry = elements.First(x => x.Name.ToString().Equals("CountryName", StringComparison.InvariantCultureIgnoreCase));
 
-                var address = new XElement("address", new XAttribute("id", Guid.NewGuid()));
+                var addressID = Guid.NewGuid();
+                var address = new XElement("address", new XAttribute("id", addressID));
                 var states = new XElement("states");
                 var edo = new XElement("state", new XAttribute("name", "Distrito Federal"));
                 var city = new XElement("city", new XAttribute("name", "Distrito Federal"));
@@ -57,6 +58,15 @@ namespace Msts.Topics.Chapter11___LINQ.Lesson01___LINQ_to_Objects
                 edo.Add(city);
                 city.Add(addressDetail);
                 addressDetail.Add(col, intNumber, extNumber, mnz, calle);
+
+                var g = from c in xml.Root.Element("CountryName").Elements()
+                        where (Guid)c.Attribute("id") == addressID
+                        select c;
+
+                if (g == null)
+                {
+                    throw new Exception("Something wrong happened");
+                }
 
                 var o = new
                 {

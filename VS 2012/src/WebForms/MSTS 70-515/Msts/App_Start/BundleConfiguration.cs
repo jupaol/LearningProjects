@@ -48,6 +48,9 @@ namespace Msts.App_Start
                 "~/Scripts/knockout-{version}.js",
                 "~/Scripts/knockout.mapping-latest.js",
                 "~/Scripts/knockout.validation.js"));
+
+            bundles.Add(new StyleBundle("~/Content/AjaxControlToolkit").Include(
+                "~/Content/AjaxControlToolkit/Accordion.css"));
         }
     }
 }

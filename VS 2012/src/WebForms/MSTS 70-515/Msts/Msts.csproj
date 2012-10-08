@@ -56,6 +56,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\AspNet.ScriptManager.jQuery.UI.Combined.1.8.24\lib\net45\AspNet.ScriptManager.jQuery.UI.Combined.dll</HintPath>
     </Reference>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.2.2.0\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Elmah">
       <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
     </Reference>
@@ -102,6 +105,9 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.4.5.9\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Omu.ValueInjecter">
+      <HintPath>..\packages\ValueInjecter.2.3.3\lib\net35\Omu.ValueInjecter.dll</HintPath>
     </Reference>
     <Reference Include="SanitizerProviders">
       <HintPath>..\packages\AjaxControlToolkit.4.1.60919\lib\45\SanitizerProviders\SanitizerProviders.dll</HintPath>
@@ -169,6 +175,7 @@
     <Content Include="App_Themes\Yellow\Images\logo.jpg" />
     <Content Include="ChangePassword.aspx" />
     <EmbeddedResource Include="Content\Chapter09\PasswordStrength.css" />
+    <Content Include="Content\AjaxControlToolkit\Accordion.css" />
     <Content Include="Content\Images\logo.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -402,6 +409,9 @@
     <Content Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\CreatingDataSets.aspx" />
     <Content Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\FillingADataSetUsingSqlAdapter.aspx" />
     <Content Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\FillStrongTypedDataSet.aspx" />
+    <Content Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\LinqToEntitiesCrudOperations.aspx" />
+    <Content Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\LinqToSqlManualMappingsTest.aspx" />
+    <Content Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheObjectDataSourceControl.aspx" />
     <Content Include="Web References\HelloWorldXmlService\HelloWorldService.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -497,6 +507,7 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ExtenssionMethods\ExtenssionsForIQueryable.cs" />
     <Compile Include="ForgotPassword.aspx.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1196,6 +1207,7 @@
     <Compile Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\CreatingDataSets.aspx.designer.cs">
       <DependentUpon>CreatingDataSets.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\EmployeeEnitytManual.cs" />
     <Compile Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\FillingADataSetUsingSqlAdapter.aspx.cs">
       <DependentUpon>FillingADataSetUsingSqlAdapter.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1210,10 +1222,40 @@
     <Compile Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\FillStrongTypedDataSet.aspx.designer.cs">
       <DependentUpon>FillStrongTypedDataSet.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\JobDTO.cs" />
+    <Compile Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\JobEnityManual.cs" />
     <Compile Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\JobsDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>JobsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\LinqToEntitiesCrudOperations.aspx.cs">
+      <DependentUpon>LinqToEntitiesCrudOperations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\LinqToEntitiesCrudOperations.aspx.designer.cs">
+      <DependentUpon>LinqToEntitiesCrudOperations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\LinqToSqlManualMappingsTest.aspx.cs">
+      <DependentUpon>LinqToSqlManualMappingsTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\LinqToSqlManualMappingsTest.aspx.designer.cs">
+      <DependentUpon>LinqToSqlManualMappingsTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\ObjectDataSourceProvider.cs" />
+    <Compile Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\PubsManualContext.cs" />
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\ContextWrapper.cs" />
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\IContextWrapper.cs" />
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\JobDTO.cs" />
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\JobMapper.cs" />
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\ObjectDataSourceProvider.cs" />
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheObjectDataSourceControl.aspx.cs">
+      <DependentUpon>WorkingWithTheObjectDataSourceControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheObjectDataSourceControl.aspx.designer.cs">
+      <DependentUpon>WorkingWithTheObjectDataSourceControl.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web References\HelloWorldXmlService\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -1254,6 +1296,8 @@
     <Folder Include="App_LocalResources\" />
     <Folder Include="Files\" />
     <Folder Include="Topics\Chapter08 - Debugging and Deploying\Lesson03 - Deploying\" />
+    <Folder Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\" />
+    <Folder Include="Topics\Chapter12 - Data binding\Lesson03 - Dynamic Data\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

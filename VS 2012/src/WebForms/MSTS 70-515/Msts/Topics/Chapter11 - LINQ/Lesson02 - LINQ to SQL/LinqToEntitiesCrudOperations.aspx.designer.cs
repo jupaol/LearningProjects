@@ -7,135 +7,144 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Msts.Topics.Chapter02.Lesson01___MasterPages {
+namespace Msts.Topics.Chapter11___LINQ.Lesson02___LINQ_to_SQL {
     
     
-    public partial class GlobalMaster {
+    public partial class LinqToEntitiesCrudOperations {
         
         /// <summary>
-        /// BundleReference1 control.
+        /// eds control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Microsoft.AspNet.Web.Optimization.WebForms.BundleReference BundleReference1;
+        protected global::System.Web.UI.WebControls.EntityDataSource eds;
         
         /// <summary>
-        /// ajaxControlToolkitReference control.
+        /// new control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Microsoft.AspNet.Web.Optimization.WebForms.BundleReference ajaxControlToolkitReference;
+        protected global::System.Web.UI.WebControls.Button @new;
         
         /// <summary>
-        /// scripts control.
+        /// updatePanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder scripts;
+        protected global::System.Web.UI.UpdatePanel updatePanel;
         
         /// <summary>
-        /// form1 control.
+        /// updatePanelProgress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.UpdateProgress updatePanelProgress;
         
         /// <summary>
-        /// wpm control.
+        /// cancelSelection control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.WebParts.WebPartManager wpm;
+        protected global::System.Web.UI.WebControls.Button cancelSelection;
         
         /// <summary>
-        /// ToolkitScriptManager1 control.
+        /// gv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ToolkitScriptManager ToolkitScriptManager1;
+        protected global::System.Web.UI.WebControls.GridView gv;
         
         /// <summary>
-        /// ddlLayouts control.
+        /// insertUpdatePanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlLayouts;
+        protected global::System.Web.UI.UpdatePanel insertUpdatePanel;
         
         /// <summary>
-        /// ddlThemes control.
+        /// UpdateProgress1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlThemes;
+        protected global::System.Web.UI.UpdateProgress UpdateProgress1;
         
         /// <summary>
-        /// ddlCultures control.
+        /// description control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCultures;
+        protected global::System.Web.UI.WebControls.TextBox description;
         
         /// <summary>
-        /// smds control.
+        /// minimum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SiteMapDataSource smds;
+        protected global::System.Web.UI.WebControls.TextBox minimum;
         
         /// <summary>
-        /// sm control.
+        /// maximum control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SiteMapPath sm;
+        protected global::System.Web.UI.WebControls.TextBox maximum;
         
         /// <summary>
-        /// menui control.
+        /// addNew control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu menui;
+        protected global::System.Web.UI.WebControls.Button addNew;
         
         /// <summary>
-        /// tv control.
+        /// status control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TreeView tv;
+        protected global::System.Web.UI.WebControls.Label status;
         
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// ods control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.ObjectDataSource ods;
+        
+        /// <summary>
+        /// gv2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView gv2;
     }
 }

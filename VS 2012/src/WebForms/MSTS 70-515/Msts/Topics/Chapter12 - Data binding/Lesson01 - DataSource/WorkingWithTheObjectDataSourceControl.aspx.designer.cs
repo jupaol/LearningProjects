@@ -7,135 +7,108 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Msts.Topics.Chapter02.Lesson01___MasterPages {
+namespace Msts.Topics.Chapter12___Data_binding.Lesson01___DataSource {
     
     
-    public partial class GlobalMaster {
+    public partial class WorkingWithTheObjectDataSourceControl {
         
         /// <summary>
-        /// BundleReference1 control.
+        /// updatePanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Microsoft.AspNet.Web.Optimization.WebForms.BundleReference BundleReference1;
+        protected global::System.Web.UI.UpdatePanel updatePanel;
         
         /// <summary>
-        /// ajaxControlToolkitReference control.
+        /// descriptionFilter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Microsoft.AspNet.Web.Optimization.WebForms.BundleReference ajaxControlToolkitReference;
+        protected global::System.Web.UI.WebControls.TextBox descriptionFilter;
         
         /// <summary>
-        /// scripts control.
+        /// minimumFilter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder scripts;
+        protected global::System.Web.UI.WebControls.DropDownList minimumFilter;
         
         /// <summary>
-        /// form1 control.
+        /// maximumFilter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.RadioButtonList maximumFilter;
         
         /// <summary>
-        /// wpm control.
+        /// UpdateProgress1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.WebParts.WebPartManager wpm;
+        protected global::System.Web.UI.UpdateProgress UpdateProgress1;
         
         /// <summary>
-        /// ToolkitScriptManager1 control.
+        /// applyFilter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ToolkitScriptManager ToolkitScriptManager1;
+        protected global::System.Web.UI.WebControls.Button applyFilter;
         
         /// <summary>
-        /// ddlLayouts control.
+        /// resetFilter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlLayouts;
+        protected global::System.Web.UI.WebControls.Button resetFilter;
         
         /// <summary>
-        /// ddlThemes control.
+        /// ods control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlThemes;
+        protected global::System.Web.UI.WebControls.ObjectDataSource ods;
         
         /// <summary>
-        /// ddlCultures control.
+        /// gv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCultures;
+        protected global::System.Web.UI.WebControls.GridView gv;
         
         /// <summary>
-        /// smds control.
+        /// jobODS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SiteMapDataSource smds;
+        protected global::System.Web.UI.WebControls.ObjectDataSource jobODS;
         
         /// <summary>
-        /// sm control.
+        /// jobDetails control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SiteMapPath sm;
-        
-        /// <summary>
-        /// menui control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu menui;
-        
-        /// <summary>
-        /// tv control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TreeView tv;
-        
-        /// <summary>
-        /// ContentPlaceHolder1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.DetailsView jobDetails;
     }
 }

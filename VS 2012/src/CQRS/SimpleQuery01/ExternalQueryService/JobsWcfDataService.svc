@@ -1,0 +1,5 @@
+﻿<%@ ServiceHost 
+    Language="C#" 
+    Debug="true" 
+    Service="QueryRepository.PubsService, QueryRepository" 
+    Factory="System.Data.Services.DataServiceHostFactory, Microsoft.Data.Services" %>

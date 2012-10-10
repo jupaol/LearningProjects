@@ -412,6 +412,7 @@
     <Content Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\LinqToEntitiesCrudOperations.aspx" />
     <Content Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\LinqToSqlManualMappingsTest.aspx" />
     <Content Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheObjectDataSourceControl.aspx" />
+    <Content Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheSqlDataSourceControl.aspx" />
     <Content Include="Web References\HelloWorldXmlService\HelloWorldService.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -1256,6 +1257,13 @@
     </Compile>
     <Compile Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheObjectDataSourceControl.aspx.designer.cs">
       <DependentUpon>WorkingWithTheObjectDataSourceControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheSqlDataSourceControl.aspx.cs">
+      <DependentUpon>WorkingWithTheSqlDataSourceControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheSqlDataSourceControl.aspx.designer.cs">
+      <DependentUpon>WorkingWithTheSqlDataSourceControl.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web References\HelloWorldXmlService\Reference.cs">
       <AutoGen>True</AutoGen>

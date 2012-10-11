@@ -84,6 +84,7 @@
     <Content Include="CallingSimpleWcfDataServiceInCodeBehind.aspx" />
     <Content Include="CallingSimpleWcfDataServiceWithJQuery.aspx" />
     <Content Include="CallingSimpleWcfService.aspx" />
+    <Content Include="CallingWebApierviceUsingJQuery.aspx" />
     <Content Include="Content\jquery.jqGrid\ellipsis-xbl.xml" />
     <Content Include="Content\jquery.jqGrid\ui.jqgrid.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -190,6 +191,8 @@
     <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
     <Content Include="Scripts\jquery.jqGrid.min.js" />
     <Content Include="Scripts\jquery.jqGrid.src.js" />
+    <Content Include="Scripts\json2.js" />
+    <Content Include="Scripts\json2.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -214,6 +217,13 @@
     </Compile>
     <Compile Include="CallingSimpleWcfService.aspx.designer.cs">
       <DependentUpon>CallingSimpleWcfService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CallingWebApierviceUsingJQuery.aspx.cs">
+      <DependentUpon>CallingWebApierviceUsingJQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CallingWebApierviceUsingJQuery.aspx.designer.cs">
+      <DependentUpon>CallingWebApierviceUsingJQuery.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

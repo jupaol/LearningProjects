@@ -18,12 +18,23 @@ namespace MvcApplication1
                         "~/Scripts/jquery.unobtrusive*",
                         "~/Scripts/jquery.validate*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/jqgrid").Include(
+                "~/Scripts/i18n/grid.locale-en.js",
+                "~/Scripts/jquery.jqGrid*"
+                ));
+
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
+            bundles.Add(new StyleBundle("~/Content/jqgrid").Include(
+                "~/Content/jquery.jqGrid/ui.jqgrid.css"
+                ));
+
+            bundles.Add(new StyleBundle("~/Content/css").Include(
+                "~/Content/site.css"
+                ));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
                         "~/Content/themes/base/jquery.ui.core.css",
@@ -38,6 +49,10 @@ namespace MvcApplication1
                         "~/Content/themes/base/jquery.ui.datepicker.css",
                         "~/Content/themes/base/jquery.ui.progressbar.css",
                         "~/Content/themes/base/jquery.ui.theme.css"));
+
+            bundles.Add(new StyleBundle("~/Content/themes/start").Include(
+                "~/Content/themes/start/jquery-ui-1.9.0.custom.css"
+                ));
         }
     }
 }

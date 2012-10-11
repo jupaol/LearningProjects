@@ -12,5 +12,10 @@ namespace MvcApplication1.Controllers
         {
             return View();
         }
+
+        public ActionResult CallWebApiService()
+        {
+            return View();
+        }
     }
 }

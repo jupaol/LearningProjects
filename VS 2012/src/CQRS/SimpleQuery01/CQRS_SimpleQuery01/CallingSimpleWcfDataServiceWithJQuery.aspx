@@ -9,7 +9,9 @@
     <link href="Content/jquery.jqGrid/ui.jqgrid.css" rel="stylesheet" />
     <script src="Scripts/jquery-1.7.2.min.js"></script>
     <script src="Scripts/jquery-ui-1.8.24.min.js"></script>
+    <script src="Scripts/i18n/grid.locale-en.js"></script>
     <script src="Scripts/jquery.jqGrid.min.js"></script>
+    <script src="Scripts/json2.min.js"></script>
     <script>
         $(function () {
             var $call = $("input:submit[id$=call]");
@@ -19,10 +21,16 @@
             $dialog.dialog({
                 autoOpen: false,
                 modal: true,
-                height: 140
+                height: 140,
+                closeOnEscape: false,
+                open: function (e, ui) {
+                    $(this).closest(".ui-dialog").find(".ui-dialog-titlebar-close").hide();
+                }
             });
 
             function requestData() {
+                $dialog.dialog("open");
+
                 $.ajax({
                     url: "http://localhost:58284/JobsWcfDataService.svc/jobs/?$format=json&$callback=mycallback",
                     type: "GET",
@@ -31,11 +39,20 @@
                     jsonpCallback: "mycallback",
                     data: "{}",
                     success: function (msg) {
-                        $grid.addJSONData
+                        console.log(msg.d);
+
+                        $grid.clearGridData(true);
+                        $grid.setGridParam({
+                            data: msg.d,
+                            rowNum: msg.d.length
+                        }).trigger("reloadGrid");
                     },
                     error: function (err) {
                         console.log(err);
                         alert(err.responseText);
+                    },
+                    complete: function () {
+                        $dialog.dialog("close");
                     }
                 });
             }
@@ -44,18 +61,23 @@
                 e.preventDefault();
 
                 $grid.jqGrid({
-                    datatype: requestData,
-                    colNames: ["ID"],
+                    datatype: "local",
+                    colNames: ["ID", "Description", "Minimum", "Maximum"],
                     colModel: [
-                        { name: "id", index: "job_id" }
+                        { name: "job_id", index: "job_id", sorttype: "int", jsonmap: "job_id" },
+                        { name: "job_desc", index: "job_desc", jsonmap: "job_desc" },
+                        { name: "min_lvl", index: "min_lvl", jsonmap: "min_lvl", sorttype: "min_lvl" },
+                        { name: "max_lvl", index: "max_lvl", jsonmap: "max_lvl", sorttype: "max_lvl" }
                     ],
-                    rowNum: 3,
-                    rowList: [10, 20, 30],
+                    rowList: [3, 6, 9],
                     pager: "#pager",
                     sortname: "job_id",
                     viewrecords: true,
                     sortorder: "desc",
-                    caption: "JSON example"
+                    caption: "JSON example",
+                    multiselect: false,
+                    autowidth: true,
+                    forceFit: true
                 });
 
                 $grid.jqGrid("navGrid", "#pager", {
@@ -64,6 +86,7 @@
                     del: false
                 });
 
+                requestData();
             });
         });
     </script>

@@ -1,0 +1,64 @@
+﻿@{
+    ViewBag.Title = "CallWebApiService";
+}
+
+<h2>CallWebApiService</h2>
+
+<div>
+    <input type="button" id="initializeGrid" value="Initialize Grid" />
+</div>
+
+<table id="grid"></table>
+<div id="pager"></div>
+
+
+@section scripts{
+    <script>
+        $(function () {
+            var $initializeGrid = $("#initializeGrid");
+            var $grid = $("#grid");
+            var $pager = $("#pager");
+
+            $initializeGrid.click(function (e) {
+                e.preventDefault();
+
+                $grid.jqGrid({
+                    url: "@Url.RouteUrl("DefaultApi", new { controller = "Values", httproute = "" })",
+                    datatype: "json",
+                    mtype: "GET",
+                    colNames: ["ID", "Description", "Minimum", "Maximum"],
+                    colModel: [
+                        { name: "ID", index: "ID", sorttype: "int", searchoptions: { sopt: ["eq", "ne", "gt", "ge", "lt", "le"] } },
+                        { name: "Description", index: "Description", searchoptions: { sopt: ["eq", "ne", "cn"] } },
+                        { name: "Minimum", index: "Minimum", sorttype: "int", searchoptions: { sopt: ["eq", "ne", "gt", "ge", "lt", "le"] } },
+                        { name: "Maximum", index: "Maximum", sorttype: "int", searchoptions: { sopt: ["eq", "ne", "gt", "ge", "lt", "le"] } }
+                    ],
+                    autowidth: true,
+                    viewrecords: true,
+                    pager: $pager,
+                    rowNum: 3,
+                    rowList: [3, 6, 8],
+                    sortorder: "desc",
+                    sortname: "ID",
+                    caption: "Test",
+                    multiselect: false,
+                    forcefit: true
+                }).navGrid("#pager", {
+                    edit: true,
+                    add: true,
+                    del: true,
+                    search: true,
+                    refresh: true
+                },
+                null,
+                null,
+                null,
+                {
+                    closeOnEscape: true,
+                    multipleSearch: true,
+                    closeAfterSearch: true
+                });
+            });
+        });
+    </script>
+}

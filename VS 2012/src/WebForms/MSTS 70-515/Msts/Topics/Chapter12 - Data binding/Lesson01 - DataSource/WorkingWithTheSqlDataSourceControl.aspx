@@ -8,11 +8,13 @@
         ConnectionString="<%$ConnectionStrings: Msts %>"
         DataSourceMode="DataSet"
         SelectCommand="select * from jobs"
-        SelectCommandType="Text">
+        SelectCommandType="Text"
+        OnSelecting="sds_Selecting">
         
     </asp:SqlDataSource>
     <asp:GridView runat="server" ID="gv" 
         DataSourceID="sds"
+        AllowPaging="true" AllowSorting="true" PageSize="5"
         >
 
     </asp:GridView>

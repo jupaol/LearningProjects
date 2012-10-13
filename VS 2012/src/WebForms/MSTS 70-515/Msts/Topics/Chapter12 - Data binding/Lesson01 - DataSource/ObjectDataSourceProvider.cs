@@ -5,7 +5,8 @@ using System.Collections.Generic;
 using System.Data.Linq.SqlClient;
 using System.Linq;
 using System.Web;
-using Msts.ExtenssionMethods;
+//using Msts.ExtenssionMethods;
+using System.Linq.Dynamic;
 
 namespace Msts.Topics.Chapter12___Data_binding.Lesson01___DataSource
 {
@@ -20,11 +21,11 @@ namespace Msts.Topics.Chapter12___Data_binding.Lesson01___DataSource
             this.context = wrapper.GetEFContext();
         }
 
-        private IQueryable<job> ApplySort(IQueryable<job> source, string sortCriteria)
+        private IQueryable<JobDTO> ApplySort(IQueryable<JobDTO> source, string sortCriteria)
         {
             if (string.IsNullOrWhiteSpace(sortCriteria))
             {
-                return source.OrderBy(x => x.job_id);
+                return source.OrderBy(x => x.ID);
             }
 
             string[] sortValues = sortCriteria.Split(' ');
@@ -40,11 +41,11 @@ namespace Msts.Topics.Chapter12___Data_binding.Lesson01___DataSource
 
             if (desceding)
             {
-                return source.OrderBy(sortValues[0]);
+                return source.OrderBy(sortValues[0] + " descending");
             }
             else
             {
-                return source.OrderByDescending(sortValues[0]);
+                return source.OrderBy(sortValues[0]);
             }
         }
 
@@ -52,11 +53,18 @@ namespace Msts.Topics.Chapter12___Data_binding.Lesson01___DataSource
         {
             var q = this.FindJobs(description, minimum, maximum);
 
-            q = this.ApplySort(q, sortCriteria);
+            var res = q.Select(x => new JobDTO
+                {
+                    Description = x.job_desc,
+                    ID = x.job_id,
+                    Maximum = x.max_lvl,
+                    Minimum = x.min_lvl
+                });
 
-            q = q.Skip(rowIndex).Take(pageSize);
+            res = this.ApplySort(res, sortCriteria);
+            res = res.Skip(rowIndex).Take(pageSize);
 
-            return q.ToList().Select(x => Mapper.Map<JobDTO>(x));
+            return res;
         }
 
         public int GetJobsCount(string description, byte? minimum, byte? maximum)

@@ -13,5 +13,10 @@ namespace Msts.Topics.Chapter12___Data_binding.Lesson01___DataSource
         {
 
         }
+
+        protected void sds_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+        {
+            
+        }
     }
 }

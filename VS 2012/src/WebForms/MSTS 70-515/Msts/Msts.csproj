@@ -59,6 +59,9 @@
     <Reference Include="AutoMapper">
       <HintPath>..\packages\AutoMapper.2.2.0\lib\net40\AutoMapper.dll</HintPath>
     </Reference>
+    <Reference Include="Dynamic">
+      <HintPath>..\packages\DynamicQuery.1.0\lib\35\Dynamic.dll</HintPath>
+    </Reference>
     <Reference Include="Elmah">
       <HintPath>..\packages\elmah.corelibrary.1.2.2\lib\Elmah.dll</HintPath>
     </Reference>
@@ -235,6 +238,7 @@
     <Content Include="CreateAccount.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="DefaultErrorPage.html" />
+    <Content Include="Dynamic Expressions.html" />
     <Content Include="ForgotPassword.aspx" />
     <Content Include="Global.asax" />
     <EntityDeploy Include="DataAccess\EFData\Pubs.edmx">

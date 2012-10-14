@@ -179,7 +179,15 @@
     <Content Include="ChangePassword.aspx" />
     <EmbeddedResource Include="Content\Chapter09\PasswordStrength.css" />
     <Content Include="Content\AjaxControlToolkit\Accordion.css" />
+    <Content Include="Content\Images\image1.jpg" />
+    <Content Include="Content\Images\image2.jpg" />
+    <Content Include="Content\Images\image3.jpg" />
+    <Content Include="Content\Images\image4.jpg" />
+    <Content Include="Content\Images\image5.jpg" />
+    <Content Include="Content\Images\image6.jpg" />
     <Content Include="Content\Images\logo.jpg" />
+    <Content Include="Content\Images\image7.jpg" />
+    <Content Include="Content\Images\image8.jpg" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -420,6 +428,8 @@
     <Content Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheObjectDataSourceControl.aspx" />
     <Content Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheSqlDataSourceControl.aspx" />
     <Content Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheXmlDataSourceControl.aspx" />
+    <Content Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithSimpleDataBoundControls.aspx" />
+    <Content Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheGridViewControl.aspx" />
     <Content Include="Web References\HelloWorldXmlService\HelloWorldService.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -1293,6 +1303,20 @@
     <Compile Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheXmlDataSourceControl.aspx.designer.cs">
       <DependentUpon>WorkingWithTheXmlDataSourceControl.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithSimpleDataBoundControls.aspx.cs">
+      <DependentUpon>WorkingWithSimpleDataBoundControls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithSimpleDataBoundControls.aspx.designer.cs">
+      <DependentUpon>WorkingWithSimpleDataBoundControls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheGridViewControl.aspx.cs">
+      <DependentUpon>WorkingWithTheGridViewControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheGridViewControl.aspx.designer.cs">
+      <DependentUpon>WorkingWithTheGridViewControl.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Web References\HelloWorldXmlService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1332,7 +1356,6 @@
     <Folder Include="App_LocalResources\" />
     <Folder Include="Files\" />
     <Folder Include="Topics\Chapter08 - Debugging and Deploying\Lesson03 - Deploying\" />
-    <Folder Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\" />
     <Folder Include="Topics\Chapter12 - Data binding\Lesson03 - Dynamic Data\" />
   </ItemGroup>
   <ItemGroup>

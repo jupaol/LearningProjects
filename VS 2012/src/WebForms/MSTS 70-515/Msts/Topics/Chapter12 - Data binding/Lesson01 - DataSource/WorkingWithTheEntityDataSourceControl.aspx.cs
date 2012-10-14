@@ -1,6 +1,7 @@
 ﻿using Msts.DataAccess.EFData;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -55,6 +56,13 @@ namespace Msts.Topics.Chapter12___Data_binding.Lesson01___DataSource
         {
             this.gv.SelectedIndex = -1;
             this.gv.DataBind();
+        }
+
+        protected void eds_ContextCreating(object sender, EntityDataSourceContextCreatingEventArgs e)
+        {
+            var pubs = new PubsEntities();
+
+            e.Context = ((IObjectContextAdapter)pubs).ObjectContext;
         }
     }
 }

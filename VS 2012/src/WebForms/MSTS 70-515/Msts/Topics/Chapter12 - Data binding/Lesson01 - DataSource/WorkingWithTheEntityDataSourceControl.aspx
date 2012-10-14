@@ -57,6 +57,7 @@
                 EnableDelete="true"
                 EnableFlattening="true"
                 OnQueryCreated="eds_QueryCreated"
+                OnContextCreating="eds_ContextCreating"
                 Where="it.max_lvl <= @maximumLevel and it.min_lvl >= @minimumLevel">
                 <WhereParameters>
                     <asp:ControlParameter 
@@ -86,6 +87,7 @@
                 EnableFlattening="true"
                 Where="it.job_id == @job_id"
                 AutoPage="false" AutoSort="true"
+                OnContextCreating="eds_ContextCreating"
                 EnableDelete="true" EnableInsert="true" EnableUpdate="true">
                 <WhereParameters>
                     <asp:ControlParameter 

@@ -415,8 +415,11 @@
     <Content Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\FillStrongTypedDataSet.aspx" />
     <Content Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\LinqToEntitiesCrudOperations.aspx" />
     <Content Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\LinqToSqlManualMappingsTest.aspx" />
+    <Content Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheEntityDataSourceControl.aspx" />
+    <Content Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheLinqDataSourceControl.aspx" />
     <Content Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheObjectDataSourceControl.aspx" />
     <Content Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheSqlDataSourceControl.aspx" />
+    <Content Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheXmlDataSourceControl.aspx" />
     <Content Include="Web References\HelloWorldXmlService\HelloWorldService.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -1255,6 +1258,20 @@
     <Compile Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\JobDTO.cs" />
     <Compile Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\JobMapper.cs" />
     <Compile Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\ObjectDataSourceProvider.cs" />
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheEntityDataSourceControl.aspx.cs">
+      <DependentUpon>WorkingWithTheEntityDataSourceControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheEntityDataSourceControl.aspx.designer.cs">
+      <DependentUpon>WorkingWithTheEntityDataSourceControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheLinqDataSourceControl.aspx.cs">
+      <DependentUpon>WorkingWithTheLinqDataSourceControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheLinqDataSourceControl.aspx.designer.cs">
+      <DependentUpon>WorkingWithTheLinqDataSourceControl.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheObjectDataSourceControl.aspx.cs">
       <DependentUpon>WorkingWithTheObjectDataSourceControl.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1268,6 +1285,13 @@
     </Compile>
     <Compile Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheSqlDataSourceControl.aspx.designer.cs">
       <DependentUpon>WorkingWithTheSqlDataSourceControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheXmlDataSourceControl.aspx.cs">
+      <DependentUpon>WorkingWithTheXmlDataSourceControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheXmlDataSourceControl.aspx.designer.cs">
+      <DependentUpon>WorkingWithTheXmlDataSourceControl.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web References\HelloWorldXmlService\Reference.cs">
       <AutoGen>True</AutoGen>

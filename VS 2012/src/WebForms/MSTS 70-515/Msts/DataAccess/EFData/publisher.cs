@@ -12,18 +12,19 @@ namespace Msts.DataAccess.EFData
     using System;
     using System.Collections.Generic;
     
-    public partial class employee
+    public partial class publisher
     {
-        public string emp_id { get; set; }
-        public string fname { get; set; }
-        public string minit { get; set; }
-        public string lname { get; set; }
-        public short job_id { get; set; }
-        public Nullable<byte> job_lvl { get; set; }
-        public string pub_id { get; set; }
-        public System.DateTime hire_date { get; set; }
+        public publisher()
+        {
+            this.employees = new HashSet<employee>();
+        }
     
-        public virtual job job { get; set; }
-        public virtual publisher publisher { get; set; }
+        public string pub_id { get; set; }
+        public string pub_name { get; set; }
+        public string city { get; set; }
+        public string state { get; set; }
+        public string country { get; set; }
+    
+        public virtual ICollection<employee> employees { get; set; }
     }
 }

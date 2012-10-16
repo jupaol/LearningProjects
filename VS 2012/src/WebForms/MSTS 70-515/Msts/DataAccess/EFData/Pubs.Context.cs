@@ -27,5 +27,6 @@ namespace Msts.DataAccess.EFData
     
         public DbSet<employee> employees { get; set; }
         public DbSet<job> jobs { get; set; }
+        public DbSet<publisher> publishers { get; set; }
     }
 }

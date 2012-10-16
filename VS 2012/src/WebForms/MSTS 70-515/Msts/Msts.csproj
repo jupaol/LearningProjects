@@ -429,7 +429,11 @@
     <Content Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheSqlDataSourceControl.aspx" />
     <Content Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheXmlDataSourceControl.aspx" />
     <Content Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithSimpleDataBoundControls.aspx" />
+    <Content Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheDetailsViewControl.aspx" />
+    <Content Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheFormViewControl.aspx" />
     <Content Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheGridViewControl.aspx" />
+    <Content Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheListViewControl.aspx" />
+    <Content Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheRepeaterControl.aspx" />
     <Content Include="Web References\HelloWorldXmlService\HelloWorldService.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -496,6 +500,9 @@
       <DependentUpon>Pubs.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccess\EFData\job.cs">
+      <DependentUpon>Pubs.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\EFData\publisher.cs">
       <DependentUpon>Pubs.tt</DependentUpon>
     </Compile>
     <Compile Include="DataAccess\EFData\Pubs.Context.cs">
@@ -1310,12 +1317,40 @@
     <Compile Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithSimpleDataBoundControls.aspx.designer.cs">
       <DependentUpon>WorkingWithSimpleDataBoundControls.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheDetailsViewControl.aspx.cs">
+      <DependentUpon>WorkingWithTheDetailsViewControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheDetailsViewControl.aspx.designer.cs">
+      <DependentUpon>WorkingWithTheDetailsViewControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheFormViewControl.aspx.cs">
+      <DependentUpon>WorkingWithTheFormViewControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheFormViewControl.aspx.designer.cs">
+      <DependentUpon>WorkingWithTheFormViewControl.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheGridViewControl.aspx.cs">
       <DependentUpon>WorkingWithTheGridViewControl.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheGridViewControl.aspx.designer.cs">
       <DependentUpon>WorkingWithTheGridViewControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheListViewControl.aspx.cs">
+      <DependentUpon>WorkingWithTheListViewControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheListViewControl.aspx.designer.cs">
+      <DependentUpon>WorkingWithTheListViewControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheRepeaterControl.aspx.cs">
+      <DependentUpon>WorkingWithTheRepeaterControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheRepeaterControl.aspx.designer.cs">
+      <DependentUpon>WorkingWithTheRepeaterControl.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web References\HelloWorldXmlService\Reference.cs">
       <AutoGen>True</AutoGen>

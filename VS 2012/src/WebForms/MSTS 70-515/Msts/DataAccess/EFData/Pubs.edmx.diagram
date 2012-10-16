@@ -8,6 +8,8 @@
         <EntityTypeShape EntityType="pubsModel.employee" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="pubsModel.job" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
         <AssociationConnector Association="pubsModel.FK__employee__job_id__1BFD2C07" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="pubsModel.publisher" Width="1.5" PointX="8.7500369440531536" PointY="5.7140480008507373" />
+        <AssociationConnector Association="pubsModel.FK__employee__pub_id__1ED998B2" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

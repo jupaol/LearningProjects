@@ -4,12 +4,17 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="pubsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="pubsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="pubsModelStoreContainer">
           <EntitySet Name="employee" EntityType="pubsModel.Store.employee" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="jobs" EntityType="pubsModel.Store.jobs" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="publishers" EntityType="pubsModel.Store.publishers" store:Type="Tables" Schema="dbo" />
           <AssociationSet Name="FK__employee__job_id__1BFD2C07" Association="pubsModel.Store.FK__employee__job_id__1BFD2C07">
             <End Role="jobs" EntitySet="jobs" />
+            <End Role="employee" EntitySet="employee" />
+          </AssociationSet>
+          <AssociationSet Name="FK__employee__pub_id__1ED998B2" Association="pubsModel.Store.FK__employee__pub_id__1ED998B2">
+            <End Role="publishers" EntitySet="publishers" />
             <End Role="employee" EntitySet="employee" />
           </AssociationSet>
         </EntityContainer>
@@ -35,6 +40,16 @@
           <Property Name="min_lvl" Type="tinyint" Nullable="false" />
           <Property Name="max_lvl" Type="tinyint" Nullable="false" />
         </EntityType>
+        <EntityType Name="publishers">
+          <Key>
+            <PropertyRef Name="pub_id" />
+          </Key>
+          <Property Name="pub_id" Type="char" Nullable="false" MaxLength="4" />
+          <Property Name="pub_name" Type="varchar" MaxLength="40" />
+          <Property Name="city" Type="varchar" MaxLength="20" />
+          <Property Name="state" Type="char" MaxLength="2" />
+          <Property Name="country" Type="varchar" MaxLength="30" />
+        </EntityType>
         <Association Name="FK__employee__job_id__1BFD2C07">
           <End Role="jobs" Type="pubsModel.Store.jobs" Multiplicity="1" />
           <End Role="employee" Type="pubsModel.Store.employee" Multiplicity="*" />
@@ -47,8 +62,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
+        <Association Name="FK__employee__pub_id__1ED998B2">
+          <End Role="publishers" Type="pubsModel.Store.publishers" Multiplicity="1" />
+          <End Role="employee" Type="pubsModel.Store.employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="publishers">
+              <PropertyRef Name="pub_id" />
+            </Principal>
+            <Dependent Role="employee">
+              <PropertyRef Name="pub_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="pubsModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -57,6 +83,11 @@
           <EntitySet Name="jobs" EntityType="pubsModel.job" />
           <AssociationSet Name="FK__employee__job_id__1BFD2C07" Association="pubsModel.FK__employee__job_id__1BFD2C07">
             <End Role="jobs" EntitySet="jobs" />
+            <End Role="employee" EntitySet="employees" />
+          </AssociationSet>
+          <EntitySet Name="publishers" EntityType="pubsModel.publisher" />
+          <AssociationSet Name="FK__employee__pub_id__1ED998B2" Association="pubsModel.FK__employee__pub_id__1ED998B2">
+            <End Role="publisher" EntitySet="publishers" />
             <End Role="employee" EntitySet="employees" />
           </AssociationSet>
         </EntityContainer>
@@ -73,6 +104,7 @@
           <Property Name="pub_id" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="true" />
           <Property Name="hire_date" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="job" Relationship="pubsModel.FK__employee__job_id__1BFD2C07" FromRole="employee" ToRole="jobs" />
+          <NavigationProperty Name="publisher" Relationship="pubsModel.FK__employee__pub_id__1ED998B2" FromRole="employee" ToRole="publisher" />
         </EntityType>
         <EntityType Name="job">
           <Key>
@@ -93,6 +125,29 @@
             </Principal>
             <Dependent Role="employee">
               <PropertyRef Name="job_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="publisher">
+          <Key>
+            <PropertyRef Name="pub_id" />
+          </Key>
+          <Property Type="String" Name="pub_id" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="pub_name" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="city" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="state" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Type="String" Name="country" MaxLength="30" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="employees" Relationship="pubsModel.FK__employee__pub_id__1ED998B2" FromRole="publisher" ToRole="employee" />
+        </EntityType>
+        <Association Name="FK__employee__pub_id__1ED998B2">
+          <End Type="pubsModel.publisher" Role="publisher" Multiplicity="1" />
+          <End Type="pubsModel.employee" Role="employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="publisher">
+              <PropertyRef Name="pub_id" />
+            </Principal>
+            <Dependent Role="employee">
+              <PropertyRef Name="pub_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -123,6 +178,17 @@
                 <ScalarProperty Name="job_desc" ColumnName="job_desc" />
                 <ScalarProperty Name="min_lvl" ColumnName="min_lvl" />
                 <ScalarProperty Name="max_lvl" ColumnName="max_lvl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="publishers">
+            <EntityTypeMapping TypeName="pubsModel.publisher">
+              <MappingFragment StoreEntitySet="publishers">
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="pub_name" ColumnName="pub_name" />
+                <ScalarProperty Name="pub_id" ColumnName="pub_id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

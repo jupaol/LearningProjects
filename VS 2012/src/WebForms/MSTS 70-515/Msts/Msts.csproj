@@ -138,6 +138,7 @@
     <Reference Include="System.Spatial">
       <HintPath>..\packages\System.Spatial.5.0.2\lib\net40\System.Spatial.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -429,6 +430,7 @@
     <Content Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheSqlDataSourceControl.aspx" />
     <Content Include="Topics\Chapter12 - Data binding\Lesson01 - DataSource\WorkingWithTheXmlDataSourceControl.aspx" />
     <Content Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithSimpleDataBoundControls.aspx" />
+    <Content Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheChartControl.aspx" />
     <Content Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheDetailsViewControl.aspx" />
     <Content Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheFormViewControl.aspx" />
     <Content Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheGridViewControl.aspx" />
@@ -1316,6 +1318,13 @@
     </Compile>
     <Compile Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithSimpleDataBoundControls.aspx.designer.cs">
       <DependentUpon>WorkingWithSimpleDataBoundControls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheChartControl.aspx.cs">
+      <DependentUpon>WorkingWithTheChartControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheChartControl.aspx.designer.cs">
+      <DependentUpon>WorkingWithTheChartControl.aspx</DependentUpon>
     </Compile>
     <Compile Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheDetailsViewControl.aspx.cs">
       <DependentUpon>WorkingWithTheDetailsViewControl.aspx</DependentUpon>

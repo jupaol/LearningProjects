@@ -49,13 +49,13 @@ namespace Msts.Topics.Chapter12___Data_binding.Lesson01___DataSource
         {
             var current = this.context.Items[ContextKey] as Msts.DataAccess.EFData.PubsEntities;
 
-            if (this.logger.IsDebugEnabled)
-            {
-                this.logger.Debug(MethodInfo.GetCurrentMethod().Name + " " + (current as object).GetHashCode().ToString());
-            }
-
             if (current != null)
             {
+                if (this.logger.IsDebugEnabled)
+                {
+                    this.logger.Debug(MethodInfo.GetCurrentMethod().Name + " " + (current as object).GetHashCode().ToString());
+                }
+
                 current.Dispose();
             }
         }

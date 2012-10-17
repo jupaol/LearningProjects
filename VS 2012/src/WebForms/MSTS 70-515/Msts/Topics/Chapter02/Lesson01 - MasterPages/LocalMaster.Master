@@ -142,6 +142,7 @@
             </tr>
         </table>
     </div>
+        <%= StackExchange.Profiling.MiniProfiler.RenderIncludes() %>
     </form>
 </body>
 </html>

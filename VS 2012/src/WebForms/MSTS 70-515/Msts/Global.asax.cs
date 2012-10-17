@@ -13,6 +13,7 @@ using System.Web.UI;
 using Bootstrap.Ninject;
 using Bootstrap.Locator;
 using Microsoft.Practices.ServiceLocation;
+using StackExchange.Profiling;
 
 namespace Msts
 {
@@ -25,6 +26,12 @@ namespace Msts
         public Global()
         {
             this.PostRequestHandlerExecute += Global_PostRequestHandlerExecute;
+            this.EndRequest += Global_EndRequest;
+        }
+
+        private void Global_EndRequest(object sender, EventArgs e)
+        {
+            MiniProfiler.Stop();
         }
 
         private void Global_PostRequestHandlerExecute(object sender, EventArgs e)
@@ -69,6 +76,16 @@ namespace Msts
             //        .ServiceLocator()
             //    .Start();
 
+            var ignored = MiniProfiler.Settings.IgnoredPaths.ToList();
+            ignored.Add("WebResource.axd");
+            ignored.Add("ScriptResource.axd");
+            ignored.Add("/Content/");
+            ignored.Add("/App_Themes/");
+            ignored.Add("/bundles");
+            MiniProfiler.Settings.IgnoredPaths = ignored.ToArray();
+
+            MiniProfilerEF.Initialize();
+
             BundleConfiguration.RegisterBundles(BundleTable.Bundles);
             RoutesConfig.ConfigureRoutes(RouteTable.Routes);
 
@@ -82,7 +99,7 @@ namespace Msts
 
         protected void Application_BeginRequest(object sender, EventArgs e)
         {
-
+            MiniProfiler.Start();
         }
 
         protected void Application_AuthenticateRequest(object sender, EventArgs e)
@@ -102,7 +119,6 @@ namespace Msts
 
         protected void Application_End(object sender, EventArgs e)
         {
-
         }
 
         public override string GetVaryByCustomString(HttpContext context, string custom)

@@ -2,6 +2,7 @@
 using Microsoft.Practices.ServiceLocation;
 using Msts.DataAccess.EFData;
 using Msts.Topics.Chapter12___Data_binding.Lesson01___DataSource;
+using StackExchange.Profiling;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -63,8 +64,11 @@ namespace Msts.Topics.Chapter12___Data_binding.Lesson03___Dynamic_Data
             TryUpdateModel(item);
             if (ModelState.IsValid)
             {
-                // Save changes here, e.g. MyDataLayer.SaveChanges();
-                this.contextWrapper.GetEFContext().SaveChanges();
+                using (MiniProfiler.Current.Step("Updating DB"))
+                {
+                    // Save changes here, e.g. MyDataLayer.SaveChanges();
+                    this.contextWrapper.GetEFContext().SaveChanges();
+                }
             }
         }
 

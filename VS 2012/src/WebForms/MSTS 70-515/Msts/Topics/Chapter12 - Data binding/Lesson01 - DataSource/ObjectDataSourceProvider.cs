@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 //using Msts.ExtenssionMethods;
 using System.Linq.Dynamic;
+using Microsoft.Practices.ServiceLocation;
 
 namespace Msts.Topics.Chapter12___Data_binding.Lesson01___DataSource
 {
@@ -16,7 +17,8 @@ namespace Msts.Topics.Chapter12___Data_binding.Lesson01___DataSource
 
         public ObjectDataSourceProvider()
         {
-            var wrapper = new ContextWrapper(new HttpContextWrapper(HttpContext.Current));
+            //var wrapper = new ContextWrapper(new HttpContextWrapper(HttpContext.Current));
+            var wrapper = ServiceLocator.Current.GetInstance<IContextWrapper>();
 
             this.context = wrapper.GetEFContext();
         }

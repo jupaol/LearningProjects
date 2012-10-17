@@ -1,4 +1,5 @@
-﻿using Msts.App_Start;
+﻿using Bootstrap;
+using Msts.App_Start;
 using Msts.Topics.Chapter12___Data_binding.Lesson01___DataSource;
 using System;
 using System.Collections.Generic;
@@ -9,12 +10,17 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.UI;
+using Bootstrap.Ninject;
+using Bootstrap.Locator;
+using Microsoft.Practices.ServiceLocation;
 
 namespace Msts
 {
     public class Global : System.Web.HttpApplication
     {
         Msts.DataAccess.EFData.PubsEntities PubsEFContext;
+
+        public static Msts.DataAccess.EFData.PubsEntities CurrentContext;
 
         public Global()
         {
@@ -23,9 +29,21 @@ namespace Msts
 
         private void Global_PostRequestHandlerExecute(object sender, EventArgs e)
         {
-            var wrapper = new ContextWrapper(new HttpContextWrapper(this.Context));
+            var app = sender as HttpApplication;
+            var handler = app.Context.Handler as Page;
 
-            wrapper.ReleaseEFContext();            
+            if (handler != null)
+            {
+                var wrapper = ServiceLocator.Current.GetInstance<IContextWrapper>();
+
+                if (CurrentContext != null && wrapper != null && !ReferenceEquals(CurrentContext, wrapper.GetEFContext()))
+                {
+                    throw new ApplicationException("The InRequestScope method is not working");
+                }
+
+                Global.CurrentContext = null;
+                wrapper.ReleaseEFContext();            
+            }
         }
 
         protected void Application_Start(object sender, EventArgs e)
@@ -41,6 +59,15 @@ namespace Msts
             //bt.Add(new ScriptBundle("~/bundles/jquery").Include(
             //    "~/Scripts/jquery/jquery-{version}.js"
             //    ));
+
+            //Bootstrapper
+            //    .Including
+            //        .AndAssembly(typeof(Global).Assembly)
+            //    .With
+            //        .Ninject()
+            //    .And
+            //        .ServiceLocator()
+            //    .Start();
 
             BundleConfiguration.RegisterBundles(BundleTable.Bundles);
             RoutesConfig.ConfigureRoutes(RouteTable.Routes);

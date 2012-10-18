@@ -71,6 +71,8 @@
     <Compile Include="DataAccess\employee.cs">
       <DependentUpon>Pubs.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataAccess\Employee_Aditional.cs" />
+    <Compile Include="DataAccess\Employee_Metadata.cs" />
     <Compile Include="DataAccess\job.cs">
       <DependentUpon>Pubs.tt</DependentUpon>
     </Compile>
@@ -99,7 +101,39 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Content Include="DynamicData\CustomPages\jobs\Details.aspx" />
+    <Content Include="DynamicData\CustomPages\jobs\List.aspx" />
+    <Content Include="DynamicData\FieldTemplates\CustomDate.ascx" />
+    <Content Include="DynamicData\FieldTemplates\CustomDate_Edit.ascx" />
     <Content Include="Global.asax" />
+    <Compile Include="DynamicData\CustomPages\jobs\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\jobs\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\jobs\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\CustomPages\jobs\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\CustomDate.ascx.cs">
+      <DependentUpon>CustomDate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\CustomDate.ascx.designer.cs">
+      <DependentUpon>CustomDate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\CustomDate_Edit.ascx.cs">
+      <DependentUpon>CustomDate_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\CustomDate_Edit.ascx.designer.cs">
+      <DependentUpon>CustomDate_Edit.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -396,7 +430,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="DynamicData\CustomPages\" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="DataAccess\Pubs.edmx">

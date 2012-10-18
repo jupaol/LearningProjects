@@ -515,6 +515,9 @@
     <Content Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheListViewControl.aspx" />
     <Content Include="Topics\Chapter12 - Data binding\Lesson02 - DataBound\WorkingWithTheRepeaterControl.aspx" />
     <Content Include="Topics\Chapter12 - Data binding\Lesson03 - Dynamic Data\SimpleDynamicDataGridView.aspx" />
+    <Content Include="Topics\Chapter12 - Data binding\Lesson03 - Dynamic Data\SimpleDynamicDetailsView.aspx" />
+    <Content Include="Topics\Chapter12 - Data binding\Lesson03 - Dynamic Data\SimpleDynamicFormView.aspx" />
+    <Content Include="Topics\Chapter12 - Data binding\Lesson03 - Dynamic Data\SimpleDynamicListView.aspx" />
     <Content Include="Web References\HelloWorldXmlService\HelloWorldService.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -1681,6 +1684,27 @@
     </Compile>
     <Compile Include="Topics\Chapter12 - Data binding\Lesson03 - Dynamic Data\SimpleDynamicDataGridView.aspx.designer.cs">
       <DependentUpon>SimpleDynamicDataGridView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson03 - Dynamic Data\SimpleDynamicDetailsView.aspx.cs">
+      <DependentUpon>SimpleDynamicDetailsView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson03 - Dynamic Data\SimpleDynamicDetailsView.aspx.designer.cs">
+      <DependentUpon>SimpleDynamicDetailsView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson03 - Dynamic Data\SimpleDynamicFormView.aspx.cs">
+      <DependentUpon>SimpleDynamicFormView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson03 - Dynamic Data\SimpleDynamicFormView.aspx.designer.cs">
+      <DependentUpon>SimpleDynamicFormView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson03 - Dynamic Data\SimpleDynamicListView.aspx.cs">
+      <DependentUpon>SimpleDynamicListView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter12 - Data binding\Lesson03 - Dynamic Data\SimpleDynamicListView.aspx.designer.cs">
+      <DependentUpon>SimpleDynamicListView.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web References\HelloWorldXmlService\Reference.cs">
       <AutoGen>True</AutoGen>

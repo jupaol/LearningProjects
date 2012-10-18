@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Topics/Chapter02/Lesson01 - MasterPages/ClassicMaster.Master" AutoEventWireup="true" CodeBehind="TracingAjax.aspx.cs" Inherits="Msts.Topics.Chapter08___Debugging_and_Deploying.Lesson02___Troubleshooting.TracingAjax" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Topics/Chapter02 - Master - themes - caching/Lesson01 - MasterPages/ClassicMaster.Master" AutoEventWireup="true" CodeBehind="TracingAjax.aspx.cs" Inherits="Msts.Topics.Chapter08___Debugging_and_Deploying.Lesson02___Troubleshooting.TracingAjax" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>

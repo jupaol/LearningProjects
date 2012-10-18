@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Topics/Chapter02/Lesson01 - MasterPages/ClassicMaster.Master" AutoEventWireup="true" CodeBehind="HandlingPartialPostsExceptions.aspx.cs" Inherits="Msts.Topics.Chapter09___Scripts.Lesson01___MS_AJAX.HandlingPartialPostsExceptions" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Topics/Chapter02 - Master - themes - caching/Lesson01 - MasterPages/ClassicMaster.Master" AutoEventWireup="true" CodeBehind="HandlingPartialPostsExceptions.aspx.cs" Inherits="Msts.Topics.Chapter09___Scripts.Lesson01___MS_AJAX.HandlingPartialPostsExceptions" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>

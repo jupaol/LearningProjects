@@ -1,0 +1,25 @@
+﻿<%@ Master EnableViewState="true" ViewStateMode="Enabled" Language="C#" MasterPageFile="~/Topics/Chapter02 - Master - themes - caching/Lesson01 - MasterPages/LocalMaster.Master" AutoEventWireup="true" CodeBehind="ModernMaster.master.cs" Inherits="Msts.Topics.Chapter02.Lesson01___MasterPages.ModernMaster" %>
+
+<asp:Content runat="server" ID="content" ContentPlaceHolderID="ContentPlaceHolder1">
+    <table class="master-global-table">
+        <tr>
+            <td class="master-nested-modern-content">
+                <div>
+                    EnableViewState is : <%: this.EnableViewState %>
+                </div>
+                <div>
+                    IsViewStateEnabled is: <%: this.IsViewStateEnabled %>
+                </div>
+                <div class="master-nested-modern-slogan">
+                    OMFG MODeRn
+                </div>
+                <asp:ContentPlaceHolder runat="server" ID="ContentPlaceHolder1">
+
+                </asp:ContentPlaceHolder>
+            </td>
+            <td class="master-nested-modern-menu">
+                <asp:Image ID="Image1" runat="server" SkinID="modernLogo" />
+            </td>
+        </tr>
+    </table>
+</asp:Content>

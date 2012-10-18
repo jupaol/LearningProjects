@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Topics/Chapter02/Lesson01 - MasterPages/ClassicMaster.Master" AutoEventWireup="true" CodeBehind="AjaxCallToPageMethod.aspx.cs" Inherits="Msts.Topics.Chapter09___Scripts.Lesson03___JQuery.AjaxCallToPageMethod" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Topics/Chapter02 - Master - themes - caching/Lesson01 - MasterPages/ClassicMaster.Master" AutoEventWireup="true" CodeBehind="AjaxCallToPageMethod.aspx.cs" Inherits="Msts.Topics.Chapter09___Scripts.Lesson03___JQuery.AjaxCallToPageMethod" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <script>

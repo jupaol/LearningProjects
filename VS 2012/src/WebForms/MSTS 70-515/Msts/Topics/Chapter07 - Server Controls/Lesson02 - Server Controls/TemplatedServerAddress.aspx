@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Topics/Chapter02/Lesson01 - MasterPages/ClassicMaster.Master" AutoEventWireup="true" CodeBehind="TemplatedServerAddress.aspx.cs" Inherits="Msts.Topics.Chapter07___Server_Controls.Lesson02___Server_Controls.TemplatedServerAddress" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Topics/Chapter02 - Master - themes - caching/Lesson01 - MasterPages/ClassicMaster.Master" AutoEventWireup="true" CodeBehind="TemplatedServerAddress.aspx.cs" Inherits="Msts.Topics.Chapter07___Server_Controls.Lesson02___Server_Controls.TemplatedServerAddress" %>
 <%@ Register Assembly="Msts" Namespace="Msts.Topics.Chapter07___Server_Controls.Lesson02___Server_Controls" TagPrefix="address" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

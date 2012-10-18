@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CachedMaster.master.cs" Inherits="Msts.Topics.Chapter02.Lesson03.CachedMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table class="master-global-table">
+            <tr>
+                <th class="master-header">
+                    Header from global
+                </th>
+            </tr>
+            <tr>
+                <th class="master-header-actions">
+                    <div>
+                        <asp:Label ID="Label1" runat="server" Text="Select your custom layout" AssociatedControlID="ddlLayouts"></asp:Label>
+                        <asp:DropDownList runat="server" ID="ddlLayouts" AutoPostBack="true" CausesValidation="true">
+                            <asp:ListItem Text="Global - Classic" Value="~/Topics/Chapter02/Lesson01 - MasterPages/ClassicMaster.Master" Selected="True" />
+                            <asp:ListItem Text="Local - Modern" Value="~/Topics/Chapter02/Lesson01 - MasterPages/ModernMaster.Master" />
+                        </asp:DropDownList>
+                    </div>
+                    <div>
+                        <asp:Label ID="Label2" runat="server" Text="Select your preferred theme" AssociatedControlID="ddlThemes"></asp:Label>
+                        <asp:DropDownList runat="server" ID="ddlThemes" AutoPostBack="true" CausesValidation="true">
+                            <asp:ListItem Text="Blue" Selected="True" />
+                            <asp:ListItem Text="Red" />
+                            <asp:ListItem Text="Yellow" />
+                        </asp:DropDownList>
+                    </div>
+                </th>
+            </tr>
+            <tr class="master-breadcrumb">
+                <td>
+                    <asp:SiteMapDataSource runat="server" ID="smds" ShowStartingNode="false" />
+                    <asp:SiteMapPath runat="server" ID="sm" Font-Names="Verdana" Font-Size="0.8em" PathSeparator=" : ">
+                        <CurrentNodeStyle ForeColor="#333333"></CurrentNodeStyle>
+
+                        <NodeStyle Font-Bold="True" ForeColor="#990000"></NodeStyle>
+
+                        <PathSeparatorStyle Font-Bold="True" ForeColor="#990000"></PathSeparatorStyle>
+
+                        <RootNodeStyle Font-Bold="True" ForeColor="#FF8000"></RootNodeStyle>
+                    </asp:SiteMapPath>
+                </td>
+            </tr>
+            <tr>
+                <td class="master-content">
+                    <table style="width:100%">
+                        <tr>
+                            <td style="width:180px; vertical-align:top;">
+                                <asp:Menu runat="server" ID="menui" DataSourceID="smds" BackColor="#FFFBD6" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#990000" StaticSubMenuIndent="10px">
+
+                                    <DynamicHoverStyle BackColor="#990000" ForeColor="White"></DynamicHoverStyle>
+
+                                    <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px"></DynamicMenuItemStyle>
+
+                                    <DynamicMenuStyle BackColor="#FFFBD6"></DynamicMenuStyle>
+
+                                    <DynamicSelectedStyle BackColor="#FFCC66"></DynamicSelectedStyle>
+
+                                    <StaticHoverStyle BackColor="#990000" ForeColor="White"></StaticHoverStyle>
+
+                                    <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px"></StaticMenuItemStyle>
+
+                                    <StaticSelectedStyle BackColor="#FFCC66"></StaticSelectedStyle>
+                                </asp:Menu>
+                                <hr />
+                                <asp:TreeView runat="server" ID="tv" DataSourceID="smds" ImageSet="XPFileExplorer" NodeIndent="15">
+
+                                    <HoverNodeStyle Font-Underline="True" ForeColor="#6666AA"></HoverNodeStyle>
+
+                                    <NodeStyle HorizontalPadding="2px" NodeSpacing="0px" VerticalPadding="2px" Font-Names="Tahoma" Font-Size="8pt" ForeColor="Black"></NodeStyle>
+
+                                    <ParentNodeStyle Font-Bold="False"></ParentNodeStyle>
+
+                                    <SelectedNodeStyle HorizontalPadding="0px" VerticalPadding="0px" BackColor="#B5B5B5" Font-Underline="False"></SelectedNodeStyle>
+                                </asp:TreeView>
+                            </td>
+                            <td style="vertical-align:top;">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

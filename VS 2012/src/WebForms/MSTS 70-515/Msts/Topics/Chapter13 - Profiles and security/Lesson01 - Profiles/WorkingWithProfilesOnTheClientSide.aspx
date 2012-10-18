@@ -6,8 +6,12 @@
             var $loadProfile = $("#loadProfile");
             var $waitDialog = $("#waitDialog");
             var $profileDialog = $("#profileDialog");
-            var $masterPage = $("#masterPage", $profileDialog);
+            var $profileInfo = $("#profileInfo");
             var $saveProfile = $("#saveProfile", $profileDialog);
+            var $masterPage = $("input:text[id$=masterPage]", $profileDialog);
+            var $theme = $("input:text[id$=theme]", $profileDialog);
+            var $language = $("input:text[id$=language]", $profileDialog);
+            var formValidation;
             var viewModel = {
                 masterPage: ko.observable(),
                 profileLoaded: ko.observable(false),
@@ -16,22 +20,34 @@
                 lastLogin: ko.observable()
             };
 
-            Sys.Services.ProfileService.load(null, function (msg) {
-                console.log("%o", msg);
-                console.log("%o", Sys.Services.ProfileService.properties);
-                viewModel.masterPage(Sys.Services.ProfileService.properties.MasterPage);
-                viewModel.theme(Sys.Services.ProfileService.properties.Theme);
-                viewModel.language(Sys.Services.ProfileService.properties.Language);
-                viewModel.lastLogin(Sys.Services.ProfileService.properties.LastLogin);
+            function loadProfile() {
+                $profileInfo.hide();
 
-                viewModel.profileLoaded(true);
-            }, function (error) {
+                Sys.Services.ProfileService.load(null, function (msg) {
+                    console.log("%o", msg);
+                    console.log("%o", Sys.Services.ProfileService.properties);
+                    viewModel.masterPage(Sys.Services.ProfileService.properties.MasterPage);
+                    viewModel.theme(Sys.Services.ProfileService.properties.Theme);
+                    viewModel.language(Sys.Services.ProfileService.properties.Language);
+                    viewModel.lastLogin(Sys.Services.ProfileService.properties.LastLogin);
 
-            }, null);
+                    viewModel.profileLoaded(true);
+
+                    $profileInfo.show();
+                }, function (error) {
+
+                }, null);
+            }
+
+            loadProfile();
 
             $profileDialog.dialog({
                 modal: true,
-                autoOpen: false
+                autoOpen: false,
+                open: function (e, ui) {
+                    $(this).parent().appendTo("form");
+                    formValidation = $(this).closest("form").validate();
+                }
             });
 
             $waitDialog.dialog({
@@ -51,8 +67,25 @@
 
             $saveProfile.click(function (e) {
                 e.preventDefault();
-                alert("before validate");
-                $(this).closest("form").validate();
+
+                $waitDialog.dialog("open");
+
+                Sys.Services.ProfileService.properties.MasterPage = $masterPage.val();
+                Sys.Services.ProfileService.properties.Theme = $theme.val();
+                Sys.Services.ProfileService.properties.Language = $language.val();
+
+                Sys.Services.ProfileService.save(
+                    null,
+                    function (msg) {
+                        console.log("msg: %o", msg);
+                        $waitDialog.dialog("close");
+                        $profileDialog.dialog("close");
+                    },
+                    function (err) {
+                        console.log("error: %o", err);
+                        $waitDialog.dialog("close");
+                    },
+                    null);
             });
 
             ko.applyBindings(viewModel);
@@ -67,8 +100,9 @@
     <h2>
         On the client side
     </h2>
-
-
+    <h3>
+        After saving the profile settings refresh the page to see your new values applied
+    </h3>
 
     <div id="#profileInfo" data-bind="visible: profileLoaded">
         <div><span><b>MasterPage:</b></span></div>
@@ -89,35 +123,33 @@
         </div>
     </div>
     <div id="profileDialog" style="display:none;">
-        <form>
         <div>
             <fieldset>
                 <legend>
                     Edit profile settings
                 </legend>
                 <div>
-                    <label for="masterPage">Master Page</label>
+                    <asp:Label Text="MasterPage" runat="server" AssociatedControlID="masterPage" />
                 </div>
                 <div>
-                    <input type="text" id="masterPage" data-bind="value: masterPage" class="required" />
+                    <asp:TextBox runat="server" ID="masterPage" data-bind="value: masterPage" />
                 </div>
                 <div>
-                    <label for="theme">Theme</label>
+                    <asp:Label Text="Theme" runat="server" AssociatedControlID="theme" />
                 </div>
                 <div>
-                    <input type="text" id="theme" data-bind="value: theme" />
+                    <asp:TextBox runat="server" ID="theme" data-bind="value: theme" />
                 </div>
                 <div>
-                    <label for="language">Language</label>
+                    <asp:Label Text="Language" runat="server" AssociatedControlID="language" />
                 </div>
                 <div>
-                    <input type="text" id="language" data-bind="value: language" />
+                    <asp:TextBox runat="server" ID="language" data-bind="value: language" />
                 </div>
                 <div>
                     <a href="#" id="saveProfile">Save Profile</a>
                 </div>
             </fieldset>
         </div>
-        </form>
     </div>
 </asp:Content>

@@ -518,6 +518,7 @@
     <Content Include="Topics\Chapter12 - Data binding\Lesson03 - Dynamic Data\SimpleDynamicDetailsView.aspx" />
     <Content Include="Topics\Chapter12 - Data binding\Lesson03 - Dynamic Data\SimpleDynamicFormView.aspx" />
     <Content Include="Topics\Chapter12 - Data binding\Lesson03 - Dynamic Data\SimpleDynamicListView.aspx" />
+    <Content Include="Topics\Chapter13 - Profiles and security\Lesson01 - Profiles\WorkingWithProfilesOnTheClientSide.aspx" />
     <Content Include="Web References\HelloWorldXmlService\HelloWorldService.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -1705,6 +1706,13 @@
     </Compile>
     <Compile Include="Topics\Chapter12 - Data binding\Lesson03 - Dynamic Data\SimpleDynamicListView.aspx.designer.cs">
       <DependentUpon>SimpleDynamicListView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter13 - Profiles and security\Lesson01 - Profiles\WorkingWithProfilesOnTheClientSide.aspx.cs">
+      <DependentUpon>WorkingWithProfilesOnTheClientSide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter13 - Profiles and security\Lesson01 - Profiles\WorkingWithProfilesOnTheClientSide.aspx.designer.cs">
+      <DependentUpon>WorkingWithProfilesOnTheClientSide.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web References\HelloWorldXmlService\Reference.cs">
       <AutoGen>True</AutoGen>

@@ -31,6 +31,7 @@
                 <asp:ScriptReference Name="WebParts.js"  Path="~/Scripts/WebForms/WebParts.js" />
                 <asp:ScriptReference Name="Focus.js"  Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
+                <asp:ScriptReference Path="~/bundles/jquery.validation" />
                 <%--Site Scripts--%>
 
             </Scripts>

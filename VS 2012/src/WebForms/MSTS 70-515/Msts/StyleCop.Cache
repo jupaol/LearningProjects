@@ -29018,9 +29018,6 @@
     </timestamps>
     <violations />
   </sourcecode>
-  <project key="-1249611613">
-    <configuration>DEBUG;TRACE</configuration>
-  </project>
   <sourcecode name="HelloWorldWcfDataService.svc.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2012/10/01 23:21:15.176</styleCop>
@@ -29150,6 +29147,32 @@
       </violation>
     </violations>
   </sourcecode>
+  <sourcecode name="SimpleValidation.aspx.designer.cs" parser="StyleCop.CSharp.CsParser">
+    <timestamps>
+      <styleCop>2012/10/01 23:21:15.176</styleCop>
+      <settingsFile>2012/10/01 23:21:14.907</settingsFile>
+      <sourceFile>2012/10/17 23:31:34.624</sourceFile>
+      <parser>2012/10/01 23:21:15.176</parser>
+      <StyleCop.CSharp.DocumentationRules>2012/10/01 23:21:15.176</StyleCop.CSharp.DocumentationRules>
+      <StyleCop.CSharp.DocumentationRules.FilesHashCode>780160645</StyleCop.CSharp.DocumentationRules.FilesHashCode>
+      <StyleCop.CSharp.LayoutRules>2012/10/01 23:21:15.176</StyleCop.CSharp.LayoutRules>
+      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
+      <StyleCop.CSharp.MaintainabilityRules>2012/10/01 23:21:15.176</StyleCop.CSharp.MaintainabilityRules>
+      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
+      <StyleCop.CSharp.NamingRules>2012/10/01 23:21:15.176</StyleCop.CSharp.NamingRules>
+      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
+      <StyleCop.CSharp.OrderingRules>2012/10/01 23:21:15.176</StyleCop.CSharp.OrderingRules>
+      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
+      <StyleCop.CSharp.ReadabilityRules>2012/10/01 23:21:15.176</StyleCop.CSharp.ReadabilityRules>
+      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
+      <StyleCop.CSharp.SpacingRules>2012/10/01 23:21:15.176</StyleCop.CSharp.SpacingRules>
+      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
+    </timestamps>
+    <violations />
+  </sourcecode>
+  <project key="-1249611613">
+    <configuration>DEBUG;TRACE</configuration>
+  </project>
   <sourcecode name="JobDTO.cs" parser="StyleCop.CSharp.CsParser">
     <timestamps>
       <styleCop>2012/10/01 23:21:15.176</styleCop>
@@ -29449,7 +29472,7 @@
     <timestamps>
       <styleCop>2012/10/01 23:21:15.176</styleCop>
       <settingsFile>2012/10/01 23:21:14.907</settingsFile>
-      <sourceFile>2012/10/16 21:20:56.626</sourceFile>
+      <sourceFile>2012/10/16 21:20:57.222</sourceFile>
       <parser>2012/10/01 23:21:15.176</parser>
       <StyleCop.CSharp.DocumentationRules>2012/10/01 23:21:15.176</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>780160645</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -29492,11 +29515,6 @@
         <line>4</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.OrderingRules" rule="UsingDirectivesMustBeOrderedAlphabeticallyByNamespace" ruleCheckId="SA1210">
-        <context>Using directives must be sorted alphabetically by the namespaces.</context>
-        <line>4</line>
-        <warning>False</warning>
-      </violation>
       <violation namespace="StyleCop.CSharp.OrderingRules" rule="UsingDirectivesMustBePlacedWithinNamespace" ruleCheckId="SA1200">
         <context>All using directives must be placed inside of the namespace.</context>
         <line>5</line>
@@ -29512,56 +29530,235 @@
         <line>7</line>
         <warning>False</warning>
       </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="UsingDirectivesMustBePlacedWithinNamespace" ruleCheckId="SA1200">
+        <context>All using directives must be placed inside of the namespace.</context>
+        <line>8</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="UsingDirectivesMustBePlacedWithinNamespace" ruleCheckId="SA1200">
+        <context>All using directives must be placed inside of the namespace.</context>
+        <line>9</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="UsingDirectivesMustBePlacedWithinNamespace" ruleCheckId="SA1200">
+        <context>All using directives must be placed inside of the namespace.</context>
+        <line>10</line>
+        <warning>False</warning>
+      </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PartialElementsMustBeDocumented" ruleCheckId="SA1601">
         <context>The partial class element must have a documentation header containing either a summary tag or a content tag.</context>
-        <line>11</line>
+        <line>14</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketsMustNotBePrecededByBlankLine" ruleCheckId="SA1508">
         <context>A closing curly bracket must not be preceded by a blank line.</context>
-        <line>30</line>
+        <line>75</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The method must have a documentation header.</context>
-        <line>13</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="CurlyBracketsMustNotBeOmitted" ruleCheckId="SA1503">
-        <context>The body of the if statement must be wrapped in opening and closing curly brackets.</context>
-        <line>19</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
-        <context>All methods must be placed after all properties.</context>
-        <line>13</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to CheckBox1 must begin with the 'this.', 'base.', 'object.' or 'BooleanField.' or 'System.Web.DynamicData.FieldTemplateUserControl.' prefix to indicate the intended method call. </context>
-        <line>19</line>
-        <index>532</index>
-        <endIndex>540</endIndex>
-        <startLine>19</startLine>
-        <startColumn>17</startColumn>
-        <endLine>19</endLine>
-        <endColumn>25</endColumn>
+        <context>The field must have a documentation header.</context>
+        <line>16</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The property must have a documentation header.</context>
-        <line>22</line>
+        <line>17</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
+        <context>Adjacent elements must be separated by a blank line.</context>
+        <line>17</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to CheckBox1 must begin with the 'this.', 'base.', 'object.' or 'BooleanField.' or 'System.Web.DynamicData.FieldTemplateUserControl.' prefix to indicate the intended method call. </context>
-        <line>26</line>
-        <index>688</index>
-        <endIndex>696</endIndex>
-        <startLine>26</startLine>
+        <context>The call to DropDownList1 must begin with the 'this.', 'base.', 'object.' or 'BooleanFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>21</line>
+        <index>608</index>
+        <endIndex>620</endIndex>
+        <startLine>21</startLine>
         <startColumn>24</startColumn>
-        <endLine>26</endLine>
-        <endColumn>32</endColumn>
+        <endLine>21</endLine>
+        <endColumn>36</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The method must have a documentation header.</context>
+        <line>25</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
+        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
+        <line>38</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="SingleLineCommentMustBePrecededByBlankLine" ruleCheckId="SA1515">
+        <context>A single-line comment must be preceded by a blank line or another single-line comment, or must be the first item in its scope. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>41</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustBeOrderedByAccess" ruleCheckId="SA1202">
+        <context>All protected methods must be placed after all public methods.</context>
+        <line>50</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="UseBuiltInTypeAlias" ruleCheckId="SA1121">
+        <context>Use the built-in type alias 'string' rather than String or System.String.</context>
+        <line>29</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="UseBuiltInTypeAlias" ruleCheckId="SA1121">
+        <context>Use the built-in type alias 'string' rather than String or System.String.</context>
+        <line>34</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="UseBuiltInTypeAlias" ruleCheckId="SA1121">
+        <context>Use the built-in type alias 'bool' rather than Boolean or System.Boolean.</context>
+        <line>39</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="UseBuiltInTypeAlias" ruleCheckId="SA1121">
+        <context>Use the built-in type alias 'bool' rather than Boolean or System.Boolean.</context>
+        <line>40</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="UseBuiltInTypeAlias" ruleCheckId="SA1121">
+        <context>Use the built-in type alias 'string' rather than String or System.String.</context>
+        <line>43</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to DropDownList1 must begin with the 'this.', 'base.', 'object.' or 'BooleanFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>34</line>
+        <index>1077</index>
+        <endIndex>1089</endIndex>
+        <startLine>34</startLine>
+        <startColumn>17</startColumn>
+        <endLine>34</endLine>
+        <endColumn>29</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to DropDownList1 must begin with the 'this.', 'base.', 'object.' or 'BooleanFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>37</line>
+        <index>1218</index>
+        <endIndex>1230</endIndex>
+        <startLine>37</startLine>
+        <startColumn>21</startColumn>
+        <endLine>37</endLine>
+        <endColumn>33</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to DropDownList1 must begin with the 'this.', 'base.', 'object.' or 'BooleanFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>39</line>
+        <index>1323</index>
+        <endIndex>1335</endIndex>
+        <startLine>39</startLine>
+        <startColumn>17</startColumn>
+        <endLine>39</endLine>
+        <endColumn>29</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to DropDownList1 must begin with the 'this.', 'base.', 'object.' or 'BooleanFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>40</line>
+        <index>1407</index>
+        <endIndex>1419</endIndex>
+        <startLine>40</startLine>
+        <startColumn>17</startColumn>
+        <endLine>40</endLine>
+        <endColumn>29</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to DropDownList1 must begin with the 'this.', 'base.', 'object.' or 'BooleanFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>45</line>
+        <index>1685</index>
+        <endIndex>1697</endIndex>
+        <startLine>45</startLine>
+        <startColumn>21</startColumn>
+        <endLine>45</endLine>
+        <endColumn>33</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The method must have a documentation header.</context>
+        <line>50</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
+        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
+        <line>62</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
+        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
+        <line>66</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="UseBuiltInTypeAlias" ruleCheckId="SA1121">
+        <context>Use the built-in type alias 'string' rather than String or System.String.</context>
+        <line>53</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to DropDownList1 must begin with the 'this.', 'base.', 'object.' or 'BooleanFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>52</line>
+        <index>1891</index>
+        <endIndex>1903</endIndex>
+        <startLine>52</startLine>
+        <startColumn>36</startColumn>
+        <endLine>52</endLine>
+        <endColumn>48</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to DefaultValues must begin with the 'this.', 'base.', 'object.' or 'BooleanFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>65</line>
+        <index>2265</index>
+        <endIndex>2277</endIndex>
+        <startLine>65</startLine>
+        <startColumn>17</startColumn>
+        <endLine>65</endLine>
+        <endColumn>29</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to DefaultValues must begin with the 'this.', 'base.', 'object.' or 'BooleanFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>63</line>
+        <index>2210</index>
+        <endIndex>2222</endIndex>
+        <startLine>63</startLine>
+        <startColumn>17</startColumn>
+        <endLine>63</endLine>
+        <endColumn>29</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to ApplyEqualityFilter must begin with the 'this.', 'base.', 'object.' or 'BooleanFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>67</line>
+        <index>2336</index>
+        <endIndex>2354</endIndex>
+        <startLine>67</startLine>
+        <startColumn>20</startColumn>
+        <endLine>67</endLine>
+        <endColumn>38</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The method must have a documentation header.</context>
+        <line>70</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to OnFilterChanged must begin with the 'this.', 'base.', 'object.' or 'BooleanFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>72</line>
+        <index>2509</index>
+        <endIndex>2523</endIndex>
+        <startLine>72</startLine>
+        <startColumn>13</startColumn>
+        <endLine>72</endLine>
+        <endColumn>27</endColumn>
         <warning>False</warning>
       </violation>
     </violations>
@@ -29570,7 +29767,7 @@
     <timestamps>
       <styleCop>2012/10/01 23:21:15.176</styleCop>
       <settingsFile>2012/10/01 23:21:14.907</settingsFile>
-      <sourceFile>2012/10/16 21:20:56.645</sourceFile>
+      <sourceFile>2012/10/16 21:20:57.226</sourceFile>
       <parser>2012/10/01 23:21:15.176</parser>
       <StyleCop.CSharp.DocumentationRules>2012/10/01 23:21:15.176</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>780160645</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -29593,7 +29790,7 @@
     <timestamps>
       <styleCop>2012/10/01 23:21:15.176</styleCop>
       <settingsFile>2012/10/01 23:21:14.907</settingsFile>
-      <sourceFile>2012/10/16 21:20:56.789</sourceFile>
+      <sourceFile>2012/10/16 21:20:57.251</sourceFile>
       <parser>2012/10/01 23:21:15.176</parser>
       <StyleCop.CSharp.DocumentationRules>2012/10/01 23:21:15.176</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>780160645</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -29636,11 +29833,6 @@
         <line>4</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.OrderingRules" rule="UsingDirectivesMustBeOrderedAlphabeticallyByNamespace" ruleCheckId="SA1210">
-        <context>Using directives must be sorted alphabetically by the namespaces.</context>
-        <line>4</line>
-        <warning>False</warning>
-      </violation>
       <violation namespace="StyleCop.CSharp.OrderingRules" rule="UsingDirectivesMustBePlacedWithinNamespace" ruleCheckId="SA1200">
         <context>All using directives must be placed inside of the namespace.</context>
         <line>5</line>
@@ -29656,79 +29848,199 @@
         <line>7</line>
         <warning>False</warning>
       </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="UsingDirectivesMustBePlacedWithinNamespace" ruleCheckId="SA1200">
+        <context>All using directives must be placed inside of the namespace.</context>
+        <line>8</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="UsingDirectivesMustBePlacedWithinNamespace" ruleCheckId="SA1200">
+        <context>All using directives must be placed inside of the namespace.</context>
+        <line>9</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="UsingDirectivesMustBePlacedWithinNamespace" ruleCheckId="SA1200">
+        <context>All using directives must be placed inside of the namespace.</context>
+        <line>10</line>
+        <warning>False</warning>
+      </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PartialElementsMustBeDocumented" ruleCheckId="SA1601">
         <context>The partial class element must have a documentation header containing either a summary tag or a content tag.</context>
-        <line>11</line>
+        <line>14</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketsMustNotBePrecededByBlankLine" ruleCheckId="SA1508">
         <context>A closing curly bracket must not be preceded by a blank line.</context>
-        <line>41</line>
+        <line>68</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The field must have a documentation header.</context>
+        <line>16</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The property must have a documentation header.</context>
-        <line>13</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to Literal1 must begin with the 'this.', 'base.', 'object.' or 'EnumerationField.' or 'System.Web.DynamicData.FieldTemplateUserControl.' prefix to indicate the intended method call. </context>
         <line>17</line>
-        <index>454</index>
-        <endIndex>461</endIndex>
-        <startLine>17</startLine>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
+        <context>Adjacent elements must be separated by a blank line.</context>
+        <line>17</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to DropDownList1 must begin with the 'this.', 'base.', 'object.' or 'EnumerationFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>21</line>
+        <index>612</index>
+        <endIndex>624</endIndex>
+        <startLine>21</startLine>
         <startColumn>24</startColumn>
-        <endLine>17</endLine>
-        <endColumn>31</endColumn>
+        <endLine>21</endLine>
+        <endColumn>36</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The property must have a documentation header.</context>
-        <line>21</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to FieldValueString must begin with the 'this.', 'base.', 'object.' or 'EnumerationField.' or 'System.Web.DynamicData.FieldTemplateUserControl.' prefix to indicate the intended method call. </context>
-        <line>27</line>
-        <index>667</index>
-        <endIndex>682</endIndex>
-        <startLine>27</startLine>
-        <startColumn>28</startColumn>
-        <endLine>27</endLine>
-        <endColumn>43</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to FieldValue must begin with the 'this.', 'base.', 'object.' or 'EnumerationField.' or 'System.Web.DynamicData.FieldTemplateUserControl.' prefix to indicate the intended method call. </context>
+        <context>The method must have a documentation header.</context>
         <line>25</line>
-        <index>600</index>
-        <endIndex>609</endIndex>
-        <startLine>25</startLine>
-        <startColumn>21</startColumn>
-        <endLine>25</endLine>
-        <endColumn>30</endColumn>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to FormatFieldValue must begin with the 'this.', 'base.', 'object.' or 'EnumerationField.' or 'System.Web.DynamicData.FieldTemplateUserControl.' prefix to indicate the intended method call. </context>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
+        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
+        <line>32</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="SingleLineCommentMustBePrecededByBlankLine" ruleCheckId="SA1515">
+        <context>A single-line comment must be preceded by a blank line or another single-line comment, or must be the first item in its scope. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
         <line>34</line>
-        <index>931</index>
-        <endIndex>946</endIndex>
-        <startLine>34</startLine>
-        <startColumn>28</startColumn>
-        <endLine>34</endLine>
-        <endColumn>43</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="UseBuiltInTypeAlias" ruleCheckId="SA1121">
+        <context>Use the built-in type alias 'string' rather than String or System.String.</context>
+        <line>36</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to FieldValueString must begin with the 'this.', 'base.', 'object.' or 'EnumerationField.' or 'System.Web.DynamicData.FieldTemplateUserControl.' prefix to indicate the intended method call. </context>
-        <line>37</line>
-        <index>1005</index>
-        <endIndex>1020</endIndex>
-        <startLine>37</startLine>
-        <startColumn>24</startColumn>
-        <endLine>37</endLine>
-        <endColumn>39</endColumn>
+        <context>The call to DropDownList1 must begin with the 'this.', 'base.', 'object.' or 'EnumerationFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>31</line>
+        <index>856</index>
+        <endIndex>868</endIndex>
+        <startLine>31</startLine>
+        <startColumn>21</startColumn>
+        <endLine>31</endLine>
+        <endColumn>33</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to PopulateListControl must begin with the 'this.', 'base.', 'object.' or 'EnumerationFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>33</line>
+        <index>961</index>
+        <endIndex>979</endIndex>
+        <startLine>33</startLine>
+        <startColumn>17</startColumn>
+        <endLine>33</endLine>
+        <endColumn>35</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to DropDownList1 must begin with the 'this.', 'base.', 'object.' or 'EnumerationFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>33</line>
+        <index>981</index>
+        <endIndex>993</endIndex>
+        <startLine>33</startLine>
+        <startColumn>37</startColumn>
+        <endLine>33</endLine>
+        <endColumn>49</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to DropDownList1 must begin with the 'this.', 'base.', 'object.' or 'EnumerationFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>38</line>
+        <index>1206</index>
+        <endIndex>1218</endIndex>
+        <startLine>38</startLine>
+        <startColumn>21</startColumn>
+        <endLine>38</endLine>
+        <endColumn>33</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The method must have a documentation header.</context>
+        <line>43</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
+        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
+        <line>55</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
+        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
+        <line>59</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="UseBuiltInTypeAlias" ruleCheckId="SA1121">
+        <context>Use the built-in type alias 'string' rather than String or System.String.</context>
+        <line>46</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to DropDownList1 must begin with the 'this.', 'base.', 'object.' or 'EnumerationFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>45</line>
+        <index>1412</index>
+        <endIndex>1424</endIndex>
+        <startLine>45</startLine>
+        <startColumn>36</startColumn>
+        <endLine>45</endLine>
+        <endColumn>48</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to DefaultValues must begin with the 'this.', 'base.', 'object.' or 'EnumerationFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>58</line>
+        <index>1786</index>
+        <endIndex>1798</endIndex>
+        <startLine>58</startLine>
+        <startColumn>17</startColumn>
+        <endLine>58</endLine>
+        <endColumn>29</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to DefaultValues must begin with the 'this.', 'base.', 'object.' or 'EnumerationFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>56</line>
+        <index>1731</index>
+        <endIndex>1743</endIndex>
+        <startLine>56</startLine>
+        <startColumn>17</startColumn>
+        <endLine>56</endLine>
+        <endColumn>29</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to ApplyEqualityFilter must begin with the 'this.', 'base.', 'object.' or 'EnumerationFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>60</line>
+        <index>1857</index>
+        <endIndex>1875</endIndex>
+        <startLine>60</startLine>
+        <startColumn>20</startColumn>
+        <endLine>60</endLine>
+        <endColumn>38</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The method must have a documentation header.</context>
+        <line>63</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to OnFilterChanged must begin with the 'this.', 'base.', 'object.' or 'EnumerationFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>65</line>
+        <index>2030</index>
+        <endIndex>2044</endIndex>
+        <startLine>65</startLine>
+        <startColumn>13</startColumn>
+        <endLine>65</endLine>
+        <endColumn>27</endColumn>
         <warning>False</warning>
       </violation>
     </violations>
@@ -29737,7 +30049,7 @@
     <timestamps>
       <styleCop>2012/10/01 23:21:15.176</styleCop>
       <settingsFile>2012/10/01 23:21:14.907</settingsFile>
-      <sourceFile>2012/10/16 21:20:56.792</sourceFile>
+      <sourceFile>2012/10/16 21:20:57.255</sourceFile>
       <parser>2012/10/01 23:21:15.176</parser>
       <StyleCop.CSharp.DocumentationRules>2012/10/01 23:21:15.176</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>780160645</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -29760,7 +30072,7 @@
     <timestamps>
       <styleCop>2012/10/01 23:21:15.176</styleCop>
       <settingsFile>2012/10/01 23:21:14.907</settingsFile>
-      <sourceFile>2012/10/16 21:20:56.821</sourceFile>
+      <sourceFile>2012/10/16 21:20:57.268</sourceFile>
       <parser>2012/10/01 23:21:15.176</parser>
       <StyleCop.CSharp.DocumentationRules>2012/10/01 23:21:15.176</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>780160645</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -29803,11 +30115,6 @@
         <line>4</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.OrderingRules" rule="UsingDirectivesMustBeOrderedAlphabeticallyByNamespace" ruleCheckId="SA1210">
-        <context>Using directives must be sorted alphabetically by the namespaces.</context>
-        <line>4</line>
-        <warning>False</warning>
-      </violation>
       <violation namespace="StyleCop.CSharp.OrderingRules" rule="UsingDirectivesMustBePlacedWithinNamespace" ruleCheckId="SA1200">
         <context>All using directives must be placed inside of the namespace.</context>
         <line>5</line>
@@ -29823,66 +30130,65 @@
         <line>7</line>
         <warning>False</warning>
       </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="UsingDirectivesMustBePlacedWithinNamespace" ruleCheckId="SA1200">
+        <context>All using directives must be placed inside of the namespace.</context>
+        <line>8</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="UsingDirectivesMustBePlacedWithinNamespace" ruleCheckId="SA1200">
+        <context>All using directives must be placed inside of the namespace.</context>
+        <line>9</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="UsingDirectivesMustBePlacedWithinNamespace" ruleCheckId="SA1200">
+        <context>All using directives must be placed inside of the namespace.</context>
+        <line>10</line>
+        <warning>False</warning>
+      </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="PartialElementsMustBeDocumented" ruleCheckId="SA1601">
         <context>The partial class element must have a documentation header containing either a summary tag or a content tag.</context>
-        <line>11</line>
+        <line>14</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketsMustNotBePrecededByBlankLine" ruleCheckId="SA1508">
         <context>A closing curly bracket must not be preceded by a blank line.</context>
-        <line>72</line>
+        <line>83</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The field must have a documentation header.</context>
-        <line>13</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.NamingRules" rule="FieldNamesMustNotBeginWithUnderscore" ruleCheckId="SA1309">
-        <context>Field names must not start with an underscore.</context>
-        <line>13</line>
+        <line>16</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
         <context>The property must have a documentation header.</context>
-        <line>15</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The property must have a documentation header.</context>
-        <line>21</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
-        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
-        <line>26</line>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to _allowNavigation must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyField.' or 'System.Web.DynamicData.FieldTemplateUserControl.' prefix to indicate the intended method call. </context>
-        <line>25</line>
-        <index>589</index>
-        <endIndex>604</endIndex>
-        <startLine>25</startLine>
-        <startColumn>24</startColumn>
-        <endLine>25</endLine>
-        <endColumn>39</endColumn>
+        <line>17</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.LayoutRules" rule="ElementsMustBeSeparatedByBlankLine" ruleCheckId="SA1516">
         <context>Adjacent elements must be separated by a blank line.</context>
-        <line>27</line>
+        <line>17</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustBeOrderedByAccess" ruleCheckId="SA1202">
+        <context>All private properties must be placed after all public properties.</context>
+        <line>25</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The property must have a documentation header.</context>
+        <line>25</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to _allowNavigation must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyField.' or 'System.Web.DynamicData.FieldTemplateUserControl.' prefix to indicate the intended method call. </context>
+        <context>The call to DropDownList1 must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
         <line>29</line>
-        <index>671</index>
-        <endIndex>686</endIndex>
+        <index>790</index>
+        <endIndex>802</endIndex>
         <startLine>29</startLine>
-        <startColumn>17</startColumn>
+        <startColumn>24</startColumn>
         <endLine>29</endLine>
-        <endColumn>32</endColumn>
+        <endColumn>36</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
@@ -29890,123 +30196,203 @@
         <line>33</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustAppearInTheCorrectOrder" ruleCheckId="SA1201">
-        <context>All methods must be placed after all properties.</context>
-        <line>64</line>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
+        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
+        <line>40</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to FormatFieldValue must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyField.' or 'System.Web.DynamicData.FieldTemplateUserControl.' prefix to indicate the intended method call. </context>
-        <line>39</line>
-        <index>894</index>
-        <endIndex>909</endIndex>
-        <startLine>39</startLine>
-        <startColumn>24</startColumn>
-        <endLine>39</endLine>
-        <endColumn>39</endColumn>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="SingleLineCommentMustBePrecededByBlankLine" ruleCheckId="SA1515">
+        <context>A single-line comment must be preceded by a blank line or another single-line comment, or must be the first item in its scope. To ignore this error when commenting out a line of code, begin the comment with '////' rather than '//'.</context>
+        <line>42</line>
         <warning>False</warning>
       </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to Row must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyField.' or 'System.Web.DynamicData.FieldTemplateUserControl.' prefix to indicate the intended method call. </context>
-        <line>39</line>
-        <index>948</index>
-        <endIndex>950</endIndex>
-        <startLine>39</startLine>
-        <startColumn>78</startColumn>
-        <endLine>39</endLine>
-        <endColumn>80</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to FormatFieldValue must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyField.' or 'System.Web.DynamicData.FieldTemplateUserControl.' prefix to indicate the intended method call. </context>
-        <line>43</line>
-        <index>1027</index>
-        <endIndex>1042</endIndex>
-        <startLine>43</startLine>
-        <startColumn>24</startColumn>
-        <endLine>43</endLine>
-        <endColumn>39</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The method must have a documentation header.</context>
-        <line>47</line>
+      <violation namespace="StyleCop.CSharp.OrderingRules" rule="ElementsMustBeOrderedByAccess" ruleCheckId="SA1202">
+        <context>All protected methods must be placed after all public methods.</context>
+        <line>56</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="UseBuiltInTypeAlias" ruleCheckId="SA1121">
         <context>Use the built-in type alias 'string' rather than String or System.String.</context>
-        <line>54</line>
+        <line>44</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to AllowNavigation must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyField.' or 'System.Web.DynamicData.FieldTemplateUserControl.' prefix to indicate the intended method call. </context>
-        <line>49</line>
-        <index>1199</index>
-        <endIndex>1213</endIndex>
-        <startLine>49</startLine>
-        <startColumn>18</startColumn>
-        <endLine>49</endLine>
-        <endColumn>32</endColumn>
+        <context>The call to DropDownList1 must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>39</line>
+        <index>1037</index>
+        <endIndex>1049</endIndex>
+        <startLine>39</startLine>
+        <startColumn>21</startColumn>
+        <endLine>39</endLine>
+        <endColumn>33</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to ForeignKeyPath must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyField.' or 'System.Web.DynamicData.FieldTemplateUserControl.' prefix to indicate the intended method call. </context>
+        <context>The call to Column must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>37</line>
+        <index>978</index>
+        <endIndex>983</endIndex>
+        <startLine>37</startLine>
+        <startColumn>22</startColumn>
+        <endLine>37</endLine>
+        <endColumn>27</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to PopulateListControl must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>41</line>
+        <index>1142</index>
+        <endIndex>1160</endIndex>
+        <startLine>41</startLine>
+        <startColumn>17</startColumn>
+        <endLine>41</endLine>
+        <endColumn>35</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to DropDownList1 must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>41</line>
+        <index>1162</index>
+        <endIndex>1174</endIndex>
+        <startLine>41</startLine>
+        <startColumn>37</startColumn>
+        <endLine>41</endLine>
+        <endColumn>49</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to DropDownList1 must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>46</line>
+        <index>1387</index>
+        <endIndex>1399</endIndex>
+        <startLine>46</startLine>
+        <startColumn>21</startColumn>
+        <endLine>46</endLine>
+        <endColumn>33</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The method must have a documentation header.</context>
+        <line>51</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to OnFilterChanged must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>53</line>
+        <index>1589</index>
+        <endIndex>1603</endIndex>
+        <startLine>53</startLine>
+        <startColumn>13</startColumn>
+        <endLine>53</endLine>
+        <endColumn>27</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
+        <context>The method must have a documentation header.</context>
         <line>56</line>
-        <index>1369</index>
-        <endIndex>1382</endIndex>
-        <startLine>56</startLine>
-        <startColumn>24</startColumn>
-        <endLine>56</endLine>
-        <endColumn>37</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
+        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
+        <line>77</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.LayoutRules" rule="ClosingCurlyBracketMustBeFollowedByBlankLine" ruleCheckId="SA1513">
+        <context>Statements or elements wrapped in curly brackets must be followed by a blank line.</context>
+        <line>79</line>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="UseBuiltInTypeAlias" ruleCheckId="SA1121">
+        <context>Use the built-in type alias 'string' rather than String or System.String.</context>
+        <line>59</line>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to NavigateUrl must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyField.' or 'System.Web.DynamicData.FieldTemplateUserControl.' prefix to indicate the intended method call. </context>
-        <line>54</line>
-        <index>1316</index>
-        <endIndex>1326</endIndex>
-        <startLine>54</startLine>
-        <startColumn>38</startColumn>
-        <endLine>54</endLine>
+        <context>The call to DropDownList1 must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>58</line>
+        <index>1736</index>
+        <endIndex>1748</endIndex>
+        <startLine>58</startLine>
+        <startColumn>36</startColumn>
+        <endLine>58</endLine>
         <endColumn>48</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to BuildForeignKeyPath must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyField.' or 'System.Web.DynamicData.FieldTemplateUserControl.' prefix to indicate the intended method call. </context>
-        <line>60</line>
-        <index>1457</index>
-        <endIndex>1475</endIndex>
-        <startLine>60</startLine>
+        <context>The call to ApplyEqualityFilter must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>66</line>
+        <index>1973</index>
+        <endIndex>1991</endIndex>
+        <startLine>66</startLine>
         <startColumn>24</startColumn>
-        <endLine>60</endLine>
+        <endLine>66</endLine>
         <endColumn>42</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to NavigateUrl must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyField.' or 'System.Web.DynamicData.FieldTemplateUserControl.' prefix to indicate the intended method call. </context>
-        <line>60</line>
-        <index>1477</index>
-        <endIndex>1487</endIndex>
-        <startLine>60</startLine>
-        <startColumn>44</startColumn>
-        <endLine>60</endLine>
-        <endColumn>54</endColumn>
-        <warning>False</warning>
-      </violation>
-      <violation namespace="StyleCop.CSharp.DocumentationRules" rule="ElementsMustBeDocumented" ruleCheckId="SA1600">
-        <context>The property must have a documentation header.</context>
-        <line>64</line>
+        <context>The call to Column must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>66</line>
+        <index>2001</index>
+        <endIndex>2006</endIndex>
+        <startLine>66</startLine>
+        <startColumn>52</startColumn>
+        <endLine>66</endLine>
+        <endColumn>57</endColumn>
         <warning>False</warning>
       </violation>
       <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
-        <context>The call to HyperLink1 must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyField.' or 'System.Web.DynamicData.FieldTemplateUserControl.' prefix to indicate the intended method call. </context>
-        <line>68</line>
-        <index>1631</index>
-        <endIndex>1640</endIndex>
-        <startLine>68</startLine>
-        <startColumn>24</startColumn>
-        <endLine>68</endLine>
+        <context>The call to Column must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>70</line>
+        <index>2100</index>
+        <endIndex>2105</endIndex>
+        <startLine>70</startLine>
+        <startColumn>13</startColumn>
+        <endLine>70</endLine>
+        <endColumn>18</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to DefaultValues must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>76</line>
+        <index>2348</index>
+        <endIndex>2360</endIndex>
+        <startLine>76</startLine>
+        <startColumn>21</startColumn>
+        <endLine>76</endLine>
         <endColumn>33</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to DefaultValues must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>74</line>
+        <index>2285</index>
+        <endIndex>2297</endIndex>
+        <startLine>74</startLine>
+        <startColumn>21</startColumn>
+        <endLine>74</endLine>
+        <endColumn>33</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to ApplyEqualityFilter must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>78</line>
+        <index>2427</index>
+        <endIndex>2445</endIndex>
+        <startLine>78</startLine>
+        <startColumn>26</startColumn>
+        <endLine>78</endLine>
+        <endColumn>44</endColumn>
+        <warning>False</warning>
+      </violation>
+      <violation namespace="StyleCop.CSharp.ReadabilityRules" rule="PrefixCallsCorrectly" ruleCheckId="SA1126">
+        <context>The call to Column must begin with the 'this.', 'base.', 'object.' or 'ForeignKeyFilter.' or 'System.Web.DynamicData.QueryableFilterUserControl.' prefix to indicate the intended method call. </context>
+        <line>78</line>
+        <index>2455</index>
+        <endIndex>2460</endIndex>
+        <startLine>78</startLine>
+        <startColumn>54</startColumn>
+        <endLine>78</endLine>
+        <endColumn>59</endColumn>
         <warning>False</warning>
       </violation>
     </violations>
@@ -30015,7 +30401,7 @@
     <timestamps>
       <styleCop>2012/10/01 23:21:15.176</styleCop>
       <settingsFile>2012/10/01 23:21:14.907</settingsFile>
-      <sourceFile>2012/10/16 21:20:56.825</sourceFile>
+      <sourceFile>2012/10/16 21:20:57.272</sourceFile>
       <parser>2012/10/01 23:21:15.176</parser>
       <StyleCop.CSharp.DocumentationRules>2012/10/01 23:21:15.176</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>780160645</StyleCop.CSharp.DocumentationRules.FilesHashCode>
@@ -30038,30 +30424,7 @@
     <timestamps>
       <styleCop>2012/10/01 23:21:15.176</styleCop>
       <settingsFile>2012/10/01 23:21:14.907</settingsFile>
-      <sourceFile>2012/10/02 00:24:45.170</sourceFile>
-      <parser>2012/10/01 23:21:15.176</parser>
-      <StyleCop.CSharp.DocumentationRules>2012/10/01 23:21:15.176</StyleCop.CSharp.DocumentationRules>
-      <StyleCop.CSharp.DocumentationRules.FilesHashCode>780160645</StyleCop.CSharp.DocumentationRules.FilesHashCode>
-      <StyleCop.CSharp.LayoutRules>2012/10/01 23:21:15.176</StyleCop.CSharp.LayoutRules>
-      <StyleCop.CSharp.LayoutRules.FilesHashCode>0</StyleCop.CSharp.LayoutRules.FilesHashCode>
-      <StyleCop.CSharp.MaintainabilityRules>2012/10/01 23:21:15.176</StyleCop.CSharp.MaintainabilityRules>
-      <StyleCop.CSharp.MaintainabilityRules.FilesHashCode>0</StyleCop.CSharp.MaintainabilityRules.FilesHashCode>
-      <StyleCop.CSharp.NamingRules>2012/10/01 23:21:15.176</StyleCop.CSharp.NamingRules>
-      <StyleCop.CSharp.NamingRules.FilesHashCode>0</StyleCop.CSharp.NamingRules.FilesHashCode>
-      <StyleCop.CSharp.OrderingRules>2012/10/01 23:21:15.176</StyleCop.CSharp.OrderingRules>
-      <StyleCop.CSharp.OrderingRules.FilesHashCode>0</StyleCop.CSharp.OrderingRules.FilesHashCode>
-      <StyleCop.CSharp.ReadabilityRules>2012/10/01 23:21:15.176</StyleCop.CSharp.ReadabilityRules>
-      <StyleCop.CSharp.ReadabilityRules.FilesHashCode>0</StyleCop.CSharp.ReadabilityRules.FilesHashCode>
-      <StyleCop.CSharp.SpacingRules>2012/10/01 23:21:15.176</StyleCop.CSharp.SpacingRules>
-      <StyleCop.CSharp.SpacingRules.FilesHashCode>0</StyleCop.CSharp.SpacingRules.FilesHashCode>
-    </timestamps>
-    <violations />
-  </sourcecode>
-  <sourcecode name="SimpleValidation.aspx.designer.cs" parser="StyleCop.CSharp.CsParser">
-    <timestamps>
-      <styleCop>2012/10/01 23:21:15.176</styleCop>
-      <settingsFile>2012/10/01 23:21:14.907</settingsFile>
-      <sourceFile>2012/10/17 23:31:34.624</sourceFile>
+      <sourceFile>2012/10/02 01:05:23.271</sourceFile>
       <parser>2012/10/01 23:21:15.176</parser>
       <StyleCop.CSharp.DocumentationRules>2012/10/01 23:21:15.176</StyleCop.CSharp.DocumentationRules>
       <StyleCop.CSharp.DocumentationRules.FilesHashCode>780160645</StyleCop.CSharp.DocumentationRules.FilesHashCode>

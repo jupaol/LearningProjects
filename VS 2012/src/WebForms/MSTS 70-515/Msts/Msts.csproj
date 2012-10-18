@@ -393,13 +393,13 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Service References\HelloWorldWcfServiceReference\HelloWorldWcfService.disco" />
-    <Content Include="Service References\HelloWorldWcfServiceReference\configuration91.svcinfo" />
-    <Content Include="Service References\HelloWorldWcfServiceReference\configuration.svcinfo" />
-    <Content Include="Service References\HelloWorldWcfServiceReference\Reference.svcmap">
+    <None Include="Service References\HelloWorldWcfServiceReference\HelloWorldWcfService.disco" />
+    <None Include="Service References\HelloWorldWcfServiceReference\configuration91.svcinfo" />
+    <None Include="Service References\HelloWorldWcfServiceReference\configuration.svcinfo" />
+    <None Include="Service References\HelloWorldWcfServiceReference\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
-    </Content>
+    </None>
     <Content Include="Service References\HelloWorldWvfService\HelloWorldService.disco" />
     <Content Include="Service References\HelloWorldWvfService\configuration91.svcinfo" />
     <Content Include="Service References\HelloWorldWvfService\configuration.svcinfo" />
@@ -532,7 +532,7 @@
       <Generator>MSDiscoCodeGenerator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
-    <Content Include="Service References\HelloWorldWcfServiceReference\HelloWorldWcfService.wsdl" />
+    <None Include="Service References\HelloWorldWcfServiceReference\HelloWorldWcfService.wsdl" />
     <None Include="Service References\HelloWorldWcfServiceReference\HelloWorldWcfService.xsd" />
     <None Include="Service References\HelloWorldWcfServiceReference\HelloWorldWcfService1.xsd" />
     <Content Include="Topics\Chapter11 - LINQ\Lesson02 - LINQ to SQL\JobsDataSet.xsc">

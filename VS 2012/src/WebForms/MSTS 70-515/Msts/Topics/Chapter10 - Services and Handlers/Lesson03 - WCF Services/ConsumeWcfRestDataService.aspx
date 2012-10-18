@@ -49,7 +49,7 @@
                         type: "GET",
                         contentType: "application/json;odata=verbose;charset=utf-8;",
                         dataType: "json",
-                        data: "",
+                        data: "{}",
                         success: function (msg) {
                             $res1.text("");
 

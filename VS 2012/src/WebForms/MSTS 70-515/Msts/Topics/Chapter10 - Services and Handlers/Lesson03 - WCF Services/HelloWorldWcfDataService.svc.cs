@@ -21,7 +21,7 @@ namespace Msts.Topics.Chapter10___Services_and_Handlers.Lesson03___WCF_Services
             config.SetEntitySetAccessRule("*", EntitySetRights.All);
             config.SetServiceOperationAccessRule("*", ServiceOperationRights.All);
 
-            config.DataServiceBehavior.MaxProtocolVersion = DataServiceProtocolVersion.V3;
+            config.DataServiceBehavior.MaxProtocolVersion = DataServiceProtocolVersion.V2;
         }
     }
 }

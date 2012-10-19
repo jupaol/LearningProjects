@@ -32,6 +32,7 @@
                 <asp:ScriptReference Name="Focus.js"  Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
                 <asp:ScriptReference Path="~/bundles/jquery.validation" />
+                <asp:ScriptReference Path="~/Scripts/jquery.maskedinput-1.3.0.min.js" />
                 <%--Site Scripts--%>
 
             </Scripts>
@@ -76,10 +77,12 @@
                     <asp:LoginView ID="LoginView1" runat="server">
                         <AnonymousTemplate>
                             Welcome!
+                            <asp:HyperLink NavigateUrl="#" ID="customAsyncLoginAync" runat="server" Text="Async Login" />
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <asp:HyperLink ID="HyperLink1" NavigateUrl="~/ChangePassword.aspx" runat="server" Text="Change password" />
-                            <asp:LoginName ID="LoginName1" FormatString="Welcome {0}!" runat="server" /> - 
+                            <asp:LoginName ID="LoginName1" FormatString="Welcome {0}!" runat="server" />
+                            <asp:HyperLink NavigateUrl="#" runat="server" ID="customAsyncLogoutAsync" Text="Async Logout" />
                         </LoggedInTemplate>
                     </asp:LoginView>
                     <asp:LoginStatus ID="LoginStatus1" runat="server" />
@@ -145,5 +148,232 @@
     </div>
         <%= StackExchange.Profiling.MiniProfiler.RenderIncludes() %>
     </form>
+    <div id="waitDialog">
+        <div>
+            Processing...
+        </div>
+    </div>
+
+    <div id="loginDialog">
+        <form id="asyncLoginForm">
+            <div>
+                <fieldset>
+                    <legend>
+                        Login
+                    </legend>
+                    <div>
+                        <label for="asyncUsername">Username:</label>
+                    </div>
+                    <div>
+                        <input type="text" id="asyncUsername" name="asyncUsername" class="required" />
+                    </div>
+                    <div>
+                        <label for="asyncPassword">Password</label>
+                    </div>
+                    <div>
+                        <input type="password" id="asyncPassword" name="asyncPassword" class="required" />
+                    </div>
+                    <div>
+                        <input type="checkbox" id="asyncRememberMe" name="asyncRememberMe" />
+                        <label for="asyncRememberMe">Remember me</label>
+                    </div>
+                    <div>
+                        <input type="button" id="asyncTryLogin" value="Login" class="ui-corner-all" />
+                    </div>
+                    <div id="asyncMsgRes">
+
+                    </div>
+                </fieldset>
+            </div>
+        </form>
+    </div>
+
+    <div id="logoutDialog">
+        <form>
+            <div>
+                <fieldset class="ui-widget ui-widget-content ui-corner-all">
+                    <legend class="ui-widget ui-widget-header ui-corner-all">
+                        Logout
+                    </legend>
+                    <div>
+                        <input type="button" id="logaoutAsynchronously" name="logaoutAsynchronously" value="Logout Asynchronoulsy" />
+                    </div>
+                </fieldset>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        $(function () {
+            var $asyncLogin = $("a[id$=customAsyncLoginAync]");
+            var $waitDialog = $("#waitDialog");
+            var $loginDialog = $("#loginDialog");
+            var $asyncUsername = $("#asyncUsername");
+            var $asyncPassword = $("#asyncPassword");
+            var $asyncLoginForm = $("#asyncLoginForm");
+            var $asyncTryLogin = $("#asyncTryLogin");
+            var $asyncRememberMe = $("#asyncRememberMe");
+            var $asyncMsgRes = $("#asyncMsgRes");
+
+            var $customAsyncLogoutAsync = $("a[id$=customAsyncLogoutAsync]");
+            var $logoutDialog = $("#logoutDialog");
+            var $logaoutAsynchronously = $("#logaoutAsynchronously");
+
+            $logaoutAsynchronously.button();
+
+            $logaoutAsynchronously.click(function (e) {
+                e.preventDefault();
+
+                $waitDialog.dialog("open");
+
+                var $self = $(this);
+
+                $self.prop("disabled", true);
+
+                Sys.Services.AuthenticationService.logout(
+                    null,
+                    function (msg) {
+                        console.log("msg logout: %o", msg);
+                        $waitDialog.dialog("close");
+                        $self.prop("disabled", false);
+
+                        if (msg) {
+                            $logoutDialog.dialog("close");
+                        }
+                    },
+                    function (err) {
+                        console.log("err from logout: %o", err);
+                        $waitDialog.dialog("close");
+                        $self.prop("disabled", false);
+                    },
+                    null
+                );
+            });
+
+            $logoutDialog.dialog({
+                autoOpen: false,
+                modal: true,
+                open: function (e, ui) {
+
+                },
+                close: function (e, ui) {
+                    if (!Sys.Services.AuthenticationService.get_isLoggedIn()) {
+                        window.location = window.location;
+                    }
+                }
+            });
+
+            $customAsyncLogoutAsync.click(function (e) {
+                e.preventDefault();
+
+                $logoutDialog.dialog("open");
+            });
+
+            $asyncLoginForm.tooltip({
+                show: false,
+                hide: false
+            });
+
+            $.validator.setDefaults({
+                submitHandler: function () { alert("submitted!"); },
+                showErrors: function (map, list) {
+
+                    var focussed = document.activeElement;
+                    if (focussed && $(focussed).is("input, textarea")) {
+                        $(this.currentForm).tooltip("close", { currentTarget: focussed }, true)
+                    }
+                    this.currentElements.removeAttr("title").removeClass("ui-state-highlight");
+                    $.each(list, function (index, error) {
+                        $(error.element).attr("title", error.message).addClass("ui-state-highlight");
+                    });
+                    if (focussed && $(focussed).is("input, textarea")) {
+                        $(this.currentForm).tooltip("open", { target: focussed });
+                    }
+                }
+            });
+
+            $asyncTryLogin.click(function (e) {
+                e.preventDefault();
+
+                $asyncLoginForm.validate();
+
+                var isFormValid = $asyncLoginForm.validate().form();
+
+                if (!isFormValid) {
+                    return false;
+                }
+
+                $waitDialog.dialog("open");
+
+                var $self = $(this);
+
+                $self.prop("disabled", true);
+
+                Sys.Services.AuthenticationService.login(
+                    $asyncUsername.val(),
+                    $asyncPassword.val(),
+                    $asyncRememberMe.is(":checked"),
+                    null,
+                    null,
+                    function (msg) {
+                        $waitDialog.dialog("close");
+
+                        if (msg) {
+                            $asyncMsgRes
+                                .text("Correctly logged in")
+                                .hide("highlight", {}, 500, null)
+                                .show("highlight", {}, 1000, function () {
+                                    $loginDialog.dialog("close");
+                                });
+                        }
+                        else {
+                            $asyncMsgRes
+                                .text("Invalid username / password")
+                                .hide("shake", {}, 500, null)
+                                .show("shake", {}, 500, function () {
+                                    $self.prop("disabled", false);
+                                });
+                        }
+                    },
+                    function (err) {
+                        console.log("Error: %o", err);
+                        alert("An error ocurred");
+                        $waitDialog.dialog("close");
+                    },
+                    null
+                );
+            });
+
+            $asyncLoginForm.validate();
+
+            $waitDialog.dialog({
+                modal: true,
+                autoOpen: false,
+                closeOnEscape: false,
+                open: function (e, ui) {
+                    $(this).closest(".ui-dialog").find(".ui-dialog-titlebar-close").hide();
+                }
+            });
+
+            $loginDialog.dialog({
+                modal: true,
+                autoOpen: false,
+                open: function (e, ui) {
+
+                },
+                close: function (e, ui) {
+                    if (Sys.Services.AuthenticationService.get_isLoggedIn()) {
+                        window.location = window.location;
+                    }
+                }
+            });
+
+            $asyncLogin.click(function (e) {
+                e.preventDefault();
+
+                $loginDialog.dialog("open");
+            });
+        });
+    </script>
 </body>
 </html>

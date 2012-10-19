@@ -70,13 +70,17 @@
 
                 $waitDialog.dialog("open");
 
+                var date = new Date();
+
                 Sys.Services.ProfileService.properties.MasterPage = $masterPage.val();
                 Sys.Services.ProfileService.properties.Theme = $theme.val();
                 Sys.Services.ProfileService.properties.Language = $language.val();
+                Sys.Services.ProfileService.properties.LastLogin = date;
 
                 Sys.Services.ProfileService.save(
                     null,
                     function (msg) {
+                        viewModel.lastLogin(date);
                         console.log("msg: %o", msg);
                         $waitDialog.dialog("close");
                         $profileDialog.dialog("close");

@@ -35,8 +35,13 @@ namespace Msts.Topics.Chapter06___Globalization_and_Accessibility.Lesson01___Glo
                     {
                         if (!string.IsNullOrEmpty(profile.Language))
                         {
-                            page.UICulture = profile.Language;
-                            page.Culture = profile.Language;
+                            var availableCultures = CultureInfo.GetCultures(CultureTypes.AllCultures).Select(x => new { Name = x.Name });
+
+                            if (availableCultures.Any(x => x.Name.Equals(profile.Language, StringComparison.InvariantCultureIgnoreCase)))
+                            {
+                                page.UICulture = profile.Language;
+                                page.Culture = profile.Language;
+                            }
                         }
                     }
                     

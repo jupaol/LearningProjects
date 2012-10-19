@@ -11,6 +11,71 @@
             var $no = $("input:submit[id$=no]");
             var confirmAccepted = false;
             var $confirm = $("#confirm");
+            var $form = $("form");
+            var $name = $("input:text[id$=name]");
+
+            $.validator.setDefaults({
+                submitHandler: function () {
+                    alert("submitted");
+                },
+                showErrors: function (map, list) {
+                    var focussed = document.activeElement;
+                    if (focussed && $(focussed).is("input, textarea")) {
+                        $(this.currentForm).tooltip("close", { currentTarget: focussed }, true)
+                    }
+                    this.currentElements.removeAttr("title").removeClass("ui-state-highlight");
+                    $.each(list, function (index, error) {
+                        $(error.element).attr("title", error.message).addClass("ui-state-highlight");
+                    });
+                    if (focussed && $(focussed).is("input, textarea")) {
+                        $(this.currentForm).tooltip("open", { target: focussed });
+                    }
+                }
+            });
+
+            $form.tooltip({
+                show: false,
+                hide: false
+            });
+
+            //$name.tooltip({
+            //    content: ""
+            //});
+            //$birthdayDate.tooltip({
+            //    content: "Your birthday date (mm/dd/yyyy)"
+            //});
+
+            $birthdayDate.mask("99/99/9999");
+
+            $.validator.addMethod("normalDate", function (value, element) {
+                var momentoWrapped = moment(value, "MM/DD/YYYY");
+
+                return momentoWrapped.isValid();
+            });
+
+            $("form").validate({
+                ignore: []
+            });
+
+            $name.rules("add", {
+                required: true,
+                minlength: 2,
+                maxlength: 10,
+                messages: {
+                    required: "The name is required bro",
+                    minlength: "The min length is {0}",
+                    maxlength: "Calm down, we only support {0}"
+                }
+            });
+
+            $birthdayDate.rules("add", {
+                required: true,
+                normalDate: true,
+                messages: {
+                    required: "The birthday date is required dude!",
+                    normalDate: "The date is not valid mate (DD/MM/YYYY)"
+                }
+            });
 
             Sys.Application.add_init(function () {
                 Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(function () {
@@ -35,10 +100,23 @@
                 }
             });
 
-            $accordion.accordion();
+            $accordion.accordion({
+                activate: function (e, ui) {
+                    var accordionIndex = $accordion.accordion("option", "active");
+
+                    console.log("accordion index: %o", accordionIndex);
+
+                    if (accordionIndex === 0) {
+                        //$name.tooltip("open");
+                        //$birthdayDate.tooltip("open");
+                    }
+                }
+            });
             $accordion.accordion("activate", 0);
 
-            $birthdayDate.datepicker();
+            $birthdayDate.datepicker({
+                dateFormat: "mm/dd/yy"
+            });
 
             $yes.click(function (e) {
                 e.preventDefault();
@@ -56,6 +134,17 @@
             });
 
             $sendRequest.click(function (e) {
+                var validator = $("form").validate();
+                var isFormValid = validator.form();
+
+                console.log(isFormValid);
+
+                if (!isFormValid) {
+                    $accordion.accordion("activate", 0);
+                    validator.focusInvalid();
+                    return false;
+                }
+
                 if (!confirmAccepted) {
                     $confirm.dialog("open");
                     e.preventDefault();
@@ -82,18 +171,23 @@
                     <a href="#">Prepare request</a>
                 </h3>
                 <div>
-                    <div>
-                        <asp:Label ID="Label1" Text="Please enter your name" runat="server" AssociatedControlID="name" />
-                    </div>
-                    <div>
-                        <asp:TextBox runat="server" ID="name" />
-                    </div>
-                    <div>
-                        <asp:Label ID="Label2" Text="Please enter your birthday date" runat="server" AssociatedControlID="birthdayDate" />
-                    </div>
-                    <div>
-                        <asp:TextBox runat="server" ID="birthdayDate" />
-                    </div>
+                    <fieldset class="ui-widget ui-widget-content ui-corner-all">
+                        <legend class="ui-widget ui-widget-header ui-carner-all">
+                            Enter your info
+                        </legend>
+                        <div>
+                            <asp:Label ID="Label1" Text="Please enter your name" runat="server" AssociatedControlID="name" />
+                        </div>
+                        <div>
+                            <asp:TextBox runat="server" ID="name" CssClass="ui-widget-content" />
+                        </div>
+                        <div>
+                            <asp:Label ID="Label2" Text="Please enter your birthday date" runat="server" AssociatedControlID="birthdayDate" />
+                        </div>
+                        <div>
+                            <asp:TextBox runat="server" ID="birthdayDate" CssClass="ui-widget-content" />
+                        </div>
+                    </fieldset>
                 </div>
                 <h3>
                     <a href="#">Send Request</a>

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -55,13 +56,23 @@ namespace Msts.Topics.Chapter02.Lesson01___MasterPages
                     {
                         if (!string.IsNullOrWhiteSpace(profile.MasterPage))
                         {
-                            page.MasterPageFile = profile.MasterPage;
+                            var physicalMasterPagePath = page.Server.MapPath(profile.MasterPage);
+
+                            if (File.Exists(physicalMasterPagePath))
+                            {
+                                page.MasterPageFile = profile.MasterPage;
+                            }
                         }
                     }
 
                     if (!string.IsNullOrWhiteSpace(profile.Theme))
                     {
-                        page.Theme = profile.Theme;
+                        var themesPath = page.Server.MapPath("~/App_Themes");
+
+                        if (Directory.Exists(Path.Combine(themesPath, profile.Theme)))
+                        {
+                            page.Theme = profile.Theme;
+                        }
                     }
                 }
 

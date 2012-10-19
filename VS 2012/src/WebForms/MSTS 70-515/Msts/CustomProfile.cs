@@ -8,7 +8,7 @@ using System.Web.Profile;
 
 namespace Msts
 {
-    public class CustomProfile : ProfileBase
+    public partial class CustomProfile : ProfileBase
     {
         public static CustomProfile GetCurrentProfile()
         {

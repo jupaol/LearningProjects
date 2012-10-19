@@ -300,6 +300,8 @@
     <Content Include="DynamicData\FieldTemplates\Boolean_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\Children.ascx" />
     <Content Include="DynamicData\FieldTemplates\Children_Insert.ascx" />
+    <Content Include="DynamicData\FieldTemplates\CustomDateTime.ascx" />
+    <Content Include="DynamicData\FieldTemplates\CustomDateTime_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\DateTime.ascx" />
     <Content Include="DynamicData\FieldTemplates\DateTime_Edit.ascx" />
     <Content Include="DynamicData\FieldTemplates\Decimal_Edit.ascx" />
@@ -361,6 +363,7 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-ui-1.9.0.js" />
     <Content Include="Scripts\jquery-ui-1.9.0.min.js" />
+    <Content Include="Scripts\jquery.maskedinput-1.3.0.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\knockout-2.1.0.debug.js" />
@@ -371,6 +374,8 @@
     <Content Include="Scripts\knockout.validation.js" />
     <Content Include="Scripts\ko.editables.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
     <Content Include="Scripts\WebForms\GridView.js" />
@@ -443,6 +448,7 @@
     <Content Include="Topics\Chapter05 - Validation and navigation\Lesson03 - WebParts\UserControl1.ascx" />
     <Content Include="Topics\Chapter05 - Validation and navigation\Lesson03 - WebParts\UserControl2.ascx" />
     <Content Include="Topics\Chapter05 - Validation and navigation\Lesson03 - WebParts\UserControl3.ascx" />
+    <Content Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Resources\DisplayingCultureInformation.aspx" />
     <Content Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Resources\LocalResourcesTest.aspx" />
     <Content Include="Topics\Chapter06 - Globalization and Accessibility\Lesson02 - Accessibility\GeneralAccessibilityRules.aspx" />
     <Content Include="Topics\Chapter06 - Globalization and Accessibility\Lesson02 - Accessibility\TestingTheSkipTextProperty.aspx" />
@@ -519,6 +525,10 @@
     <Content Include="Topics\Chapter12 - Data binding\Lesson03 - Dynamic Data\SimpleDynamicFormView.aspx" />
     <Content Include="Topics\Chapter12 - Data binding\Lesson03 - Dynamic Data\SimpleDynamicListView.aspx" />
     <Content Include="Topics\Chapter13 - Profiles and security\Lesson01 - Profiles\WorkingWithProfilesOnTheClientSide.aspx" />
+    <Content Include="Topics\Chapter13 - Profiles and security\Lesson01 - Profiles\WorkingWithTheProfileOnTheServerSide.aspx" />
+    <Content Include="Topics\Chapter13 - Profiles and security\Lesson02 - Membership\logo.jpg" />
+    <Content Include="Topics\Chapter13 - Profiles and security\Lesson02 - Membership\PasswordResetMailContent.txt" />
+    <Content Include="Topics\Chapter13 - Profiles and security\Lesson02 - Membership\UserCreatedEmailBody.txt" />
     <Content Include="Web References\HelloWorldXmlService\HelloWorldService.disco" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -582,6 +592,8 @@
       <DependentUpon>CreateAccount.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomProfile.cs" />
+    <Compile Include="CustomProfileExtensions.cs" />
+    <Compile Include="CustomProfileMetadata.cs" />
     <Compile Include="DataAccess\EFData\employee.cs">
       <DependentUpon>Pubs.tt</DependentUpon>
     </Compile>
@@ -673,6 +685,20 @@
     </Compile>
     <Compile Include="DynamicData\FieldTemplates\Children_Insert.ascx.designer.cs">
       <DependentUpon>Children_Insert.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\CustomDateTime.ascx.cs">
+      <DependentUpon>CustomDateTime.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\CustomDateTime.ascx.designer.cs">
+      <DependentUpon>CustomDateTime.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\CustomDateTime_Edit.ascx.cs">
+      <DependentUpon>CustomDateTime_Edit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DynamicData\FieldTemplates\CustomDateTime_Edit.ascx.designer.cs">
+      <DependentUpon>CustomDateTime_Edit.ascx</DependentUpon>
     </Compile>
     <Compile Include="DynamicData\FieldTemplates\DateTime.ascx.cs">
       <DependentUpon>DateTime.ascx</DependentUpon>
@@ -1186,6 +1212,13 @@
     </Compile>
     <Compile Include="Topics\Chapter05 - Validation and navigation\Lesson03 - WebParts\UserControl3.ascx.designer.cs">
       <DependentUpon>UserControl3.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Resources\DisplayingCultureInformation.aspx.cs">
+      <DependentUpon>DisplayingCultureInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Resources\DisplayingCultureInformation.aspx.designer.cs">
+      <DependentUpon>DisplayingCultureInformation.aspx</DependentUpon>
     </Compile>
     <Compile Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Resources\LocalizationModule.cs" />
     <Compile Include="Topics\Chapter06 - Globalization and Accessibility\Lesson01 - Resources\LocalResourcesTest.aspx.cs">
@@ -1713,6 +1746,13 @@
     </Compile>
     <Compile Include="Topics\Chapter13 - Profiles and security\Lesson01 - Profiles\WorkingWithProfilesOnTheClientSide.aspx.designer.cs">
       <DependentUpon>WorkingWithProfilesOnTheClientSide.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter13 - Profiles and security\Lesson01 - Profiles\WorkingWithTheProfileOnTheServerSide.aspx.cs">
+      <DependentUpon>WorkingWithTheProfileOnTheServerSide.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter13 - Profiles and security\Lesson01 - Profiles\WorkingWithTheProfileOnTheServerSide.aspx.designer.cs">
+      <DependentUpon>WorkingWithTheProfileOnTheServerSide.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web References\HelloWorldXmlService\Reference.cs">
       <AutoGen>True</AutoGen>

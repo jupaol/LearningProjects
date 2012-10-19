@@ -15,7 +15,8 @@ namespace Msts.App_Start
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/jquery.validation").Include(
-                "~/Scripts/jquery.validate.js"
+                "~/Scripts/jquery.validate.js",
+                "~/Scripts/moment.js"
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/WebFormsJs").Include(
@@ -35,23 +36,27 @@ namespace Msts.App_Start
                 "~/Scripts/WebForms/MsAjax/MicrosoftAjaxWebForms.js"));
 
             bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
-                "~/Content/themes/base/jquery.ui.core.css",
-                "~/Content/themes/base/jquery.ui.resizable.css",
-                "~/Content/themes/base/jquery.ui.selectable.css",
-                "~/Content/themes/base/jquery.ui.accordion.css",
-                "~/Content/themes/base/jquery.ui.autocomplete.css",
-                "~/Content/themes/base/jquery.ui.button.css",
-                "~/Content/themes/base/jquery.ui.dialog.css",
-                "~/Content/themes/base/jquery.ui.slider.css",
-                "~/Content/themes/base/jquery.ui.tabs.css",
-                "~/Content/themes/base/jquery.ui.datepicker.css",
-                "~/Content/themes/base/jquery.ui.progressbar.css",
-                "~/Content/themes/base/jquery.ui.theme.css"));
+                "~/Content/themes/base/jquery.ui.all.css"
+                //"~/Content/themes/base/jquery.ui.core.css",
+                //"~/Content/themes/base/jquery.ui.resizable.css",
+                //"~/Content/themes/base/jquery.ui.selectable.css",
+                //"~/Content/themes/base/jquery.ui.accordion.css",
+                //"~/Content/themes/base/jquery.ui.autocomplete.css",
+                //"~/Content/themes/base/jquery.ui.button.css",
+                //"~/Content/themes/base/jquery.ui.dialog.css",
+                //"~/Content/themes/base/jquery.ui.slider.css",
+                //"~/Content/themes/base/jquery.ui.tabs.css",
+                //"~/Content/themes/base/jquery.ui.datepicker.css",
+                //"~/Content/themes/base/jquery.ui.progressbar.css",
+                //"~/Content/themes/base/jquery.ui.theme.css"
+            ));
 
             bundles.Add(new ScriptBundle("~/bundles/knockout").Include(
                 "~/Scripts/knockout-{version}.js",
                 "~/Scripts/knockout.mapping-latest.js",
-                "~/Scripts/knockout.validation.js"));
+                "~/Scripts/knockout.validation.js",
+                "~/Scripts/ko.editables.js"
+            ));
 
             bundles.Add(new StyleBundle("~/Content/AjaxControlToolkit").Include(
                 "~/Content/AjaxControlToolkit/Accordion.css"));

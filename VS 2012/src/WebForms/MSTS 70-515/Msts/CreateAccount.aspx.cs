@@ -13,5 +13,12 @@ namespace Msts
         {
 
         }
+
+        protected void createUser_SendingMail(object sender, MailMessageEventArgs e)
+        {
+            var message = e.Message.Body.Replace("{{ pwd }}", this.createUser.Password);
+
+            e.Message.Body = message;
+        }
     }
 }

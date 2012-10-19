@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Security;
 using System.Web;
@@ -33,7 +34,12 @@ namespace Msts.Topics.Chapter02.Lesson01___MasterPages
 
                     if (!string.IsNullOrWhiteSpace(masterPage))
                     {
-                        layouts.SelectedValue = masterPage;
+                        var masterPagePhysicalPath = Server.MapPath(masterPage);
+
+                        if (File.Exists(masterPagePhysicalPath))
+                        {
+                            layouts.SelectedValue = masterPage;
+                        }
                     }
                 }
 
@@ -43,7 +49,12 @@ namespace Msts.Topics.Chapter02.Lesson01___MasterPages
 
                     if (!string.IsNullOrWhiteSpace(theme))
                     {
-                        themes.SelectedValue = theme;
+                        var themesPhysicalPath = Server.MapPath("~/App_Themes");
+
+                        if (Directory.Exists(Path.Combine(themesPhysicalPath, theme)))
+                        {
+                            themes.SelectedValue = theme;
+                        }
                     }
                 }
 
@@ -53,7 +64,12 @@ namespace Msts.Topics.Chapter02.Lesson01___MasterPages
 
                     if (!string.IsNullOrWhiteSpace(language))
                     {
-                        languages.SelectedValue = language;
+                        var availableCultures = CultureInfo.GetCultures(CultureTypes.AllCultures).Select(x => new { Name = x.Name });
+
+                        if (availableCultures.Any(x => x.Name.Equals(language, StringComparison.InvariantCultureIgnoreCase)))
+                        {
+                            languages.SelectedValue = language;
+                        }
                     }
                 }
             }

@@ -1,0 +1,15 @@
+﻿<b>
+	Congratulations
+</b>
+
+<p>
+	You ar enow mine!!!!
+</p>
+
+<p>
+	This is your password: {{ pwd }}
+</p>
+
+<h1>
+	Let the spam flyyy
+</h1>

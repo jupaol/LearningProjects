@@ -16,7 +16,8 @@ namespace Msts.App_Start
 
             bundles.Add(new ScriptBundle("~/bundles/jquery.validation").Include(
                 "~/Scripts/jquery.validate.js",
-                "~/Scripts/moment.js"
+                "~/Scripts/moment.js",
+                "~/Scripts/jquery.blockUI.js"
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/WebFormsJs").Include(

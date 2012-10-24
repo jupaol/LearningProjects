@@ -70,6 +70,15 @@
     <Reference Include="Elmah.Contrib.Mvc">
       <HintPath>..\packages\Elmah.Contrib.Mvc.1.0\lib\net40\Elmah.Contrib.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="FizzWare.NBuilder">
+      <HintPath>..\packages\NBuilder.3.0.1.1\lib\FizzWare.NBuilder.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Core">
+      <HintPath>..\packages\Glimpse.0.87\lib\net40\Glimpse.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Mvc3">
+      <HintPath>..\packages\Glimpse.Mvc3.0.87\lib\net40\Glimpse.Mvc3.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Data.Edm">
       <HintPath>..\packages\Microsoft.Data.Edm.5.0.2\lib\net40\Microsoft.Data.Edm.dll</HintPath>
@@ -200,8 +209,16 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\Chapter14\Chapter14AreaRegistration.cs" />
+    <Compile Include="Areas\Chapter14\Controllers\CachingController.cs" />
+    <Compile Include="Areas\Chapter14\Controllers\FiltersLifeCycleController.cs" />
+    <Compile Include="Areas\Chapter14\Controllers\PassingDataToActionsController.cs" />
+    <Compile Include="Areas\Chapter14\Controllers\WorkingWithActionResultsController.cs" />
+    <Compile Include="Areas\Chapter14\Controllers\WorkingWithHelperMethodsController.cs" />
+    <Compile Include="Areas\Chapter14\Models\HelperMethodsModel.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="CustomHelpers\HtmlExtensions.cs" />
     <Compile Include="DataAccess\EFData\employee.cs">
       <DependentUpon>Pubs.tt</DependentUpon>
     </Compile>
@@ -234,7 +251,9 @@
     <Compile Include="ExternalHelloWorldWcfService.svc.cs">
       <DependentUpon>ExternalHelloWorldWcfService.svc</DependentUpon>
     </Compile>
+    <Compile Include="CustomFilterProviders\CrossSiteRequestForgeryFilter.cs" />
     <Compile Include="Filters\CustomFilter.cs" />
+    <Compile Include="Filters\FilterLifeCycle.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -243,6 +262,8 @@
     <Compile Include="IExternalHelloWorldWcfService.cs" />
     <Compile Include="JSONPSupportInspector.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\MyColors.cs" />
+    <Compile Include="Models\SimpleValidationModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Topics\RequestLifeCycle\RequestLifeCycle.cs" />
   </ItemGroup>
@@ -250,6 +271,8 @@
     <Content Include="App_Readme\Elmah.SqlServer.sql" />
     <Content Include="App_Readme\Elmah.SqlServer.txt" />
     <Content Include="App_Readme\Elmah.txt" />
+    <Content Include="App_Readme\glimpse.mvc3.readme.txt" />
+    <Content Include="App_Readme\glimpse.readme.txt" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -330,6 +353,24 @@
       <DependentUpon>Pubs.edmx</DependentUpon>
       <LastGenOutput>Pubs.cs</LastGenOutput>
     </Content>
+    <Content Include="Areas\Chapter14\Views\Web.config" />
+    <Content Include="Areas\Chapter14\Views\WorkingWithActionResults\Index.cshtml" />
+    <Content Include="Areas\Chapter14\Views\WorkingWithActionResults\SimpleViewResult.cshtml" />
+    <Content Include="Areas\Chapter14\Views\Shared\Menu.cshtml" />
+    <Content Include="Areas\Chapter14\Views\PassingDataToActions\Index.cshtml" />
+    <Content Include="Areas\Chapter14\Views\PassingDataToActions\PassingGetParameters.cshtml" />
+    <Content Include="Areas\Chapter14\Views\PassingDataToActions\PassingPostParameters.cshtml" />
+    <Content Include="Areas\Chapter14\Views\PassingDataToActions\PassingPostParametersWithFormCollection.cshtml" />
+    <Content Include="Areas\Chapter14\Views\Caching\Index.cshtml" />
+    <Content Include="Areas\Chapter14\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\Chapter14\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Chapter14\Views\FiltersLifeCycle\Index.cshtml" />
+    <Content Include="Areas\Chapter14\Views\WorkingWithHelperMethods\Index.cshtml" />
+    <Content Include="Areas\Chapter14\Views\WorkingWithHelperMethods\RenderComponent.cshtml" />
+    <Content Include="Areas\Chapter14\Views\WorkingWithHelperMethods\PrcessForm.cshtml" />
+    <Content Include="Areas\Chapter14\Views\WorkingWithHelperMethods\CheckingValidation.cshtml" />
+    <Content Include="Areas\Chapter14\Views\WorkingWithHelperMethods\ScaffoldTheModel.cshtml" />
+    <Content Include="Areas\Chapter14\Views\WorkingWithHelperMethods\ScaffoldTheModelReadOnly.cshtml" />
     <None Include="DataAccess\LinqData\Pubs.dbml.layout">
       <DependentUpon>Pubs.dbml</DependentUpon>
     </None>
@@ -404,6 +445,12 @@
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Msts.Domain\Msts.Domain.csproj">
+      <Project>{90ae8187-a59c-4466-9455-a254361638ae}</Project>
+      <Name>Msts.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

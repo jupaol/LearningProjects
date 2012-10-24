@@ -1,0 +1,155 @@
+﻿@model Msts.Mvc.Areas.Chapter14.Models.HelperMethodsModel
+
+@using Msts.Mvc.CustomHelpers
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+    fieldset label {
+        /*display:block;*/
+    }
+</style>
+
+<h2>Helper Methods</h2>
+
+<div>
+    <hr />
+    <h3>
+        Rendering an <i>action</i> with the <code>Action</code> method (inline)
+    </h3>
+    <div style="background-color:yellow;">
+        @Html.Action("RenderComponent")
+    </div>
+</div>
+<div>
+    <hr />
+    <h3>
+        Rendering an <i>action</i> with the <code>RenderAction</code> method (streamed)
+    </h3>
+    <div style="background-color:green;">
+        @{
+            Html.RenderAction("RenderComponent");
+        }
+    </div>
+</div>
+<div>
+    <hr />
+    <h3>
+        Rendering a <i>view</i> with the <code>Partial</code> method (inline)
+    </h3>
+    <div style="background-color:blue;">
+        @Html.Partial("RenderComponent")
+    </div>
+</div>
+<div>
+    <hr />
+    <h3>
+        Rendering a <i>view</i> with the <code>RenderPartial</code> method (streamed)
+    </h3>
+    <div style="background-color:red;">
+        @{
+            Html.RenderPartial("RenderComponent");
+        }
+    </div>
+</div>
+
+<hr />
+
+@using (Html.BeginForm("PrcessForm", "WorkingWithHelperMethods", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <fieldset>
+        <legend>
+            Rendering model properties
+        </legend>
+        <div>
+            @Html.CheckBoxFor(x => x.IsAccepted)
+            @Html.LabelFor(x => x.IsAccepted)
+        </div>
+        <div>
+            @Html.DropDownListFor(x => x.SelectedJob, new SelectList(this.Model.Jobs, "job_id", "job_desc"), "Please select a job...")
+        </div>
+        <div>
+            @Html.EditorFor(x => x.JobDescription)
+        </div>
+        <div>
+            @Html.HiddenFor(x => x.ID)
+        </div>
+        <div>
+            @Html.LabelFor(x => x.SelectedJob)
+        </div>
+        <div>
+            @Html.ListBoxFor(x => x.SelectedJobs, new SelectList(this.Model.Jobs, "job_id", "job_desc"))
+        </div>
+        <div>
+            @Html.PasswordFor(x => x.Password)
+        </div>
+        <div>
+            @Html.LabelFor(x => x.FavoriteColor)
+            @Html.RadioButtonFor(x => x.FavoriteColor, "Red", new { @checked = "checked" })
+        </div>
+        <hr />
+        <div>
+            @foreach (var item in this.Model.Jobs)
+            {
+                <label>@Html.RadioButtonFor(x => x.FavoriteColor, item.job_id) @item.job_desc</label><br />
+            }
+        </div>
+        <div>
+            @Html.LabelFor(x => x.MyColor)
+            @Html.EnumDropDownListFor(x => x.MyColor)
+        </div>
+        <div>
+            @Html.LabelFor(x => x.SimpleTextbox)
+            @Html.TextBoxFor(x => x.SimpleTextbox)
+            @Html.ValidationMessageFor(x => x.SimpleTextbox)
+        </div>
+        <div>
+            @Html.TextAreaFor(x => x.SimpleTextArea)
+        </div>
+        <div>
+            <input type="submit" value="Go" />
+        </div>
+        <div>
+            @Html.ValidationSummary(false)
+        </div>
+    </fieldset>
+}
+
+<hr />
+
+<div>
+    <h3>
+        Using the <code>DysplayForModel</code> method
+    </h3>
+    <div>
+        @Html.DisplayForModel()
+    </div>
+</div>
+
+<div>
+    <h4>
+        Checking validation - initial steps
+    </h4>
+    <div>
+        @Html.ActionLink("Check validation", "CheckingValidation")
+    </div>
+</div>
+
+<div>
+    <h4>
+        Scaffolding the model using Data Annotations
+    </h4>
+    <div>
+        @Html.ActionLink("Check the scaffolding results - Readonly mode", "ScaffoldTheModelReadOnly")
+    </div>
+    <div>
+        @Html.ActionLink("Check the scaffolding results - Edit mode", "ScaffoldTheModel")
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

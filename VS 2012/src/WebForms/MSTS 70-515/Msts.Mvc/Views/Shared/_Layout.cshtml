@@ -32,12 +32,23 @@
                             <li>@Html.ActionLink("Raise exception", "RaiseException", "Home")</li>
                             <li>@Html.ActionLink("Handled exception", "HandledException", "Home")</li>
                             <li><a href="@Url.Content("~/elmah.axd")">Elmah error page</a></li>
+                            <li>@Html.ActionLink("Chapter 14 - Working with Action Results", "Index", "WorkingWithActionResults", new { area = "Chapter14" }, null)</li>
+                            <li>@Html.ActionLink("Chapter 14 - PassingDataToActions", "Index", "PassingDataToActions", new { area = "Chapter14" }, null)</li>
+                            <li>@Html.ActionLink("Chapter 14 - Caching", "Index", "Caching", new { area = "Chapter14" }, null)</li>
+                            <li>@Html.ActionLink("Chapter 14 - Filters Life Cycle", "Index", "FiltersLifeCycle", new { area = "Chapter14" }, null)</li>
+                            <li>@Html.ActionLink("Chapter 14 - Helper Methods", "Index", "WorkingWithHelperMethods", new { area = "Chapter14" }, null)</li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </header>
         <div id="body">
+            <fieldset>
+                <legend>
+                    djend
+                </legend>
+                ndeindiende
+            </fieldset>
             @RenderSection("featured", required: false)
             <section class="content-wrapper main-content clear-fix">
                 @RenderBody()

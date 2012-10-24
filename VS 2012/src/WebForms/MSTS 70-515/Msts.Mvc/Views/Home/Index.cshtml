@@ -1,4 +1,6 @@
-﻿@{
+﻿@model Msts.Mvc.Models.SimpleValidationModel
+
+@{
     ViewBag.Title = "Home Page";
 }
 @section featured {
@@ -43,3 +45,20 @@
         <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more…</a>
     </li>
 </ol>
+<div>
+    Testing validation
+    @using (Html.BeginForm())
+    {
+        @Html.TextBoxFor(x => x.FirstName)
+        @Html.ValidationMessageFor(x => x.FirstName)
+
+        <input type="submit" value="Go" />
+        <div>
+            @Html.ValidationSummary(false)
+        </div>
+    }
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

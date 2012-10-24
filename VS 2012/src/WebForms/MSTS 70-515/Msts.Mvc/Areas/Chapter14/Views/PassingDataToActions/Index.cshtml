@@ -1,0 +1,109 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Sending parameters to Actions methods</h2>
+
+<hr />
+
+<h3>
+    Using GET
+</h3>
+
+@using (Html.BeginForm("PassingGetParameters", "PassingDataToActions", FormMethod.Get))
+{
+    <fieldset>
+        <legend>
+            Sending parameters using GET
+        </legend>
+        <div>
+            <label for="p1">
+                P1 info
+            </label>
+        </div>
+        <div>
+            @Html.TextBox("p1")
+        </div>
+        <div>
+            <label for="p2">
+                P2 info
+            </label>
+        </div>
+        <div>
+            @Html.TextBox("p2")
+        </div>
+        <div>
+            <input type="submit" value="Go" />
+        </div>
+    </fieldset>
+}
+
+<hr />
+
+<h3>
+    Using POST
+</h3>
+
+@using (Html.BeginForm("PassingPostParameters", "PassingDataToActions", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <fieldset>
+        <legend>
+            Sending Parameters using POST
+        </legend>
+        <div>
+            <label for="p1">
+                P1 info
+            </label>
+        </div>
+        <div>
+            @Html.TextBox("p1")
+        </div>
+        <div>
+            <label for="p2">
+                P1 info
+            </label>
+        </div>
+        <div>
+            @Html.TextBox("p2")
+        </div>
+        <div>
+            <input type="submit" value="Go" />
+        </div>
+    </fieldset>
+}
+
+<hr />
+
+<h3>
+    Using POST - FormCollection
+</h3>
+
+@using (Html.BeginForm("PassingPostParametersWithFormCollection", "PassingDataToActions", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <fieldset>
+        <legend>
+            Sending Parameters using POST
+        </legend>
+        <div>
+            <label for="p1">
+                P1 info
+            </label>
+        </div>
+        <div>
+            @Html.TextBox("p1")
+        </div>
+        <div>
+            <label for="p2">
+                P1 info
+            </label>
+        </div>
+        <div>
+            @Html.TextBox("p2")
+        </div>
+        <div>
+            <input type="submit" value="Go" />
+        </div>
+    </fieldset>
+}

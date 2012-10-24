@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Menu";
+}
+
+<h2>Menu</h2>
+
+<h3>
+    @this.Model
+</h3>
+
+<ul>
+    <li>
+        @Html.ActionLink("ViewResult", "SimpleViewResult", "WorkingWithActionResults")
+    </li>
+    <li>
+        @Html.ActionLink("RedirectResult", "SimpleRedirectResult", "WorkingWithActionResults")
+    </li>
+    <li>
+        @Html.ActionLink("RedirectToRouteResult - RedirectToAction", "SimpleRedirectToRouteResult", "WorkingWithActionResults")
+    </li>
+    <li>
+        @Html.ActionLink("RedirectToRouteResult - RedirectToRoute", "SimpleRedirectToRouteResultWithRedirectToRoute", "WorkingWithActionResults")
+    </li>
+    <li>
+        @Html.ActionLink("ContentResult", "SimpleContentResult", "WorkingWithActionResults")
+    </li>
+    <li>
+        @Html.ActionLink("JsonResult", "SimpleJsonResult", "WorkingWithActionResults")
+    </li>
+</ul>

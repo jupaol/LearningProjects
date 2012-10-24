@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "SimpleViewResult";
+}
+
+<h2>SimpleViewResult</h2>
+
+@if (this.TempData["SimpleRedirectToRouteResult"] != null)
+{
+    @:Plop at: @this.TempData["SimpleRedirectToRouteResult"].ToString()
+}
+
+@if (this.TempData["SimpleRedirectToRouteResultWithRedirectToRoute"] != null)
+{
+    @: Plop from Redirect To Route: @this.TempData["SimpleRedirectToRouteResultWithRedirectToRoute"]
+}

@@ -1,0 +1,85 @@
+﻿@model Msts.Mvc.Areas.Chapter14.Models.HelperMethodsModel
+
+@{
+    ViewBag.Title = "CheckingValidation";
+}
+
+<h2>CheckingValidation</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>HelperMethodsModel</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IsAccepted)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IsAccepted)
+            @Html.ValidationMessageFor(model => model.IsAccepted)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SelectedJob)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SelectedJob)
+            @Html.ValidationMessageFor(model => model.SelectedJob)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.JobDescription)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.JobDescription)
+            @Html.ValidationMessageFor(model => model.JobDescription)
+        </div>
+
+        @Html.HiddenFor(model => model.ID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Password)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Password)
+            @Html.ValidationMessageFor(model => model.Password)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FavoriteColor)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FavoriteColor)
+            @Html.ValidationMessageFor(model => model.FavoriteColor)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SimpleTextbox)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SimpleTextbox)
+            @Html.ValidationMessageFor(model => model.SimpleTextbox)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SimpleTextArea)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SimpleTextArea)
+            @Html.ValidationMessageFor(model => model.SimpleTextArea)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

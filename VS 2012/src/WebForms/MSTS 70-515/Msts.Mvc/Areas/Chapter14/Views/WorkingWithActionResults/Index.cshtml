@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<h3>
+    @this.Model
+</h3>
+
+Originally empty... but
+
+<hr />
+
+<h4>
+    Rendered with Html.Action
+</h4>
+
+@Html.Action("SimplePartialViewResult")
+
+<hr />
+
+<h4>
+    Rendered with Partial
+</h4>
+
+@Html.Partial("Menu", (object)this.Model.ToString() + " - Rendered With Partial")
+
+<hr />
+
+<h4>
+    JavaScript render
+</h4>
+
+<script src="@Url.Action("SimpleJavaScriptResult")"></script>
+
+<hr />
+
+<h4>
+    FileResult render
+</h4>
+
+<img src="@Url.Action("SimpleFileResult")" />

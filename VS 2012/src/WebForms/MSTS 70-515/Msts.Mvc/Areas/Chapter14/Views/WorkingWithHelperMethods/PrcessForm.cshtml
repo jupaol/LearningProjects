@@ -1,0 +1,34 @@
+﻿@model Msts.Mvc.Areas.Chapter14.Models.HelperMethodsModel
+
+@{
+    ViewBag.Title = "PrcessForm";
+}
+
+<h2>PrcessForm</h2>
+
+<h3>
+    Data recieved
+</h3>
+
+@if (!string.IsNullOrWhiteSpace(this.Model.SelectedJob))
+{
+    <div>
+        Job selected: @this.Model.SelectedJob
+    </div>
+}
+<ul>
+@foreach (var item in this.Model.SelectedJobs)
+{
+    <li>@item</li>
+}
+</ul>
+<hr />
+
+@Html.DisplayForModel()
+
+<div>
+    @Html.ActionLink("Go back - Using ActionLink", "Index", "WorkingWithHelperMethods")
+</div>
+<div>
+    @Html.RouteLink("Go back - using RouteLink", "Chapter14_default", new { controller = "WorkingWithHelperMethods", action = "index" })
+</div>

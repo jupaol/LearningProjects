@@ -40,6 +40,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CuttingEdge.Conditions">
+      <HintPath>..\packages\CuttingEdge.Conditions.1.2.0.0\lib\NET35\CuttingEdge.Conditions.dll</HintPath>
+    </Reference>
     <Reference Include="DotNetOpenAuth.AspNet, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\DotNetOpenAuth.AspNet.4.1.2.12274\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
@@ -92,12 +95,27 @@
     <Reference Include="Microsoft.Data.Services.Client">
       <HintPath>..\packages\Microsoft.Data.Services.Client.5.0.2\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
     <Reference Include="Mono.Math">
       <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.2.12274\lib\net45-full\Mono.Math.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.4.5.9\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject">
+      <HintPath>..\packages\Ninject.3.0.1.10\lib\net45-full\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Common">
+      <HintPath>..\packages\Ninject.Web.Common.3.0.0.7\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject.Web.Mvc">
+      <HintPath>..\packages\Ninject.MVC3.3.0.0.6\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="NinjectAdapter">
+      <HintPath>..\packages\CommonServiceLocator.NinjectAdapter.1.0.0.0\lib\NinjectAdapter.dll</HintPath>
     </Reference>
     <Reference Include="Org.Mentalis.Security.Cryptography">
       <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.2.12274\lib\net45-full\Org.Mentalis.Security.Cryptography.dll</HintPath>
@@ -204,9 +222,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstract\IContextResolver.cs" />
     <Compile Include="App_Start\AuthConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Chapter14\Chapter14AreaRegistration.cs" />
@@ -216,9 +236,14 @@
     <Compile Include="Areas\Chapter14\Controllers\WorkingWithActionResultsController.cs" />
     <Compile Include="Areas\Chapter14\Controllers\WorkingWithHelperMethodsController.cs" />
     <Compile Include="Areas\Chapter14\Models\HelperMethodsModel.cs" />
+    <Compile Include="Areas\DataAccess\MovieContext.cs" />
+    <Compile Include="Areas\Movies\Models\Movie.cs" />
+    <Compile Include="Areas\Movies\MoviesAreaRegistration.cs" />
+    <Compile Include="Concrete\ContextResolver.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="CustomHelpers\HtmlExtensions.cs" />
+    <Compile Include="DataAccess\EFData\CustomPubsEntities.cs" />
     <Compile Include="DataAccess\EFData\employee.cs">
       <DependentUpon>Pubs.tt</DependentUpon>
     </Compile>
@@ -373,6 +398,7 @@
     <Content Include="Areas\Chapter14\Views\WorkingWithHelperMethods\ScaffoldTheModelReadOnly.cshtml" />
     <Content Include="Areas\Chapter14\Views\WorkingWithHelperMethods\EditorTemplates\Date.cshtml" />
     <Content Include="Areas\Chapter14\Views\WorkingWithHelperMethods\DisplayTemplates\Date.cshtml" />
+    <Content Include="Areas\Movies\Views\Web.config" />
     <None Include="DataAccess\LinqData\Pubs.dbml.layout">
       <DependentUpon>Pubs.dbml</DependentUpon>
     </None>
@@ -437,9 +463,12 @@
     <Content Include="Views\Home\CallWcfRestCrossDomainService.cshtml" />
     <Content Include="Views\Home\CallWcfRestDataService.cshtml" />
     <Content Include="Views\Home\CallWcfRestDataCrossDomainService.cshtml" />
+    <Content Include="Views\Home\SimpleData.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Movies\Controllers\" />
+    <Folder Include="Areas\Movies\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

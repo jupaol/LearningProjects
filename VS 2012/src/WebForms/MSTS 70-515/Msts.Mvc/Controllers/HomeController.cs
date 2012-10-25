@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Msts.Mvc.Abstract;
+using Msts.Mvc.DataAccess.EFData;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +10,13 @@ namespace Msts.Mvc.Controllers
 {
     public class HomeController : Controller
     {
+        private IContextResolver contextResolver;
+
+        public HomeController(IContextResolver contextResolver)
+        {
+            this.contextResolver = contextResolver;
+        }
+
         public ActionResult Index()
         {
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
@@ -65,6 +74,13 @@ namespace Msts.Mvc.Controllers
         public ActionResult HandledException()
         {
             throw new InvalidOperationException();
+        }
+
+        public ActionResult SimpleData()
+        {
+            var ctx = this.contextResolver.GetCurrentContext<pubsEntities>();
+
+            return View(ctx.jobs);
         }
     }
 }

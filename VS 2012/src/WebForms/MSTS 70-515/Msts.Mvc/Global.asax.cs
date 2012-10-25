@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Practices.ServiceLocation;
+using Msts.Mvc.Abstract;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,6 +16,18 @@ namespace Msts.Mvc
 
     public class MvcApplication : System.Web.HttpApplication
     {
+        public MvcApplication()
+        {
+            this.PostRequestHandlerExecute += MvcApplication_PostRequestHandlerExecute;
+        }
+
+        void MvcApplication_PostRequestHandlerExecute(object sender, EventArgs e)
+        {
+            var resolver = ServiceLocator.Current.GetInstance<IContextResolver>();
+
+            resolver.ReleaseContext();
+        }
+
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();

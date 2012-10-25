@@ -40,7 +40,7 @@ namespace Msts.Mvc.Tests.Concrete
                 var contextResolverInstances = new BlockingCollection<DbContext>();
                 var tasks = new Task[numberOfConcurrentProcess];
 
-                Console.WriteLine("Before " + Thread.CurrentThread.ManagedThreadId);
+                Console.WriteLine("Initial Thread ID: {0}", Thread.CurrentThread.ManagedThreadId);
 
                 for (int i = 0; i < numberOfConcurrentProcess; i++)
                 {
@@ -50,7 +50,7 @@ namespace Msts.Mvc.Tests.Concrete
 
                         contextResolverInstances.Add(context);
 
-                        Console.WriteLine(Thread.CurrentThread.ManagedThreadId);
+                        Console.WriteLine("Task - Thread ID: {0}", Thread.CurrentThread.ManagedThreadId);
                     }, TaskCreationOptions.LongRunning);
                 }
 

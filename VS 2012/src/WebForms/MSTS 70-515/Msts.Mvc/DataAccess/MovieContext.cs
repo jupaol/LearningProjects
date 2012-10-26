@@ -5,10 +5,21 @@ using System.Data.Entity;
 using System.Linq;
 using System.Web;
 
-namespace Msts.Mvc.Areas.DataAccess
+namespace Msts.Mvc.DataAccess
 {
     public class MovieContext : DbContext
     {
+        public MovieContext()
+        {
+
+        }
+
+        public MovieContext(string connectionString)
+            : base(connectionString)
+        {
+
+        }
+
         public DbSet<Movie> Movies { get; set; }
     }
 }

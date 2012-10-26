@@ -64,8 +64,7 @@ namespace Msts.Mvc.App_Start
         {
             //kernel.Bind<HttpContextBase>().ToMethod(x => new HttpContextWrapper(HttpContext.Current));
             kernel.Bind<IContextResolver>().To<ContextResolver>()
-                .WithConstructorArgument("connectionString", x => "name=pubsEntities");
-            //ConfigurationManager.ConnectionStrings["Msts"].ConnectionString
+                .WithConstructorArgument("connectionString", x => ConfigurationManager.ConnectionStrings["Msts"].ConnectionString);
         }        
     }
 }

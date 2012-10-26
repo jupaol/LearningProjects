@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Routing;
 
 namespace Msts.Mvc.Controllers
 {
@@ -19,6 +20,17 @@ namespace Msts.Mvc.Controllers
 
         public ActionResult Index()
         {
+            var res = new List<string>();
+
+            foreach (var item in RouteTable.Routes)
+            {
+                var r = (Route)item;
+
+                res.Add(r.Url);
+            }
+
+            this.ViewBag.Res = res;
+
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 
             return View();
@@ -78,7 +90,7 @@ namespace Msts.Mvc.Controllers
 
         public ActionResult SimpleData()
         {
-            var ctx = this.contextResolver.GetCurrentContext<pubsEntities>();
+            var ctx = new pubsEntities();
 
             return View(ctx.jobs);
         }

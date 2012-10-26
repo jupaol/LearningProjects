@@ -45,6 +45,10 @@
         <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more…</a>
     </li>
 </ol>
+@foreach (var item in this.ViewBag.Res)
+{
+    <div>@item</div>
+}
 <div>
     Testing validation
     @using (Html.BeginForm())

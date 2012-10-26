@@ -17,7 +17,7 @@ namespace Msts.Mvc.Areas.Movies
             context.MapRoute(
                 "Movies_default",
                 "Movies/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new { controller = "Movies", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

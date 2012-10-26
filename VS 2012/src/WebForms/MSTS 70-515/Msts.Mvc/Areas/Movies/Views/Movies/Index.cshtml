@@ -15,7 +15,7 @@
 <table>
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Title)
+            @Html.DisplayNameFor(mod => mod.Title)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.ReleaseData)
@@ -25,6 +25,12 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rating)
+        </th>
+        <th>
+            @Html.DisplayNameFor(x => x.Audience)
         </th>
         <th></th>
     </tr>
@@ -42,6 +48,12 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rating)
+        </td>
+        <td>
+            @Html.DisplayFor(x => item.Audience)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |

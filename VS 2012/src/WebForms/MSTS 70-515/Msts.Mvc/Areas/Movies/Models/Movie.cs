@@ -12,5 +12,7 @@ namespace Msts.Mvc.Areas.Movies.Models
         public DateTime ReleaseData { get; set; }
         public string Genre { get; set; }
         public decimal Price { get; set; }
+        public string Rating { get; set; }
+        public string Audience { get; set; }
     }
 }

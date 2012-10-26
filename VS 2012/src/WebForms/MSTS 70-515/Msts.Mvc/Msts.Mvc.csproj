@@ -287,6 +287,19 @@
     <Compile Include="HelloWorldDto.cs" />
     <Compile Include="IExternalHelloWorldWcfService.cs" />
     <Compile Include="JSONPSupportInspector.cs" />
+    <Compile Include="Migrations\201210260900060_initial.cs" />
+    <Compile Include="Migrations\201210260900060_initial.Designer.cs">
+      <DependentUpon>201210260900060_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201210260903038_MovieRating.cs" />
+    <Compile Include="Migrations\201210260903038_MovieRating.Designer.cs">
+      <DependentUpon>201210260903038_MovieRating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201210260906179_MovieAudience.cs" />
+    <Compile Include="Migrations\201210260906179_MovieAudience.Designer.cs">
+      <DependentUpon>201210260906179_MovieAudience.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\MyColors.cs" />
     <Compile Include="Models\SimpleValidationModel.cs" />
@@ -829,7 +842,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Movies\Views\Shared\" />
-    <Folder Include="Migrations\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -843,6 +855,17 @@
       <Project>{90ae8187-a59c-4466-9455-a254361638ae}</Project>
       <Name>Msts.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201210260900060_initial.resx">
+      <DependentUpon>201210260900060_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201210260903038_MovieRating.resx">
+      <DependentUpon>201210260903038_MovieRating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201210260906179_MovieAudience.resx">
+      <DependentUpon>201210260906179_MovieAudience.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

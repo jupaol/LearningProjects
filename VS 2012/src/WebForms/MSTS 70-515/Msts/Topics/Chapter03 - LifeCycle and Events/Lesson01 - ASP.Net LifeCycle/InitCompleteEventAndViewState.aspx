@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Topics/Chapter02 - Master - themes - caching/Lesson01 - MasterPages/ClassicMaster.Master" AutoEventWireup="true" CodeBehind="InitCompleteEventAndViewState.aspx.cs" Inherits="Msts.Topics.Chapter03.Lesson01.InitCompleteEventAndViewState" %>
+﻿<%@ Page EnableViewStateMac="true" Title="" Language="C#" MasterPageFile="~/Topics/Chapter02 - Master - themes - caching/Lesson01 - MasterPages/ClassicMaster.Master" AutoEventWireup="true" CodeBehind="InitCompleteEventAndViewState.aspx.cs" Inherits="Msts.Topics.Chapter03.Lesson01.InitCompleteEventAndViewState" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>

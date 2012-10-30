@@ -82,6 +82,7 @@ namespace Msts
             ignored.Add("/Content/");
             ignored.Add("/App_Themes/");
             ignored.Add("/bundles");
+            ignored.Add("glimpse.axd");
             MiniProfiler.Settings.IgnoredPaths = ignored.ToArray();
 
             MiniProfilerEF.Initialize();

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Msts.Topics.Chapter05___Validation_and_navigation.Lesson02___Site_Navigation;
+using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.IO;
@@ -24,8 +25,8 @@ namespace Msts.Topics.Chapter05.Lesson02
 
                 this.Clear();
 
-                var topicsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Topics");
-                var root = new SiteMapNode(this, "Home", "/", "Home", "Home");                
+                var topicsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory);
+                var root = new SiteMapNode(this, topicsPath, "/", "Home", "Home");                
                 var files = this.GetFiles(topicsPath).ToList();
 
                 this.rootNode = root;
@@ -33,47 +34,57 @@ namespace Msts.Topics.Chapter05.Lesson02
 
                 var tracing = new SiteMapNode(this, "tracinKey", "/trace.axd", "Tracing page");
                 var elmah = new SiteMapNode(this, "elmahKey", "/elmah.axd", "Elmah errors handler");
+                var glimpse = new SiteMapNode(this, "glimpseKey", "/glimpse.axd", "Glimpse Configuration");
 
                 this.AddNode(tracing, root);
                 this.AddNode(elmah, root);
+                this.AddNode(glimpse, root);
 
-                foreach (var filePath in files)
-                {
-                    var fileName = Path.GetFileName(filePath);
+                var nodeGenerator = new SiteMapNodeGenerator();
 
-                    var currentFile = new FileInfo(filePath);
-                    var currentDirectory = new DirectoryInfo(currentFile.DirectoryName);
-                    var previousDirectory = new DirectoryInfo(currentDirectory.Parent.FullName);
+                nodeGenerator.CreateSiteMapNode(
+                    root, 
+                    topicsPath, 
+                    (newNode, parentNode) => this.AddNode(newNode, parentNode),
+                    "topics");
 
-                    var currentDirectoryName = currentDirectory.Name;
-                    var previousDirectoryName = previousDirectory.Name;
+                //foreach (var filePath in files)
+                //{
+                //    var fileName = Path.GetFileName(filePath);
 
-                    var currentDirectoryKey = string.Format("{0} - {1}", previousDirectoryName, currentDirectoryName);
-                    var previousDirectoryKey = string.Format("{0}", previousDirectoryName);
+                //    var currentFile = new FileInfo(filePath);
+                //    var currentDirectory = new DirectoryInfo(currentFile.DirectoryName);
+                //    var previousDirectory = new DirectoryInfo(currentDirectory.Parent.FullName);
+
+                //    var currentDirectoryName = currentDirectory.Name;
+                //    var previousDirectoryName = previousDirectory.Name;
+
+                //    var currentDirectoryKey = string.Format("{0} - {1}", previousDirectoryName, currentDirectoryName);
+                //    var previousDirectoryKey = string.Format("{0}", previousDirectoryName);
                     
-                    var currentNode = this.FindSiteMapNodeFromKey(currentDirectoryKey);
-                    var previousNode = this.FindSiteMapNodeFromKey(previousDirectoryKey);
+                //    var currentNode = this.FindSiteMapNodeFromKey(currentDirectoryKey);
+                //    var previousNode = this.FindSiteMapNodeFromKey(previousDirectoryKey);
 
-                    if (previousNode == null)
-                    {
-                        previousNode = new SiteMapNode(this, previousDirectoryKey, string.Empty, previousDirectoryName);
-                        this.AddNode(previousNode, root);
-                    }
+                //    if (previousNode == null)
+                //    {
+                //        previousNode = new SiteMapNode(this, previousDirectoryKey, string.Empty, previousDirectoryName);
+                //        this.AddNode(previousNode, root);
+                //    }
 
-                    if (currentNode == null)
-                    {
-                        currentNode = new SiteMapNode(this, currentDirectoryKey, string.Empty, currentDirectoryName) { ParentNode = root };
-                        this.AddNode(currentNode, previousNode);
-                    }
+                //    if (currentNode == null)
+                //    {
+                //        currentNode = new SiteMapNode(this, currentDirectoryKey, string.Empty, currentDirectoryName) { ParentNode = root };
+                //        this.AddNode(currentNode, previousNode);
+                //    }
 
-                    var fileNode = new SiteMapNode(
-                        this, 
-                        filePath, 
-                        string.Format("~/Topics/{0}/{1}/{2}", previousDirectoryName, currentDirectoryName, fileName), 
-                        (Path.GetExtension(fileName).Equals(".aspx", StringComparison.InvariantCultureIgnoreCase)) ? Path.GetFileNameWithoutExtension(fileName) : fileName);
+                //    var fileNode = new SiteMapNode(
+                //        this, 
+                //        filePath, 
+                //        string.Format("~/Topics/{0}/{1}/{2}", previousDirectoryName, currentDirectoryName, fileName), 
+                //        (Path.GetExtension(fileName).Equals(".aspx", StringComparison.InvariantCultureIgnoreCase)) ? Path.GetFileNameWithoutExtension(fileName) : fileName);
 
-                    this.AddNode(fileNode, currentNode);
-                }
+                //    this.AddNode(fileNode, currentNode);
+                //}
 
                 return root;
             }
@@ -106,8 +117,8 @@ namespace Msts.Topics.Chapter05.Lesson02
             //    this.AddNode(newNode, parentNode);
             //}
 
-            foreach (var file in d.GetFiles(
-                "*.*")
+            foreach (var file in d.EnumerateFiles(
+                "*.*", SearchOption.AllDirectories)
                     .Where(x => 
                         x.FullName.EndsWith(".aspx", StringComparison.InvariantCultureIgnoreCase)
                         || x.Extension.Equals(".myhandler", StringComparison.InvariantCultureIgnoreCase)
@@ -119,10 +130,10 @@ namespace Msts.Topics.Chapter05.Lesson02
                 files.Add(file.FullName);
             }
 
-            foreach (var dir in d.GetDirectories())
-            {
-                files.AddRange(this.GetFiles(dir.FullName));
-            }
+            //foreach (var dir in d.GetDirectories())
+            //{
+            //    files.AddRange(this.GetFiles(dir.FullName));
+            //}
 
             return files;
         }

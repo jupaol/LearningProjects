@@ -68,6 +68,9 @@
     <Reference Include="Bootstrapper.ServiceLocator">
       <HintPath>..\packages\Bootstrapper.ServiceLocator.2.0.0.0\lib\Bootstrapper.ServiceLocator.dll</HintPath>
     </Reference>
+    <Reference Include="CuttingEdge.Conditions">
+      <HintPath>..\packages\CuttingEdge.Conditions.1.2.0.0\lib\NET35\CuttingEdge.Conditions.dll</HintPath>
+    </Reference>
     <Reference Include="Dynamic">
       <HintPath>..\packages\DynamicQuery.1.0\lib\35\Dynamic.dll</HintPath>
     </Reference>
@@ -76,6 +79,9 @@
     </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Glimpse.Core">
+      <HintPath>..\packages\Glimpse.0.87\lib\net40\Glimpse.Core.dll</HintPath>
     </Reference>
     <Reference Include="HtmlAgilityPack">
       <HintPath>..\packages\AjaxControlToolkit.4.1.60919\lib\45\SanitizerProviders\HtmlAgilityPack.dll</HintPath>
@@ -200,6 +206,7 @@
     <Content Include="App_Readme\Elmah.SqlServer.sql" />
     <Content Include="App_Readme\Elmah.SqlServer.txt" />
     <Content Include="App_Readme\Elmah.txt" />
+    <Content Include="App_Readme\glimpse.readme.txt" />
     <Content Include="App_Themes\Blue\Global.css" />
     <Content Include="App_Themes\Green\Global.css" />
     <Content Include="App_Themes\Green\Images\logo.jpg" />
@@ -414,6 +421,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </Content>
+    <Content Include="ShowDirectoryPages.aspx" />
     <Content Include="Topics\Chapter02 - Master - themes - caching\Lesson02 - Themes\OverridingDefaultThemeWithDynamicMasterPages.aspx" />
     <Content Include="Topics\Chapter02 - Master - themes - caching\Lesson01 - MasterPages\SettingMasterPageDynamically.aspx" />
     <Content Include="Topics\Chapter02 - Master - themes - caching\Lesson01 - MasterPages\SettingMasterPageDynamically2.aspx" />
@@ -918,6 +926,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="ShowDirectoryPages.aspx.cs">
+      <DependentUpon>ShowDirectoryPages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowDirectoryPages.aspx.designer.cs">
+      <DependentUpon>ShowDirectoryPages.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1161,6 +1176,7 @@
     <Compile Include="Topics\Chapter05 - Validation and navigation\Lesson02 - Site Navigation\CrossPagePostTest.aspx.designer.cs">
       <DependentUpon>CrossPagePostTest.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Topics\Chapter05 - Validation and navigation\Lesson02 - Site Navigation\FilesLocator.cs" />
     <Compile Include="Topics\Chapter05 - Validation and navigation\Lesson02 - Site Navigation\ProcessingPage.aspx.cs">
       <DependentUpon>ProcessingPage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1183,6 +1199,7 @@
       <DependentUpon>ServerTransferTest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Topics\Chapter05 - Validation and navigation\Lesson02 - Site Navigation\CustomSiteMapProvider.cs" />
+    <Compile Include="Topics\Chapter05 - Validation and navigation\Lesson02 - Site Navigation\SiteMapNodeGenerator.cs" />
     <Compile Include="Topics\Chapter05 - Validation and navigation\Lesson02 - Site Navigation\SitemapTest.aspx.cs">
       <DependentUpon>SitemapTest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

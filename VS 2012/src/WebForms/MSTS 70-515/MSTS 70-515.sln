@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Msts.DynamicDataSite", "Mst
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Msts.Mvc.Tests", "Msts.Mvc.Tests\Msts.Mvc.Tests.csproj", "{F5BE57ED-5A82-45C3-BF63-564468F5A95A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Msts.Tests", "Msts.Tests\Msts.Tests.csproj", "{A9727F10-328C-486A-ADC6-FBB79F784476}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +50,12 @@ Global
 		{F5BE57ED-5A82-45C3-BF63-564468F5A95A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F5BE57ED-5A82-45C3-BF63-564468F5A95A}.Test|Any CPU.ActiveCfg = Release|Any CPU
 		{F5BE57ED-5A82-45C3-BF63-564468F5A95A}.Test|Any CPU.Build.0 = Release|Any CPU
+		{A9727F10-328C-486A-ADC6-FBB79F784476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9727F10-328C-486A-ADC6-FBB79F784476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9727F10-328C-486A-ADC6-FBB79F784476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9727F10-328C-486A-ADC6-FBB79F784476}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9727F10-328C-486A-ADC6-FBB79F784476}.Test|Any CPU.ActiveCfg = Release|Any CPU
+		{A9727F10-328C-486A-ADC6-FBB79F784476}.Test|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

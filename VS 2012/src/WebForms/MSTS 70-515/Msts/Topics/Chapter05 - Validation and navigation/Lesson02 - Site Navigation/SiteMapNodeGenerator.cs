@@ -52,6 +52,7 @@ namespace Msts.Topics.Chapter05___Validation_and_navigation.Lesson02___Site_Navi
             var title = workingDirectory.Name;
             var key = workingDirectory.FullName;
             var node = new SiteMapNode(workingNode.Provider, key, url, title);
+            var files = this.GetFiles(workingDirectory);
 
             if (workingNode.Provider.FindSiteMapNodeFromKey(key) == null)
             {
@@ -62,11 +63,22 @@ namespace Msts.Topics.Chapter05___Validation_and_navigation.Lesson02___Site_Navi
                 node = workingNode;
             }
 
-            foreach (var file in this.GetFiles(workingDirectory))
+            foreach (var file in files)
             {
                 var linkNodeKey = file;
                 var linkNodeUrl = this.CalculateUrl(file);
-                var linkNodeTitle = Path.GetFileNameWithoutExtension(file);
+                var linkNodeTitle = string.Empty;
+                var fileExtension = Path.GetExtension(file);
+
+                if (fileExtension.Equals(".aspx", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    linkNodeTitle = Path.GetFileNameWithoutExtension(file);
+                }
+                else
+                {
+                    linkNodeTitle = Path.GetFileName(file);
+                }
+
                 var linkNode = new SiteMapNode(workingNode.Provider, linkNodeKey, linkNodeUrl, linkNodeTitle);
 
                 addNodeDelegate(linkNode, node);

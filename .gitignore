@@ -1,6 +1,7 @@
 # Nuget packages for the CQRS application - Just a test
 
 /VS 2012/src/CQRS/SimpleQuery01/packages
+/VS 2012/src/WebForms/MSTS 70-515/packages
 
 # Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
 bin

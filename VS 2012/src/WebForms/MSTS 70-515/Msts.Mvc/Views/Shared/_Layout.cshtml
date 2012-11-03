@@ -9,6 +9,11 @@
         @Scripts.Render("~/bundles/modernizr")
         @Scripts.Render("~/bundles/jquery")
         @RenderSection("scripts", required: false)
+        <style>
+            .breadcrumb {
+                background-color:silver;
+            }
+        </style>
     </head>
     <body>
         <header>
@@ -21,6 +26,10 @@
                         @Html.Partial("_LoginPartial")
                     </section>
                     <nav>
+                        @Html.MvcSiteMap().Menu(false, true, true)
+                        <div class="breadcrumb">
+                            @Html.MvcSiteMap().SiteMapPath()
+                        </div>
                         <ul id="menu">
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
                             <li>@Html.ActionLink("About", "About", "Home")</li>

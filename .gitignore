@@ -14,7 +14,7 @@ obj
 
 # Stylecop cache
 
-*.cache
+[Ss]tyle[Cc]op.[Cc]ache
 
 # mstest test results
 TestResults

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Msts.Topics.Chapter09___Scripts.Lesson03___JQuery._10_For_AJAX.EmployeesServiceWCF" CodeBehind="EmployeesServiceWCF.svc.cs" %>

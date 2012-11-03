@@ -218,6 +218,14 @@
     <Content Include="ChangePassword.aspx" />
     <EmbeddedResource Include="Content\Chapter09\PasswordStrength.css" />
     <Content Include="Content\AjaxControlToolkit\Accordion.css" />
+    <Content Include="Content\Images\1.jpg" />
+    <Content Include="Content\Images\2.jpg" />
+    <Content Include="Content\Images\3.jpg" />
+    <Content Include="Content\Images\4.jpg" />
+    <Content Include="Content\Images\5.jpg" />
+    <Content Include="Content\Images\6.jpg" />
+    <Content Include="Content\Images\7.jpg" />
+    <Content Include="Content\Images\8.jpg" />
     <Content Include="Content\Images\image1.jpg" />
     <Content Include="Content\Images\image2.jpg" />
     <Content Include="Content\Images\image3.jpg" />
@@ -488,6 +496,59 @@
     <Content Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\CustomSimpleScriptObject.aspx" />
     <Content Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\PasswordStrengthValidatorFromJavaScriptObject.aspx" />
     <Content Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\RegisteringClientScripts.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\01_Selecting.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\02_DisableCopyCutAndPasete.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\03_OnlyAllowAlphaNumeric.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\04_MakeTextBoxReadOnly.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\05_TabControlsUsingEnterKey.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\06_CloneText.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\07_SelectFirstTextBoxOnPage.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\08_SelectContentOnFocus.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\09_LimitingTheLengthOfMultiLine.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\10_AutoScrollMultiLine.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\11_SyncTextAreaScrolling.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\12_WaterMarkEfect.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\02 For CheckBox\13_MakeItRequiredWhenSubmitting.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\02 For CheckBox\14_CheckUncheckAll.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\02 For CheckBox\15_EnableDisableControlsBsedOnCheck.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\02 For CheckBox\16_DisplayCheckedItemsImmediately.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\02 For CheckBox\17_PerformCalculationsUsingCheckBox.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\03 For Radio\18_DisplaySelectedRadioOption.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\03 For Radio\19_DisplaySelectedRadioOfMultipleRadioOptions.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\03 For Radio\20_DisplayAndHideRadioOptions.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\04 For Panel\21_FadePanelsWithAnimations.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\04 For Panel\22_SmoothCascadingPanels.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\04 For Panel\23_SlideShowWithPanels.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\05 For DropDownList\24_RetrieveSelectedDropDownList.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\05 For DropDownList\25_SortADropDownList.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\05 For DropDownList\26_AddItemsToDropDownList.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\05 For DropDownList\27_FilterADropDownList.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\05 For DropDownList\28_ConvertSingleToMultipleSelection.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\29_1_ReceivingDataFromGridViewLinks.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\29_PassMultipleValuesFromGridViewToAPage.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\30_PagingAGridView.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\31_HandlingMasterDetailScenario.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\32_RetrieveGridViewCell.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\33_HighlightAndRemoveRows.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\34_HightlightAndRemoveColumns.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\35_SearchAndHighlightGridViewContent.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\36_AddEventsToGridViewControls.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\07 For Image\37_IncreaseTheSizeOfAnImage.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\07 For Image\38_ChangeImageOpacityOnMouseOver.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\07 For Image\39_ImageSlideShow.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\07 For Image\40_ImageSwapping.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\07 For Image\41_AddRemoveLinksOnImages.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\08 For BulletedList\42_ConvertBulletedListItemsToHyperLinks.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\08 For BulletedList\43_AddNewItemsToBulletedListAndApplyCSS.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\08 For BulletedList\44_SortItemsFromABulletedList.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\09 For HyperLink\45_KeyboardShortcutsForHyperlinks.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\09 For HyperLink\46_ChangeUrlFromALink.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\09 For HyperLink\47_LinkAddRotation.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\10 For AJAX\48_ConsumeAJsonWebService.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\10 For AJAX\49_TabsAndLazyLoading.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\10 For AJAX\50_PopulateAListBox.aspx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\10 For AJAX\EmployeesService.asmx" />
+    <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\10 For AJAX\EmployeesServiceWCF.svc" />
     <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\AjaxCallToPageMethod.aspx" />
     <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\CloningDomWithJQuery.aspx" />
     <Content Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\CustomXmlService.asmx" />
@@ -896,6 +957,8 @@
     <Compile Include="ForgotPassword.aspx.designer.cs">
       <DependentUpon>ForgotPassword.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GenericModel\Employee.cs" />
+    <Compile Include="GenericModel\Job.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -1434,6 +1497,372 @@
     <Compile Include="Topics\Chapter09 - Scripts\Lesson02 - Client MS AJAX\RegisteringClientScripts.aspx.designer.cs">
       <DependentUpon>RegisteringClientScripts.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\01_Selecting.aspx.cs">
+      <DependentUpon>01_Selecting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\01_Selecting.aspx.designer.cs">
+      <DependentUpon>01_Selecting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\02_DisableCopyCutAndPasete.aspx.cs">
+      <DependentUpon>02_DisableCopyCutAndPasete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\02_DisableCopyCutAndPasete.aspx.designer.cs">
+      <DependentUpon>02_DisableCopyCutAndPasete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\03_OnlyAllowAlphaNumeric.aspx.cs">
+      <DependentUpon>03_OnlyAllowAlphaNumeric.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\03_OnlyAllowAlphaNumeric.aspx.designer.cs">
+      <DependentUpon>03_OnlyAllowAlphaNumeric.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\04_MakeTextBoxReadOnly.aspx.cs">
+      <DependentUpon>04_MakeTextBoxReadOnly.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\04_MakeTextBoxReadOnly.aspx.designer.cs">
+      <DependentUpon>04_MakeTextBoxReadOnly.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\05_TabControlsUsingEnterKey.aspx.cs">
+      <DependentUpon>05_TabControlsUsingEnterKey.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\05_TabControlsUsingEnterKey.aspx.designer.cs">
+      <DependentUpon>05_TabControlsUsingEnterKey.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\06_CloneText.aspx.cs">
+      <DependentUpon>06_CloneText.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\06_CloneText.aspx.designer.cs">
+      <DependentUpon>06_CloneText.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\07_SelectFirstTextBoxOnPage.aspx.cs">
+      <DependentUpon>07_SelectFirstTextBoxOnPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\07_SelectFirstTextBoxOnPage.aspx.designer.cs">
+      <DependentUpon>07_SelectFirstTextBoxOnPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\08_SelectContentOnFocus.aspx.cs">
+      <DependentUpon>08_SelectContentOnFocus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\08_SelectContentOnFocus.aspx.designer.cs">
+      <DependentUpon>08_SelectContentOnFocus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\09_LimitingTheLengthOfMultiLine.aspx.cs">
+      <DependentUpon>09_LimitingTheLengthOfMultiLine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\09_LimitingTheLengthOfMultiLine.aspx.designer.cs">
+      <DependentUpon>09_LimitingTheLengthOfMultiLine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\10_AutoScrollMultiLine.aspx.cs">
+      <DependentUpon>10_AutoScrollMultiLine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\10_AutoScrollMultiLine.aspx.designer.cs">
+      <DependentUpon>10_AutoScrollMultiLine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\11_SyncTextAreaScrolling.aspx.cs">
+      <DependentUpon>11_SyncTextAreaScrolling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\11_SyncTextAreaScrolling.aspx.designer.cs">
+      <DependentUpon>11_SyncTextAreaScrolling.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\12_WaterMarkEfect.aspx.cs">
+      <DependentUpon>12_WaterMarkEfect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\01 For TextBox\12_WaterMarkEfect.aspx.designer.cs">
+      <DependentUpon>12_WaterMarkEfect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\02 For CheckBox\13_MakeItRequiredWhenSubmitting.aspx.cs">
+      <DependentUpon>13_MakeItRequiredWhenSubmitting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\02 For CheckBox\13_MakeItRequiredWhenSubmitting.aspx.designer.cs">
+      <DependentUpon>13_MakeItRequiredWhenSubmitting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\02 For CheckBox\14_CheckUncheckAll.aspx.cs">
+      <DependentUpon>14_CheckUncheckAll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\02 For CheckBox\14_CheckUncheckAll.aspx.designer.cs">
+      <DependentUpon>14_CheckUncheckAll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\02 For CheckBox\15_EnableDisableControlsBsedOnCheck.aspx.cs">
+      <DependentUpon>15_EnableDisableControlsBsedOnCheck.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\02 For CheckBox\15_EnableDisableControlsBsedOnCheck.aspx.designer.cs">
+      <DependentUpon>15_EnableDisableControlsBsedOnCheck.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\02 For CheckBox\16_DisplayCheckedItemsImmediately.aspx.cs">
+      <DependentUpon>16_DisplayCheckedItemsImmediately.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\02 For CheckBox\16_DisplayCheckedItemsImmediately.aspx.designer.cs">
+      <DependentUpon>16_DisplayCheckedItemsImmediately.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\02 For CheckBox\17_PerformCalculationsUsingCheckBox.aspx.cs">
+      <DependentUpon>17_PerformCalculationsUsingCheckBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\02 For CheckBox\17_PerformCalculationsUsingCheckBox.aspx.designer.cs">
+      <DependentUpon>17_PerformCalculationsUsingCheckBox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\03 For Radio\18_DisplaySelectedRadioOption.aspx.cs">
+      <DependentUpon>18_DisplaySelectedRadioOption.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\03 For Radio\18_DisplaySelectedRadioOption.aspx.designer.cs">
+      <DependentUpon>18_DisplaySelectedRadioOption.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\03 For Radio\19_DisplaySelectedRadioOfMultipleRadioOptions.aspx.cs">
+      <DependentUpon>19_DisplaySelectedRadioOfMultipleRadioOptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\03 For Radio\19_DisplaySelectedRadioOfMultipleRadioOptions.aspx.designer.cs">
+      <DependentUpon>19_DisplaySelectedRadioOfMultipleRadioOptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\03 For Radio\20_DisplayAndHideRadioOptions.aspx.cs">
+      <DependentUpon>20_DisplayAndHideRadioOptions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\03 For Radio\20_DisplayAndHideRadioOptions.aspx.designer.cs">
+      <DependentUpon>20_DisplayAndHideRadioOptions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\04 For Panel\21_FadePanelsWithAnimations.aspx.cs">
+      <DependentUpon>21_FadePanelsWithAnimations.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\04 For Panel\21_FadePanelsWithAnimations.aspx.designer.cs">
+      <DependentUpon>21_FadePanelsWithAnimations.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\04 For Panel\22_SmoothCascadingPanels.aspx.cs">
+      <DependentUpon>22_SmoothCascadingPanels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\04 For Panel\22_SmoothCascadingPanels.aspx.designer.cs">
+      <DependentUpon>22_SmoothCascadingPanels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\04 For Panel\23_SlideShowWithPanels.aspx.cs">
+      <DependentUpon>23_SlideShowWithPanels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\04 For Panel\23_SlideShowWithPanels.aspx.designer.cs">
+      <DependentUpon>23_SlideShowWithPanels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\05 For DropDownList\24_RetrieveSelectedDropDownList.aspx.cs">
+      <DependentUpon>24_RetrieveSelectedDropDownList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\05 For DropDownList\24_RetrieveSelectedDropDownList.aspx.designer.cs">
+      <DependentUpon>24_RetrieveSelectedDropDownList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\05 For DropDownList\25_SortADropDownList.aspx.cs">
+      <DependentUpon>25_SortADropDownList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\05 For DropDownList\25_SortADropDownList.aspx.designer.cs">
+      <DependentUpon>25_SortADropDownList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\05 For DropDownList\26_AddItemsToDropDownList.aspx.cs">
+      <DependentUpon>26_AddItemsToDropDownList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\05 For DropDownList\26_AddItemsToDropDownList.aspx.designer.cs">
+      <DependentUpon>26_AddItemsToDropDownList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\05 For DropDownList\27_FilterADropDownList.aspx.cs">
+      <DependentUpon>27_FilterADropDownList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\05 For DropDownList\27_FilterADropDownList.aspx.designer.cs">
+      <DependentUpon>27_FilterADropDownList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\05 For DropDownList\28_ConvertSingleToMultipleSelection.aspx.cs">
+      <DependentUpon>28_ConvertSingleToMultipleSelection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\05 For DropDownList\28_ConvertSingleToMultipleSelection.aspx.designer.cs">
+      <DependentUpon>28_ConvertSingleToMultipleSelection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\29_1_ReceivingDataFromGridViewLinks.aspx.cs">
+      <DependentUpon>29_1_ReceivingDataFromGridViewLinks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\29_1_ReceivingDataFromGridViewLinks.aspx.designer.cs">
+      <DependentUpon>29_1_ReceivingDataFromGridViewLinks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\29_PassMultipleValuesFromGridViewToAPage.aspx.cs">
+      <DependentUpon>29_PassMultipleValuesFromGridViewToAPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\29_PassMultipleValuesFromGridViewToAPage.aspx.designer.cs">
+      <DependentUpon>29_PassMultipleValuesFromGridViewToAPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\30_PagingAGridView.aspx.cs">
+      <DependentUpon>30_PagingAGridView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\30_PagingAGridView.aspx.designer.cs">
+      <DependentUpon>30_PagingAGridView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GenericModel\EmployeesResult.cs" />
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\31_HandlingMasterDetailScenario.aspx.cs">
+      <DependentUpon>31_HandlingMasterDetailScenario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\31_HandlingMasterDetailScenario.aspx.designer.cs">
+      <DependentUpon>31_HandlingMasterDetailScenario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\32_RetrieveGridViewCell.aspx.cs">
+      <DependentUpon>32_RetrieveGridViewCell.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\32_RetrieveGridViewCell.aspx.designer.cs">
+      <DependentUpon>32_RetrieveGridViewCell.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\33_HighlightAndRemoveRows.aspx.cs">
+      <DependentUpon>33_HighlightAndRemoveRows.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\33_HighlightAndRemoveRows.aspx.designer.cs">
+      <DependentUpon>33_HighlightAndRemoveRows.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\34_HightlightAndRemoveColumns.aspx.cs">
+      <DependentUpon>34_HightlightAndRemoveColumns.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\34_HightlightAndRemoveColumns.aspx.designer.cs">
+      <DependentUpon>34_HightlightAndRemoveColumns.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\35_SearchAndHighlightGridViewContent.aspx.cs">
+      <DependentUpon>35_SearchAndHighlightGridViewContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\35_SearchAndHighlightGridViewContent.aspx.designer.cs">
+      <DependentUpon>35_SearchAndHighlightGridViewContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\36_AddEventsToGridViewControls.aspx.cs">
+      <DependentUpon>36_AddEventsToGridViewControls.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\06 For GridView\36_AddEventsToGridViewControls.aspx.designer.cs">
+      <DependentUpon>36_AddEventsToGridViewControls.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\07 For Image\37_IncreaseTheSizeOfAnImage.aspx.cs">
+      <DependentUpon>37_IncreaseTheSizeOfAnImage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\07 For Image\37_IncreaseTheSizeOfAnImage.aspx.designer.cs">
+      <DependentUpon>37_IncreaseTheSizeOfAnImage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\07 For Image\38_ChangeImageOpacityOnMouseOver.aspx.cs">
+      <DependentUpon>38_ChangeImageOpacityOnMouseOver.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\07 For Image\38_ChangeImageOpacityOnMouseOver.aspx.designer.cs">
+      <DependentUpon>38_ChangeImageOpacityOnMouseOver.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\07 For Image\39_ImageSlideShow.aspx.cs">
+      <DependentUpon>39_ImageSlideShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\07 For Image\39_ImageSlideShow.aspx.designer.cs">
+      <DependentUpon>39_ImageSlideShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\07 For Image\40_ImageSwapping.aspx.cs">
+      <DependentUpon>40_ImageSwapping.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\07 For Image\40_ImageSwapping.aspx.designer.cs">
+      <DependentUpon>40_ImageSwapping.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\07 For Image\41_AddRemoveLinksOnImages.aspx.cs">
+      <DependentUpon>41_AddRemoveLinksOnImages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\07 For Image\41_AddRemoveLinksOnImages.aspx.designer.cs">
+      <DependentUpon>41_AddRemoveLinksOnImages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\08 For BulletedList\42_ConvertBulletedListItemsToHyperLinks.aspx.cs">
+      <DependentUpon>42_ConvertBulletedListItemsToHyperLinks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\08 For BulletedList\42_ConvertBulletedListItemsToHyperLinks.aspx.designer.cs">
+      <DependentUpon>42_ConvertBulletedListItemsToHyperLinks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\08 For BulletedList\43_AddNewItemsToBulletedListAndApplyCSS.aspx.cs">
+      <DependentUpon>43_AddNewItemsToBulletedListAndApplyCSS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\08 For BulletedList\43_AddNewItemsToBulletedListAndApplyCSS.aspx.designer.cs">
+      <DependentUpon>43_AddNewItemsToBulletedListAndApplyCSS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\08 For BulletedList\44_SortItemsFromABulletedList.aspx.cs">
+      <DependentUpon>44_SortItemsFromABulletedList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\08 For BulletedList\44_SortItemsFromABulletedList.aspx.designer.cs">
+      <DependentUpon>44_SortItemsFromABulletedList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\09 For HyperLink\45_KeyboardShortcutsForHyperlinks.aspx.cs">
+      <DependentUpon>45_KeyboardShortcutsForHyperlinks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\09 For HyperLink\45_KeyboardShortcutsForHyperlinks.aspx.designer.cs">
+      <DependentUpon>45_KeyboardShortcutsForHyperlinks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\09 For HyperLink\46_ChangeUrlFromALink.aspx.cs">
+      <DependentUpon>46_ChangeUrlFromALink.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\09 For HyperLink\46_ChangeUrlFromALink.aspx.designer.cs">
+      <DependentUpon>46_ChangeUrlFromALink.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\09 For HyperLink\47_LinkAddRotation.aspx.cs">
+      <DependentUpon>47_LinkAddRotation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\09 For HyperLink\47_LinkAddRotation.aspx.designer.cs">
+      <DependentUpon>47_LinkAddRotation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\10 For AJAX\48_ConsumeAJsonWebService.aspx.cs">
+      <DependentUpon>48_ConsumeAJsonWebService.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\10 For AJAX\48_ConsumeAJsonWebService.aspx.designer.cs">
+      <DependentUpon>48_ConsumeAJsonWebService.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\10 For AJAX\49_TabsAndLazyLoading.aspx.cs">
+      <DependentUpon>49_TabsAndLazyLoading.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\10 For AJAX\49_TabsAndLazyLoading.aspx.designer.cs">
+      <DependentUpon>49_TabsAndLazyLoading.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\10 For AJAX\50_PopulateAListBox.aspx.cs">
+      <DependentUpon>50_PopulateAListBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\10 For AJAX\50_PopulateAListBox.aspx.designer.cs">
+      <DependentUpon>50_PopulateAListBox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\10 For AJAX\EmployeesService.asmx.cs">
+      <DependentUpon>EmployeesService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\10 For AJAX\EmployeesServiceWCF.svc.cs">
+      <DependentUpon>EmployeesServiceWCF.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\10 For AJAX\IEmployeesServiceWCF.cs" />
     <Compile Include="Topics\Chapter09 - Scripts\Lesson03 - JQuery\AjaxCallToPageMethod.aspx.cs">
       <DependentUpon>AjaxCallToPageMethod.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

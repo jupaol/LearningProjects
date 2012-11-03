@@ -1,5 +1,0 @@
-﻿<%@ ServiceHost 
-    Language="C#" 
-    Debug="true" 
-    Service="JQueryRecipesForAsp.Net.Receipes.ForAjax.EmployeesServiceWCF" 
-    CodeBehind="EmployeesServiceWCF.svc.cs" %>

@@ -6,7 +6,6 @@
 # Log files
 
 /VS 2012/src/WebForms/MSTS 70-515/LogFile.*.log.txt
-/VS 2012/src/WebForms/MSTS 70-515/LogFile*
 
 # Build Folders (you can keep bin if you'd like, to store dlls and pdbs)
 bin

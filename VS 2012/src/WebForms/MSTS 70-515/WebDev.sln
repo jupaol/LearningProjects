@@ -20,6 +20,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{C82F52
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebForms", "WebForms", "{829226F8-BB54-459E-A0DB-9712367BD615}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVC", "MVC", "{7A4EC8B7-1DC4-4DA8-A280-EA6E75F3F77C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,5 +70,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D673901C-5A51-47D6-A1B8-CFFD0900C478} = {829226F8-BB54-459E-A0DB-9712367BD615}
+		{A9727F10-328C-486A-ADC6-FBB79F784476} = {829226F8-BB54-459E-A0DB-9712367BD615}
+		{1AF820DE-C0CD-42DE-8C3A-1E79962BC54F} = {829226F8-BB54-459E-A0DB-9712367BD615}
+		{FD475563-750C-49CD-BCA1-A9C6C9C17D98} = {7A4EC8B7-1DC4-4DA8-A280-EA6E75F3F77C}
+		{F5BE57ED-5A82-45C3-BF63-564468F5A95A} = {7A4EC8B7-1DC4-4DA8-A280-EA6E75F3F77C}
 	EndGlobalSection
 EndGlobal

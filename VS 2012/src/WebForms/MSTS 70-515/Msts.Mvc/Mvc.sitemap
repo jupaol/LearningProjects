@@ -4,9 +4,17 @@
             xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-3.0 MvcSiteMapSchema.xsd"
             enableLocalization="true">
 
-  <mvcSiteMapNode title="Home" controller="Home" action="Index">
-    <mvcSiteMapNode title="About" controller="Home" action="About"/>
-    <mvcSiteMapNode title="" controller="" action=""></mvcSiteMapNode>
+  <mvcSiteMapNode title="Site Content" clickable="false">
+    <mvcSiteMapNode title="Static Content" clickable="false">
+      <mvcSiteMapNode title="Glimpse" url="~/glimpse.axd" ></mvcSiteMapNode>
+      <mvcSiteMapNode title="Home" controller="Home" action="Index">
+        <mvcSiteMapNode title="About" controller="Home" action="About"></mvcSiteMapNode>
+        <mvcSiteMapNode title="Contact" controller="Home" action="Contact"></mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+    <mvcSiteMapNode title="Dynamic Content" clickable="false">
+      <mvcSiteMapNode title="Details" dynamicNodeProvider="Msts.Mvc.CustomSiteMapNodeProviders.DynamicNodeProvider, Msts.Mvc"></mvcSiteMapNode>
+    </mvcSiteMapNode>
   </mvcSiteMapNode>
-
+  
 </mvcSiteMap>

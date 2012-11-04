@@ -94,5 +94,26 @@ namespace Msts.Mvc.Controllers
 
             return View(ctx.jobs);
         }
+
+        public ActionResult GetMethodWithID(int id)
+        {
+            return View(id);
+        }
+
+        [NonAction]
+        public ActionResult zNonActionMethod()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult zPostAction()
+        {
+            return View();
+        }
+
+        public void zVoidAction()
+        {
+        }
     }
 }

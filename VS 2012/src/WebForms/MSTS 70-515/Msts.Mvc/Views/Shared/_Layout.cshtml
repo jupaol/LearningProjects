@@ -14,6 +14,21 @@
                 background-color:silver;
             }
         </style>
+        <style>
+            #nav, .nav, #nav .nav li { margin:0px; padding:0px; }
+            #nav li {float:left; display:inline; cursor:pointer; list-style:none; padding:0px 10px 0px 10px; border:1px #000 solid; position:relative;}
+            #nav li ul.first {left:-1px; top:100%;}
+
+            li, li a {color:#000; text-decoration:none;}
+            #nav .nav li { width:100%; text-indent:10px; line-height:30px; margin-right:10px; border-top:1px #000 solid; border-bottom:1px #000 solid;
+            border-left:none; border-right:none; background:#fff;}
+            #nav li a {display:block; width:inherit; height:inherit;}
+
+            ul.nav { display:none; }
+            #nav li:hover > a, #nav li:hover { color:#fff; background:#000; }
+            li:hover > .nav { display:block; position:absolute; width:200px; top:-2px; left:55%; z-index:1000; border:1px #000 solid; }
+            li:hover { position:relative; z-index:2000; }
+        </style>
     </head>
     <body>
         <header>
@@ -25,29 +40,18 @@
                     <section id="login">
                         @Html.Partial("_LoginPartial")
                     </section>
-                    <nav>
-                        @Html.MvcSiteMap().Menu(false, true, true)
+                    <div class="float-left">
                         <div class="breadcrumb">
                             @Html.MvcSiteMap().SiteMapPath()
                         </div>
+                        <div>
+                            @Html.MvcSiteMap().Menu(startFromCurrentNode: false, startingNodeInChildLevel: true, showStartingNode: false)
+                        </div>
+                    </div>
+                    <nav>
                         <ul id="menu">
-                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li>@Html.ActionLink("About", "About", "Home")</li>
-                            <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                            <li>@Html.ActionLink("Call WCF REST service", "CallWcfRestService", "Home")</li>
-                            <li>@Html.ActionLink("Call WCF REST xDomain", "CallWcfRestCrossDomainService", "Home")</li>
-                            <li>@Html.ActionLink("Call WCF REST Data service", "CallWcfRestDataService", "Home")</li>
-                            <li>@Html.ActionLink("Call WCF REST Data Service xDomain", "CallWcfRestDataCrossDomainService", "Home")</li>
-                            <li>@Html.ActionLink("Raise exception", "RaiseException", "Home")</li>
-                            <li>@Html.ActionLink("Handled exception", "HandledException", "Home")</li>
                             <li><a href="@Url.Content("~/elmah.axd")">Elmah error page</a></li>
-                            <li>@Html.ActionLink("Chapter 14 - Working with Action Results", "Index", "WorkingWithActionResults", new { area = "Chapter14" }, null)</li>
-                            <li>@Html.ActionLink("Chapter 14 - PassingDataToActions", "Index", "PassingDataToActions", new { area = "Chapter14" }, null)</li>
-                            <li>@Html.ActionLink("Chapter 14 - Caching", "Index", "Caching", new { area = "Chapter14" }, null)</li>
-                            <li>@Html.ActionLink("Chapter 14 - Filters Life Cycle", "Index", "FiltersLifeCycle", new { area = "Chapter14" }, null)</li>
-                            <li>@Html.ActionLink("Chapter 14 - Helper Methods", "Index", "WorkingWithHelperMethods", new { area = "Chapter14" }, null)</li>
-                            <li>@Html.ActionLink("Simple EF Context resolver", "SimpleData", "Home")</li>
-                            <li>@Html.ActionLink("Movies", "Index", "Movies", new { area = "Movies" }, null)</li>
+                            <li><a href="@Url.Content("~/glympse.axd")">Glympse configuration page</a></li>
                         </ul>
                     </nav>
                 </div>

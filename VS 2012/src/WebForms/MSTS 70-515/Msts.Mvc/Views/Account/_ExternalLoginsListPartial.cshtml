@@ -1,5 +1,9 @@
 ﻿@model ICollection<AuthenticationClientData>
 
+Remmeber to bind your local application to your test domain
+
+<a href="http://blogs.msdn.com/b/webdev/archive/2012/09/19/configuring-your-asp-net-application-for-microsoft-oauth-account.aspx">For more information</a>
+
 @if (Model.Count == 0)
 {
     <div class="message-info">
@@ -17,7 +21,21 @@ else
         <p>
         @foreach (AuthenticationClientData p in Model)
         {
-            <button type="submit" name="provider" value="@p.AuthenticationClient.ProviderName" title="Log in using your @p.DisplayName account">@p.DisplayName</button>
+            if (p.ExtraData != null && p.ExtraData.ContainsKey("Icon"))
+            {
+                <input 
+                    type="image" 
+                    src="@Url.Content(p.ExtraData["Icon"].ToString())"
+                    name="provider"
+                    id="provider"
+                    style="width:50px;height:50px;"
+                    value="@p.AuthenticationClient.ProviderName"
+                    title="Log in using your @p.DisplayName account" />
+            }
+            else
+            {
+                <button type="submit" name="provider" value="@p.AuthenticationClient.ProviderName" title="Log in using your @p.DisplayName account">@p.DisplayName</button>
+            }
         }
         </p>
     </fieldset>

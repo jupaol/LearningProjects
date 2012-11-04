@@ -443,6 +443,10 @@
     <None Include="DataAccess\LinqData\Pubs.dbml.layout">
       <DependentUpon>Pubs.dbml</DependentUpon>
     </None>
+    <Content Include="Images\facebook.jpg" />
+    <Content Include="Images\google.png" />
+    <Content Include="Images\twitter.png" />
+    <Content Include="Images\live.jpg" />
     <Content Include="Mvc.sitemap" />
     <None Include="MvcSiteMapSchema.xsd" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
@@ -817,7 +821,9 @@
     <Content Include="Scripts\knockout.mapping-latest.js" />
     <Content Include="Scripts\ko.editables.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

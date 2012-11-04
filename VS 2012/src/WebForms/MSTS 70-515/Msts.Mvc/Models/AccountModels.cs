@@ -11,7 +11,7 @@ namespace Msts.Mvc.Models
     public class UsersContext : DbContext
     {
         public UsersContext()
-            : base("DefaultConnection")
+            : base("Msts")
         {
         }
 

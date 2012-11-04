@@ -45,6 +45,7 @@
         <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more…</a>
     </li>
 </ol>
+@this.User.Identity.IsAuthenticated, @this.User.Identity.Name
 @foreach (var item in this.ViewBag.Res)
 {
     <div>@item</div>

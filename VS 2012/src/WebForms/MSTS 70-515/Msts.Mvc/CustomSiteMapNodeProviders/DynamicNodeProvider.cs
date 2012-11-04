@@ -145,8 +145,8 @@ namespace Msts.Mvc.CustomSiteMapNodeProviders
                         !x.IsGenericTypeDefinition && 
                         x != typeof(Controller) &&
                         !x.IsAbstract &&
-                        typeof(Controller).IsAssignableFrom(x) &&
-                        x != typeof(AccountController)
+                        typeof(Controller).IsAssignableFrom(x)
+                        //x != typeof(AccountController)
                     );
 
             return controllers;

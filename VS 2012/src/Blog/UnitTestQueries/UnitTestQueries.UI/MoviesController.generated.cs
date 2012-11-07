@@ -90,8 +90,10 @@ namespace UnitTestQueries.UI.Controllers {
             static readonly _ViewNamesClass s_ViewNames = new _ViewNamesClass();
             public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
             public class _ViewNamesClass {
+                public readonly string Details = "Details";
                 public readonly string Index = "Index";
             }
+            public readonly string Details = "~/Views/Movies/Details.cshtml";
             public readonly string Index = "~/Views/Movies/Index.cshtml";
         }
     }

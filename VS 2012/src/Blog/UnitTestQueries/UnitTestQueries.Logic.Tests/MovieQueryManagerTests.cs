@@ -5,7 +5,6 @@ using UnitTestQueries.Logic.Tests.Builders;
 using FluentAssertions;
 using System.Collections.Generic;
 using System.Linq;
-using System.Collections.Generic;
 
 namespace UnitTestQueries.Logic.Tests
 {

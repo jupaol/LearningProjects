@@ -1,0 +1,19 @@
+﻿@model UnitTestQueries.Data.Movie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>
+        Movie Details
+    </legend>
+    <h1>
+        @Html.DisplayFor(x => x.Title)
+    </h1>
+    <h2>
+        @Html.DisplayFor(x => x.ID)
+    </h2>
+</fieldset>

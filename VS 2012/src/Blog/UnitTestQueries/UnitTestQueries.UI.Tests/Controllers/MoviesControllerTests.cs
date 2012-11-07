@@ -23,7 +23,7 @@ namespace UnitTestQueries.UI.Tests.Controllers
                     .Setup_MoviesQueryManager_FindAll();
                 var sut = builder.Build();
 
-                sut.WithCallTo(x => x.Index()).ShouldRenderDefaultView();
+                sut.WithCallTo(x => x.Index(string.Empty)).ShouldRenderDefaultView();
             }
 
             [TestMethod]

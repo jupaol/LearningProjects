@@ -6,18 +6,40 @@
 
 <h2>Index</h2>
 
+@using (Html.BeginForm(MVC.Movies.Index(), FormMethod.Get))
+{
+    <fieldset>
+        <legend>
+            Search
+        </legend>
+        <div>
+            <label for="titleFilter">Title Filter</label>
+        </div>
+        <div>
+            @Html.TextBox("titleFilter")
+        </div>
+        <div>
+            <input type="submit" value="Go" />
+        </div>
+    </fieldset>
+}
+
 @foreach (var item in this.Model.Results)
 {
     <div>
-        <b>@Html.DisplayFor(x => item.ID)</b>
+        <b>@Html.LabelFor(x => item.ID)</b>
     </div>
     <div>
-        @Html.LabelFor(x => item.ID)
+        @Html.DisplayFor(x => item.ID)
     </div>
     <div>
-        <b>@Html.DisplayFor(x => item.Title)</b>
+        <b>@Html.LabelFor(x => item.Title)</b>
     </div>
     <div>
-        @Html.LabelFor(x => item.Title)
+        @Html.DisplayFor(x => item.Title)
     </div>
+    <div>
+        @Html.ActionLink("Details", MVC.Movies.Details(item.ID))
+    </div>
+    <hr />
 }

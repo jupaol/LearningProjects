@@ -7,7 +7,7 @@ using UnitTestQueries.Logic;
 
 namespace UnitTestQueries.UI.Controllers
 {
-    public class MoviesController : Controller
+    public partial class MoviesController : Controller
     {
         private IMovieQueryManager movieQueryManager;
 
@@ -16,9 +16,30 @@ namespace UnitTestQueries.UI.Controllers
             this.movieQueryManager = movieQueryManager;
         }
 
-        public ActionResult Index()
+        public virtual ActionResult Index(string titleFilter = "")
         {
-            return View(this.movieQueryManager.FindAll());
+            if (string.IsNullOrWhiteSpace(titleFilter))
+            {
+                return View(this.movieQueryManager.FindAll());
+            }
+            else
+            {
+                var query = new FindMoviesByTitleQuery(titleFilter);
+
+                return View(this.movieQueryManager.HandleQuery(query));
+            }
+        }
+
+        public virtual ActionResult Details(Guid id)
+        {
+            var movie = this.movieQueryManager.FindByID(new MovieID(id));
+
+            if (movie == null)
+            {
+                return new HttpNotFoundResult();
+            }
+
+            return View(movie);
         }
 
     }

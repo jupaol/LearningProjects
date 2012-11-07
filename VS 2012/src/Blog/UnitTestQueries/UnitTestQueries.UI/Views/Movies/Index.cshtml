@@ -1,0 +1,23 @@
+﻿@model UnitTestQueries.Logic.QueryResults<UnitTestQueries.Data.Movie>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@foreach (var item in this.Model.Results)
+{
+    <div>
+        <b>@Html.DisplayFor(x => item.ID)</b>
+    </div>
+    <div>
+        @Html.LabelFor(x => item.ID)
+    </div>
+    <div>
+        <b>@Html.DisplayFor(x => item.Title)</b>
+    </div>
+    <div>
+        @Html.LabelFor(x => item.Title)
+    </div>
+}

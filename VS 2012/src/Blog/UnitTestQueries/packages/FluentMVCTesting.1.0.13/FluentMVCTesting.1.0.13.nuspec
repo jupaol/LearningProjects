@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>FluentMVCTesting</id>
+    <version>1.0.13</version>
+    <authors>Robert Moore</authors>
+    <owners>Robert Moore</owners>
+    <licenseUrl>https://github.com/robdmoore/FluentMVCTesting/blob/master/LICENSE</licenseUrl>
+    <projectUrl>http://github.com/robdmoore/FluentMVCTesting</projectUrl>
+    <iconUrl>https://raw.github.com/robdmoore/FluentMVCTesting/master/logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Fluent library for testing ASP.NET MVC controllers. ASP.NET MVC 4 version; install FluentMVCTesting.Mvc3 if you are using MVC 3.</description>
+    <language>en-US</language>
+    <tags>fluent, mvc, asp.net, testing, terse</tags>
+    <dependencies>
+      <dependency id="AspNetMvc" version="4.0" />
+    </dependencies>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System.Web" targetFramework=".NETFramework4.0" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

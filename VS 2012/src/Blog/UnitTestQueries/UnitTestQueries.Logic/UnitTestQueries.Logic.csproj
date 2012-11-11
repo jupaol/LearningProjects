@@ -50,8 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FindAllMoviesQueryHandler.cs" />
+    <Compile Include="FindMovieByIDQueryHandler.cs" />
     <Compile Include="FindMoviesByTitleQuery.cs" />
     <Compile Include="FindMoviesByTitleQueryHandler.cs" />
+    <Compile Include="IFindAllMoviesQueryHandler.cs" />
+    <Compile Include="IFindMovieByIDQueryHandler.cs" />
     <Compile Include="IFindMoviesByTitleQueryHandler.cs" />
     <Compile Include="IMovieQueryManager.cs" />
     <Compile Include="IQueryHandlerFactory.cs" />
@@ -60,11 +64,14 @@
     <Compile Include="IQuery.cs" />
     <Compile Include="IQueryHandler.cs" />
     <Compile Include="IQueryID.cs" />
+    <Compile Include="IQueryByIDHandler.cs" />
     <Compile Include="MovieID.cs" />
     <Compile Include="MovieQueryManager.cs" />
     <Compile Include="OrderDirection.cs" />
     <Compile Include="PagingAndSortingInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryByIDHandler.cs" />
+    <Compile Include="QueryHandler.cs" />
     <Compile Include="QueryHandlerBase.cs" />
     <Compile Include="QueryHandlerFactory.cs" />
     <Compile Include="QueryHandlerProcessor.cs" />

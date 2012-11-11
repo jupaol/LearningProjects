@@ -8,7 +8,7 @@ using UnitTestQueries.Data;
 
 namespace UnitTestQueries.Logic
 {
-    public class FindMoviesByTitleQueryHandler : QueryHandlerBase<FindMoviesByTitleQuery, Movie>, IFindMoviesByTitleQueryHandler
+    public class FindMoviesByTitleQueryHandler : QueryHandler<FindMoviesByTitleQuery, Movie>, IFindMoviesByTitleQueryHandler
     {
         private IMoviesQueryRepository moviesQueryRepository;
 
@@ -17,17 +17,14 @@ namespace UnitTestQueries.Logic
             this.moviesQueryRepository = moviesQueryRepository;
         }
 
-        protected override IQueryable<Movie> InitialItems
-        {
-            get
-            {
-                return this.moviesQueryRepository.GetItems();
-            }
-        }
-
         protected override IQueryable<Movie> ApplyDefaultOrder(IQueryable<Movie> items)
         {
             return items.OrderBy(x => x.Title);
+        }
+
+        protected override IQueryable<Movie> InitialItems
+        {
+            get { return this.moviesQueryRepository.GetItems(); }
         }
 
         protected override IQueryable<Movie> ApplyQuery(FindMoviesByTitleQuery query, IQueryable<Movie> items)

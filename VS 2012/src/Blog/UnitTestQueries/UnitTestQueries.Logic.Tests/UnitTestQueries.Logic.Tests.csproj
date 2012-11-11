@@ -89,10 +89,16 @@
     <Compile Include="Builders\QueryHandlerFactoryBuilder.cs" />
     <Compile Include="Builders\QueryHandlerProcessorBuilder.cs" />
     <Compile Include="FindMoviesByTitleQueryHandlerTests.cs" />
+    <Compile Include="Mocks\QueryHandlerBaseMock.cs" />
+    <Compile Include="Mocks\QueryHandler_SpecificQuery_Mock.cs" />
+    <Compile Include="Mocks\QueryPageAndSortingBaseMock.cs" />
     <Compile Include="MovieQueryManagerTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryHandlerBaseTests.cs" />
     <Compile Include="QueryHandlerFactoryTests.cs" />
     <Compile Include="QueryHandlerProcessorTests.cs" />
+    <Compile Include="QueryHandler_SpecificQuery_Tests.cs" />
+    <Compile Include="QueryPageAndSortingBaseTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\UnitTestQueries.Data\UnitTestQueries.Data.csproj">
@@ -112,6 +118,7 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

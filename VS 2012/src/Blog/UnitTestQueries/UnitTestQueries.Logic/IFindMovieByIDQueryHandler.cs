@@ -7,7 +7,7 @@ using UnitTestQueries.Data;
 
 namespace UnitTestQueries.Logic
 {
-    public interface IQuery
+    public interface IFindMovieByIDQueryHandler : IQueryByIDHandler<MovieID, Movie>
     {
     }
 }

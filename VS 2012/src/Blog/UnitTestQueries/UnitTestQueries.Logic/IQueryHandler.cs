@@ -10,4 +10,9 @@ namespace UnitTestQueries.Logic
     {
         QueryResults<TQueryResult> HandleQuery(TQuery query, PagingAndSortingInfo pagingAndSortingInfo = null);
     }
+
+    public interface IQueryHandler<TQueryResult>
+    {
+        QueryResults<TQueryResult> HandleQuery(PagingAndSortingInfo pagingAndSortingInfo = null);
+    }
 }

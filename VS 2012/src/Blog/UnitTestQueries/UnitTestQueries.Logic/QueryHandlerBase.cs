@@ -9,20 +9,15 @@ using System.Linq.Expressions;
 
 namespace UnitTestQueries.Logic
 {
-    public abstract class QueryHandlerBase<TQuery, TQueryResult> : 
-        QueryPageAndSortingBase<TQueryResult>,
-        IQueryHandler<TQuery, TQueryResult>
-        where TQuery : IQuery
+    public abstract class QueryHandlerBase<TQueryResult> : QueryPageAndSortingBase<TQueryResult>
     {
         protected abstract IQueryable<TQueryResult> InitialItems { get; }
 
-        public QueryResults<TQueryResult> HandleQuery(TQuery query, PagingAndSortingInfo pagingAndSortingInfo = null)
+        protected virtual IQueryable<TQueryResult> HandleCustomQuery(IQueryable<TQueryResult> items, PagingAndSortingInfo pagingAndSortingInfo = null)
         {
-            Condition.Requires(query).Evaluate(query != null);
+            Condition.Requires(items).IsNotNull();
 
-            var customQuery = this.ApplyQuery(query, this.InitialItems);
-
-            Condition.Ensures(customQuery).IsNotNull();
+            var customQuery = items;
 
             if (pagingAndSortingInfo != null)
             {
@@ -31,9 +26,7 @@ namespace UnitTestQueries.Logic
 
             Condition.Ensures(customQuery).IsNotNull();
 
-            return QueryResults.Of(customQuery.ToList(), customQuery.Count());
+            return customQuery;
         }
-
-        protected abstract IQueryable<TQueryResult> ApplyQuery(TQuery query, IQueryable<TQueryResult> items);
     }
 }

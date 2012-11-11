@@ -12,7 +12,7 @@ namespace UnitTestQueries.Logic
     {
         protected abstract IQueryable<TQueryResult> ApplyDefaultOrder(IQueryable<TQueryResult> items);
 
-        protected IQueryable<TQueryResult> ApplyPagingAndSorting(IQueryable<TQueryResult> items, PagingAndSortingInfo pagingAndSortingInfo)
+        protected virtual IQueryable<TQueryResult> ApplyPagingAndSorting(IQueryable<TQueryResult> items, PagingAndSortingInfo pagingAndSortingInfo)
         {
             Condition.Requires(pagingAndSortingInfo).IsNotNull();
             Condition.Requires(items).IsNotNull();
@@ -44,7 +44,6 @@ namespace UnitTestQueries.Logic
             }
 
             customQuery = customQuery.Skip(pageIndex * pagesize).Take(pagesize);
-
             Condition.Ensures(customQuery).IsNotNull();
 
             return customQuery;

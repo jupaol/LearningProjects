@@ -27,6 +27,7 @@
 @foreach (var item in this.Model.Results)
 {
     <div>
+        @Html.LabelFor(x => item.ID, item.ID.ToString())
         <b>@Html.LabelFor(x => item.ID)</b>
     </div>
     <div>

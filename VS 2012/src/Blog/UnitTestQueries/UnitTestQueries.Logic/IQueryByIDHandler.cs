@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UnitTestQueries.Data;
 
 namespace UnitTestQueries.Logic
 {
-    public interface IQuery
+    public interface IQueryByIDHandler<TQueryID, TQueryResult> where TQueryID : IQueryID
     {
+        TQueryResult HandleQuery(TQueryID queryID);
     }
 }

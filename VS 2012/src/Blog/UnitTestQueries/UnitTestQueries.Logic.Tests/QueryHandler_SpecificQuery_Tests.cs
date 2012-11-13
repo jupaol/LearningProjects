@@ -48,21 +48,21 @@ namespace UnitTestQueries.Logic.Tests
                 var items = (IQueryable<Movie>)property.GetValue(sut);
                 var pagingInfo = new PagingAndSortingInfo(page: 2, pageSize: 1);
                 var pageIndex = pagingInfo.Page - 1;
-                var expectedItems = items.Where(x => x.Title.ToLower().Contains(title.ToLower()))
-                    .OrderByDescending(x => x.ID).Skip(pageIndex * pagingInfo.PageSize).Take(pagingInfo.PageSize);
+                var expectedItems = items.Where(x => x.Title.ToLower().Contains(title.ToLower()));
+                var expectedPagedItems = expectedItems.OrderByDescending(x => x.ID).Skip(pageIndex * pagingInfo.PageSize).Take(pagingInfo.PageSize);
 
                 var res = sut.HandleQuery(queryObject, pagingInfo);
 
                 res.Should().NotBeNull();
                 res.VirtualRowsCount.Should().Be(expectedItems.Count());
                 res.Results.Should().NotBeNull()
-                    .And.HaveCount(expectedItems.Count());
-                res.Results.ToList().ForEach(z =>
-                {
-                    var item = expectedItems.FirstOrDefault(x => x.ID.Equals(z.ID));
+                    .And.HaveCount(expectedPagedItems.Count());
+                expectedPagedItems.ToList().ForEach(z =>
+                    {
+                        var item = res.Results.FirstOrDefault(x => x.ID.Equals(z.ID));
 
-                    item.Should().NotBeNull("The expected item should belong to the res list");
-                });
+                        item.Should().NotBeNull("The expected item should belong to the res list");
+                    });
             }
         }
     }

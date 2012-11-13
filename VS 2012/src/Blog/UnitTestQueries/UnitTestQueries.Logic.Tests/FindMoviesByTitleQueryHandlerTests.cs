@@ -71,7 +71,7 @@ namespace UnitTestQueries.Logic.Tests
                 var res = sut.HandleQuery(query, pagingAndSortingInfo);
 
                 res.Should().NotBeNull();
-                res.VirtualRowsCount.Should().Be(3);
+                res.VirtualRowsCount.Should().Be(10);
                 res.Results.Should().NotBeNull()
                     .And.HaveCount(3)
                     .And.ContainInOrder(processedItems);
@@ -89,7 +89,7 @@ namespace UnitTestQueries.Logic.Tests
                 var res = sut.HandleQuery(query, pagingAndSortingInfo);
 
                 res.Should().NotBeNull();
-                res.VirtualRowsCount.Should().Be(3);
+                res.VirtualRowsCount.Should().Be(10);
                 res.Results.Should().NotBeNull()
                     .And.HaveCount(3)
                     .And.ContainInOrder(processedItems);
@@ -107,7 +107,7 @@ namespace UnitTestQueries.Logic.Tests
                 var res = sut.HandleQuery(query, pagingAndSortingInfo);
 
                 res.Should().NotBeNull();
-                res.VirtualRowsCount.Should().Be(3);
+                res.VirtualRowsCount.Should().Be(10);
                 res.Results.Should().NotBeNull()
                     .And.HaveCount(3)
                     .And.ContainInOrder(processedItems);

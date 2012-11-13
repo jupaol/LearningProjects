@@ -22,7 +22,7 @@ namespace UnitTestQueries.Logic
             var res = this.HandleCustomQuery(queryProcessed, pagingAndSortingInfo);
             Condition.Ensures(res).IsNotNull();
 
-            return QueryResults.Of(res.ToList(), res.Count());
+            return QueryResults.Of(res.ToList(), queryProcessed.Count());
         }
 
         protected abstract IQueryable<TQueryResult> ApplyQuery(TQuery query, IQueryable<TQueryResult> items);
@@ -35,10 +35,11 @@ namespace UnitTestQueries.Logic
         {
             Condition.Requires(this.InitialItems).IsNotNull();
 
-            var res = this.HandleCustomQuery(this.InitialItems, pagingAndSortingInfo);
+            var initialItems = this.InitialItems;
+            var res = this.HandleCustomQuery(initialItems, pagingAndSortingInfo);
             Condition.Ensures(res).IsNotNull();
 
-            return QueryResults.Of(res.ToList(), res.Count());
+            return QueryResults.Of(res.ToList(), initialItems.Count());
         }
     }
 }

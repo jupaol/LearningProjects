@@ -59,6 +59,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="README.txt" />
     <None Include="CreateSatelliteAssembly.bat">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

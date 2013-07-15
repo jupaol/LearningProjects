@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b56c0023782a41b0a4b8556aa4c5c811" Name="Diagram1">
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.BackupTarget" Width="1.5" PointX="3.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.Build" Width="1.5" PointX="6.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.Configuration" Width="1.5" PointX="1.5" PointY="33.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.DatabaseDeployment" Width="1.5" PointX="3" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.DatabaseMigration" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.DatabaseName" Width="1.5" PointX="0.75" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.DatabaseServer" Width="1.5" PointX="0.75" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.DeploymentDestination" Width="1.5" PointX="3.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.DeploymentLog" Width="1.5" PointX="9" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.DeploymentMapping" Width="1.5" PointX="3.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.DeploymentStatu" Width="1.5" PointX="6.75" PointY="45.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.DropSourceNestedPath" Width="1.5" PointX="0.75" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.DropSource" Width="1.5" PointX="3.75" PointY="35" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.Email" Width="1.5" PointX="12" PointY="31.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.Environment" Width="1.5" PointX="1.5" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.FileDeployment" Width="1.5" PointX="6" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.Filter" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.Group" Width="1.5" PointX="9.75" PointY="43" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.LogMessage" Width="1.5" PointX="11.25" PointY="38.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.LogType" Width="1.5" PointX="9" PointY="48.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.Mapping" Width="1.5" PointX="12" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.NetworkResource" Width="1.5" PointX="1.5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.NugetDeployment" Width="1.5" PointX="3" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.NugetServer" Width="1.5" PointX="0.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.PermittedUser" Width="1.5" PointX="12" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.Platform" Width="1.5" PointX="1.5" PointY="36.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.PowerShellModuleDeployment" Width="1.5" PointX="3" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.PowerShellModule" Width="1.5" PointX="0.75" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.ProductReleas" Width="1.5" PointX="9.75" PointY="30.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.Product" Width="1.5" PointX="1.5" PointY="30.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.Quality" Width="1.5" PointX="12" PointY="43.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.QualityMapping" Width="1.5" PointX="14.25" PointY="34.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.Release" Width="1.5" PointX="7.5" PointY="41.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.ScriptPath" Width="1.5" PointX="9.75" PointY="45.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.Server" Width="1.5" PointX="1.5" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.Solution" Width="1.5" PointX="1.5" PointY="38.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.SourceControlLocation" Width="1.5" PointX="9.75" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.SsisArtifact" Width="1.5" PointX="6.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.SsisDeployment" Width="1.5" PointX="9" PointY="17" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.SsisFolder" Width="1.5" PointX="6.75" PointY="29.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.SsisProject" Width="1.5" PointX="6.75" PointY="31.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.sysdiagram" Width="1.5" PointX="5.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.TeamProject" Width="1.5" PointX="7.5" PointY="38.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.WebArtifact" Width="1.5" PointX="3.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.WebDeployment" Width="1.5" PointX="6" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.WebSite" Width="1.5" PointX="3.75" PointY="40.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.WindowsService" Width="1.5" PointX="8.25" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.ZipDeployment" Width="1.5" PointX="6" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DeploymentConfigurationsModel.ZipFileArtifact" Width="1.5" PointX="3.75" PointY="44" IsExpanded="true" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_BackupTargets_dbo_NetworkResources_BackupResource_NetworkResourceId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_FileDeployments_dbo_BackupTargets_BackupTarget_BackupTargetId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_SsisDeployments_dbo_BackupTargets_BackupTarget_BackupTargetId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_WebDeployments_dbo_BackupTargets_BackupTarget_BackupTargetId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_ZipDeployments_dbo_BackupTargets_BackupTarget_BackupTargetId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_Builds_dbo_Products_Product_ProductId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_Builds_dbo_TeamProjects_TeamProject_TeamProjectId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_DeploymentLogs_dbo_Builds_Build_BuildId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_Mappings_dbo_Builds_Build_BuildId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_DropSources_dbo_Configurations_Configuration_ConfigurationId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_DatabaseDeployments_dbo_DatabaseNames_DatabaseName_DatabaseId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_DatabaseDeployments_dbo_DatabaseServers_DatabaseServer_DatabaseServerId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_DatabaseDeployments_dbo_DeploymentMappings_DeploymentMapping_DeploymentMappingId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_DatabaseDeployments_dbo_DropSourceNestedPaths_DropSourceNestedPath_ArtifactId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_DatabaseDeployments_dbo_DropSources_DropSource_DropSourceId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_FileDeployments_dbo_DeploymentDestinations_DeploymentDestination_DeploymentDestinationId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_SsisDeployments_dbo_DeploymentDestinations_DeploymentDestination_DeploymentDestinationId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_WebDeployments_dbo_DeploymentDestinations_DeploymentDestination_DeploymentDestinationId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_ZipDeployments_dbo_DeploymentDestinations_DeploymentDestination_DeploymentDestinationId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_DeploymentLogs_dbo_DeploymentMappings_DeploymentMapping_DeploymentMappingId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_DeploymentLogs_dbo_DeploymentStatus_DeploymentStatus_DeploymentStatusId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_LogMessages_dbo_DeploymentLogs_DeploymentLog_DeploymentLogId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_DeploymentMappings_dbo_Environments_Environment_EnvironmentId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_DeploymentMappings_dbo_Products_Product_ProductId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_FileDeployments_dbo_DeploymentMappings_DeploymentMapping_DeploymentMappingId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_NugetDeployments_dbo_DeploymentMappings_DeploymentMapping_DeploymentMappingId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_PowerShellModuleDeployments_dbo_DeploymentMappings_DeploymentMapping_DeploymentMappingId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_SsisDeployments_dbo_DeploymentMappings_DeploymentMapping_DeploymentMappingId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_WebDeployments_dbo_DeploymentMappings_DeploymentMapping_DeploymentMappingId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_ZipDeployments_dbo_DeploymentMappings_DeploymentMapping_DeploymentMappingId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_FileDeployments_dbo_DropSourceNestedPaths_DropSourceNestedPath_ArtifactId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_NugetDeployments_dbo_DropSourceNestedPaths_DropSourceNestedPath_ArtifactId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_PowerShellModuleDeployments_dbo_DropSourceNestedPaths_DropSourceNestedPath_ArtifactId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_SsisDeployments_dbo_DropSourceNestedPaths_DropSourceNestedPath_ArtifactId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_WebDeployments_dbo_DropSourceNestedPaths_DropSourceNestedPath_ArtifactId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_ZipDeployments_dbo_DropSourceNestedPaths_DropSourceNestedPath_ArtifactId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_DropSources_dbo_Platforms_Platform_PlatformId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_DropSources_dbo_Solutions_Solution_SolutionId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_FileDeployments_dbo_DropSources_DropSource_DropSourceId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_NugetDeployments_dbo_DropSources_DropSource_DropSourceId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_PowerShellModuleDeployments_dbo_DropSources_DropSource_DropSourceId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_SsisDeployments_dbo_DropSources_DropSource_DropSourceId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_WebDeployments_dbo_DropSources_DropSource_DropSourceId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_ZipDeployments_dbo_DropSources_DropSource_DropSourceId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_Qualities_dbo_Environments_Environment_EnvironmentId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_FileDeployments_dbo_NetworkResources_DeploymentResource_NetworkResourceId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_Mappings_dbo_Groups_Group_GroupId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_LogMessages_dbo_LogTypes_LogType_LogTypeId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_Mappings_dbo_ScriptPaths_ScriptPath_ScriptPathId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_QualityMappings_dbo_Mappings_Mapping_MappingId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_NetworkResources_dbo_Servers_Server_ServerId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_SsisDeployments_dbo_NetworkResources_DeploymentResource_NetworkResourceId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_WebDeployments_dbo_NetworkResources_DeploymentResource_NetworkResourceId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_ZipDeployments_dbo_NetworkResources_DeploymentResource_NetworkResourceId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_NugetDeployments_dbo_NugetServers_NugetServer_NugetServerId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_PowerShellModuleDeployments_dbo_PowerShellModules_PowerShellModule_ArtifactId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_ProductReleases_dbo_Products_Product_ProductId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_ProductReleases_dbo_Releases_Release_ReleaseId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_SourceControlLocations_dbo_Products_Product_ProductId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_QualityMappings_dbo_Qualities_Quality_QualityId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_SsisDeployments_dbo_Servers_SsisDeploymentServer_ServerId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_SourceControlLocations_dbo_TeamProjects_TeamProject_TeamProjectId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_SsisDeployments_dbo_SsisArtifacts_SsisArtifact_SsisArtifactId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_SsisDeployments_dbo_SsisFolders_SsisFolder_SsisFolderId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_SsisDeployments_dbo_SsisProjects_SsisProject_SsisProjectId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_WebDeployments_dbo_WebArtifacts_WebArtifact_ArtifactId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_WebDeployments_dbo_WebSites_WebSite_WebSiteId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.FK_dbo_ZipDeployments_dbo_ZipFileArtifacts_ZipFileArtifact_ArtifactId" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.PermittedUserQualityMappings" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.QualityMappingEmails" ManuallyRouted="false" />
+        <AssociationConnector Association="DeploymentConfigurationsModel.WindowsServiceFileDeployments" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

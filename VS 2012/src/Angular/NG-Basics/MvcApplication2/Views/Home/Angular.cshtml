@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Angular";
+}
+
+<h2>Angular</h2>
+
+<div ng-app="configurationApp">
+    <label for="userName">Name:</label>
+    <input type="text" placeholder="Enter your user name" ng-model="userName" id="userName" name="userName"/>
+    <hr/>
+    <h1>Hello: {{userName}}</h1>
+    <hr/>
+    <div ng-view></div>
+</div>

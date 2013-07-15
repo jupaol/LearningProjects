@@ -1,0 +1,21 @@
+﻿<h3>List of products</h3>
+
+<style>
+.gridStyle {
+    border: 1px solid rgb(212,212,212);
+    width: 400px; 
+    height: 300px
+}
+</style>
+
+<div ng-show="isBusy">
+    <img src="{{environmentRootPath}}Content/images/loader.gif"></img>
+    <img src="{{environmentRootPath}}Content/images/loading.gif"></img>
+    <img src="{{environmentRootPath}}Content/images/spinner.gif"></img>
+</div>
+
+<div class="gridStyle" ng-grid="gridOptions"></div>
+
+<ul>
+    <li ng-repeat="product in products">{{product.Name}}</li>
+</ul>

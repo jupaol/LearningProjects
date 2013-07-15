@@ -11,7 +11,7 @@
         data: "products",
         columnDefs: [
             {
-                field: 'Name',
+                field: 'job_desc',
                 displayName: 'Name'
                 //cellTemplate: '<div class="ngCellText" ng-class="col.colIndex()"><span ng-cell-text>{{row.getProperty(col.field)}}</span><i class="icon-search summary-filter" ng-click="addProductFilter(row.getProperty(col.field))"></i></div>'
             }

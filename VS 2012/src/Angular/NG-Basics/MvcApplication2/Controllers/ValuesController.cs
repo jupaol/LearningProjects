@@ -9,12 +9,12 @@ namespace MvcApplication2.Controllers
 {
     public class ValuesController : ApiController
     {
-        public IEnumerable<ProductModel> Get()
+        public IEnumerable<JobModel> Get()
         {
-            var ctx = new DeploymentConfigurationsEntities();
+            var ctx = new PubsEntities();
 
             return
-                ctx.Products.ToList().Select(x => (ProductModel) new ProductModel().InjectFrom(x)).ToList();
+                ctx.jobs.ToList().Select(x => (JobModel) new JobModel().InjectFrom(x)).ToList();
         }
     }
 }

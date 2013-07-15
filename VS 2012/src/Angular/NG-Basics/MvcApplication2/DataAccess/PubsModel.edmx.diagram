@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d89f76d0bde04c78a72ae9d18af53aed" Name="Diagram1">
+        <EntityTypeShape EntityType="pubsModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.aspnet_Applications" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.aspnet_Membership" Width="1.5" PointX="6" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.aspnet_Paths" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.aspnet_PersonalizationAllUsers" Width="1.5" PointX="5.25" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.aspnet_PersonalizationPerUser" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.aspnet_Profile" Width="1.5" PointX="10.5" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.aspnet_Roles" Width="1.5" PointX="3" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.aspnet_SchemaVersions" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.AspNet_SqlCacheTablesForChangeNotification" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.aspnet_Users" Width="1.5" PointX="8.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.aspnet_WebEvent_Events" Width="1.5" PointX="7.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.ASPStateTempApplication" Width="1.5" PointX="8.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.ASPStateTempSession" Width="1.5" PointX="9.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.author" Width="1.5" PointX="15" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.discount" Width="1.5" PointX="17.25" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.employee" Width="1.5" PointX="15" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.job" Width="1.5" PointX="12.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.Movie" Width="1.5" PointX="2.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.pub_info" Width="1.5" PointX="15" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.publisher" Width="1.5" PointX="12.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.roysched" Width="1.5" PointX="17.25" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.sale" Width="1.5" PointX="17.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.store" Width="1.5" PointX="15" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.titleauthor" Width="1.5" PointX="17.25" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.title" Width="1.5" PointX="15" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.UserProfile" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.webpages_Membership" Width="1.5" PointX="9.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.webpages_OAuthMembership" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="pubsModel.webpages_Roles" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="pubsModel.FK__aspnet_Me__Appli__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="pubsModel.FK__aspnet_Pa__Appli__0B91BA14" ManuallyRouted="false" />
+        <AssociationConnector Association="pubsModel.FK__aspnet_Ro__Appli__74AE54BC" ManuallyRouted="false" />
+        <AssociationConnector Association="pubsModel.FK__aspnet_Us__Appli__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="pubsModel.FK__aspnet_Me__UserI__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="pubsModel.FK__aspnet_Pe__PathI__1332DBDC" ManuallyRouted="false" />
+        <AssociationConnector Association="pubsModel.FK__aspnet_Pe__PathI__18EBB532" ManuallyRouted="false" />
+        <AssociationConnector Association="pubsModel.FK__aspnet_Pe__UserI__19DFD96B" ManuallyRouted="false" />
+        <AssociationConnector Association="pubsModel.FK__aspnet_Pr__UserI__693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="pubsModel.FK__titleauth__au_id__0519C6AF" ManuallyRouted="false" />
+        <AssociationConnector Association="pubsModel.FK__discounts__stor___0F975522" ManuallyRouted="false" />
+        <AssociationConnector Association="pubsModel.FK__employee__job_id__1BFD2C07" ManuallyRouted="false" />
+        <AssociationConnector Association="pubsModel.FK__employee__pub_id__1ED998B2" ManuallyRouted="false" />
+        <AssociationConnector Association="pubsModel.FK__pub_info__pub_id__173876EA" ManuallyRouted="false" />
+        <AssociationConnector Association="pubsModel.FK__titles__pub_id__014935CB" ManuallyRouted="false" />
+        <AssociationConnector Association="pubsModel.FK__roysched__title___0DAF0CB0" ManuallyRouted="false" />
+        <AssociationConnector Association="pubsModel.FK__sales__stor_id__0AD2A005" ManuallyRouted="false" />
+        <AssociationConnector Association="pubsModel.FK__sales__title_id__0BC6C43E" ManuallyRouted="false" />
+        <AssociationConnector Association="pubsModel.FK__titleauth__title__060DEAE8" ManuallyRouted="false" />
+        <AssociationConnector Association="pubsModel.aspnet_UsersInRoles" ManuallyRouted="false" />
+        <AssociationConnector Association="pubsModel.webpages_UsersInRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

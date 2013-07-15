@@ -273,167 +273,110 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IdToType_Id.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
-    <Compile Include="DataAccess\BackupTarget.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\aspnet_Applications.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\Build.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\aspnet_Membership.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\Configuration.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\aspnet_Paths.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\DatabaseDeployment.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\aspnet_PersonalizationAllUsers.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\DatabaseMigration.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\aspnet_PersonalizationPerUser.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\DatabaseName.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\aspnet_Profile.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\DatabaseServer.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\aspnet_Roles.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\DeploymentDestination.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\aspnet_SchemaVersions.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\DeploymentLog.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\AspNet_SqlCacheTablesForChangeNotification.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\DeploymentMapping.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\aspnet_Users.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\DeploymentStatu.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\aspnet_WebEvent_Events.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\DropSource.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\ASPStateTempApplication.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\DropSourceNestedPath.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\ASPStateTempSession.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\Email.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\author.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\Environment.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\C__MigrationHistory.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\FileDeployment.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\discount.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\Filter.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\employee.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\Group.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\job.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\LogMessage.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\Movie.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\LogType.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\publisher.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\MantisShrimp.Context.cs">
+    <Compile Include="DataAccess\PubsModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MantisShrimp.Context.tt</DependentUpon>
+      <DependentUpon>PubsModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\MantisShrimp.cs">
+    <Compile Include="DataAccess\PubsModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\MantisShrimp.Designer.cs">
+    <Compile Include="DataAccess\PubsModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>MantisShrimp.edmx</DependentUpon>
+      <DependentUpon>PubsModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\Mapping.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\pub_info.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\NetworkResource.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\roysched.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\NugetDeployment.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\sale.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\NugetServer.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\store.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\PermittedUser.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\title.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\Platform.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\titleauthor.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\PowerShellModule.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\UserProfile.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\PowerShellModuleDeployment.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\webpages_Membership.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\Product.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\webpages_OAuthMembership.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="DataAccess\ProductReleas.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccess\Quality.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccess\QualityMapping.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccess\Release.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccess\ScriptPath.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccess\Server.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccess\Solution.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccess\SourceControlLocation.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccess\SsisArtifact.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccess\SsisDeployment.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccess\SsisFolder.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccess\SsisProject.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccess\sysdiagram.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccess\TeamProject.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccess\WebArtifact.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccess\WebDeployment.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccess\WebSite.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccess\WindowsService.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccess\ZipDeployment.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
-    </Compile>
-    <Compile Include="DataAccess\ZipFileArtifact.cs">
-      <DependentUpon>MantisShrimp.tt</DependentUpon>
+    <Compile Include="DataAccess\webpages_Roles.cs">
+      <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
@@ -445,7 +388,7 @@
     </Compile>
     <Compile Include="Hubs\ChatHub.cs" />
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\ProductModel.cs" />
+    <Compile Include="Models\JobModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SharedController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
@@ -563,22 +506,22 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\toastr.less" />
-    <EntityDeploy Include="DataAccess\MantisShrimp.edmx">
+    <EntityDeploy Include="DataAccess\PubsModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>MantisShrimp.Designer.cs</LastGenOutput>
+      <LastGenOutput>PubsModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="DataAccess\MantisShrimp.Context.tt">
+    <Content Include="DataAccess\PubsModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MantisShrimp.edmx</DependentUpon>
-      <LastGenOutput>MantisShrimp.Context.cs</LastGenOutput>
+      <DependentUpon>PubsModel.edmx</DependentUpon>
+      <LastGenOutput>PubsModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="DataAccess\MantisShrimp.edmx.diagram">
-      <DependentUpon>MantisShrimp.edmx</DependentUpon>
+    <Content Include="DataAccess\PubsModel.edmx.diagram">
+      <DependentUpon>PubsModel.edmx</DependentUpon>
     </Content>
-    <Content Include="DataAccess\MantisShrimp.tt">
+    <Content Include="DataAccess\PubsModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>MantisShrimp.edmx</DependentUpon>
-      <LastGenOutput>MantisShrimp.cs</LastGenOutput>
+      <DependentUpon>PubsModel.edmx</DependentUpon>
+      <LastGenOutput>PubsModel.cs</LastGenOutput>
     </Content>
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Scripts\jquery-2.0.2.intellisense.js" />

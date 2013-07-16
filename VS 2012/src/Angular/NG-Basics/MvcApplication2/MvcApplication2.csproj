@@ -272,6 +272,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IdToType_Id.cs" />
+    <Compile Include="Controllers\JobsController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DataAccess\aspnet_Applications.cs">
       <DependentUpon>PubsModel.tt</DependentUpon>
@@ -327,6 +328,7 @@
     <Compile Include="DataAccess\job.cs">
       <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataAccess\JobRepository.cs" />
     <Compile Include="DataAccess\Movie.cs">
       <DependentUpon>PubsModel.tt</DependentUpon>
     </Compile>
@@ -387,6 +389,7 @@
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
     <Compile Include="Hubs\ChatHub.cs" />
+    <Compile Include="Hubs\JobHub.cs" />
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\JobModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -947,6 +950,7 @@
     <Content Include="Views\Shared\_MINIPROFILER UPDATED Layout.cshtml" />
     <Content Include="Scripts\underscore.min.map" />
     <Content Include="Views\Home\Chat.cshtml" />
+    <Content Include="Views\Home\SqlPolling.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

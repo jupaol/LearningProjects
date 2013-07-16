@@ -65,6 +65,7 @@ namespace MvcApplication2.Controllers
             public readonly string Contact = "Contact";
             public readonly string Angular = "Angular";
             public readonly string Chat = "Chat";
+            public readonly string SqlPolling = "SqlPolling";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -75,6 +76,7 @@ namespace MvcApplication2.Controllers
             public const string Contact = "Contact";
             public const string Angular = "Angular";
             public const string Chat = "Chat";
+            public const string SqlPolling = "SqlPolling";
         }
 
 
@@ -93,12 +95,14 @@ namespace MvcApplication2.Controllers
                 public readonly string Chat = "Chat";
                 public readonly string Contact = "Contact";
                 public readonly string Index = "Index";
+                public readonly string SqlPolling = "SqlPolling";
             }
             public readonly string About = "~/Views/Home/About.cshtml";
             public readonly string Angular = "~/Views/Home/Angular.cshtml";
             public readonly string Chat = "~/Views/Home/Chat.cshtml";
             public readonly string Contact = "~/Views/Home/Contact.cshtml";
             public readonly string Index = "~/Views/Home/Index.cshtml";
+            public readonly string SqlPolling = "~/Views/Home/SqlPolling.cshtml";
         }
     }
 
@@ -149,6 +153,15 @@ namespace MvcApplication2.Controllers
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Chat);
             ChatOverride(callInfo);
+            return callInfo;
+        }
+
+        partial void SqlPollingOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        public override System.Web.Mvc.ActionResult SqlPolling()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.SqlPolling);
+            SqlPollingOverride(callInfo);
             return callInfo;
         }
 

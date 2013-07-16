@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "SqlPolling";
+}
+
+<h2>SqlPolling</h2>
+
+<div>
+    <table id="tblJobInfo" style="text-align:center;margin-left:10px">
+    </table>
+</div>
+
+<hr/>
+
+<input type="text" id="minValue"/>
+<input type="button" id="call" value="Request data"/>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/signalr")
+    <script src="~/signalr/hubs"></script>
+    <script type="text/javascript">
+ 
+            $(function () {
+                $("#call").click(function () {
+                    // Proxy created on the fly
+                    var job = $.connection.jobHub;
+
+                    // Declare a function on the job hub so the server can invoke it
+                    job.client.displayStatus = function () {
+                        getData();
+                    };
+
+                    // Start the connection
+                    $.connection.hub.start();
+                    getData();
+                });
+            });
+ 
+            function getData() {
+                var $tbl = $('#tblJobInfo');
+                $.ajax({
+                    url: '../api/jobs/' + $("#minValue").val(),
+                    type: 'GET',
+                    datatype: 'json',
+                    success: function (data) {
+                        if (data.length > 0) {
+                            $tbl.empty();
+                            $tbl.append(' <tr><th>ID</th><th>Description</th></tr>');
+                            var rows = [];
+                            for (var i = 0; i < data.length; i++) {
+                                rows.push(' <tr><td>' + data[i].job_id + '</td><td>' + data[i].job_desc + '</td></tr>');
+                            }
+                            $tbl.append(rows.join(''));
+                        }
+                    }
+                });
+            }
+        </script>
+}

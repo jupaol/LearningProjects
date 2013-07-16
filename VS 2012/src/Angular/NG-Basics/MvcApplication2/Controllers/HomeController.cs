@@ -34,5 +34,10 @@ namespace MvcApplication2.Controllers
         {
             return View();
         }
+
+        public virtual ActionResult SqlPolling()
+        {
+            return View();
+        }
     }
 }

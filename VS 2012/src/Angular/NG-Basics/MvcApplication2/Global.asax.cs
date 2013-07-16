@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System.Configuration;
+using System.Data.SqlClient;
+using System.Linq;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
@@ -14,6 +16,7 @@ namespace MvcApplication2
     {
         protected void Application_Start()
         {
+            SqlDependency.Start(ConfigurationManager.ConnectionStrings["PubsEntitiesSimpleConnectionString"].ConnectionString);
             RouteTable.Routes.MapHubs();
             AreaRegistration.RegisterAllAreas();
 
@@ -34,6 +37,11 @@ namespace MvcApplication2
             //jsonSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             jsonSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
 
+        }
+
+        protected void Application_End()
+        {
+            SqlDependency.Stop(ConfigurationManager.ConnectionStrings["PubsEntitiesSimpleConnectionString"].ConnectionString);
         }
     }
 }

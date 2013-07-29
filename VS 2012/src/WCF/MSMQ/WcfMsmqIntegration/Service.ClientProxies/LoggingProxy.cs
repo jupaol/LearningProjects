@@ -12,5 +12,13 @@ namespace Service.ClientProxies
 
             return proxy.CreateChannel();
         }
+
+        public IQueueLoggingService GetQueueLoggingProxy(string endpointName)
+        {
+            //var proxy = new ChannelFactory<ILoggingService>(new NetTcpBinding(), "net.tcp://localhost:8002");
+            var proxy = new ChannelFactory<IQueueLoggingService>(endpointName);
+
+            return proxy.CreateChannel();
+        }
     }
 }

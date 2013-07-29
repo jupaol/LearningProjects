@@ -50,5 +50,24 @@ namespace Service.Client
 
             MessageBox.Show(string.Format("{0}{1}{2}", response.DeploymentId.ToString(), Environment.NewLine, response.NewServerName));
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            var proxy = new LoggingProxy().GetQueueLoggingProxy("Service.ServiceContracts.QueueLoggingService NET MSMQ");
+
+            proxy.AddDeploymentLog(new AddDeploymentLogRequest
+            {
+                AddDeploymentLog = new AddDeploymentLog
+                {
+                    BuildName = "some build name",
+                    DatabaseServerName = "some database server name",
+                    Environment = "some environment",
+                    FullBuildName = "some full build name",
+                    Product = "some product"
+                }
+            });
+
+            MessageBox.Show("Message sent.");
+        }
     }
 }

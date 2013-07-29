@@ -18,7 +18,8 @@ namespace Service.ServiceImplementations
         {
             return new AddDeploymentLogResponse
                 {
-                    DeploymentId = Guid.NewGuid()
+                    DeploymentId = Guid.NewGuid(),
+                    NewServerName = string.Format("{0} --- and now: ---- {1}", addDeploymentLogRequest.AddDeploymentLog.DatabaseServerName, "ploppp")
                 };
         }
     }

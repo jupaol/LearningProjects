@@ -16,8 +16,7 @@ namespace Service.Client
         private void button1_Click(object sender, EventArgs e)
         {
             var proxy = new LoggingProxy().GetLoggingProxy("Service.ServiceContracts.LoggingService");
-
-            var response = proxy.AddDeploymentLog(new AddDeploymentLogRequest
+            var addDeploymentLogRequest = new AddDeploymentLogRequest
                 {
                     AddDeploymentLog = new AddDeploymentLog
                         {
@@ -27,11 +26,10 @@ namespace Service.Client
                             FullBuildName = "some full build name",
                             Product = "some product"
                         }
-                });
+                };
+            var response = proxy.AddDeploymentLog(addDeploymentLogRequest);
 
-            var res = response.DeploymentId;
-
-            MessageBox.Show(res.ToString());
+            MessageBox.Show(string.Format("{0}{1}{2}", response.DeploymentId.ToString(), Environment.NewLine, response.NewServerName));
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -50,9 +48,7 @@ namespace Service.Client
                 }
             });
 
-            var res = response.DeploymentId;
-
-            MessageBox.Show(res.ToString());
+            MessageBox.Show(string.Format("{0}{1}{2}", response.DeploymentId.ToString(), Environment.NewLine, response.NewServerName));
         }
     }
 }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/themes/base/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
@@ -21,7 +22,7 @@
                         <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
                         <li>@Html.ActionLink("RestWcfService", "RestWcfService", "Home", new { area = "" }, null)</li>
                         <li><a href="@Url.RouteUrl("loggingServiceRoute")">WCF Service WS HTTP Endpoint</a></li>
-                        <li><a href="@Url.RouteUrl("loggingServiceRoute")/rest">WCF Service WEB HTTP Endpoint</a></li>
+                        <li><a href="@Url.RouteUrl("loggingServiceRoute")/rest/AddDeploymentLog">WCF Service WEB HTTP Endpoint</a></li>
                     </ul>
                 </nav>
             </div>
@@ -30,6 +31,7 @@
     @RenderBody()
 
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
     @RenderSection("scripts", required: false)
 </body>
 </html>

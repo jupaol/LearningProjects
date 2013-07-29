@@ -3,3 +3,81 @@
 }
 
 <h2>RestWcfService</h2>
+
+    <h3>
+        Using JavaScript - AJAX
+    </h3>
+    <input type="button" value="Call REST sercice using jQuery AJAX" id="callWcfRestServiceUsingProxy" name="callWcfRestServiceUsingProxy" />
+    <div>
+        <div id="res1"></div>
+    </div>
+<div id="dialog">
+    <div>
+        Processing...
+    </div>
+</div>
+<hr/>
+<div id="jsonInfo">
+    
+</div>
+
+@section scripts
+{
+    <script>
+        $(function () {
+            var $res1 = $("#res1");
+            var $butt1 = $("input[id$=callWcfRestServiceUsingProxy]");
+            var $dialog = $("#dialog");
+
+            $dialog.dialog({
+                autoOpen: false,
+                modal: true,
+                closeOnEscape: false,
+                height: 140,
+                open: function (e, ui) {
+                    $(this).closest(".ui-dialog").find(".ui-dialog-titlebar-close").hide();
+                }
+            });
+
+            $.ajaxSetup({
+                type: "POST",
+                async: true,
+                cache: false,
+                contentType: "application/json; charset=utf-8;",
+                dataType: "json",
+                beforeSend: function () {
+                    $dialog.dialog("open");
+                },
+                complete: function () {
+                    $dialog.dialog("close");
+                },
+                error: function (xhr, errorMessage, status) {
+                    alert(errorMessage);
+                }
+            });
+
+            $butt1.click(function (e) {
+                e.preventDefault();
+
+                var myJson = {
+                    AddDeploymentLog : {
+                        DatabaseServerName : 'my server name'
+                    }  
+                };
+
+                var myJsonString = JSON.stringify(myJson);
+
+                $('#jsonInfo').text(myJsonString);
+
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.RouteUrl("loggingServiceRoute")/rest/AddDeploymentLog",
+                    data: myJsonString,
+                    success: function (msg) {
+                        $res1.html("Deployment Log ID: " + msg.DeploymentId + "<br/>" + "New Server:" + msg.NewServerName);
+                    }
+                });
+            });
+        });
+    </script>
+}

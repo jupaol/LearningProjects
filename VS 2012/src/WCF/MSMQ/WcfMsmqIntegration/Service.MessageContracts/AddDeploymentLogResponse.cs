@@ -9,5 +9,8 @@ namespace Service.MessageContracts
     {
         [MessageBodyMember(Namespace = Namespaces.ServiceModelNamespace)]
         public Guid DeploymentId { get; set; }
+
+        [MessageBodyMember(Namespace = Namespaces.ServiceModelNamespace)]
+        public string NewServerName { get; set; }
     }
 }

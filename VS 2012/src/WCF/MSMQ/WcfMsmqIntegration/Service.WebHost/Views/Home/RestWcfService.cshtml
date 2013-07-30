@@ -71,10 +71,10 @@
 
                 $.ajax({
                     type: "POST",
-                    url: "@Url.RouteUrl("loggingServiceRoute")/rest/AddDeploymentLog",
+                    url: "@Url.RouteUrl("loggingServiceRoute")/log/AddDeploymentLog",
                     data: myJsonString,
                     success: function (msg) {
-                        $res1.html("Deployment Log ID: " + msg.DeploymentId + "<br/>" + "New Server:" + msg.NewServerName);
+                        $res1.html("Deployment Log ID: " + msg.d.DeploymentId + "<br/>" + "New Server:" + msg.d.NewServerName);
                     }
                 });
             });

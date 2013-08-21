@@ -7,6 +7,8 @@ using System.Web.Routing;
 using System.Web.SessionState;
 using CommonServiceLocator.NinjectAdapter.Unofficial;
 using Microsoft.Practices.ServiceLocation;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using Ninject.Extensions.Conventions;
 using NinjectWithInMvcAndWcf.App_Start;
 using NinjectWithInMvcAndWcf.Services;
@@ -73,6 +75,10 @@ namespace NinjectWithInMvcAndWcf
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            SetupJsonSerialization();
+
+            RemoveXmlResponses();
         }
 
         //protected void Application_BeginRequest(object sender, EventArgs e)
@@ -82,5 +88,22 @@ namespace NinjectWithInMvcAndWcf
         //        HttpContext.Current.SetSessionStateBehavior(SessionStateBehavior.ReadOnly);
         //    }
         //}
+
+        private static void RemoveXmlResponses()
+        {
+            var formatters = GlobalConfiguration.Configuration.Formatters;
+            formatters.XmlFormatter.SupportedMediaTypes.Clear();
+        }
+
+        private static void SetupJsonSerialization()
+        {
+            var formatters = GlobalConfiguration.Configuration.Formatters;
+            var jsonSettings = formatters.JsonFormatter.SerializerSettings;
+
+            jsonSettings.Formatting = Formatting.Indented;
+            jsonSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            jsonSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+        }
+
     }
 }

@@ -7,6 +7,7 @@
 /VS 2012/src/WCF/MSMQ/WcfMsmqIntegration/packages
 /VS 2012/src/Ninject/NinjectWithInMvcAndWcf/packages
 /VS 2012/src/Misc/ExceptionFormatter/packages
+/VS 2012/src/Angular/Angular/packages
 
 # Log files
 
@@ -24,3 +25,4 @@ obj
 TestResults
 *.suo
 *.gpstate
+*.user

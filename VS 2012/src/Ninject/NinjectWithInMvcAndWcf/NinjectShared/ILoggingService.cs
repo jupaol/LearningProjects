@@ -2,7 +2,7 @@
 using System.ServiceModel;
 using System.ServiceModel.Web;
 
-namespace NinjectWithInMvcAndWcf
+namespace NinjectShared
 {
     [ServiceContract(
         Namespace = Namespaces.MyNamespace,

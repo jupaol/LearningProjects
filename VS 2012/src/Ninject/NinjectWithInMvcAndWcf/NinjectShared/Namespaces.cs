@@ -1,4 +1,4 @@
-﻿namespace NinjectWithInMvcAndWcf
+﻿namespace NinjectShared
 {
     public class Namespaces
     {

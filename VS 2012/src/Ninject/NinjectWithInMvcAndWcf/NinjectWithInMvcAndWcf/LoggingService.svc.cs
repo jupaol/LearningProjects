@@ -2,6 +2,7 @@
 using System.ServiceModel;
 using System.ServiceModel.Activation;
 using System.Threading;
+using NinjectShared;
 using NinjectWithInMvcAndWcf.Services;
 
 namespace NinjectWithInMvcAndWcf

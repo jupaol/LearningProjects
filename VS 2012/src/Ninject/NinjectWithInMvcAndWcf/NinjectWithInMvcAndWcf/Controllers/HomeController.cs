@@ -1,5 +1,6 @@
 ﻿using System.ServiceModel;
 using System.Web.Mvc;
+using NinjectShared;
 using NinjectWithInMvcAndWcf.Services;
 
 namespace NinjectWithInMvcAndWcf.Controllers

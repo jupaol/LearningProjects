@@ -1,0 +1,33 @@
+﻿<h1>List of phones ({{phones.length}})</h1>
+
+<hr/>
+
+<div ng-show="!isbusy">
+    <legend>Filter and sorting</legend>
+    <input type="text" ng-model="query"/>
+    <select ng-model="orderProp">
+        <option value="name">Alphabetical</option>
+        <option value="age">Newest</option>
+    </select>
+    <div>
+        Selected Order: {{orderProp}}
+    </div>
+</div>
+
+<div ng-show="isbusy">
+    <img src="/Content/images/loader.gif" />
+</div>
+
+<hr/>
+
+<ul ng-show="!isbusy">
+    <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+        <a href="#phones/{{phone.phoneId}}"><img ng-src="{{phone.imageUrl}}"/></a>
+        <p><a href="#phones/{{phone.phoneId}}">{{phone.name}} - {{phone.age}}</a></p>
+        <p>{{phone.description}}</p>
+    </li>
+</ul>
+
+<hr/>
+
+{{phones | json}}

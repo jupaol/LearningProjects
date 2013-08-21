@@ -68,6 +68,8 @@ namespace NinjectWithInMvcAndWcf
 
             kernel.Bind<IServiceLocator>().ToConstant(ServiceLocator.Current);
 
+            GlobalConfiguration.Configuration.DependencyResolver = new NinjectResolver(kernel);
+
 
             AreaRegistration.RegisterAllAreas();
 

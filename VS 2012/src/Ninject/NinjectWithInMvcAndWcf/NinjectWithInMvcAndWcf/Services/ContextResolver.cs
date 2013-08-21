@@ -5,16 +5,16 @@ namespace NinjectWithInMvcAndWcf.Services
 {
     public class ContextResolver : IContextResolver
     {
-        private readonly HttpContextBase _httpContextBase;
+        private readonly HttpContextBase _httpContext;
 
-        public ContextResolver(HttpContextBase httpContextBase)
+        public ContextResolver(HttpContextBase httpContext)
         {
-            _httpContextBase = httpContextBase;
+            _httpContext = httpContext;
         }
 
         public string Resolve()
         {
-            if (_httpContextBase == null)
+            if (_httpContext == null)
             {
                 throw new ArgumentNullException("_httpContextBase");
             }

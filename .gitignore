@@ -6,6 +6,7 @@
 /VS 2012/src/Angular/NG-Basics/packages
 /VS 2012/src/WCF/MSMQ/WcfMsmqIntegration/packages
 /VS 2012/src/Ninject/NinjectWithInMvcAndWcf/packages
+/VS 2012/src/Misc/ExceptionFormatter/packages
 
 # Log files
 

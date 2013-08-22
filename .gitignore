@@ -8,6 +8,7 @@
 /VS 2012/src/Ninject/NinjectWithInMvcAndWcf/packages
 /VS 2012/src/Misc/ExceptionFormatter/packages
 /VS 2012/src/Angular/Angular/packages
+/VS 2012/src/EntityFramework/ForeignKeys/packages
 
 # Log files
 

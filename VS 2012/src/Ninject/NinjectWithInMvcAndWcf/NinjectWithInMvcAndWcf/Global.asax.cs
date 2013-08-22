@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
@@ -10,7 +11,9 @@ using Microsoft.Practices.ServiceLocation;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Ninject.Extensions.Conventions;
+using Ninject.Web.Common;
 using NinjectWithInMvcAndWcf.App_Start;
+using NinjectWithInMvcAndWcf.Data;
 using NinjectWithInMvcAndWcf.Services;
 
 namespace NinjectWithInMvcAndWcf
@@ -63,6 +66,9 @@ namespace NinjectWithInMvcAndWcf
              .SelectAllClasses()
              .Where(y => y.Namespace != null && y.Namespace.StartsWith(typeof(IContextResolver).Namespace))
              .BindAllInterfaces());
+            kernel.Bind<MyDataContext>()
+                  .ToMethod(x => new MyDataContext(ConfigurationManager.ConnectionStrings["cs"].ConnectionString))
+                  .InRequestScope();
 
             ServiceLocator.SetLocatorProvider(() => new NinjectServiceLocator(kernel));
 

@@ -9,6 +9,7 @@
 /VS 2012/src/Misc/ExceptionFormatter/packages
 /VS 2012/src/Angular/Angular/packages
 /VS 2012/src/EntityFramework/ForeignKeys/packages
+/VS 2012/src/Loggers/NLog/NLogBasic/packages
 
 # Log files
 

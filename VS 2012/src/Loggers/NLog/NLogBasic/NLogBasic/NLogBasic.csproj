@@ -105,6 +105,12 @@
     <None Include="packages.config" />
     <None Include="_MSBuild\NuGetPackageAndPublish.targets" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SharedUtilities\SharedUtilities.csproj">
+      <Project>{d81588f3-16e3-4eab-846c-dd3ba13b26e3}</Project>
+      <Name>SharedUtilities</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

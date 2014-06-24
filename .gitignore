@@ -16,6 +16,8 @@ VS 2012/src/WebForms/Security/packages
 /VS 2012/src/Loggers/NLog/NLogBasic/packages
 /VS 2012/src/Loggers/NLog/NLogNinjectSlf/packages
 
+/**/packages/**
+
 # Log files
 
 /VS 2012/src/WebForms/MSTS 70-515/LogFile.*.log.txt
